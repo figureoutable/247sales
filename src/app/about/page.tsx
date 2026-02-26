@@ -4,7 +4,7 @@ import { CalEmbed } from "@/components/CalEmbed";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Josh founded Figures in 2023. EY Turnaround & Restructuring, Barclays, Crown Agents Bank. Credit Suisse, Metro Bank, Lloyds, UBS. Fractional CFO and accounting for UK founders.",
+    "Josh co-founded Figures in 2023. EY Turnaround & Restructuring, Barclays, Crown Agents Bank. Credit Suisse, Metro Bank, Lloyds, UBS. Fractional CFO and accounting for UK founders.",
 };
 
 export default function AboutPage() {

@@ -19,7 +19,7 @@ export function AboutTeaser() {
           Meet Josh
         </h2>
         <p className="mt-6 text-lg text-slate-600">
-          Josh founded Figures in 2023 after building his career at EY (restructuring), Barclays, and Crown Agents Bank. He brings big-firm rigour and small-team responsiveness so you get advice you can trust, without the corporate runaround.
+          Josh co-founded Figures in 2023 after building his career at EY (restructuring), Barclays, and Crown Agents Bank. He brings big-firm rigour and small-team responsiveness so you get advice you can trust, without the corporate runaround.
         </p>
         <Link
           href="/about"
