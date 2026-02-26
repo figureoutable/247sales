@@ -17,7 +17,7 @@ export function WhyFigures() {
                 <th scope="col" className="px-4 py-4 text-left text-sm font-semibold text-slate-900 sm:px-6">
                   Aspect
                 </th>
-                <th scope="col" className="px-4 py-4 text-left text-sm font-semibold text-primary sm:px-6">
+                <th scope="col" className="px-4 py-4 text-left text-sm font-semibold text-slate-900 sm:px-6">
                   Figures
                 </th>
                 <th scope="col" className="px-4 py-4 text-left text-sm font-semibold text-slate-600 sm:px-6">
@@ -27,12 +27,16 @@ export function WhyFigures() {
             </thead>
             <tbody className="divide-y divide-slate-200">
               {WHY_FIGURES_ROWS.map((row, i) => (
-                <tr key={i} className="hover:bg-slate-50/50">
+                <tr key={i}>
                   <td className="whitespace-nowrap px-4 py-4 text-sm font-medium text-slate-900 sm:px-6">
                     {row.aspect}
                   </td>
-                  <td className="px-4 py-4 text-sm text-slate-700 sm:px-6">{row.figures}</td>
-                  <td className="px-4 py-4 text-sm text-slate-500 sm:px-6">{row.others}</td>
+                  <td className="px-4 py-4 text-sm text-slate-700 sm:px-6">
+                    {row.figures}
+                  </td>
+                  <td className="px-4 py-4 text-sm text-slate-500 sm:px-6">
+                    {row.others}
+                  </td>
                 </tr>
               ))}
             </tbody>
