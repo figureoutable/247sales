@@ -23,7 +23,7 @@ export function Header() {
         <Link href="/" className="flex items-center" aria-label="figures home">
           <span className="flex h-12 items-center overflow-hidden sm:h-14">
             <Image
-              src="/figures-logo.png"
+              src="/figures-logo.jpg"
               alt="figures"
               width={200}
               height={56}

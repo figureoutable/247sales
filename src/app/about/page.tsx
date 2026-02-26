@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { CalEmbed } from "@/components/CalEmbed";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Josh founded Figures in 2022. EY Turnaround & Restructuring, Barclays, Crown Agents Bank. Credit Suisse, Metro Bank, Lloyds, UBS. Fractional CFO and accounting for UK founders.",
+    "Josh founded Figures in 2023. EY Turnaround & Restructuring, Barclays, Crown Agents Bank. Credit Suisse, Metro Bank, Lloyds, UBS. Fractional CFO and accounting for UK founders.",
 };
 
 export default function AboutPage() {
@@ -16,7 +17,7 @@ export default function AboutPage() {
 
         <div className="mt-12 space-y-10 text-slate-600 dark:text-zinc-400">
           <p>
-            Figures was founded in 2022 with a simple idea — that growing businesses deserve the same
+            Figures was founded in 2023 with a simple idea — that growing businesses deserve the same
             quality of financial thinking that big corporations pay millions for, without the price tag
             or the runaround.
           </p>
@@ -49,14 +50,9 @@ export default function AboutPage() {
           <p className="text-lg font-medium text-slate-900 dark:text-white">
             Fancy a chat? Book a discovery call and we’ll tell you more.
           </p>
-          <a
-            href="https://cal.com/figures/discovery"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-          >
-            Schedule a call
-          </a>
+          <div className="mt-6">
+            <CalEmbed className="mx-auto max-w-2xl" />
+          </div>
         </div>
       </div>
     </div>

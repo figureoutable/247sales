@@ -31,7 +31,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="mt-12 max-w-xl">
+    <div className="mt-12 text-center">
       <h2 className="text-lg font-semibold text-slate-900">Send a message</h2>
       <form
         onSubmit={handleSubmit}
@@ -94,7 +94,7 @@ export function ContactForm() {
           </p>
         )}
       </form>
-      <p className="mt-8 text-sm text-slate-600">
+      <p className="mt-8 text-center text-sm text-slate-600">
         You can also email us directly at{" "}
         <a
           href={`mailto:${CONTACT_EMAIL}`}
