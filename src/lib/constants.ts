@@ -19,6 +19,9 @@ export const SERVICES = [
     icon: "briefcase",
     description:
       "Senior finance leadership without the full-time cost. We sit alongside your leadership team, own the numbers and help you make better decisions faster.",
+    detail:
+      "Whether you're scaling up, raising funding, or navigating a tricky period, you get the strategic input of an experienced CFO without the salary. We attend board meetings when needed, challenge assumptions, and make sure the numbers support the story you're telling.",
+    whoFor: "Founders and leadership teams who want strategic finance input without a full-time hire.",
   },
   {
     id: "management-reporting",
@@ -26,6 +29,9 @@ export const SERVICES = [
     icon: "layout-dashboard",
     description:
       "Monthly board packs delivered within 5 working days. Actual vs budget, cash flow, KPIs and forward forecast — presented clearly so the whole team can act on it.",
+    detail:
+      "We pull together your management accounts, variance analysis, and cash position into a pack you can actually use. No jargon, no delay. You get a consistent format every month so you can spot trends and make decisions quickly.",
+    whoFor: "Leadership teams and boards who need reliable, timely numbers to run the business.",
   },
   {
     id: "financial-planning-analysis",
@@ -33,6 +39,9 @@ export const SERVICES = [
     icon: "line-chart",
     description:
       "Budgets, scenario models and rolling forecasts so you always know where the business is heading and what levers to pull.",
+    detail:
+      "We build budgets and forecasts that tie to your strategy and are easy to update. Run scenarios (e.g. what if revenue slips, or we hire three more?) and see the impact on cash and profit. Rolling forecasts keep the plan relevant as the year unfolds.",
+    whoFor: "Businesses that want to plan ahead and understand the financial impact of different choices.",
   },
   {
     id: "cash-flow-management",
@@ -40,6 +49,9 @@ export const SERVICES = [
     icon: "droplets",
     description:
       "13-week rolling cash forecasts and early warning monitoring. We make sure you never run out of runway unexpectedly.",
+    detail:
+      "We maintain a rolling 13-week cash forecast updated with your latest numbers and assumptions. We flag pinch points early so you can act — whether that's chasing invoices, delaying spend, or arranging funding. No nasty surprises.",
+    whoFor: "Founders and FDs who need to stay on top of cash and avoid running out of runway.",
   },
   {
     id: "board-investor-reporting",
@@ -47,6 +59,9 @@ export const SERVICES = [
     icon: "presentation",
     description:
       "Investor-ready reporting packs and board presentations that tell the right story with the right numbers behind them.",
+    detail:
+      "We prepare the financials and commentary for board packs and investor updates. Clear narrative, consistent metrics, and numbers that stack up. We can present in person or support you so you're confident when investors or the board ask questions.",
+    whoFor: "Companies with a board or external investors who expect clear, professional reporting.",
   },
   {
     id: "budgeting-forecasting",
@@ -54,6 +69,9 @@ export const SERVICES = [
     icon: "calendar-range",
     description:
       "Annual budgets and quarterly reforecasts built with your team. Clear targets, realistic assumptions and a plan everyone can work to.",
+    detail:
+      "We work with you to build an annual budget that reflects your strategy and is grounded in realistic assumptions. Through the year we run quarterly reforecasts so the plan stays relevant. The result is a shared view of where you're heading and what good looks like.",
+    whoFor: "Teams that want a clear financial plan and regular check-ins against it.",
   },
   {
     id: "statutory-accounts-tax",
@@ -61,6 +79,9 @@ export const SERVICES = [
     icon: "shield-check",
     description:
       "Year-end accounts, corporation tax and VAT handled accurately and on time. Compliance sorted so you can focus on growth.",
+    detail:
+      "We prepare year-end accounts to Companies House and HMRC standards, file corporation tax returns and computations, and manage VAT returns and registrations. Deadlines are tracked and met so you stay compliant without the last-minute scramble.",
+    whoFor: "Limited companies that want compliance done properly and on time.",
   },
   {
     id: "payroll-paye",
@@ -68,6 +89,9 @@ export const SERVICES = [
     icon: "users",
     description:
       "Payroll processed accurately every month with RTI submissions and HMRC correspondence handled on your behalf.",
+    detail:
+      "We run payroll (including director-only), submit FPS and EPS to HMRC, and handle P45s, P60s and year-end. We deal with HMRC queries on your behalf so you don't have to. You get a clear summary each month and your team gets paid on time.",
+    whoFor: "Employers who want payroll and PAYE sorted without the admin headache.",
   },
   {
     id: "bookkeeping-xero",
@@ -75,6 +99,9 @@ export const SERVICES = [
     icon: "book-open",
     description:
       "Clean, organised books updated regularly so your numbers are always ready when you need them. We work in Xero and connect your whole finance stack.",
+    detail:
+      "We keep your books in Xero — coding transactions, reconciling banks, and keeping records tidy. We link in your bank feeds, expenses, and other tools so the finance stack works as one. When you need management accounts or year-end, the data is already there.",
+    whoFor: "Businesses that want their books in good shape without doing it themselves.",
   },
 ] as const;
 

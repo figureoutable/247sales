@@ -16,7 +16,7 @@ export default function AboutPage() {
 
         <div className="mt-12 space-y-10 text-slate-600 dark:text-zinc-400">
           <p>
-            Josh founded Figures in 2022 with a simple idea — that growing businesses deserve the same
+            Figures was founded in 2022 with a simple idea — that growing businesses deserve the same
             quality of financial thinking that big corporations pay millions for, without the price tag
             or the runaround.
           </p>

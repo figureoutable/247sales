@@ -45,6 +45,8 @@ export default function ServicesPage() {
         <div className="mt-16 space-y-20">
           {SERVICES.map((service) => {
             const Icon = ICON_MAP[service.icon] ?? Briefcase;
+            const hasDetail = "detail" in service && service.detail;
+            const hasWhoFor = "whoFor" in service && service.whoFor;
             return (
               <section
                 key={service.id}
@@ -55,11 +57,19 @@ export default function ServicesPage() {
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700 dark:bg-zinc-800 dark:text-zinc-300">
                     <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                   </span>
-                  <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+                  <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">
                     {service.title}
                   </h2>
                 </div>
-                <p className="mt-4 text-slate-600">{service.description}</p>
+                <p className="mt-4 text-slate-600 dark:text-zinc-400">{service.description}</p>
+                {hasDetail && (
+                  <p className="mt-4 text-slate-600 dark:text-zinc-400">{service.detail}</p>
+                )}
+                {hasWhoFor && (
+                  <p className="mt-6 rounded-lg border-l-4 border-slate-300 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700 dark:border-zinc-600 dark:bg-zinc-800/50 dark:text-zinc-300">
+                    <span className="text-slate-500 dark:text-zinc-500">Who it’s for:</span> {service.whoFor}
+                  </p>
+                )}
               </section>
             );
           })}
