@@ -107,7 +107,7 @@ export const SERVICES = [
 
 export const WHY_FIGURES_ROWS = [
   { aspect: "Response time", figures: "Same day", others: "Days or weeks" },
-  { aspect: "Open hours", figures: "Flexible, when you need us", others: "9–5 only" },
+  { aspect: "Open hours", figures: "8am to 8pm", others: "9–5 only" },
   { aspect: "Communication", figures: "Plain English, no jargon", others: "Heavy on the acronyms" },
   { aspect: "Pricing", figures: "Transparent, fixed where possible", others: "Hourly, unpredictable" },
   { aspect: "Support style", figures: "Proactive, part of your team", others: "Reactive, once a year" },
