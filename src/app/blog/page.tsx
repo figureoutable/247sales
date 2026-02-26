@@ -3,26 +3,39 @@ import Link from "next/link";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { postListQuery } from "@/sanity/lib/queries";
+import { getLocalPosts } from "@/data/blog-posts";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Insights and updates from Figures — accounting and advisory for UK founders and small businesses.",
 };
 
-async function getPosts() {
+type PostListItem = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  category: string | null;
+  publishedAt: string;
+  mainImage: string | null;
+  excerpt: string | null;
+};
+
+async function getPosts(): Promise<PostListItem[]> {
   try {
-    return await client.fetch<Array<{
-      _id: string;
-      title: string;
-      slug: { current: string };
-      category: string | null;
-      publishedAt: string;
-      mainImage: string;
-      excerpt: string | null;
-    }>>(postListQuery);
+    const sanityPosts = await client.fetch<PostListItem[]>(postListQuery);
+    if (sanityPosts.length > 0) return sanityPosts;
   } catch {
-    return [];
+    // fall through to local
   }
+  return getLocalPosts().map((p) => ({
+    _id: p._id,
+    title: p.title,
+    slug: p.slug,
+    category: p.category,
+    publishedAt: p.publishedAt,
+    mainImage: p.mainImage,
+    excerpt: p.excerpt,
+  }));
 }
 
 export default async function BlogPage() {
