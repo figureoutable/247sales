@@ -26,7 +26,7 @@ export function Footer() {
             <Link href="/" className="inline-block" aria-label="Figures home">
               <span className="flex h-10 items-center overflow-hidden rounded-sm bg-white px-1">
                 <Image
-                  src="/figures-logo.png"
+                  src="/figures-logo.jpg"
                   alt="Figures"
                   width={160}
                   height={40}
