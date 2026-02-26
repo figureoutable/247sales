@@ -20,15 +20,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" aria-label="figures home">
-          <span className="flex h-12 items-center overflow-hidden sm:h-14">
+        <Link href="/" className="flex items-center" aria-label="Figures home">
+          <span className="flex h-12 items-center overflow-hidden rounded-sm bg-white px-1 sm:h-14">
             <Image
-              src="/figures-logo.jpg"
-              alt="figures"
+              src="/figures-logo.png"
+              alt="Figures"
               width={200}
               height={56}
-              className="h-12 w-auto scale-110 object-left object-contain sm:h-14 sm:scale-[1.15]"
+              className="h-12 w-auto object-left object-contain sm:h-14"
               priority
+              unoptimized
             />
           </span>
         </Link>
