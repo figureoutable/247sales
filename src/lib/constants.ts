@@ -1,5 +1,5 @@
 export const SITE_NAME = "Figures";
-export const TAGLINE = "Oddly Satisfying Accounting.";
+export const TAGLINE = "Oddly Satisfying Accounting";
 export const CAL_LINK = "https://cal.com/figures/discovery";
 
 export const SOCIAL_LINKS = {
@@ -28,7 +28,7 @@ export const SERVICES = [
     title: "Management Reporting",
     icon: "layout-dashboard",
     description:
-      "Monthly board packs delivered within 5 working days. Actual vs budget, cash flow, KPIs and forward forecast — presented clearly so the whole team can act on it.",
+      "Monthly board packs. Actual vs budget, cash flow, KPIs and forward forecast — presented clearly so the whole team can act on it.",
     detail:
       "We pull together your management accounts, variance analysis, and cash position into a pack you can actually use. No jargon, no delay. You get a consistent format every month so you can spot trends and make decisions quickly.",
     whoFor: "Leadership teams and boards who need reliable, timely numbers to run the business.",

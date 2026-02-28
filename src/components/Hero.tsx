@@ -10,7 +10,7 @@ export function Hero() {
     <section className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-          Oddly Satisfying Accounting.
+          Oddly Satisfying Accounting
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg font-light text-slate-600 sm:text-xl">
           The accounting equivalent of a superhero saving your weekend, money and giving you peace of mind.
