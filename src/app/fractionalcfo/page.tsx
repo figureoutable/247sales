@@ -43,45 +43,11 @@ export default function FractionalCFOPage() {
       <section className="px-4 pt-6 pb-16 sm:px-6 sm:pt-8 sm:pb-20 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            What a Figures fractional CFO actually does
+            See what quality finance support looks like, explore our sample reports:
           </h2>
 
-          <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-8 sm:grid-cols-3">
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-              <h3 className="text-lg font-semibold text-slate-900">
-                Monthly Management Reporting
-              </h3>
-              <p className="mt-2 text-slate-600 sm:mt-3">
-                Actual vs budget, cash flow, KPIs and forward forecast delivered
-                within 5 working days of month end. Every month, without
-                chasing.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-              <h3 className="text-lg font-semibold text-slate-900">
-                Cash Flow & Runway Management
-              </h3>
-              <p className="mt-2 text-slate-600 sm:mt-3">
-                13-week rolling cash forecasts and early warning monitoring so
-                you always know what is coming and never get caught short.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-              <h3 className="text-lg font-semibold text-slate-900">
-                Strategic Finance Support
-              </h3>
-              <p className="mt-2 text-slate-600 sm:mt-3">
-                Budgets, forecasts, scenario models and board preparation. The
-                thinking your business needs to grow with confidence.
-              </p>
-            </div>
-          </div>
-
-          {/* Sample reports — below the three cards */}
+          {/* Sample reports */}
           <div className="mt-10 mx-auto max-w-5xl text-center sm:mt-16">
-            <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
-              Sample Reports
-            </h3>
             <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
               <div className="mx-auto w-full max-w-sm">
                 <a
