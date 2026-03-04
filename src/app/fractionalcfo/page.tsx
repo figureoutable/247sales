@@ -78,22 +78,22 @@ export default function FractionalCFOPage() {
           </div>
 
           {/* Sample reports — below the three cards */}
-          <div className="mt-10 mx-auto max-w-4xl text-center sm:mt-16">
+          <div className="mt-10 mx-auto max-w-5xl text-center sm:mt-16">
             <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
               Sample Reports
             </h3>
-            <div className="mt-6 flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-8">
-              <div className="w-full max-w-sm">
+            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
+              <div className="mx-auto w-full max-w-sm">
                 <a
                   href="/sample-reports/ecommerce-management-report-sample.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block overflow-hidden rounded-xl border-2 border-slate-200 bg-white shadow-sm transition-shadow hover:border-slate-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
-                  aria-label="View sample management report (PDF)"
+                  aria-label="View sample — Revenue Performance & Forecast (PDF)"
                 >
                   <Image
-                    src="/sample-reports/sample-management-report.png"
-                    alt="Sample Management Report — Revenue Performance & Forecast"
+                    src="/sample-reports/sample-report-3-opportunities.png"
+                    alt="Revenue Performance & Forecast — Ecommerce Management Report"
                     width={480}
                     height={320}
                     className="h-auto w-full object-cover"
@@ -103,17 +103,37 @@ export default function FractionalCFOPage() {
                   Ecommerce — Management Report
                 </p>
               </div>
-              <div className="w-full max-w-sm">
+              <div className="mx-auto w-full max-w-sm">
+                <a
+                  href="/sample-reports/invoice-finance-report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block overflow-hidden rounded-xl border-2 border-slate-200 bg-white shadow-sm transition-shadow hover:border-slate-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
+                  aria-label="View sample — Invoice Finance Market Review (PDF)"
+                >
+                  <Image
+                    src="/sample-reports/sample-report-1-revenue.png"
+                    alt="Invoice Finance — Market Review"
+                    width={480}
+                    height={320}
+                    className="h-auto w-full object-cover"
+                  />
+                </a>
+                <p className="mt-2 text-center text-sm font-medium text-slate-700">
+                  Invoice Finance — Market Review
+                </p>
+              </div>
+              <div className="mx-auto w-full max-w-sm">
                 <a
                   href="/sample-reports/marketing-agency-budget-financial-plan.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block overflow-hidden rounded-xl border-2 border-slate-200 bg-white shadow-sm transition-shadow hover:border-slate-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
-                  aria-label="View sample board pack (PDF)"
+                  aria-label="View sample — Current Position & Opportunities (PDF)"
                 >
                   <Image
-                    src="/sample-reports/sample-board-pack.png"
-                    alt="Sample Board Pack — Current Position & Opportunities"
+                    src="/sample-reports/sample-report-2-aldermore.png"
+                    alt="Current Position & Opportunities — Marketing Agency Budget & Financial Plan"
                     width={480}
                     height={320}
                     className="h-auto w-full object-cover"
