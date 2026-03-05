@@ -18,7 +18,7 @@ export default function FractionalCFOPage() {
             <span className="mt-2 block">You just don&apos;t need a full-time one</span>
           </h1>
           <p className="mt-6 text-lg text-slate-600 sm:text-xl">
-            The average CFO costs £100k+ a year. Figures starts at £1,500 a month.
+            The average CFO costs £100k+ a year. With Figures, you get the same expertise at a fraction of the cost.
             No recruitment, no overhead, no lock-in.
           </p>
         </div>
