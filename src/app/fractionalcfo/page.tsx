@@ -118,15 +118,15 @@ export default function FractionalCFOPage() {
       <section className="border-t border-slate-200 bg-slate-50/30 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            Book your free 15-minute discovery call
+            Book your free 20-minute discovery call
           </h2>
           <p className="mt-4 text-center text-lg text-slate-600">
-            No obligation. No hard sell. Just an honest conversation about
+            No obligation. No hard sell. An honest conversation about
             whether we are the right fit.
           </p>
           <div className="mt-10 w-full">
             <iframe
-              src="https://cal.com/figures/discovery"
+              src="https://cal.com/figures/discoverycall"
               title="Book a discovery call with Figures"
               className="h-[700px] w-full"
               style={{ border: 0 }}
