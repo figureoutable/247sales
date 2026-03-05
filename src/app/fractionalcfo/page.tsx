@@ -58,7 +58,7 @@ export default function FractionalCFOPage() {
                   aria-label="View sample — Revenue Performance & Forecast (PDF)"
                 >
                   <Image
-                    src="/sample-reports/sample-report-3-opportunities.png"
+                    src="/sample-reports/sample-ecommerce-management-report.png"
                     alt="Revenue Performance & Forecast — Ecommerce Management Report"
                     width={480}
                     height={320}
@@ -78,7 +78,7 @@ export default function FractionalCFOPage() {
                   aria-label="View sample — Invoice Finance Market Review (PDF)"
                 >
                   <Image
-                    src="/sample-reports/sample-report-1-revenue.png"
+                    src="/sample-reports/sample-invoice-finance-review.png"
                     alt="Invoice Finance — Market Review"
                     width={480}
                     height={320}
@@ -98,7 +98,7 @@ export default function FractionalCFOPage() {
                   aria-label="View sample — Current Position & Opportunities (PDF)"
                 >
                   <Image
-                    src="/sample-reports/sample-report-2-aldermore.png"
+                    src="/sample-reports/sample-marketing-agency-forecast.png"
                     alt="Current Position & Opportunities — Marketing Agency Budget & Financial Plan"
                     width={480}
                     height={320}
