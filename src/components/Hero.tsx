@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { CAL_LINK } from "@/lib/constants";
 
 const YOUTUBE_EMBED_ID = "opShRwVFX10";
@@ -31,7 +30,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-center">
           <a
             href={CAL_LINK}
             target="_blank"
@@ -40,12 +39,6 @@ export function Hero() {
           >
             Schedule a call
           </a>
-          <Link
-            href="/services"
-            className="inline-flex w-full items-center justify-center rounded-full border-2 border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-700 transition-colors hover:border-black hover:bg-slate-50 hover:text-black sm:w-auto"
-          >
-            Learn more
-          </Link>
         </div>
       </div>
     </section>
