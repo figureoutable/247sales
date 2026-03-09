@@ -23,6 +23,7 @@ import {
   bodyLocal15,
   bodyLocal16,
 } from "./blog-post-bodies-remaining";
+import { GENERATED_POSTS } from "./generated-posts";
 
 export type LocalPost = {
   _id: string;
@@ -259,14 +260,19 @@ export const LOCAL_BLOG_POSTS: LocalPost[] = [
 ];
 
 
+const ALL_POSTS: LocalPost[] = [
+  ...LOCAL_BLOG_POSTS,
+  ...(GENERATED_POSTS as LocalPost[]),
+];
+
 export function getLocalPosts(): LocalPost[] {
-  return [...LOCAL_BLOG_POSTS].sort(
+  return [...ALL_POSTS].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
 }
 
 export function getLocalPostBySlug(slug: string): LocalPost | null {
-  return LOCAL_BLOG_POSTS.find((p) => p.slug.current === slug) ?? null;
+  return ALL_POSTS.find((p) => p.slug.current === slug) ?? null;
 }
 
 export function getLocalLatestPosts(count: number): LocalPost[] {

@@ -1,0 +1,422 @@
+[
+  {
+    "topic": "How to register a limited company in the UK step by step",
+    "primaryKeyword": "register a limited company UK",
+    "secondaryKeywords": ["Companies House registration", "setting up a limited company", "company formation UK"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "R&D tax credits for UK small businesses explained",
+    "primaryKeyword": "R&D tax credits UK",
+    "secondaryKeywords": ["research and development relief", "RDEC", "SME R&D scheme"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Making Tax Digital for income tax what you need to know",
+    "primaryKeyword": "Making Tax Digital income tax",
+    "secondaryKeywords": ["MTD ITSA", "digital tax records", "HMRC digital"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to choose an accountant for your small business in the UK",
+    "primaryKeyword": "choose an accountant UK small business",
+    "secondaryKeywords": ["finding an accountant", "what to look for in an accountant", "small business accountant"],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "HMRC penalties and how to avoid them UK",
+    "primaryKeyword": "HMRC penalties UK",
+    "secondaryKeywords": ["late filing penalty", "late payment penalty", "HMRC surcharge"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Employee benefits and tax implications for UK employers",
+    "primaryKeyword": "employee benefits tax UK",
+    "secondaryKeywords": ["benefits in kind", "P11D", "taxable benefits"],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Capital allowances explained for UK businesses",
+    "primaryKeyword": "capital allowances UK",
+    "secondaryKeywords": ["annual investment allowance", "AIA", "writing down allowance"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to set up payroll for the first time in the UK",
+    "primaryKeyword": "set up payroll UK",
+    "secondaryKeywords": ["PAYE registration", "first payroll", "employer HMRC"],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Auto-enrolment pension for small businesses UK",
+    "primaryKeyword": "auto-enrolment pension UK",
+    "secondaryKeywords": ["workplace pension", "pension contributions employer", "staging date"],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Annual investment allowance explained for UK businesses",
+    "primaryKeyword": "annual investment allowance UK",
+    "secondaryKeywords": ["AIA limit", "capital expenditure relief", "plant and machinery"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to do a bank reconciliation in Xero",
+    "primaryKeyword": "bank reconciliation Xero",
+    "secondaryKeywords": ["Xero bank feeds", "reconcile transactions", "bookkeeping Xero"],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "When to register for VAT UK thresholds and timing",
+    "primaryKeyword": "when to register for VAT UK",
+    "secondaryKeywords": ["VAT threshold UK", "voluntary VAT registration", "VAT registration deadline"],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "Construction industry scheme CIS explained for UK contractors",
+    "primaryKeyword": "construction industry scheme UK",
+    "secondaryKeywords": ["CIS deductions", "CIS registration", "CIS subcontractor"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "IR35 rules explained for UK contractors and businesses",
+    "primaryKeyword": "IR35 rules UK",
+    "secondaryKeywords": ["off-payroll working", "inside IR35", "IR35 determination"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to prepare for an HMRC investigation or enquiry UK",
+    "primaryKeyword": "HMRC investigation UK",
+    "secondaryKeywords": ["HMRC enquiry", "tax investigation", "HMRC compliance check"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Cash accounting vs accrual accounting for UK small businesses",
+    "primaryKeyword": "cash vs accrual accounting UK",
+    "secondaryKeywords": ["cash basis", "accrual basis", "accounting method small business"],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to invoice correctly as a UK limited company",
+    "primaryKeyword": "invoicing UK limited company",
+    "secondaryKeywords": ["VAT invoice requirements", "invoice template UK", "legal invoice requirements"],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Understanding your balance sheet as a UK small business",
+    "primaryKeyword": "balance sheet UK small business",
+    "secondaryKeywords": ["assets and liabilities", "how to read a balance sheet", "net assets"],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Dividend tax rates and allowances UK explained",
+    "primaryKeyword": "dividend tax UK",
+    "secondaryKeywords": ["dividend allowance", "dividend tax rates 2025", "tax on dividends"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to close a limited company in the UK",
+    "primaryKeyword": "close a limited company UK",
+    "secondaryKeywords": ["strike off company", "dissolve a company", "members voluntary liquidation"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Employee share schemes and options for UK startups",
+    "primaryKeyword": "employee share schemes UK",
+    "secondaryKeywords": ["EMI options", "share option scheme", "CSOP"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "National Insurance rates and thresholds UK explained",
+    "primaryKeyword": "National Insurance rates UK",
+    "secondaryKeywords": ["NI thresholds", "employer NI", "employee NI contributions"],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How to file a confirmation statement at Companies House UK",
+    "primaryKeyword": "confirmation statement UK",
+    "secondaryKeywords": ["Companies House filing", "annual return replacement", "CS01"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Gift Aid for businesses donating to charity UK",
+    "primaryKeyword": "Gift Aid business UK",
+    "secondaryKeywords": ["charitable donations tax relief", "corporate Gift Aid", "donating to charity tax"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Xero vs QuickBooks which is better for UK small businesses",
+    "primaryKeyword": "Xero vs QuickBooks UK",
+    "secondaryKeywords": ["best accounting software UK", "Xero or QuickBooks", "cloud accounting comparison"],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to calculate corporation tax for a UK limited company",
+    "primaryKeyword": "calculate corporation tax UK",
+    "secondaryKeywords": ["corporation tax calculation", "taxable profit", "marginal relief"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Self assessment tax return guide for company directors UK",
+    "primaryKeyword": "self assessment director UK",
+    "secondaryKeywords": ["directors tax return", "SA100", "self assessment deadline"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Business insurance types and what UK small businesses need",
+    "primaryKeyword": "business insurance UK small business",
+    "secondaryKeywords": ["professional indemnity", "public liability insurance", "employers liability"],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How to read a balance sheet for UK small business owners",
+    "primaryKeyword": "how to read a balance sheet UK",
+    "secondaryKeywords": ["balance sheet explained", "current assets", "shareholders funds"],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Profit extraction strategies for UK limited company directors",
+    "primaryKeyword": "profit extraction UK",
+    "secondaryKeywords": ["tax-efficient profit extraction", "salary and dividends", "pension contributions"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to manage accounts receivable for UK small businesses",
+    "primaryKeyword": "accounts receivable UK small business",
+    "secondaryKeywords": ["chasing invoices", "debtor management", "credit control"],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Year-end checklist for UK limited companies",
+    "primaryKeyword": "year-end checklist limited company UK",
+    "secondaryKeywords": ["company year end", "year-end accounts preparation", "pre year-end planning"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to reduce corporation tax legally in the UK",
+    "primaryKeyword": "reduce corporation tax UK",
+    "secondaryKeywords": ["tax planning limited company", "corporation tax savings", "allowable deductions"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Cloud accounting benefits for UK small businesses",
+    "primaryKeyword": "cloud accounting UK",
+    "secondaryKeywords": ["online accounting software", "cloud bookkeeping", "digital accounting"],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to prepare management accounts from scratch UK",
+    "primaryKeyword": "prepare management accounts UK",
+    "secondaryKeywords": ["management accounts template", "monthly accounts", "management reporting"],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "P11D benefits in kind explained for UK employers",
+    "primaryKeyword": "P11D benefits in kind UK",
+    "secondaryKeywords": ["P11D filing", "taxable benefits employer", "P11D deadline"],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Working capital management for UK small businesses",
+    "primaryKeyword": "working capital management UK",
+    "secondaryKeywords": ["working capital ratio", "cash conversion cycle", "managing cash flow"],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Digital record keeping for Making Tax Digital UK",
+    "primaryKeyword": "digital record keeping MTD UK",
+    "secondaryKeywords": ["Making Tax Digital records", "MTD compliant software", "digital links"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Employer National Insurance changes and impact on UK small businesses",
+    "primaryKeyword": "employer NI changes UK",
+    "secondaryKeywords": ["employer NI rate increase", "NI cost to employers", "employment allowance"],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How to automate your accounting workflow as a UK business",
+    "primaryKeyword": "automate accounting UK",
+    "secondaryKeywords": ["accounting automation", "Xero automation", "Dext receipt capture"],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Preparing for your first audit as a UK small business",
+    "primaryKeyword": "first audit UK small business",
+    "secondaryKeywords": ["audit threshold UK", "statutory audit", "audit preparation"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Revenue recognition explained for UK small businesses",
+    "primaryKeyword": "revenue recognition UK",
+    "secondaryKeywords": ["when to recognise revenue", "FRS 102 revenue", "accrued income"],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to apply for a business loan in the UK what lenders want",
+    "primaryKeyword": "business loan UK",
+    "secondaryKeywords": ["small business loan application", "business finance UK", "what lenders look for"],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Tax-efficient ways to sell your business in the UK",
+    "primaryKeyword": "sell a business UK tax",
+    "secondaryKeywords": ["business asset disposal relief", "selling a company tax", "entrepreneurs relief"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Company pension contributions and corporation tax relief UK",
+    "primaryKeyword": "company pension contributions UK",
+    "secondaryKeywords": ["employer pension tax relief", "pension corporation tax deduction", "workplace pension contributions"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to switch accountants in the UK what to expect",
+    "primaryKeyword": "switch accountants UK",
+    "secondaryKeywords": ["change accountant", "transfer to new accountant", "professional clearance"],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "Mileage allowance and travel expenses for UK businesses",
+    "primaryKeyword": "mileage allowance UK business",
+    "secondaryKeywords": ["HMRC mileage rates", "business travel expenses", "advisory fuel rates"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to prepare a cash flow statement for a UK business",
+    "primaryKeyword": "cash flow statement UK",
+    "secondaryKeywords": ["statement of cash flows", "cash flow reporting", "operating cash flow"],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Startup costs you can claim before trading in the UK",
+    "primaryKeyword": "startup costs claim UK",
+    "secondaryKeywords": ["pre-trading expenses", "costs before incorporation", "allowable pre-trading costs"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to change your company year-end date in the UK",
+    "primaryKeyword": "change company year end UK",
+    "secondaryKeywords": ["accounting reference date", "shorten accounting period", "extend year end"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "VAT on imports and exports for UK small businesses post-Brexit",
+    "primaryKeyword": "VAT imports exports UK",
+    "secondaryKeywords": ["import VAT UK", "postponed VAT accounting", "export VAT rules"],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "Understanding FRS 102 for UK small businesses",
+    "primaryKeyword": "FRS 102 UK small business",
+    "secondaryKeywords": ["FRS 102 Section 1A", "UK accounting standards", "financial reporting standard"],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to claim expenses as a remote worker through your limited company UK",
+    "primaryKeyword": "claim expenses remote worker UK",
+    "secondaryKeywords": ["working from home expenses", "home office deduction", "remote working tax"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to set up Dext for receipt capture in your UK business",
+    "primaryKeyword": "Dext receipt capture UK",
+    "secondaryKeywords": ["Dext setup", "receipt scanning software", "Dext Xero integration"],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Intercompany transactions and group accounting for UK businesses",
+    "primaryKeyword": "intercompany transactions UK",
+    "secondaryKeywords": ["group accounts", "intercompany reconciliation", "consolidation UK"],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Financial due diligence for UK acquisitions and mergers",
+    "primaryKeyword": "financial due diligence UK",
+    "secondaryKeywords": ["acquisition due diligence", "buying a business UK", "due diligence checklist"],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Flat rate expenses for employees and directors UK",
+    "primaryKeyword": "flat rate expenses UK",
+    "secondaryKeywords": ["HMRC flat rate deductions", "professional subscriptions", "uniform allowance"],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to build a three-way financial model for your UK business",
+    "primaryKeyword": "three-way financial model UK",
+    "secondaryKeywords": ["integrated financial model", "P&L balance sheet cash flow model", "financial modelling"],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Company directors responsibilities and legal duties UK",
+    "primaryKeyword": "company directors responsibilities UK",
+    "secondaryKeywords": ["fiduciary duty", "Companies Act 2006 duties", "director obligations"],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to handle late paying clients as a UK small business",
+    "primaryKeyword": "late paying clients UK",
+    "secondaryKeywords": ["chasing late invoices", "late payment interest UK", "debt recovery small business"],
+    "category": "Cash Flow",
+    "used": false
+  }
+]
