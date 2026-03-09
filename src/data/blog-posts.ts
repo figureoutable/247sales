@@ -39,7 +39,7 @@ export type LocalPost = {
 export const LOCAL_BLOG_POSTS: LocalPost[] = [
   {
     _id: "local-1",
-    title: "What expenses are tax deductible for limited companies UK",
+    title: "Tax deductible expenses for limited companies UK",
     slug: { current: "what-expenses-tax-deductible-limited-companies-uk" },
     category: "Compliance",
     publishedAt: "2025-01-02T09:00:00.000Z",
@@ -215,7 +215,7 @@ export const LOCAL_BLOG_POSTS: LocalPost[] = [
   },
   {
     _id: "local-17",
-    title: "Cash flow forecast for small business UK: a practical guide",
+    title: "Cash flow forecast for small business UK",
     slug: { current: "cash-flow-forecast-small-business-uk" },
     category: "Cash Flow",
     publishedAt: "2025-02-26T10:00:00.000Z",
@@ -226,7 +226,7 @@ export const LOCAL_BLOG_POSTS: LocalPost[] = [
   },
   {
     _id: "local-18",
-    title: "When is corporation tax due UK? Deadlines and what to file",
+    title: "When is corporation tax due UK?",
     slug: { current: "when-is-corporation-tax-due-uk" },
     category: "Tax",
     publishedAt: "2025-03-01T09:00:00.000Z",
@@ -248,7 +248,7 @@ export const LOCAL_BLOG_POSTS: LocalPost[] = [
   },
   {
     _id: "local-20",
-    title: "How to pay yourself as a limited company director in the UK",
+    title: "How to pay yourself as a UK company director",
     slug: { current: "pay-yourself-limited-company-director-uk" },
     category: "Compliance",
     publishedAt: "2025-03-08T09:00:00.000Z",
