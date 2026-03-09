@@ -24,6 +24,14 @@ import {
   bodyLocal16,
 } from "./blog-post-bodies-remaining";
 import { GENERATED_POSTS } from "./generated-posts";
+import {
+  bodyLocal21,
+  bodyLocal22,
+  bodyLocal23,
+  bodyLocal24,
+  bodyLocal25,
+  bodyLocal26,
+} from "./blog-post-bodies-batch2";
 
 export type LocalPost = {
   _id: string;
@@ -256,6 +264,72 @@ export const LOCAL_BLOG_POSTS: LocalPost[] = [
     excerpt:
       "How to pay yourself as a limited company director in the UK: salary, dividends, and director's loans explained. Get it right with expert guidance.",
     body: bodyLocal20,
+  },
+  {
+    _id: "local-21",
+    title: "VAT registration threshold UK 2025",
+    slug: { current: "vat-registration-threshold-uk-2025" },
+    category: "VAT",
+    publishedAt: "2025-02-25T09:00:00.000Z",
+    mainImage: "/blog/vat-digital-services.jpg",
+    excerpt:
+      "VAT registration threshold UK 2025: what the limit is, what counts towards it, and what to do when you reach it.",
+    body: bodyLocal21,
+  },
+  {
+    _id: "local-22",
+    title: "Do I need to register for VAT UK",
+    slug: { current: "do-i-need-to-register-for-vat-uk" },
+    category: "VAT",
+    publishedAt: "2025-02-28T10:00:00.000Z",
+    mainImage: "/blog/vat-schemes.jpg",
+    excerpt:
+      "Do I need to register for VAT in the UK? How to decide, when it is compulsory, and when voluntary registration makes sense.",
+    body: bodyLocal22,
+  },
+  {
+    _id: "local-23",
+    title: "R&D tax credits UK small business",
+    slug: { current: "r-and-d-tax-credits-uk-small-business" },
+    category: "Tax",
+    publishedAt: "2025-03-02T09:00:00.000Z",
+    mainImage: "/blog/corporation-tax-year-end.jpg",
+    excerpt:
+      "R&D tax credits for UK small businesses: who qualifies, what you can claim, and how to submit a successful claim.",
+    body: bodyLocal23,
+  },
+  {
+    _id: "local-24",
+    title: "Capital allowances explained UK",
+    slug: { current: "capital-allowances-explained-uk" },
+    category: "Tax",
+    publishedAt: "2025-03-05T10:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt:
+      "Capital allowances explained for UK businesses: AIA, full expensing, writing down allowances, and how to claim.",
+    body: bodyLocal24,
+  },
+  {
+    _id: "local-25",
+    title: "How to set up payroll UK for the first time",
+    slug: { current: "how-to-set-up-payroll-uk" },
+    category: "Payroll",
+    publishedAt: "2025-03-07T09:00:00.000Z",
+    mainImage: "/blog/paye-payroll.jpg",
+    excerpt:
+      "How to set up payroll in the UK for the first time: HMRC registration, software, RTI, and auto-enrolment step by step.",
+    body: bodyLocal25,
+  },
+  {
+    _id: "local-26",
+    title: "HMRC penalties and how to avoid them UK",
+    slug: { current: "hmrc-penalties-how-to-avoid-them-uk" },
+    category: "Compliance",
+    publishedAt: "2025-03-10T10:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt:
+      "HMRC penalties for UK businesses: corporation tax, VAT, self-assessment, and PAYE. What triggers them and how to avoid them.",
+    body: bodyLocal26,
   },
 ];
 
