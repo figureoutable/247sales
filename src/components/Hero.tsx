@@ -12,7 +12,7 @@ export function Hero() {
           Oddly Satisfying Accounting
         </h1>
         <p className="mx-auto mt-6 max-w-4xl text-lg font-light text-slate-600 sm:whitespace-nowrap sm:text-xl">
-          We file your accounts and tax in 21 days from your instruction or you don&apos;t pay a penny.
+          We file your accounts and tax in 21 days of your instruction or you don&apos;t pay a penny.
         </p>
 
         <div
