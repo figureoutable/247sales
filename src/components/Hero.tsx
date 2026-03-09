@@ -11,8 +11,8 @@ export function Hero() {
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
           Oddly Satisfying Accounting
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg font-light text-slate-600 sm:text-xl">
-          The accounting equivalent of a superhero saving your weekend, money and giving you peace of mind.
+        <p className="mx-auto mt-6 max-w-4xl text-lg font-light text-slate-600 sm:whitespace-nowrap sm:text-xl">
+          We file your accounts and tax in 21 days from your instruction or you don&apos;t pay a penny.
         </p>
 
         <div

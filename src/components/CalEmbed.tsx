@@ -1,7 +1,7 @@
 "use client";
 
-// Direct link to Discovery Call (15 min) — skips event-type selection and opens calendar
-const CAL_EMBED_URL = "https://cal.com/figures/discovery";
+// Direct link to Discovery Call (20 min) — skips event-type selection and opens calendar
+const CAL_EMBED_URL = "https://cal.com/figures/discoverycall";
 
 export function CalEmbed({ className }: { className?: string }) {
   return (

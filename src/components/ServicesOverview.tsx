@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Users,
   BookOpen,
+  Receipt,
   type LucideIcon,
 } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
@@ -25,11 +26,12 @@ const ICON_MAP: Record<string, LucideIcon> = {
   "shield-check": ShieldCheck,
   users: Users,
   "book-open": BookOpen,
+  receipt: Receipt,
 };
 
 export function ServicesOverview() {
   return (
-    <section className="px-4 pt-8 pb-16 sm:px-6 sm:pt-12 sm:pb-20 lg:px-8 lg:pt-16 lg:pb-24" id="services">
+    <section className="px-4 pt-6 pb-16 sm:px-6 sm:pt-8 sm:pb-20 lg:px-8 lg:pt-10 lg:pb-24" id="services">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">

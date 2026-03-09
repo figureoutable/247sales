@@ -64,7 +64,7 @@ export function Footer() {
               </Link>
             ))}
             <a
-              href="https://cal.com/figures/discovery"
+              href="https://cal.com/figures/discoverycall"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-slate-600 transition-colors hover:text-black"

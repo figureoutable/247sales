@@ -50,7 +50,7 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://cal.com/figures/discovery"
+            href="https://cal.com/figures/discoverycall"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-800 sm:inline-block"
@@ -98,7 +98,7 @@ export function Header() {
             </Link>
           ))}
           <a
-            href="https://cal.com/figures/discovery"
+            href="https://cal.com/figures/discoverycall"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 rounded-full bg-black px-4 py-3 text-center text-sm font-medium text-white hover:bg-slate-800"

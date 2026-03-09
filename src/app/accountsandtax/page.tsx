@@ -18,7 +18,8 @@ export default function AccountsAndTaxPage() {
             <span className="mt-2 block">or You Don&apos;t Pay a Penny</span>
           </h1>
           <p className="mt-6 text-lg text-slate-600 sm:text-xl">
-            Full-Service Accounting for UK Businesses. Corporation tax, VAT, payroll, self-assessment. Fixed fees, same-day responses. No Jargon, No Surprises.
+            <span className="block">Full-Service Accounting for UK Businesses. Fixed fees, same-day responses.</span>
+            <span className="mt-1 block">No Jargon, No Surprises.</span>
           </p>
         </div>
       </section>
@@ -37,6 +38,32 @@ export default function AccountsAndTaxPage() {
           </div>
         </div>
       </section>
+
+      {/* SECTION 2b — BULLET POINTS (2x2, EY box highlighted) */}
+      <section className="px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+        <div className="mx-auto max-w-2xl">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4">
+            <div className="flex min-h-[4rem] items-center gap-2 rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-700 sm:gap-2.5 sm:px-5">
+              <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700" aria-hidden>✓</span>
+              <span>Open 8am to 8pm</span>
+            </div>
+            <div className="flex min-h-[4rem] items-center gap-2 rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-700 sm:gap-2.5 sm:px-5">
+              <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700" aria-hidden>✓</span>
+              <span>Fixed fees from day one</span>
+            </div>
+            <div className="flex min-h-[4rem] items-center gap-2 rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-slate-700 sm:gap-2.5 sm:px-5">
+              <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700" aria-hidden>✓</span>
+              <span>Same-day responses</span>
+            </div>
+            <div className="flex min-h-[4rem] items-center gap-2 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-base text-slate-800 sm:gap-2.5 sm:px-5">
+              <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700" aria-hidden>✓</span>
+              <span>EY Trained Chartered Accountants</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Testimonials />
 
       {/* SECTION 3 — BOOKING CALENDAR */}
       <section className="border-t border-slate-200 bg-slate-50/30 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
@@ -58,8 +85,6 @@ export default function AccountsAndTaxPage() {
           </div>
         </div>
       </section>
-
-      <Testimonials />
     </div>
   );
 }

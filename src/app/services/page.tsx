@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Users,
   BookOpen,
+  Receipt,
   type LucideIcon,
 } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
@@ -23,6 +24,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   "shield-check": ShieldCheck,
   users: Users,
   "book-open": BookOpen,
+  receipt: Receipt,
 };
 
 export const metadata: Metadata = {
@@ -80,7 +82,7 @@ export default function ServicesPage() {
             Not sure what you need? We’ll help you figure it out.
           </p>
           <a
-            href="https://cal.com/figures/discovery"
+            href="https://cal.com/figures/discoverycall"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"

@@ -1,6 +1,6 @@
 export const SITE_NAME = "Figures";
 export const TAGLINE = "Oddly Satisfying Accounting";
-export const CAL_LINK = "https://cal.com/figures/discovery";
+export const CAL_LINK = "https://cal.com/figures/discoverycall";
 
 export const SOCIAL_LINKS = {
   youtube: "https://youtube.com/@tryfigures",
@@ -13,6 +13,36 @@ export const SOCIAL_LINKS = {
 export const CONTACT_EMAIL = "joshua@tryfigures.com";
 
 export const SERVICES = [
+  {
+    id: "statutory-accounts-tax",
+    title: "Statutory Accounts & Tax",
+    icon: "shield-check",
+    description:
+      "Year-end accounts, corporation tax and VAT handled accurately and on time. Compliance sorted so you can focus on growth.",
+    detail:
+      "We prepare year-end accounts to Companies House and HMRC standards, file corporation tax returns and computations, and manage VAT returns and registrations. Deadlines are tracked and met so you stay compliant without the last-minute scramble.",
+    whoFor: "Limited companies that want compliance done properly and on time.",
+  },
+  {
+    id: "payroll-paye",
+    title: "Payroll & PAYE",
+    icon: "users",
+    description:
+      "Payroll processed accurately every month with RTI submissions and HMRC correspondence handled on your behalf.",
+    detail:
+      "We run payroll (including director-only), submit FPS and EPS to HMRC, and handle P45s, P60s and year-end. We deal with HMRC queries on your behalf so you don't have to. You get a clear summary each month and your team gets paid on time.",
+    whoFor: "Employers who want payroll and PAYE sorted without the admin headache.",
+  },
+  {
+    id: "bookkeeping-xero",
+    title: "Bookkeeping & Xero",
+    icon: "book-open",
+    description:
+      "Clean, organised books updated regularly so your numbers are always ready when you need them. We work in Xero and connect your whole finance stack.",
+    detail:
+      "We keep your books in Xero — coding transactions, reconciling banks, and keeping records tidy. We link in your bank feeds, expenses, and other tools so the finance stack works as one. When you need management accounts or year-end, the data is already there.",
+    whoFor: "Businesses that want their books in good shape without doing it themselves.",
+  },
   {
     id: "fractional-cfo",
     title: "Fractional CFO",
@@ -34,14 +64,14 @@ export const SERVICES = [
     whoFor: "Leadership teams and boards who need reliable, timely numbers to run the business.",
   },
   {
-    id: "financial-planning-analysis",
-    title: "Financial Planning & Analysis",
-    icon: "line-chart",
+    id: "vat",
+    title: "VAT",
+    icon: "receipt",
     description:
-      "Budgets, scenario models and rolling forecasts so you always know where the business is heading and what levers to pull.",
+      "VAT registration, returns and advice. We handle the paperwork and deadlines so you stay compliant and reclaim what you're owed.",
     detail:
-      "We build budgets and forecasts that tie to your strategy and are easy to update. Run scenarios (e.g. what if revenue slips, or we hire three more?) and see the impact on cash and profit. Rolling forecasts keep the plan relevant as the year unfolds.",
-    whoFor: "Businesses that want to plan ahead and understand the financial impact of different choices.",
+      "We register you for VAT when the time's right, prepare and submit your VAT returns on time, and advise on schemes (standard, flat rate, cash accounting). We make sure you don't overpay or miss reclaims.",
+    whoFor: "UK businesses that are VAT-registered or need to register and want it done properly.",
   },
   {
     id: "cash-flow-management",
@@ -72,36 +102,6 @@ export const SERVICES = [
     detail:
       "We work with you to build an annual budget that reflects your strategy and is grounded in realistic assumptions. Through the year we run quarterly reforecasts so the plan stays relevant. The result is a shared view of where you're heading and what good looks like.",
     whoFor: "Teams that want a clear financial plan and regular check-ins against it.",
-  },
-  {
-    id: "statutory-accounts-tax",
-    title: "Statutory Accounts & Tax",
-    icon: "shield-check",
-    description:
-      "Year-end accounts, corporation tax and VAT handled accurately and on time. Compliance sorted so you can focus on growth.",
-    detail:
-      "We prepare year-end accounts to Companies House and HMRC standards, file corporation tax returns and computations, and manage VAT returns and registrations. Deadlines are tracked and met so you stay compliant without the last-minute scramble.",
-    whoFor: "Limited companies that want compliance done properly and on time.",
-  },
-  {
-    id: "payroll-paye",
-    title: "Payroll & PAYE",
-    icon: "users",
-    description:
-      "Payroll processed accurately every month with RTI submissions and HMRC correspondence handled on your behalf.",
-    detail:
-      "We run payroll (including director-only), submit FPS and EPS to HMRC, and handle P45s, P60s and year-end. We deal with HMRC queries on your behalf so you don't have to. You get a clear summary each month and your team gets paid on time.",
-    whoFor: "Employers who want payroll and PAYE sorted without the admin headache.",
-  },
-  {
-    id: "bookkeeping-xero",
-    title: "Bookkeeping & Xero",
-    icon: "book-open",
-    description:
-      "Clean, organised books updated regularly so your numbers are always ready when you need them. We work in Xero and connect your whole finance stack.",
-    detail:
-      "We keep your books in Xero — coding transactions, reconciling banks, and keeping records tidy. We link in your bank feeds, expenses, and other tools so the finance stack works as one. When you need management accounts or year-end, the data is already there.",
-    whoFor: "Businesses that want their books in good shape without doing it themselves.",
   },
 ] as const;
 

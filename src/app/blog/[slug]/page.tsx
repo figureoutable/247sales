@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { client } from "@/sanity/lib/client";
 import { postBySlugQuery } from "@/sanity/lib/queries";
 import { PortableText } from "@portabletext/react";
@@ -136,13 +138,17 @@ export default async function BlogPostPage({ params }: Props) {
               />
             </div>
           )}
-          <div className="prose prose-slate mt-10 max-w-none prose-p:text-slate-600 dark:prose-p:text-zinc-400">
+          <div className="prose prose-slate mt-10 max-w-none prose-headings:font-bold prose-p:text-slate-600 prose-ul:my-4 prose-li:my-1 prose-a:text-black prose-a:no-underline hover:prose-a:underline dark:prose-p:text-zinc-400 dark:prose-a:text-white">
             {localPost.body ? (
-              localPost.body.split("\n\n").map((paragraph, i) => (
-                <p key={i} className="mb-4 last:mb-0">
-                  {paragraph}
-                </p>
-              ))
+              localPost.body.includes("##") ? (
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{localPost.body}</ReactMarkdown>
+              ) : (
+                localPost.body.split("\n\n").map((paragraph, i) => (
+                  <p key={i} className="mb-4 last:mb-0">
+                    {paragraph}
+                  </p>
+                ))
+              )
             ) : localPost.excerpt ? (
               <p className="text-lg">{localPost.excerpt}</p>
             ) : null}
