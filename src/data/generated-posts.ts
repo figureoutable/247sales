@@ -4,6 +4,7 @@
  */
 
 import { body as bodyLocal27 } from "./blog-post-bodies/local-27";
+import { body as bodyLocal28 } from "./blog-post-bodies/local-28";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -27,6 +28,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/statutory-accounts.jpg",
     excerpt: "Learn how to register a limited company in the UK with our comprehensive step-by-step guide. Simplify your Companies House registration process today.",
     body: bodyLocal27,
+  },
+  {
+    _id: "local-28",
+    title: "Understanding R&D Tax Credits for UK Small Businesses",
+    slug: { current: "rd-tax-credits-uk-small-businesses" },
+    category: "Tax",
+    publishedAt: "2025-03-14T09:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt: "Explore how R&D tax credits UK can benefit small businesses. Learn about research and development relief options including SME R&D scheme and RDEC.",
+    body: bodyLocal28,
   },
   // GENERATED_ENTRIES
 ];
