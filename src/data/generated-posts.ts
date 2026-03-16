@@ -5,6 +5,7 @@
 
 import { body as bodyLocal27 } from "./blog-post-bodies/local-27";
 import { body as bodyLocal28 } from "./blog-post-bodies/local-28";
+import { body as bodyLocal29 } from "./blog-post-bodies/local-29";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -38,6 +39,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/making-tax-digital.jpg",
     excerpt: "Explore how R&D tax credits UK can benefit small businesses. Learn about research and development relief options including SME R&D scheme and RDEC.",
     body: bodyLocal28,
+  },
+  {
+    _id: "local-29",
+    title: "Making Tax Digital for Income Tax: What You Need to Know",
+    slug: { current: "making-tax-digital-income-tax-guide" },
+    category: "Compliance",
+    publishedAt: "2025-03-17T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Learn about Making Tax Digital for income tax, its impact on your business, and how to maintain digital tax records effectively.",
+    body: bodyLocal29,
   },
   // GENERATED_ENTRIES
 ];
