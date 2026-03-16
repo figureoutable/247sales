@@ -120,7 +120,7 @@ No. Only taxable supplies made in the course of business count. Pre-trading inco
 
 The VAT registration threshold UK 2025 is £90,000 of taxable turnover in a rolling 12-month period. Monitor your turnover monthly, understand what counts, and register on time to avoid penalties. If you are close to the threshold or have questions about voluntary registration, we can help.
 
-At Figures we handle VAT registration, scheme selection, and ongoing returns for UK businesses. [Book a discovery call](/) or see our [VAT service](/services#vat) to get started.`;
+At Figures Chartered Accountants we handle VAT registration, scheme selection, and ongoing returns for UK businesses. [Book a discovery call](/) or see our [VAT service](/services#vat) to get started.`;
 
 export const bodyLocal22 = `One of the most common questions small business owners in the UK ask is: do I need to register for VAT? The answer depends on your taxable turnover, what you sell, and whether voluntary registration would benefit you. Getting it right matters because registering late can lead to backdated bills and HMRC penalties, while registering too early means charging VAT before you need to.
 
@@ -248,7 +248,7 @@ It depends. Sales of goods exported outside the UK are generally zero-rated. Ser
 
 Whether you need to register for VAT in the UK depends on your taxable turnover, what you sell, and your customer base. If you are over £90,000, registration is mandatory. If you are under, voluntary registration may still make sense. Monitor your rolling 12-month turnover each month and act quickly if you cross the line.
 
-At Figures we help UK businesses with VAT registration, scheme selection, and returns. If you are unsure whether to register, [book a discovery call](/) and we will walk you through it.`;
+At Figures Chartered Accountants we help UK businesses with VAT registration, scheme selection, and returns. If you are unsure whether to register, [book a discovery call](/) and we will walk you through it.`;
 
 export const bodyLocal23 = `Research and development tax credits are one of the most valuable reliefs available to UK businesses, yet many small companies either do not know they qualify or underestimate how much they could claim. R&D tax credits for UK small businesses can reduce your corporation tax bill or even generate a cash payment from HMRC. This guide explains how the scheme works, who qualifies, and how to make a claim.
 
@@ -376,7 +376,7 @@ Most claims are processed within four to eight weeks. Complex claims or those se
 
 R&D tax credits for UK small businesses offer genuine savings if you are developing products, software, or processes. Identify your qualifying projects, calculate the costs, and prepare a strong technical narrative. Do not miss the two-year deadline.
 
-If you think your company might qualify, we can help. At Figures we work with UK limited companies to prepare accounts and identify tax reliefs. [Book a discovery call](/) or see our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service to find out more.`;
+If you think your company might qualify, we can help. At Figures Chartered Accountants we work with UK limited companies to prepare accounts and identify tax reliefs. [Book a discovery call](/) or see our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service to find out more.`;
 
 export const bodyLocal24 = `Capital allowances are the main way UK businesses get tax relief on money spent on equipment, vehicles, and other assets. Unlike day-to-day expenses, which reduce your taxable profit in the year you incur them, capital expenditure is dealt with through a separate system of allowances. Understanding capital allowances can save your business significant tax. This guide explains how they work, what qualifies, and how to claim them.
 
@@ -501,7 +501,7 @@ If you sell the asset for more than the written-down value in the pool, you may 
 
 Capital allowances let UK businesses claim tax relief on equipment, vehicles, and other assets. The £1,000,000 AIA covers most small business purchases in full. Make sure you claim every year, keep records, and consider timing around your year end.
 
-If you need help with capital allowances or year-end tax planning, we are here to help. At Figures we prepare [Statutory Accounts & Tax](/services#statutory-accounts-tax) and make sure you claim every relief you are entitled to. [Book a discovery call](/) to get started.`;
+If you need help with capital allowances or year-end tax planning, we are here to help. At Figures Chartered Accountants we prepare [Statutory Accounts & Tax](/services#statutory-accounts-tax) and make sure you claim every relief you are entitled to. [Book a discovery call](/) to get started.`;
 
 export const bodyLocal25 = `Setting up payroll for the first time in the UK can feel daunting. There are registrations, deadlines, and compliance requirements that you need to get right from the start. Whether you are hiring your first employee or setting up payroll as a director-only company, this guide explains the process step by step. Getting payroll right from day one saves you time, penalties, and stress later on.
 
@@ -647,7 +647,7 @@ PAYE (Pay As You Earn) is the system HMRC uses to collect income tax and NI from
 
 Setting up payroll in the UK means registering with HMRC, choosing software, gathering employee details, running your first pay, and meeting ongoing RTI obligations. Get it right from the start and you avoid penalties and admin headaches down the line.
 
-If you would rather hand payroll over to someone who does it every day, we are here. At Figures we run payroll, handle RTI, manage auto-enrolment, and deal with HMRC on your behalf. [Book a discovery call](/) or see our [Payroll & PAYE](/services#payroll-paye) service.`;
+If you would rather hand payroll over to someone who does it every day, we are here. At Figures Chartered Accountants we run payroll, handle RTI, manage auto-enrolment, and deal with HMRC on your behalf. [Book a discovery call](/) or see our [Payroll & PAYE](/services#payroll-paye) service.`;
 
 export const bodyLocal26 = `HMRC penalties catch more UK businesses than you might think. Late filing, late payment, inaccurate returns, and missed deadlines can all trigger fines, interest, and in serious cases, further investigation. The good news is that most HMRC penalties are avoidable with the right systems and awareness. This guide explains the main types of penalties, how they work, and what you can do to avoid them.
 
@@ -802,4 +802,4 @@ You can view your penalty points through your VAT online account on the HMRC web
 
 HMRC penalties are avoidable. Know your deadlines, file and pay on time, keep accurate records, and use a professional to review your returns. If you do receive a penalty, check it carefully and appeal if you have a reasonable excuse.
 
-At Figures we track every deadline, prepare and file your returns, and deal with HMRC so you do not have to. If you want to take the stress out of compliance, [book a discovery call](/) or see our full range of [services](/services).`;
+At Figures Chartered Accountants we track every deadline, prepare and file your returns, and deal with HMRC so you do not have to. If you want to take the stress out of compliance, [book a discovery call](/) or see our full range of [services](/services).`;

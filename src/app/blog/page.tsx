@@ -7,7 +7,7 @@ import { getLocalPosts } from "@/data/blog-posts";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Insights and updates from Figures — accounting and advisory for UK founders and small businesses.",
+  description: "Insights and updates from Figures Chartered Accountants — accounting and advisory for UK founders and small businesses.",
 };
 
 type PostListItem = {
@@ -48,7 +48,7 @@ export default async function BlogPage() {
           Blog
         </h1>
         <p className="mt-4 text-lg text-slate-600">
-          Updates, guides, and thoughts from the Figures team.
+          Updates, guides, and thoughts from the Figures Chartered Accountants team.
         </p>
 
         {posts.length === 0 ? (

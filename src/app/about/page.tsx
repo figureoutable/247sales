@@ -4,7 +4,7 @@ import { CalEmbed } from "@/components/CalEmbed";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Josh co-founded Figures in 2023. EY Turnaround & Restructuring, Barclays, Crown Agents Bank. Credit Suisse, Metro Bank, Lloyds, UBS. Fractional CFO and accounting for UK founders.",
+    "Josh co-founded Figures Chartered Accountants in 2023. EY Turnaround & Restructuring, Barclays, Crown Agents Bank. Credit Suisse, Metro Bank, Lloyds, UBS. Fractional CFO and accounting for UK founders.",
 };
 
 export default function AboutPage() {
@@ -12,18 +12,18 @@ export default function AboutPage() {
     <div className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
-          About Figures
+          About Figures Chartered Accountants
         </h1>
 
         <div className="mt-12 space-y-10 text-slate-600 dark:text-zinc-400">
           <p>
-            Figures was founded in 2023 with a simple idea — that growing businesses deserve the same
+            Figures Chartered Accountants was founded in 2023 with a simple idea — that growing businesses deserve the same
             quality of financial thinking that big corporations pay millions for, without the price tag
             or the runaround.
           </p>
 
           <p>
-            Before Figures, Josh worked at EY in Turnaround and Restructuring, working on some of the
+            Before founding Figures Chartered Accountants, Josh worked at EY in Turnaround and Restructuring, working on some of the
             most high-profile engagements of recent years including <strong className="text-slate-900 dark:text-white">Credit Suisse</strong>,{" "}
             <strong className="text-slate-900 dark:text-white">Metro Bank</strong> and{" "}
             <strong className="text-slate-900 dark:text-white">Lloyds Bank</strong>. Before that he trained in Assurance auditing companies such
@@ -35,11 +35,11 @@ export default function AboutPage() {
 
           <p>
             He has seen first-hand what good financial management looks like — and what happens when
-            it breaks down. That experience shapes everything about how Figures works.
+            it breaks down. That experience shapes everything about how Figures Chartered Accountants works.
           </p>
 
           <p>
-            Today Figures is a team of three, serving founders and growing businesses across the UK.
+            Today Figures Chartered Accountants is a team of three, serving founders and growing businesses across the UK.
             We provide fractional CFO services, management reporting, financial planning and core
             accounting — with Big Four rigour and the kind of responsiveness you would never get from
             a big firm.

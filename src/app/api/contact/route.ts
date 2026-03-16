@@ -20,7 +20,7 @@ export async function POST(request: Request) {
           Authorization: `Bearer ${resendKey}`,
         },
         body: JSON.stringify({
-          from: process.env.RESEND_FROM ?? "Figures Website <onboarding@resend.dev>",
+          from: process.env.RESEND_FROM ?? "Figures Chartered Accountants Website <onboarding@resend.dev>",
           to: [CONTACT_EMAIL],
           replyTo: email,
           subject: `Contact form: ${name}`,

@@ -5,7 +5,7 @@ export function WhyFigures() {
     <section className="bg-slate-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-          Why Figures?
+          Why Figures Chartered Accountants?
         </h2>
         <p className="mt-4 text-center text-lg text-slate-600">
           We’re not your typical accountant. Here’s how we compare.

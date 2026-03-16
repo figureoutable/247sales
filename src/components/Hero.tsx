@@ -11,18 +11,19 @@ export function Hero() {
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
           Oddly Satisfying Accounting
         </h1>
-        <p className="mx-auto mt-6 max-w-4xl text-lg font-light text-slate-600 sm:whitespace-nowrap sm:text-xl">
-          We file your accounts and tax in 21 days of your instruction or you don&apos;t pay a penny.
+        <p className="mx-auto mt-6 max-w-4xl text-lg font-light text-slate-600 sm:text-xl">
+          Former EY accountants who&apos;ve advised the likes of Lloyds, UBS and Metro Bank bring that same expertise to
+          small businesses in Surrey without the corporate price tag.
         </p>
 
         <div
           className="mx-auto mt-10 max-w-4xl"
-          aria-label="Intro video: Welcome to Figures"
+          aria-label="Intro video: Welcome to Figures Chartered Accountants"
         >
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-lg ring-1 ring-slate-200/50">
             <iframe
               src={`https://www.youtube.com/embed/${YOUTUBE_EMBED_ID}?rel=0`}
-              title="Welcome to Figures – intro from Joshua Lee"
+              title="Welcome to Figures Chartered Accountants – intro from Joshua Lee"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="absolute inset-0 h-full w-full"

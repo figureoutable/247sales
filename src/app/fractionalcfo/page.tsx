@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Fractional CFO | Figures",
+  title: "Fractional CFO | Figures Chartered Accountants",
   description:
     "Senior finance leadership from £1,500 a month. No recruitment, no overhead, no long-term commitment. Book a free discovery call.",
 };
@@ -18,7 +18,7 @@ export default function FractionalCFOPage() {
             <span className="mt-2 block">You just don&apos;t need a full-time one</span>
           </h1>
           <p className="mt-6 text-lg text-slate-600 sm:text-xl">
-            The average CFO costs £100k+ a year. With Figures, you get the same expertise at a fraction of the cost.
+            The average CFO costs £100k+ a year. With Figures Chartered Accountants, you get the same expertise at a fraction of the cost.
             No recruitment, no overhead, no lock-in.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function FractionalCFOPage() {
           <div className="aspect-video w-full overflow-hidden rounded-2xl bg-slate-100">
             <iframe
               src="https://www.youtube.com/embed/IMINKKOOWgE"
-              title="How Figures fractional CFO works"
+              title="How Figures Chartered Accountants fractional CFO works"
               className="h-full w-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -127,7 +127,7 @@ export default function FractionalCFOPage() {
           <div className="mt-10 w-full">
             <iframe
               src="https://cal.com/figures/discoverycall"
-              title="Book a discovery call with Figures"
+              title="Book a discovery call with Figures Chartered Accountants"
               className="h-[700px] w-full"
               style={{ border: 0 }}
             />

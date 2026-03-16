@@ -23,7 +23,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <Link href="/" className="inline-block" aria-label="Figures home">
+            <Link href="/" className="inline-block" aria-label="Figures Chartered Accountants home">
               <span className="flex h-10 items-center overflow-hidden rounded-sm bg-white px-1">
                 <Image
                   src="/figures-logo.jpg"
@@ -36,6 +36,17 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-2 text-sm text-slate-600">{TAGLINE}</p>
+            <div className="mt-3 space-y-1 text-sm text-slate-600">
+              <p>
+                <span className="font-semibold">Email:</span> joshua@tryfigures.com
+              </p>
+              <p>
+                <span className="font-semibold">Phone:</span> +44 7775 081123
+              </p>
+              <p>
+                <span className="font-semibold">Location:</span> 65 Southwood Avenue, Woking, Surrey, GU21 2EZ
+              </p>
+            </div>
             <div className="mt-4 flex gap-4">
               {(Object.keys(SOCIAL_LINKS) as (keyof typeof SOCIAL_LINKS)[]).map((key) => (
                 <a

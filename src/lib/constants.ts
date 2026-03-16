@@ -1,4 +1,4 @@
-export const SITE_NAME = "Figures";
+export const SITE_NAME = "Figures Chartered Accountants";
 export const TAGLINE = "Oddly Satisfying Accounting";
 export const CAL_LINK = "https://cal.com/figures/discoverycall";
 
@@ -147,7 +147,7 @@ export const TESTIMONIALS = [
 
 // Placeholder FAQ – replace with your copy when provided
 export const FAQ_ITEMS = [
-  { q: "What does Figures do?", a: "We provide accounting and advisory for UK founders and small businesses — from bookkeeping and VAT to year-end accounts and tax. Think of us as your in-house finance team, without the overhead." },
+  { q: "What does Figures Chartered Accountants do?", a: "We provide accounting and advisory for UK founders and small businesses — from bookkeeping and VAT to year-end accounts and tax. Think of us as your in-house finance team, without the overhead." },
   { q: "Who do you work with?", a: "Limited companies, sole traders, and landlords. If you're running a UK business or have UK tax to sort, we can help." },
   { q: "How is pricing structured?", a: "We offer transparent, fixed-fee packages where possible so you know what you're paying. For more complex work we'll agree a scope and price upfront." },
   { q: "Where are you based?", a: "We're based in Surrey and work with clients across the UK remotely. We're happy to meet in person when it helps." },

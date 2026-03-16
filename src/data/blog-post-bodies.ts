@@ -101,7 +101,7 @@ As a sole trader, you and the business are the same for tax purposes. You can dr
 
 Paying yourself as a limited company director in the UK comes down to three things: choosing the right mix of salary and dividends, keeping your director's loan account clear and documented, and repaying any loan (or clearing it with a dividend) before the nine-month deadline to avoid Section 455 tax.
 
-If you would like to discuss how you pay yourself from your company, or you need help with director's loan accounts and year-end compliance, we would be glad to help. At Figures we work with UK founders and small businesses to keep their accounts and tax in order. You can [book a discovery call](/) or explore our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service to see how we can support you.`;
+If you would like to discuss how you pay yourself from your company, or you need help with director's loan accounts and year-end compliance, we would be glad to help. At Figures Chartered Accountants we work with UK founders and small businesses to keep their accounts and tax in order. You can [book a discovery call](/) or explore our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service to see how we can support you.`;
 
 export const bodyLocal19 = `A profit and loss statement (P&L) is one of the most important documents your business produces. It shows whether you made or lost money over a period, and where the numbers came from. Yet many UK founders and SME owners rarely look at theirs, or find it hard to make sense of the lines. You do not need to be an accountant to understand a P&L. This guide walks you through how to read a profit and loss statement in the UK, so you can use yours to make better decisions.
 
@@ -165,7 +165,7 @@ Do not try to absorb every line at once. Focus on:
 
 ## How often should you see a P&L?
 
-For most small businesses, a monthly or quarterly P&L is enough to run the business. Monthly management accounts typically include a P&L, a cash flow summary, and a balance sheet. Year-end accounts will include a full P&L that goes to Companies House and HMRC. At Figures we produce [monthly management accounts](/services#management-reporting) so you always have an up-to-date view.
+For most small businesses, a monthly or quarterly P&L is enough to run the business. Monthly management accounts typically include a P&L, a cash flow summary, and a balance sheet. Year-end accounts will include a full P&L that goes to Companies House and HMRC. At Figures Chartered Accountants we produce [monthly management accounts](/services#management-reporting) so you always have an up-to-date view.
 
 ## UK context and accuracy
 
@@ -197,7 +197,7 @@ Your accountant or bookkeeper can produce one from your records (e.g. in Xero). 
 
 Reading a profit and loss statement in the UK comes down to understanding the flow: revenue, cost of sales, gross profit, overheads, operating profit, then interest and tax. Focus on revenue trends, gross margin, and operating profit, and compare actuals to budget and prior periods.
 
-If you would like help understanding your P&L or getting management accounts that you can actually use, we would be glad to help. At Figures we work with UK founders and small businesses to make the numbers clear. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) service.`;
+If you would like help understanding your P&L or getting management accounts that you can actually use, we would be glad to help. At Figures Chartered Accountants we work with UK founders and small businesses to make the numbers clear. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) service.`;
 
 export const bodyLocal18 = `Tax deadlines can feel like a moving target. Corporation tax, VAT, and now Making Tax Digital (MTD) each have their own due dates and rules. Missing a deadline can mean penalties and interest from HMRC. This article explains when corporation tax is due in the UK and how it fits with other key deadlines, including MTD for income tax. It is for limited company directors and small business owners who want to stay on top of their obligations.
 
@@ -224,7 +224,7 @@ You need to:
 3. File the CT600 and computation with HMRC.
 4. Pay the tax by the 9-month-and-1-day deadline.
 
-Your accountant can do steps 2–4; many also prepare the accounts. At Figures we handle [Statutory Accounts & Tax](/services#statutory-accounts-tax) so you meet both Companies House and HMRC deadlines.
+Your accountant can do steps 2–4; many also prepare the accounts. At Figures Chartered Accountants we handle [Statutory Accounts & Tax](/services#statutory-accounts-tax) so you meet both Companies House and HMRC deadlines.
 
 ## How this fits with other UK tax deadlines
 
@@ -276,7 +276,7 @@ HMRC can allow extra time to file in certain circumstances. Payment is still due
 
 Corporation tax in the UK is due 9 months and 1 day after the end of your accounting period; the return is due within 12 months. Keep track of your year end and both deadlines, and get your information to your accountant early. If you are a sole trader or landlord, also watch for MTD for income tax from April 2026.
 
-If you would like help with corporation tax, year-end accounts, or Making Tax Digital, we would be glad to help. At Figures we work with UK limited companies and sole traders to stay compliant. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
+If you would like help with corporation tax, year-end accounts, or Making Tax Digital, we would be glad to help. At Figures Chartered Accountants we work with UK limited companies and sole traders to stay compliant. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
 
 export const bodyLocal17 = `Running out of cash is one of the main reasons small businesses fail. A cash flow forecast helps you see when money is coming in and when it is going out, so you can plan ahead and avoid surprises. This article explains how to build and use a cash flow forecast for a small business in the UK, and what to include so it stays useful.
 
@@ -327,7 +327,7 @@ A 13-week rolling forecast is often enough: each week or fortnight you add a new
 
 ## Who can help build and maintain it
 
-You can do a simple forecast in a spreadsheet. Your accountant or a [fractional CFO](/services#fractional-cfo) can build a more robust model and help you interpret it. At Figures we produce rolling cash forecasts for clients so they always know where they stand. We flag pinch points early and tie the forecast to your actual bank and accounting data where possible.
+You can do a simple forecast in a spreadsheet. Your accountant or a [fractional CFO](/services#fractional-cfo) can build a more robust model and help you interpret it. At Figures Chartered Accountants we produce rolling cash forecasts for clients so they always know where they stand. We flag pinch points early and tie the forecast to your actual bank and accounting data where possible.
 
 ## UK context and accuracy
 
@@ -359,4 +359,4 @@ A budget is a plan for revenue and costs (often for the P&L). A cash flow foreca
 
 A cash flow forecast for your small business in the UK helps you see when money is coming in and going out, so you can avoid shortfalls and plan for tax and other big payments. Keep it simple: cash in, cash out, opening and closing balance. Update it regularly (e.g. a 13-week rolling forecast) and use it to make decisions.
 
-If you would like help building or maintaining a cash flow forecast, we would be glad to help. At Figures we work with UK founders and small businesses on cash flow, management accounts, and planning. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) and [Cash Flow Management](/services#cash-flow-management) services.`;
+If you would like help building or maintaining a cash flow forecast, we would be glad to help. At Figures Chartered Accountants we work with UK founders and small businesses on cash flow, management accounts, and planning. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) and [Cash Flow Management](/services#cash-flow-management) services.`;

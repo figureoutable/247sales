@@ -8,7 +8,7 @@ export function CalEmbed({ className }: { className?: string }) {
     <div className={className}>
       <iframe
         src={CAL_EMBED_URL}
-        title="Book a call with Figures"
+        title="Book a call with Figures Chartered Accountants"
         className="h-[700px] w-full rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-zinc-800"
         style={{ border: 0 }}
       />

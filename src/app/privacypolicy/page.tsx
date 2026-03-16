@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Figures",
+  title: "Privacy Policy | Figures Chartered Accountants",
   description:
-    "Figures privacy policy. How we collect, use and protect your personal data when you use our accounting, tax and fractional CFO services.",
+    "Figures Chartered Accountants privacy policy. How we collect, use and protect your personal data when you use our accounting, tax and fractional CFO services.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
               1. Who we are
             </h2>
             <p className="mt-3">
-              Figures (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) provides accounting, tax and fractional CFO services to UK businesses. This privacy policy explains how we collect, use and protect your personal data when you use our website at tryfigures.com or our services.
+              Figures Chartered Accountants (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) provides accounting, tax and fractional CFO services to UK businesses. This privacy policy explains how we collect, use and protect your personal data when you use our website at tryfigures.com or our services.
             </p>
           </section>
 

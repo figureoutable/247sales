@@ -11,8 +11,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Figures | Oddly Satisfying Accounting",
-    template: "%s | Figures",
+    default: "Figures Chartered Accountants | Oddly Satisfying Accounting",
+    template: "%s | Figures Chartered Accountants",
   },
   description:
     "UK accounting and advisory for founders and small businesses. Plain English, same-day response, transparent pricing. Surrey-based.",

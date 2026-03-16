@@ -91,7 +91,7 @@ HMRC accept digital records. The important thing is that you can show the expens
 
 What expenses are tax deductible for limited companies in the UK comes down to the "wholly and exclusively" test: costs that are for the trade, properly recorded and evidenced, can reduce your profit and your corporation tax. Get the basics right (staff, premises, professional fees, travel within the rules) and avoid claiming private or non-deductible items.
 
-If you would like help with year-end accounts, tax, or expense policies, we would be glad to help. At Figures we work with UK limited companies to keep accounts and tax in order. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
+If you would like help with year-end accounts, tax, or expense policies, we would be glad to help. At Figures Chartered Accountants we work with UK limited companies to keep accounts and tax in order. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
 
 export const bodyLocal2 = `Too many small businesses treat financial planning as a one-off exercise: a budget set in January and barely looked at until the next year. In reality, your numbers change every month. New orders, late payers, and unexpected costs all affect where you will be in six or twelve months. Business financial planning for a small business in the UK should be a rolling process, not a static document. This article explains how to do it well.
 
@@ -131,7 +131,7 @@ At least quarterly. Many small businesses do a full reforecast every quarter: ta
 
 ## Who can help
 
-You can build a simple plan in a spreadsheet. An accountant or [fractional CFO](/services#fractional-cfo) can build a more robust model, tie it to your accounts, and help you interpret it. At Figures we work with UK founders on budgets, reforecasts, and cash flow so the plan stays useful.
+You can build a simple plan in a spreadsheet. An accountant or [fractional CFO](/services#fractional-cfo) can build a more robust model, tie it to your accounts, and help you interpret it. At Figures Chartered Accountants we work with UK founders on budgets, reforecasts, and cash flow so the plan stays useful.
 
 ## UK context and accuracy
 
@@ -163,7 +163,7 @@ Management accounts show what actually happened (actuals). Your plan or forecast
 
 Business financial planning for a small business in the UK means building a realistic view of profit and cash, updating it regularly (at least quarterly), and using it to make decisions. Include revenue, costs, cash flow, and clear assumptions. Keep it simple enough to maintain and detailed enough to be useful.
 
-If you would like help with financial planning, budgets, or reforecasts, we would be glad to help. At Figures we work with UK founders and small businesses on planning and reporting. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) and [Financial Planning](/services#financial-planning-analysis) support.`;
+If you would like help with financial planning, budgets, or reforecasts, we would be glad to help. At Figures Chartered Accountants we work with UK founders and small businesses on planning and reporting. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) and [Financial Planning](/services#financial-planning-analysis) support.`;
 
 export const bodyLocal3 = `VAT can feel like a maze. When do you need to register? What rate do you charge? How do you report it? For small businesses in the UK, getting VAT wrong can mean unnecessary cost, admin headaches, or trouble with HMRC. This article explains how VAT works for small businesses in the UK in plain terms: registration, rates, returns, and the main schemes you might use.
 
@@ -233,7 +233,7 @@ HMRC publish a list of sectors and their flat rate percentages. The percentage d
 
 How VAT works for small businesses in the UK: you charge VAT on taxable sales, reclaim it on qualifying costs, and pay or reclaim the difference on your return. Register when you exceed the threshold (or voluntarily), choose a scheme that fits (standard, flat rate, or cash accounting), and keep digital records. Getting it right from the start saves time and avoids problems.
 
-If you would like help with VAT registration, returns, or choosing a scheme, we would be glad to help. At Figures we work with UK small businesses on VAT and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
+If you would like help with VAT registration, returns, or choosing a scheme, we would be glad to help. At Figures Chartered Accountants we work with UK small businesses on VAT and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
 
 export const bodyLocal4 = `If your accountant sends you a pack of numbers every month and you file it without reading it, you are not alone. But management accounts are not just for compliance. A good management account gives you a clear view of how your business is performing so you can make decisions. This article explains what a management account is in the UK context, what it should include, and how to use it.
 
@@ -314,7 +314,7 @@ Get your bookkeeping up to date so the numbers are reliable. Then agree with you
 
 What is a management account in the UK? It is an internal financial report (or set of reports) that shows profit, cash, and often comparison to budget and prior period. It is not the same as your statutory accounts; it is the regular snapshot you use to run the business. Good management accounts are timely, clear, and actionable.
 
-If you would like to set up or improve your management accounts, we would be glad to help. At Figures we produce monthly packs for UK SMEs so you always know where you stand. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) service.`;
+If you would like to set up or improve your management accounts, we would be glad to help. At Figures Chartered Accountants we produce monthly packs for UK SMEs so you always know where you stand. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) service.`;
 
 export const bodyLocal5 = `Taking a salary from your own limited company is straightforward. Taking a mix of salary and dividends so that you keep more after tax is where many directors get stuck. The balance between director salary and dividends in the UK is a question of tax efficiency, legal compliance, and personal circumstances. This article explains how director salary vs dividend tax efficiency works for UK limited companies, so you can structure your pay in a way that makes sense.
 
@@ -386,7 +386,7 @@ The dividend allowance (£500 for 2025/26) means the first £500 of dividend inc
 
 Director salary vs dividend tax efficiency in the UK comes down to using salary to secure state pension and personal allowance with minimal NI, and dividends to take the rest of your income at lower tax rates. Keep the structure legal (retained profits, proper paperwork) and the director's loan account clear.
 
-If you would like to discuss how you pay yourself from your company, we would be glad to help. At Figures we work with UK limited company directors on salary, dividends, and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) and [Payroll & PAYE](/services#payroll-paye) services.`;
+If you would like to discuss how you pay yourself from your company, we would be glad to help. At Figures Chartered Accountants we work with UK limited company directors on salary, dividends, and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) and [Payroll & PAYE](/services#payroll-paye) services.`;
 
 export const bodyLocal6 = `Profit margin is one of the most telling numbers in your business. It shows how much of each pound of revenue you keep after costs. When margins slip, you work harder for less. When they improve, you have more to reinvest or take home. This article looks at how to improve profit margins for a small business in the UK: where to look, what to change, and how to track it.
 
@@ -456,7 +456,7 @@ Both. Gross margin shows the health of your core product or service; net margin 
 
 How to improve profit margins for a small business in the UK: know your gross and net margin, then work on pricing, cost of sales, mix, and overheads. Track the numbers regularly and use them to decide where to focus. Small gains compound.
 
-If you would like help with margin analysis, pricing, or management reporting, we would be glad to help. At Figures we work with UK SMEs on numbers that drive decisions. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) service.`;
+If you would like help with margin analysis, pricing, or management reporting, we would be glad to help. At Figures Chartered Accountants we work with UK SMEs on numbers that drive decisions. You can [book a discovery call](/) or look at our [Management Reporting](/services#management-reporting) service.`;
 
 export const bodyLocal7 = `Corporation tax is one of the main taxes your limited company pays. Knowing the rate, when it applies, and how it is calculated helps you plan and avoid surprises. This article explains the corporation tax rate in the UK for 2025 and how it applies to small companies, including the small profits rate and the main rules that affect what you pay.
 
@@ -512,7 +512,7 @@ Yes. Claim all allowable expenses and reliefs (e.g. capital allowances, R&D if y
 
 The corporation tax rate in the UK for 2025 is 25% for profits over £250,000 (main rate) and 19% for profits of £50,000 or less (small profits rate), with marginal relief in between. Associated companies share the limits. Tax is due 9 months and 1 day after the period end. Getting the calculation and payment right keeps you compliant and avoids interest and penalties.
 
-If you would like help with corporation tax, year-end accounts, or tax planning, we would be glad to help. At Figures we work with UK limited companies on accounts and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
+If you would like help with corporation tax, year-end accounts, or tax planning, we would be glad to help. At Figures Chartered Accountants we work with UK limited companies on accounts and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
 
 export const bodyLocal8 = `You need someone who can own the numbers, challenge the board, and help you make big decisions. You do not need a full-time finance director on the payroll. A fractional CFO in the UK gives small and medium-sized businesses access to senior finance leadership for a fraction of the cost and commitment of a permanent hire. This article explains what a fractional CFO does, when a small business might need one, and how to get the most from the relationship.
 
@@ -586,7 +586,7 @@ No. Many fractional CFOs work remotely with regular calls and occasional on-site
 
 A fractional CFO in the UK gives small businesses access to senior finance leadership without the cost and commitment of a full-time hire. They own the numbers, support strategy and fundraising, and challenge the board. If you are scaling, raising, or simply want that level of input for a few days a month, it is worth exploring.
 
-If you would like to discuss whether a fractional CFO is right for your business, we would be glad to talk. At Figures we provide fractional CFO and [management reporting](/services#management-reporting) to UK SMEs. You can [book a discovery call](/) or look at our [Fractional CFO](/services#fractional-cfo) service.`;
+If you would like to discuss whether a fractional CFO is right for your business, we would be glad to talk. At Figures Chartered Accountants we provide fractional CFO and [management reporting](/services#management-reporting) to UK SMEs. You can [book a discovery call](/) or look at our [Fractional CFO](/services#fractional-cfo) service.`;
 
 export const bodyLocal9 = `VAT you pay on business purchases is often reclaimable. That means you can get money back from HMRC when your input VAT (on what you buy) exceeds your output VAT (on what you sell). Many UK small businesses miss out because they do not know the rules, keep poor records, or assume they cannot reclaim. This article explains reclaiming VAT on business expenses in the UK: what you can claim, what you need to keep, and common mistakes to avoid.
 
@@ -651,7 +651,7 @@ VAT on food for staff (e.g. office tea and coffee) can be reclaimable if it is f
 
 Reclaiming VAT on business expenses in the UK means claiming back the VAT you pay on qualifying business purchases, supported by valid invoices and records. Know what you can and cannot reclaim (including the rules on cars and entertainment), keep good records, and include reclaims on your VAT return. It can improve your cash flow and reduce net VAT cost.
 
-If you would like help with VAT, record-keeping, or returns, we would be glad to help. At Figures we work with UK businesses on VAT and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) and [Bookkeeping & Xero](/services#bookkeeping-xero) services.`;
+If you would like help with VAT, record-keeping, or returns, we would be glad to help. At Figures Chartered Accountants we work with UK businesses on VAT and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) and [Bookkeeping & Xero](/services#bookkeeping-xero) services.`;
 
 export const bodyLocal10 = `Investors and boards want to see the numbers that matter. That usually means a small set of KPIs (key performance indicators) that tell the story of the business at a glance. For small businesses in the UK, choosing the right KPIs and reporting them consistently can make the difference between a confident conversation and a confused one. This article looks at KPIs for small businesses in the UK: what to measure, how to present them, and how to avoid KPI overload.
 
@@ -735,7 +735,7 @@ Often the founder, a finance person, or an external [fractional CFO](/services#f
 
 KPIs for small businesses in the UK should be a small set of financial (and where relevant operational) metrics that you and your investors or board use to track performance. Focus on revenue, profit, cash, and the drivers that matter for your business. Present them consistently and with context so they drive decisions, not confusion.
 
-If you would like help defining or reporting KPIs, we would be glad to help. At Figures we build KPI-driven [management](/services#management-reporting) and [investor](/services#board-investor-reporting) packs for UK SMEs. You can [book a discovery call](/) or look at our services.`;
+If you would like help defining or reporting KPIs, we would be glad to help. At Figures Chartered Accountants we build KPI-driven [management](/services#management-reporting) and [investor](/services#board-investor-reporting) packs for UK SMEs. You can [book a discovery call](/) or look at our services.`;
 
 export const bodyLocal11 = `One of the first big decisions when you start a business in the UK is whether to operate as a sole trader or set up a limited company. The choice affects tax, liability, admin, and how you are seen by customers and lenders. This article compares sole trader vs limited company in the UK for 2025, so you can make an informed choice.
 
@@ -813,7 +813,7 @@ You can be a sole trader in one venture and a director of a limited company in a
 
 Sole trader vs limited company in the UK in 2025: sole trader is simpler and you are personally liable; limited company gives liability protection and can be more tax-efficient at higher profits, with more admin. The right choice depends on your profits, risk, and plans. Many businesses start as sole traders and incorporate when they grow or need the protection.
 
-If you would like to discuss your structure or switch from sole trader to limited company, we would be glad to help. At Figures we work with UK sole traders and limited companies on tax and accounts. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
+If you would like to discuss your structure or switch from sole trader to limited company, we would be glad to help. At Figures Chartered Accountants we work with UK sole traders and limited companies on tax and accounts. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
 
 export const bodyLocal12 = `Management accounts are only useful if they tell you what you need to know, when you need to know it. Too often they are either too thin (no context, no comparison) or too thick (dozens of pages no one reads). This article sets out what monthly management accounts should include for a UK small business so you can get a pack that actually helps you run the business.
 
@@ -893,7 +893,7 @@ Agree what you want in the pack (P&L, cash, KPIs, commentary), how often, and wh
 
 What should monthly management accounts include for a UK small business? At least a P&L (actual vs budget and prior year), a cash summary, a few KPIs, and short commentary. Add a balance sheet and a cash forecast if they help. Keep the pack focused so it is read and used.
 
-If you would like to set up or improve your monthly management accounts, we would be glad to help. At Figures we produce [management accounts](/services#management-reporting) for UK SMEs so you always know where you stand. You can [book a discovery call](/) or look at our Management Reporting service.`;
+If you would like to set up or improve your monthly management accounts, we would be glad to help. At Figures Chartered Accountants we produce [management accounts](/services#management-reporting) for UK SMEs so you always know where you stand. You can [book a discovery call](/) or look at our Management Reporting service.`;
 
 export const bodyLocal13 = `If you are VAT registered in the UK, you usually account for VAT on the standard scheme: you report the VAT you charge (outputs) and the VAT you pay (inputs), and pay or reclaim the difference. The flat rate scheme is an alternative that can simplify your returns and sometimes reduce your net VAT bill. This article explains the VAT flat rate scheme for UK small businesses: how it works, who it suits, and how to decide if it is right for you.
 
@@ -960,7 +960,7 @@ The flat rate scheme applies to your total turnover including VAT. Some business
 
 The VAT flat rate scheme lets you pay a fixed percentage of your turnover to HMRC and generally not reclaim input VAT. It can simplify returns and sometimes reduce net VAT cost for businesses with few reclaimable inputs. Check your sector rate, compare to the standard scheme, and consider the first year discount if you have just registered.
 
-If you would like help deciding between the flat rate and standard scheme, or with VAT returns, we would be glad to help. At Figures we work with UK businesses on VAT and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
+If you would like help deciding between the flat rate and standard scheme, or with VAT returns, we would be glad to help. At Figures Chartered Accountants we work with UK businesses on VAT and tax. You can [book a discovery call](/) or look at our [Statutory Accounts & Tax](/services#statutory-accounts-tax) service.`;
 
 export const bodyLocal14 = `Scaling a small business in the UK is as much a finance challenge as a sales or product one. You need to fund growth, manage cash as you invest, and avoid running out of money before the extra revenue arrives. This article looks at how to scale a small business in the UK from a finance perspective: funding, cash flow, and the numbers you need to get right.
 
@@ -1024,7 +1024,7 @@ When the numbers get too complex to run in your head, when you are raising or pl
 
 How to scale a small business in the UK from a finance perspective: get the basics right (books, unit economics, cash flow), plan the funding gap, choose the right mix of funding, and monitor actuals vs plan. Growth that is not funded and monitored can break the business; growth that is planned and measured is more likely to succeed.
 
-If you would like help with planning, funding, or reporting as you scale, we would be glad to help. At Figures we work with UK SMEs on [cash flow](/services#cash-flow-management), [management reporting](/services#management-reporting), and [fractional CFO](/services#fractional-cfo) support. You can [book a discovery call](/) or explore our services.`;
+If you would like help with planning, funding, or reporting as you scale, we would be glad to help. At Figures Chartered Accountants we work with UK SMEs on [cash flow](/services#cash-flow-management), [management reporting](/services#management-reporting), and [fractional CFO](/services#fractional-cfo) support. You can [book a discovery call](/) or explore our services.`;
 
 export const bodyLocal15 = `Completing a VAT return in the UK is a regular task for most VAT-registered businesses. You must report your output VAT (what you charge) and input VAT (what you pay on business purchases), work out the difference, and pay or reclaim that amount. Getting it wrong can mean paying too much, reclaiming incorrectly, or facing penalties. This article explains how to complete a VAT return in the UK: what to include, how to calculate the figures, and how to submit and pay on time.
 
@@ -1115,7 +1115,7 @@ On the flat rate scheme you do not fill Boxes 1–4 in the same way; you apply y
 
 How to complete a VAT return in the UK: report output VAT (Box 1), input VAT (Box 4), and the other required figures. Use MTD-compatible software, keep the right records, and submit and pay by the deadline (one month and seven days after the period end). Getting it right keeps you compliant and avoids penalties.
 
-If you would like help with VAT returns, bookkeeping, or MTD, we would be glad to help. At Figures we work with UK businesses on [VAT and tax](/services#statutory-accounts-tax) and [bookkeeping](/services#bookkeeping-xero). You can [book a discovery call](/) or look at our services.`;
+If you would like help with VAT returns, bookkeeping, or MTD, we would be glad to help. At Figures Chartered Accountants we work with UK businesses on [VAT and tax](/services#statutory-accounts-tax) and [bookkeeping](/services#bookkeeping-xero). You can [book a discovery call](/) or look at our services.`;
 
 export const bodyLocal16 = `Choosing the right accounting software for your small business in the UK can save you time, reduce errors, and make it easier to stay on top of tax and reporting. The market is crowded: Xero, QuickBooks, FreeAgent, Sage, and others all offer different features and pricing. This article looks at what to consider when picking the best accounting software for a small business in the UK, and how to get the most from it once it is in place.
 
@@ -1203,4 +1203,4 @@ Most cloud software allows you to invite your accountant as a user with the righ
 
 The best accounting software for a small business in the UK is one that is MTD-compatible, connects to your bank, produces the reports you need, and fits your (and your accountant's) workflow. Xero, QuickBooks, FreeAgent, and Sage are all credible choices; the right one depends on your size and how you work. Use it consistently and keep the books up to date so you get the full benefit.
 
-If you would like help choosing or using accounting software, or with bookkeeping and reporting, we would be glad to help. At Figures we work in [Xero](/services#bookkeeping-xero) and support UK small businesses with [bookkeeping](/services#bookkeeping-xero) and [management accounts](/services#management-reporting). You can [book a discovery call](/) or look at our services.`;
+If you would like help choosing or using accounting software, or with bookkeeping and reporting, we would be glad to help. At Figures Chartered Accountants we work in [Xero](/services#bookkeeping-xero) and support UK small businesses with [bookkeeping](/services#bookkeeping-xero) and [management accounts](/services#management-reporting). You can [book a discovery call](/) or look at our services.`;

@@ -5,7 +5,7 @@ import { CalEmbed } from "@/components/CalEmbed";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Figures. Send a message or schedule a discovery call. UK accounting and advisory for founders and small businesses.",
+    "Get in touch with Figures Chartered Accountants. Send a message or schedule a discovery call. UK accounting and advisory for founders and small businesses.",
 };
 
 export default function ContactPage() {
