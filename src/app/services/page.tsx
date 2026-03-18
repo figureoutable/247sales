@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Briefcase,
   LayoutDashboard,
@@ -44,6 +45,18 @@ export default function ServicesPage() {
           End-to-end finance and accounting for UK founders and small businesses. Here’s what we offer.
         </p>
 
+        <div className="mt-10 flex flex-wrap gap-3">
+          {SERVICES.map((service) => (
+            <Link
+              key={service.id}
+              href={`/services/${service.id}`}
+              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-slate-300 hover:text-black"
+            >
+              {service.title}
+            </Link>
+          ))}
+        </div>
+
         <div className="mt-16 space-y-20">
           {SERVICES.map((service) => {
             const Icon = ICON_MAP[service.icon] ?? Briefcase;
@@ -72,6 +85,17 @@ export default function ServicesPage() {
                     <span className="text-slate-500 dark:text-zinc-500">Who it’s for:</span> {service.whoFor}
                   </p>
                 )}
+                <div className="mt-6">
+                  <Link
+                    href={`/services/${service.id}`}
+                    className="inline-flex items-center text-sm font-semibold text-black hover:underline"
+                  >
+                    View {service.title}
+                    <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </section>
             );
           })}
