@@ -6,6 +6,7 @@
 import { body as bodyLocal27 } from "./blog-post-bodies/local-27";
 import { body as bodyLocal28 } from "./blog-post-bodies/local-28";
 import { body as bodyLocal29 } from "./blog-post-bodies/local-29";
+import { body as bodyLocal30 } from "./blog-post-bodies/local-30";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -49,6 +50,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/statutory-accounts.jpg",
     excerpt: "Learn about Making Tax Digital for income tax, its impact on your business, and how to maintain digital tax records effectively.",
     body: bodyLocal29,
+  },
+  {
+    _id: "local-30",
+    title: "How to Choose an Accountant for UK Small Business",
+    slug: { current: "choose-accountant-uk-small-business" },
+    category: "Leadership",
+    publishedAt: "2025-03-19T09:00:00.000Z",
+    mainImage: "/blog/fractional-cfo.jpg",
+    excerpt: "Learn how to choose an accountant for your UK small business, exploring key factors to consider and tips for finding the right financial partner.",
+    body: bodyLocal30,
   },
   // GENERATED_ENTRIES
 ];
