@@ -31,6 +31,11 @@ export function Hero() {
           </div>
         </div>
 
+        <p className="mx-auto mt-8 max-w-4xl text-lg font-light text-slate-600 sm:text-xl">
+          We know how frustrating it is to feel ignored by your accountant. So we <strong className="font-bold">guarantee a response within 5 business
+          hours</strong>, every time. If we ever fall short, your next month is on us.
+        </p>
+
         <div className="mt-10 flex flex-col items-center justify-center">
           <a
             href={CAL_LINK}

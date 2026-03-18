@@ -65,30 +65,32 @@ export function Header() {
             {servicesOpen && (
               <div
                 role="menu"
-                className="absolute left-0 top-full z-50 mt-3 w-[320px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg"
+                className="absolute left-0 top-full z-50 w-[320px] pt-2"
               >
-                <div className="p-2">
-                  <Link
-                    href="/services"
-                    role="menuitem"
-                    className="block rounded-xl px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50"
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    View all services
-                  </Link>
-                  <div className="my-2 h-px bg-slate-200" />
-                  <div className="grid gap-1">
-                    {serviceLinks.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        role="menuitem"
-                        className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-black"
-                        onClick={() => setServicesOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+                  <div className="p-2">
+                    <Link
+                      href="/services"
+                      role="menuitem"
+                      className="block rounded-xl px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      View all services
+                    </Link>
+                    <div className="my-2 h-px bg-slate-200" />
+                    <div className="grid gap-1">
+                      {serviceLinks.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          role="menuitem"
+                          className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-black"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

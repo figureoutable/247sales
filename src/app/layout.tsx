@@ -41,6 +41,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   return (
     <html lang="en" className={plusJakarta.variable}>
       <head>
+        <script
+          type="text/javascript"
+          charSet="UTF-8"
+          src="https://cdn.cookie-script.com/s/eb65a2062c7ccdde1707b9f7ba62d907.js"
+        />
         <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
       </head>
       <body className="min-h-screen flex flex-col antialiased">

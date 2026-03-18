@@ -9,6 +9,7 @@ export type ServicePageContent = {
   itemsToNote: string[];
   whatWeNeedFromYou: string[];
   typicalTimeline: string[];
+  extraCopy: string[];
   faqs: { q: string; a: string }[];
 };
 
@@ -44,6 +45,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
     typicalTimeline: [
       "Most year ends are completed within a few weeks once records are ready.",
       "If bookkeeping is behind or reconciliations are incomplete, we agree a clean-up plan first.",
+    ],
+    extraCopy: [
+      "Statutory accounts are more than a box-ticking exercise. They are the formal record of how your company performed in the year, and they need to reconcile back to your bookkeeping and supporting evidence. When the underlying records are clean, the year end is straightforward. When they are not, it becomes time-consuming and stressful. Our approach is to make sure the foundations are right so you can file with confidence and move on.",
+      "We also focus on the practical side: deadlines, cash flow, and clarity. Corporation tax is usually due before the CT600 filing deadline, so we help you understand what is due and when. If something unusual is sitting in the accounts (director loans, dividends, one-off transactions), we flag it early and explain the options in plain English so there are no surprises later.",
     ],
     faqs: [
       {
@@ -93,6 +98,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
     typicalTimeline: [
       "Setup is usually quick once we have the employee list and pay dates.",
       "Ongoing runs follow your pay calendar; we work backwards from payday to keep approvals simple.",
+    ],
+    extraCopy: [
+      "Payroll is one of those areas where small mistakes compound. A late RTI submission, an incorrect tax code, or a missed pension duty can create a trail of admin and HMRC follow-up. We keep the process simple: confirm changes, run payroll, file RTI, and tell you exactly what is due and when. The result is a predictable payroll rhythm for you and your team.",
+      "For director-only companies, the goal is often tax efficiency and compliance rather than complexity. We can run a clean director payroll alongside your year-end accounts and tax, and coordinate with dividends so everything is documented properly and your records stay consistent.",
     ],
     faqs: [
       {
@@ -144,6 +153,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
       "A tidy-up can take a few days to a few weeks depending on backlog and complexity.",
       "Once clean, ongoing bookkeeping becomes quick and predictable.",
     ],
+    extraCopy: [
+      "Good bookkeeping is not about perfection, it is about reliability. When transactions are coded consistently and reconciliations are up to date, you can actually trust your P&L, your cash position, and your VAT returns. That means better decisions and fewer last-minute scrambles when a deadline hits.",
+      "We also build for scalability. As your transaction volume increases, manual processes break. We help you set up bank rules, receipt capture, and a simple workflow so your finance stack works as one system. The goal is tidy records now, and a structure that does not fall apart as you grow.",
+    ],
     faqs: [
       {
         q: "Do you only work with Xero?",
@@ -192,6 +205,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
     typicalTimeline: [
       "Week 1-2: baseline reporting and cash visibility.",
       "Weeks 3-4: first pack/forecast and decision support cadence.",
+    ],
+    extraCopy: [
+      "A fractional CFO should make decisions easier. That means turning numbers into clarity: what is really driving performance, what the constraints are, and what you can do next. We focus on the metrics that matter, keep the reporting consistent, and help you prioritise actions that move cash and profitability in the right direction.",
+      "If you are raising funding or reporting to stakeholders, credibility matters. We help you build a narrative that matches the numbers and stands up to scrutiny. That might mean tightening reporting, improving forecasting, or pressure-testing assumptions before you take them into a board meeting or investor conversation.",
     ],
     faqs: [
       {
@@ -242,6 +259,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
       "First pack: usually within the first month after setup and clean data inputs.",
       "Ongoing: delivered on a fixed schedule agreed with you.",
     ],
+    extraCopy: [
+      "Management accounts are only valuable if they are timely and actionable. We design packs so you can see performance quickly: what changed, why it changed, and what decisions it implies. That might be adjusting pricing, tightening costs, focusing on a segment, or fixing collection issues that are hurting cash.",
+      "We keep the format consistent month to month. That consistency is what makes trends obvious. Over time, the pack becomes a tool you and your team actually use, not a PDF that gets filed away. If you need board-ready reporting, we can shape the same core numbers into a narrative suitable for investors and stakeholders.",
+    ],
     faqs: [
       {
         q: "What is included in a typical pack?",
@@ -290,6 +311,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
     typicalTimeline: [
       "Registration: typically a few weeks depending on HMRC processing times.",
       "Returns: we work to your quarterly/monthly schedule with clear deadlines.",
+    ],
+    extraCopy: [
+      "VAT is easiest when the bookkeeping is set up correctly. Most issues we see come from inconsistent coding, missing evidence, or misunderstanding what is taxable vs exempt. We put simple rules in place so your VAT position reflects reality and your returns are straightforward to review and submit.",
+      "We also help you choose the right approach for your business. The flat rate scheme can simplify admin but it is not always the cheapest. Cash accounting can improve cash flow for businesses with slow-paying customers. We will explain the trade-offs and recommend the option that fits your customer base and margins.",
     ],
     faqs: [
       {
@@ -340,6 +365,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
       "Initial forecast: typically within 1-2 weeks once inputs are available.",
       "Then updated weekly on an agreed day and time.",
     ],
+    extraCopy: [
+      "Cash flow management is about control. A rolling 13-week forecast gives you visibility early enough to act, whether that is chasing invoices, delaying spend, adjusting payment terms, or lining up funding. We focus on a simple rhythm so the forecast stays current and useful rather than becoming stale.",
+      "We build forecasts around your real cash drivers: payroll, VAT and PAYE dates, recurring costs, and expected receipts. Over time, tracking actual vs forecast improves accuracy and makes the forecast a reliable decision tool, not just an exercise in guesswork.",
+    ],
     faqs: [
       {
         q: "Is this only for businesses in trouble?",
@@ -389,6 +418,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
       "First pack: usually within a month once data sources are reliable.",
       "Then delivered on the board/investor schedule (monthly or quarterly).",
     ],
+    extraCopy: [
+      "Boards and investors do not want more numbers, they want the right numbers and a clear explanation. We build packs that are easy to scan, hard to misinterpret, and anchored to consistent KPI definitions. That means fewer distractions, better questions, and more productive decisions.",
+      "We also support the narrative. If performance is strong, we help you explain why it is repeatable. If it is under pressure, we help you frame the plan, the risks, and the actions you are taking. Good reporting builds trust, which matters when you need support, investment, or patience from stakeholders.",
+    ],
     faqs: [
       {
         q: "Can you help with investor updates as well as board packs?",
@@ -437,6 +470,10 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
     typicalTimeline: [
       "Initial budget build: typically 1-3 weeks depending on complexity and stakeholder inputs.",
       "Reforecast: quarterly sessions, usually faster once the model exists.",
+    ],
+    extraCopy: [
+      "A budget is useful when it reflects how your business actually operates. We build plans from the drivers up: pricing, conversion, capacity, delivery costs, and headcount. That makes the plan easier to update and more credible when you are explaining performance internally or externally.",
+      "We also tie the plan to cash. Profitability is important, but cash timing is what keeps you safe. By linking assumptions to receipts, tax dates, and spend, you get a plan that helps you avoid surprises and make decisions early, not after the bank balance forces your hand.",
     ],
     faqs: [
       {

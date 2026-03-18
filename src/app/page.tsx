@@ -21,9 +21,6 @@ export default function Home() {
           <h2 id="book-call-home-heading" className="text-center text-2xl font-bold text-slate-900 sm:text-3xl">
             Book a discovery call
           </h2>
-          <p className="mt-2 text-center text-slate-600">
-            Choose a time below — no need to leave this page.
-          </p>
           <CalEmbed className="mt-8" />
         </div>
       </section>

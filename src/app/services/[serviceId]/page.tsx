@@ -41,8 +41,8 @@ export default async function ServicePage({ params }: Props) {
         </h1>
         <p className="mt-6 text-lg text-slate-600">{content.intro}</p>
 
-        <div className="mt-12 grid gap-8">
-          <section className="rounded-2xl border border-slate-200 bg-white p-8">
+        <div className="mt-14 space-y-12">
+          <section>
             <h2 className="text-2xl font-bold text-slate-900">What we do</h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
               {content.whatWeDo.map((item) => (
@@ -51,7 +51,7 @@ export default async function ServicePage({ params }: Props) {
             </ul>
           </section>
 
-          <section className="rounded-2xl border border-slate-200 bg-white p-8">
+          <section>
             <h2 className="text-2xl font-bold text-slate-900">How we do it</h2>
             <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-600">
               {content.howWeWork.map((item) => (
@@ -60,7 +60,7 @@ export default async function ServicePage({ params }: Props) {
             </ol>
           </section>
 
-          <section className="rounded-2xl border border-slate-200 bg-white p-8">
+          <section>
             <h2 className="text-2xl font-bold text-slate-900">Items to note</h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
               {content.itemsToNote.map((item) => (
@@ -69,7 +69,7 @@ export default async function ServicePage({ params }: Props) {
             </ul>
           </section>
 
-          <section className="rounded-2xl border border-slate-200 bg-white p-8">
+          <section>
             <h2 className="text-2xl font-bold text-slate-900">What we need from you</h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
               {content.whatWeNeedFromYou.map((item) => (
@@ -78,7 +78,7 @@ export default async function ServicePage({ params }: Props) {
             </ul>
           </section>
 
-          <section className="rounded-2xl border border-slate-200 bg-white p-8">
+          <section>
             <h2 className="text-2xl font-bold text-slate-900">Typical timeline</h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
               {content.typicalTimeline.map((item) => (
@@ -87,7 +87,16 @@ export default async function ServicePage({ params }: Props) {
             </ul>
           </section>
 
-          <section className="rounded-2xl border border-slate-200 bg-white p-8">
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900">More detail</h2>
+            <div className="mt-4 space-y-4 text-slate-600">
+              {content.extraCopy.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+          </section>
+
+          <section>
             <h2 className="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
             <div className="mt-6 space-y-6">
               {content.faqs.map((faq) => (
