@@ -7,6 +7,7 @@ import { body as bodyLocal27 } from "./blog-post-bodies/local-27";
 import { body as bodyLocal28 } from "./blog-post-bodies/local-28";
 import { body as bodyLocal29 } from "./blog-post-bodies/local-29";
 import { body as bodyLocal30 } from "./blog-post-bodies/local-30";
+import { body as bodyLocal31 } from "./blog-post-bodies/local-31";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -60,6 +61,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/fractional-cfo.jpg",
     excerpt: "Learn how to choose an accountant for your UK small business, exploring key factors to consider and tips for finding the right financial partner.",
     body: bodyLocal30,
+  },
+  {
+    _id: "local-31",
+    title: "Avoiding HMRC Penalties in the UK: A Comprehensive Guide",
+    slug: { current: "avoiding-hmrc-penalties-uk-guide" },
+    category: "Compliance",
+    publishedAt: "2025-03-21T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Learn how to avoid HMRC penalties in the UK, including late filing and payment penalties. Stay compliant and safeguard your business finances.",
+    body: bodyLocal31,
   },
   // GENERATED_ENTRIES
 ];
