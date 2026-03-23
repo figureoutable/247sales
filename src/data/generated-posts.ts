@@ -8,6 +8,7 @@ import { body as bodyLocal28 } from "./blog-post-bodies/local-28";
 import { body as bodyLocal29 } from "./blog-post-bodies/local-29";
 import { body as bodyLocal30 } from "./blog-post-bodies/local-30";
 import { body as bodyLocal31 } from "./blog-post-bodies/local-31";
+import { body as bodyLocal32 } from "./blog-post-bodies/local-32";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -71,6 +72,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/statutory-accounts.jpg",
     excerpt: "Learn how to avoid HMRC penalties in the UK, including late filing and payment penalties. Stay compliant and safeguard your business finances.",
     body: bodyLocal31,
+  },
+  {
+    _id: "local-32",
+    title: "Employee Benefits Tax UK: Implications for Employers",
+    slug: { current: "employee-benefits-tax-uk-employers" },
+    category: "Payroll",
+    publishedAt: "2025-03-24T09:00:00.000Z",
+    mainImage: "/blog/paye-payroll.jpg",
+    excerpt: "Understand employee benefits tax in the UK and its implications for employers, including benefits in kind, P11D forms, and taxable benefits.",
+    body: bodyLocal32,
   },
   // GENERATED_ENTRIES
 ];
