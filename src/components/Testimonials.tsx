@@ -4,22 +4,26 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { TESTIMONIALS } from "@/lib/constants";
 
-const VISIBLE = 3;
 const TOTAL = TESTIMONIALS.length;
-const MAX_INDEX = Math.max(0, TOTAL - VISIBLE);
-const GAP_PX = 24; // gap-6
 
 export function Testimonials() {
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(1);
+  const [gapPx, setGapPx] = useState(16);
   const [stepPx, setStepPx] = useState(0);
+  const maxIndex = Math.max(0, TOTAL - visible);
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
     const update = () => {
       const w = el.getBoundingClientRect().width;
-      setStepPx((w - (VISIBLE - 1) * GAP_PX) / VISIBLE + GAP_PX);
+      const nextVisible = w >= 1024 ? 3 : w >= 640 ? 2 : 1;
+      const nextGap = nextVisible === 1 ? 16 : 24;
+      setVisible(nextVisible);
+      setGapPx(nextGap);
+      setStepPx((w - (nextVisible - 1) * nextGap) / nextVisible + nextGap);
     };
     update();
     const ro = new ResizeObserver(update);
@@ -29,16 +33,20 @@ export function Testimonials() {
 
   useEffect(() => {
     const id = setInterval(() => {
-      setIndex((i) => (i >= MAX_INDEX ? 0 : i + 1));
+      setIndex((i) => (i >= maxIndex ? 0 : i + 1));
     }, 6000);
     return () => clearInterval(id);
-  }, []);
+  }, [maxIndex]);
+
+  useEffect(() => {
+    setIndex((i) => Math.min(i, maxIndex));
+  }, [maxIndex]);
 
   const go = (delta: number) => {
     setIndex((i) => {
       const next = i + delta;
-      if (next < 0) return MAX_INDEX;
-      if (next > MAX_INDEX) return 0;
+      if (next < 0) return maxIndex;
+      if (next > maxIndex) return 0;
       return next;
     });
   };
@@ -53,7 +61,7 @@ export function Testimonials() {
         <div className="relative mt-10">
           <div className="overflow-hidden" ref={containerRef}>
             <div
-              className="flex gap-6 transition-transform duration-300 ease-out"
+              className="flex gap-4 transition-transform duration-300 ease-out sm:gap-6"
               style={{
                 transform: stepPx ? `translateX(-${index * stepPx}px)` : undefined,
               }}
@@ -62,7 +70,7 @@ export function Testimonials() {
                 <blockquote
                   key={i}
                   className="flex flex-shrink-0 flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/50"
-                  style={{ width: `calc(${100 / VISIBLE}% - ${(VISIBLE - 1) * GAP_PX / VISIBLE}px)` }}
+                  style={{ width: `calc(${100 / visible}% - ${(visible - 1) * gapPx / visible}px)` }}
                 >
                   {t.image && (
                     <div className="mb-4 flex justify-center">
@@ -90,7 +98,7 @@ export function Testimonials() {
             </div>
           </div>
 
-          {MAX_INDEX > 0 && (
+          {maxIndex > 0 && (
             <>
               <button
                 type="button"
@@ -115,9 +123,9 @@ export function Testimonials() {
             </>
           )}
 
-          {MAX_INDEX > 0 && (
+          {maxIndex > 0 && (
             <div className="mt-6 flex justify-center gap-2" role="tablist" aria-label="Testimonial slides">
-              {Array.from({ length: MAX_INDEX + 1 }).map((_, i) => (
+              {Array.from({ length: maxIndex + 1 }).map((_, i) => (
                 <button
                   key={i}
                   type="button"
