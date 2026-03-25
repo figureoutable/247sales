@@ -57,9 +57,9 @@ export function Hero() {
             href="/checklists/new-company-checklist.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-colors hover:border-slate-300"
+            className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
           >
-            <div className="relative h-28 w-full bg-slate-100 sm:h-auto sm:aspect-[4/3]">
+            <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
               <Image
                 src="/checklists/previews/new-company-checklist.pdf.png"
                 alt="Preview of New Company Checklist PDF"
@@ -77,9 +77,9 @@ export function Hero() {
             href="/checklists/self-assessment-checklist.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-colors hover:border-slate-300"
+            className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
           >
-            <div className="relative h-28 w-full bg-slate-100 sm:h-auto sm:aspect-[4/3]">
+            <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
               <Image
                 src="/checklists/previews/self-assessment-checklist.pdf.png"
                 alt="Preview of Self Assessment Checklist PDF"
@@ -97,9 +97,9 @@ export function Hero() {
             href="/checklists/year-end-accounts-checklist.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-colors hover:border-slate-300"
+            className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
           >
-            <div className="relative h-28 w-full bg-slate-100 sm:h-auto sm:aspect-[4/3]">
+            <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
               <Image
                 src="/checklists/previews/year-end-accounts-checklist.pdf.png"
                 alt="Preview of Year-End Accounts Checklist PDF"

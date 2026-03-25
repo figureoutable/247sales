@@ -11,6 +11,8 @@ export const SOCIAL_LINKS = {
 } as const;
 
 export const CONTACT_EMAIL = "joshua@tryfigures.com";
+export const CONTACT_PHONE_DISPLAY = "+44 7775 081123";
+export const CONTACT_PHONE_TEL = "+447775081123";
 
 export const SERVICES = [
   {

@@ -89,9 +89,30 @@ export function Testimonials() {
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <footer className="mt-4">
-                    <cite className="not-italic font-semibold text-slate-900 dark:text-white">
-                      {t.name}
-                    </cite>
+                    <div className="flex items-center justify-between gap-3">
+                      <cite className="not-italic font-semibold text-slate-900 dark:text-white">
+                        {t.name}
+                      </cite>
+
+                      <span
+                        className="inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950 dark:text-emerald-200"
+                        aria-label="Verified testimonial"
+                      >
+                        <svg
+                          className="h-3.5 w-3.5"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden
+                        >
+                          <path
+                            d="M6.6 11.1L3.7 8.2L4.7 7.2L6.6 9.1L11.3 4.4L12.3 5.4L6.6 11.1Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        Verified
+                      </span>
+                    </div>
                   </footer>
                 </blockquote>
               ))}

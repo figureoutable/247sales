@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { SERVICES } from "@/lib/constants";
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, SERVICES } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -110,7 +110,13 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <a
+            href={`tel:${CONTACT_PHONE_TEL}`}
+            className="hidden whitespace-nowrap text-sm font-bold text-slate-600 transition-colors hover:text-black sm:inline-block"
+          >
+            {CONTACT_PHONE_DISPLAY}
+          </a>
           <a
             href="https://cal.com/figures/discoverycall"
             target="_blank"
@@ -181,15 +187,24 @@ export function Header() {
               {label}
             </Link>
           ))}
-          <a
-            href="https://cal.com/figures/discoverycall"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 rounded-full bg-black px-4 py-3 text-center text-sm font-medium text-white hover:bg-slate-800"
-            onClick={() => setOpen(false)}
-          >
-            Schedule a call
-          </a>
+          <div className="mt-2 flex flex-col gap-2">
+            <a
+              href={`tel:${CONTACT_PHONE_TEL}`}
+              className="rounded-lg px-4 py-3 text-center text-sm font-bold text-slate-600 hover:bg-slate-50"
+              onClick={() => setOpen(false)}
+            >
+              {CONTACT_PHONE_DISPLAY}
+            </a>
+            <a
+              href="https://cal.com/figures/discoverycall"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-black px-4 py-3 text-center text-sm font-medium text-white hover:bg-slate-800"
+              onClick={() => setOpen(false)}
+            >
+              Schedule a call
+            </a>
+          </div>
         </div>
       </div>
     </header>

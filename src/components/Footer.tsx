@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { TAGLINE, SOCIAL_LINKS } from "@/lib/constants";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+  TAGLINE,
+  SOCIAL_LINKS,
+} from "@/lib/constants";
 
 const FOOTER_LINKS = [
   { href: "/services", label: "Services" },
@@ -38,10 +44,22 @@ export function Footer() {
             <p className="mt-2 text-sm text-slate-600">{TAGLINE}</p>
             <div className="mt-3 space-y-1 text-sm text-slate-600">
               <p>
-                <span className="font-semibold">Email:</span> joshua@tryfigures.com
+                <span className="font-semibold">Email:</span>{" "}
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="text-slate-600 underline-offset-2 hover:text-black hover:underline"
+                >
+                  {CONTACT_EMAIL}
+                </a>
               </p>
               <p>
-                <span className="font-semibold">Phone:</span> +44 7775 081123
+                <span className="font-semibold">Phone:</span>{" "}
+                <a
+                  href={`tel:${CONTACT_PHONE_TEL}`}
+                  className="text-slate-600 underline-offset-2 hover:text-black hover:underline"
+                >
+                  {CONTACT_PHONE_DISPLAY}
+                </a>
               </p>
               <p>
                 <span className="font-semibold">Location:</span> 65 Southwood Avenue, Woking, Surrey, GU21 2EZ
