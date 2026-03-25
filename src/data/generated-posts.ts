@@ -9,6 +9,7 @@ import { body as bodyLocal29 } from "./blog-post-bodies/local-29";
 import { body as bodyLocal30 } from "./blog-post-bodies/local-30";
 import { body as bodyLocal31 } from "./blog-post-bodies/local-31";
 import { body as bodyLocal32 } from "./blog-post-bodies/local-32";
+import { body as bodyLocal33 } from "./blog-post-bodies/local-33";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -82,6 +83,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/paye-payroll.jpg",
     excerpt: "Understand employee benefits tax in the UK and its implications for employers, including benefits in kind, P11D forms, and taxable benefits.",
     body: bodyLocal32,
+  },
+  {
+    _id: "local-33",
+    title: "Capital Allowances UK: A Comprehensive Guide",
+    slug: { current: "capital-allowances-uk-guide" },
+    category: "Tax",
+    publishedAt: "2025-03-26T09:00:00.000Z",
+    mainImage: "/blog/corporation-tax-year-end.jpg",
+    excerpt: "Explore capital allowances UK for tax relief, including annual investment allowance and writing down allowance, to optimise business expenses.",
+    body: bodyLocal33,
   },
   // GENERATED_ENTRIES
 ];
