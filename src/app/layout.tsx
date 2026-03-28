@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "UK accounting and advisory for founders and small businesses. Plain English, same-day response, transparent pricing. Surrey-based.",
   keywords: ["accounting", "advisory", "UK", "small business", "founders", "VAT", "payroll", "tax"],
   icons: {
-    icon: "/figures-favicon.ico",
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
     apple: "/figures-icon.png",
   },
   openGraph: {

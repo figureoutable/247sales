@@ -58,23 +58,23 @@ export function Hero() {
           </p>
           <div className="grid gap-3 text-left sm:gap-4 sm:grid-cols-3">
           <a
-            href="/checklists/new-company-checklist.pdf"
+            href="/checklists/year-end-accounts-checklist.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
           >
             <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
               <Image
-                src="/checklists/previews/new-company-checklist.pdf.png"
-                alt="Preview of New Company Checklist PDF"
+                src="/checklists/previews/year-end-accounts-checklist.pdf.png"
+                alt="Preview of Year-End Accounts Checklist PDF"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 640px) 100vw, 33vw"
               />
             </div>
             <div className="p-4 sm:p-5">
-              <p className="text-sm font-semibold text-slate-900">New Company Checklist</p>
-              <p className="mt-2 text-sm text-slate-600">Everything you need to set up your limited company correctly.</p>
+              <p className="text-sm font-semibold text-slate-900">Year-End Accounts Checklist</p>
+              <p className="mt-2 text-sm text-slate-600">Know exactly what your accountant needs before they ask.</p>
             </div>
           </a>
           <a
@@ -98,23 +98,23 @@ export function Hero() {
             </div>
           </a>
           <a
-            href="/checklists/year-end-accounts-checklist.pdf"
+            href="/checklists/new-company-checklist.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
           >
             <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
               <Image
-                src="/checklists/previews/year-end-accounts-checklist.pdf.png"
-                alt="Preview of Year-End Accounts Checklist PDF"
+                src="/checklists/previews/new-company-checklist.pdf.png"
+                alt="Preview of New Company Checklist PDF"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 640px) 100vw, 33vw"
               />
             </div>
             <div className="p-4 sm:p-5">
-              <p className="text-sm font-semibold text-slate-900">Year-End Accounts Checklist</p>
-              <p className="mt-2 text-sm text-slate-600">Know exactly what your accountant needs before they ask.</p>
+              <p className="text-sm font-semibold text-slate-900">New Company Checklist</p>
+              <p className="mt-2 text-sm text-slate-600">Everything you need to set up your limited company correctly.</p>
             </div>
           </a>
           </div>

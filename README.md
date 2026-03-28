@@ -8,7 +8,7 @@ Professional website for Figures, a UK-based accounting and advisory firm. Built
 - **Tailwind CSS** for styling
 - **Kokonut UI** + **shadcn/ui** for components (Shape Hero, Card Flip, Accordion)
 - **Sanity CMS** for blog posts
-- **Vercel** for deployment
+- Any **Next.js-compatible host** for production deployment
 
 ## Getting started
 
@@ -33,10 +33,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-### 4. Deploy on Vercel
+### 4. Deploy to production
 
-- Push to GitHub and import the repo in Vercel, or use the Vercel CLI.
-- Add the same environment variables in the Vercel project settings.
+- Push to your Git remote and deploy with your hosting provider’s Next.js workflow.
+- Add the same environment variables in the host’s project settings.
 
 ## Sanity Studio (blog)
 
