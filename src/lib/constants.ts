@@ -4,7 +4,6 @@ export const CAL_LINK = "https://cal.com/figures/discoverycall";
 
 export const SOCIAL_LINKS = {
   youtube: "https://youtube.com/@tryfigures",
-  x: "https://x.com/tryfigures",
   tiktok: "https://tiktok.com/@tryfigures",
   instagram: "https://instagram.com/tryfigures",
   linkedin: "https://linkedin.com/company/tryfigures",

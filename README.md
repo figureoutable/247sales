@@ -60,7 +60,7 @@ Schema reference is in `src/sanity/schema.ts`.
 
 - **Copy**: Testimonials and FAQ text are in `src/lib/constants.ts`. Replace with your final copy when ready.
 - **Cal.com**: All “Schedule a call” links use `https://cal.com/figures/discovery`. Update `CAL_LINK` in `src/lib/constants.ts` if your link changes.
-- **Social links**: Edit `SOCIAL_LINKS` in `src/lib/constants.ts` (YouTube, X, TikTok, Instagram, LinkedIn).
+- **Social links**: Edit `SOCIAL_LINKS` in `src/lib/constants.ts` (YouTube, TikTok, Instagram, LinkedIn).
 - **Colours & font**: Brand colours and Plus Jakarta Sans are in `src/app/globals.css` and `src/app/layout.tsx`.
 
 ## Scripts
