@@ -10,6 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tryfigures.com"),
   title: {
     default: "Figures Chartered Accountants | Oddly Satisfying Accounting",
     template: "%s | Figures Chartered Accountants",

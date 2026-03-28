@@ -73,7 +73,12 @@ export default function ServicesPage() {
                     <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
                   </span>
                   <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">
-                    {service.title}
+                    <Link
+                      href={`/services/${service.id}`}
+                      className="transition-colors hover:text-slate-700 hover:underline dark:hover:text-zinc-200"
+                    >
+                      {service.title}
+                    </Link>
                   </h2>
                 </div>
                 <p className="mt-4 text-slate-600 dark:text-zinc-400">{service.description}</p>

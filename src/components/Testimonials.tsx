@@ -66,9 +66,9 @@ export function Testimonials() {
                 transform: stepPx ? `translateX(-${index * stepPx}px)` : undefined,
               }}
             >
-              {TESTIMONIALS.map((t, i) => (
+              {TESTIMONIALS.map((t) => (
                 <blockquote
-                  key={i}
+                  key={t.image}
                   className="flex flex-shrink-0 flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/50"
                   style={{ width: `calc(${100 / visible}% - ${(visible - 1) * gapPx / visible}px)` }}
                 >
@@ -79,7 +79,11 @@ export function Testimonials() {
                           src={t.image}
                           alt=""
                           fill
-                          className="object-cover object-top"
+                          className={
+                            t.image === "/testimonials/jon.png"
+                              ? "object-cover object-center scale-[1.4]"
+                              : "object-cover object-top"
+                          }
                           sizes="(max-width: 640px) 96px, 112px"
                         />
                       </div>
@@ -89,9 +93,10 @@ export function Testimonials() {
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <footer className="mt-4">
-                    <div className="flex items-center justify-between gap-3">
-                      <cite className="not-italic font-semibold text-slate-900 dark:text-white">
-                        {t.name}
+                    <div className="flex items-start justify-between gap-3">
+                      <cite className="not-italic text-slate-900 dark:text-white">
+                        <span className="block font-semibold">{t.name}</span>
+                        <span className="mt-0.5 block text-xs font-normal text-slate-600 dark:text-zinc-400">{t.role}</span>
                       </cite>
 
                       <span

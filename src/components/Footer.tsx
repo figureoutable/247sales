@@ -7,6 +7,9 @@ import {
   TAGLINE,
   SOCIAL_LINKS,
 } from "@/lib/constants";
+import { LOCATIONS_PATH, SURREY_HUB_PATH, SW_LONDON_HUB_PATH, townPath } from "@/data/locations";
+import { SURREY_TOWN_PAGES } from "@/data/locations-surrey-towns";
+import { SW_LONDON_TOWN_PAGES } from "@/data/locations-sw-towns";
 
 const FOOTER_LINKS = [
   { href: "/services", label: "Services" },
@@ -61,9 +64,6 @@ export function Footer() {
                   {CONTACT_PHONE_DISPLAY}
                 </a>
               </p>
-              <p>
-                <span className="font-semibold">Location:</span> 65 Southwood Avenue, Woking, Surrey, GU21 2EZ
-              </p>
             </div>
             <div className="mt-4 flex gap-4">
               {(Object.keys(SOCIAL_LINKS) as (keyof typeof SOCIAL_LINKS)[]).map((key) => (
@@ -82,25 +82,78 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <nav className="flex flex-wrap gap-6" aria-label="Footer">
-            {FOOTER_LINKS.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
+          <div className="flex flex-wrap gap-10">
+            <nav className="flex flex-wrap gap-6" aria-label="Footer">
+              {FOOTER_LINKS.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-sm text-slate-600 transition-colors hover:text-black"
+                >
+                  {label}
+                </Link>
+              ))}
+              <a
+                href="https://cal.com/figures/discoverycall"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-slate-600 transition-colors hover:text-black"
               >
-                {label}
+                Schedule a call
+              </a>
+            </nav>
+
+            <div className="w-full min-w-0 sm:max-w-md lg:max-w-lg">
+              <Link
+                href={LOCATIONS_PATH}
+                className="block text-sm font-semibold text-slate-900 transition-colors hover:text-black"
+              >
+                Locations
               </Link>
-            ))}
-            <a
-              href="https://cal.com/figures/discoverycall"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-slate-600 transition-colors hover:text-black"
-            >
-              Schedule a call
-            </a>
-          </nav>
+              <div className="mt-4 grid grid-cols-2 gap-x-5 gap-y-0 sm:gap-x-6">
+                <div className="min-w-0">
+                  <Link
+                    href={SURREY_HUB_PATH}
+                    className="block text-sm font-semibold text-slate-800 transition-colors hover:text-black"
+                  >
+                    Surrey
+                  </Link>
+                  <ul className="mt-1.5 flex flex-col gap-0.5">
+                    {SURREY_TOWN_PAGES.map((t) => (
+                      <li key={t.slug}>
+                        <Link
+                          href={townPath("surrey", t.slug)}
+                          className="block text-sm leading-snug text-slate-600 transition-colors hover:text-black"
+                        >
+                          {t.listLabel}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="min-w-0">
+                  <Link
+                    href={SW_LONDON_HUB_PATH}
+                    className="block text-sm font-semibold text-slate-800 transition-colors hover:text-black"
+                  >
+                    South West London
+                  </Link>
+                  <ul className="mt-1.5 flex flex-col gap-0.5">
+                    {SW_LONDON_TOWN_PAGES.map((t) => (
+                      <li key={t.slug}>
+                        <Link
+                          href={townPath("south-west-london", t.slug)}
+                          className="block text-sm leading-snug text-slate-600 transition-colors hover:text-black"
+                        >
+                          {t.listLabel}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <p className="mt-8 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
           © {new Date().getFullYear()} figures. All rights reserved.

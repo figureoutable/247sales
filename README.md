@@ -69,3 +69,7 @@ Schema reference is in `src/sanity/schema.ts`.
 - `npm run build` — Production build
 - `npm run start` — Run production build locally
 - `npm run lint` — ESLint
+
+### Blog post generator (`scripts/generate-blog-post.mjs`)
+
+Requires `OPENAI_API_KEY`. Each run writes a body file, updates `generated-posts.ts`, and saves a **hero image prompt** under `scripts/hero-image-prompts/local-{id}.txt`. The model is instructed to propose **colourful, high-contrast** scenes and to **avoid beige / cream-only / grey-washed stock** aesthetics; the same rules are prepended to every saved prompt so future images stay on-brand visually.

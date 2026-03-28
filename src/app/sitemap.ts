@@ -1,9 +1,35 @@
 import type { MetadataRoute } from "next";
 import { getLocalPosts } from "@/data/blog-posts";
+import { SERVICES } from "@/lib/constants";
+import { SURREY_TOWN_PAGES } from "@/data/locations-surrey-towns";
+import { SW_LONDON_TOWN_PAGES } from "@/data/locations-sw-towns";
+import { townPath } from "@/data/locations";
 
 const BASE_URL = "https://tryfigures.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const locationPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/locations`, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/locations/surrey`, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/locations/south-west-london`, changeFrequency: "monthly", priority: 0.85 },
+    ...SURREY_TOWN_PAGES.map((t) => ({
+      url: `${BASE_URL}${townPath("surrey", t.slug)}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...SW_LONDON_TOWN_PAGES.map((t) => ({
+      url: `${BASE_URL}${townPath("south-west-london", t.slug)}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+  ];
+
+  const servicePages: MetadataRoute.Sitemap = SERVICES.map((s) => ({
+    url: `${BASE_URL}/services/${s.id}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.8 },
@@ -22,5 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPosts];
+  return [...staticPages, ...servicePages, ...locationPages, ...blogPosts];
 }

@@ -44,6 +44,21 @@ function pickImage(category, id) {
   return images[id % images.length];
 }
 
+/** Prepended to every saved hero-image prompt (AI tools, designers, future image pipelines). */
+const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
+- Use a rich, saturated colour palette: deep blues, teals, emerald or forest greens, coral, amber, or violet accents — not a single muddy hue.
+- Strong contrast between subject and background; clear focal point; crisp, modern lighting.
+- Avoid beige, taupe, cream-only backgrounds, grey-washed offices, brown-on-brown stock looks, and flat "corporate beige" aesthetics.
+- Suitable for a wide 16:9 or 3:2 web hero; professional, UK-relevant small-business context.`;
+
+function buildHeroImagePrompt(post, topic) {
+  const scene =
+    typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()
+      ? post.heroImagePrompt.trim()
+      : `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Use props or settings that suggest finance, growth, or clarity — with bold, colourful environments (not a beige office).`;
+  return `${HERO_IMAGE_VISUAL_RULES}\n\nScene and composition:\n${scene}`;
+}
+
 /* ---------- state helpers ---------- */
 
 function readAllSources() {
@@ -130,7 +145,13 @@ Internal links to include (pick 2-3 that are relevant):
 - [book a discovery call](/)
 
 Include at least one external link to GOV.UK or another authoritative UK source.
-Use the primary keyword 3-5 times naturally throughout. Use secondary keywords where they fit.`;
+Use the primary keyword 3-5 times naturally throughout. Use secondary keywords where they fit.
+
+Hero image prompt (for AI or human designers generating the blog thumbnail/hero):
+- Also return a field "heroImagePrompt": one focused paragraph describing ONLY the visual scene for a wide hero image.
+- The scene must feel colourful and energetic: name specific colours (e.g. teal dashboard, cobalt sky, green plants, warm accent lighting) — not vague "professional office".
+- Explicitly avoid beige-only, cream-washed, or all-grey stock-photo moods; do not describe bland neutral open-plan offices as the whole frame.
+- Tie the visual metaphor to the article topic and UK small business context (founders, limited companies, finance clarity).`;
 
 async function generatePost(topic, existingTitles) {
   const userPrompt = `Write a blog post about: ${topic.topic}
@@ -147,7 +168,8 @@ Return ONLY a valid JSON object (no markdown fences, no explanation) with these 
   "title": "SEO title including the primary keyword (50-65 chars)",
   "slug": "url-friendly-slug-with-keyword",
   "excerpt": "Meta description with primary keyword (150-160 characters)",
-  "body": "Full markdown body (1500+ words, no H1, opening paragraph first)"
+  "body": "Full markdown body (1500+ words, no H1, opening paragraph first)",
+  "heroImagePrompt": "One paragraph: vivid, non-beige hero image scene matching this article (colours and metaphor specified; no beige stock-office clichés)"
 }`;
 
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -192,6 +214,14 @@ function writeBodyFile(id, body) {
     .replace(/\$\{/g, "\\${");
   const filePath = path.join(BODIES_DIR, `local-${id}.ts`);
   fs.writeFileSync(filePath, `export const body = \`${escaped}\`;\n`);
+  return filePath;
+}
+
+function writeHeroImagePromptFile(id, fullPrompt) {
+  const dir = path.join(ROOT, "scripts", "hero-image-prompts");
+  fs.mkdirSync(dir, { recursive: true });
+  const filePath = path.join(dir, `local-${id}.txt`);
+  fs.writeFileSync(filePath, fullPrompt + "\n");
   return filePath;
 }
 
@@ -253,6 +283,13 @@ async function main() {
 
   writeBodyFile(nextId, post.body);
   console.log(`Body file: src/data/blog-post-bodies/local-${nextId}.ts`);
+
+  const heroPrompt = buildHeroImagePrompt(post, topic);
+  const heroPath = writeHeroImagePromptFile(nextId, heroPrompt);
+  console.log(`Hero image prompt: ${path.relative(ROOT, heroPath)}`);
+  console.log("\n--- Copy for your image generator (colourful, not beige) ---\n");
+  console.log(heroPrompt);
+  console.log("\n--- End hero image prompt ---\n");
 
   updateManifest(nextId, post, publishDate, topic.category);
   console.log("Manifest updated: src/data/generated-posts.ts");

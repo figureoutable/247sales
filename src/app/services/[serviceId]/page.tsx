@@ -3,11 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SERVICES } from "@/lib/constants";
 import { SERVICE_PAGES } from "@/data/service-pages";
+import { AreasWeServeCrossLinks } from "@/components/locations/AreasWeServeCrossLinks";
 
 type Props = { params: Promise<{ serviceId: string }> };
 
 function getService(serviceId: string) {
   return SERVICES.find((s) => s.id === serviceId) ?? null;
+}
+
+export function generateStaticParams() {
+  return SERVICES.map((s) => ({ serviceId: s.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -121,6 +126,8 @@ export default async function ServicePage({ params }: Props) {
             Schedule a call
           </a>
         </div>
+
+        <AreasWeServeCrossLinks />
       </div>
     </div>
   );

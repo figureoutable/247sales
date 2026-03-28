@@ -119,31 +119,66 @@ export const WHY_FIGURES_ROWS = [
 export const TESTIMONIALS = [
   {
     name: "Kabir",
-    role: "Founder",
+    role: "Property",
     quote:
       "I had fallen behind with HMRC and it was causing a lot of stress. I did not know who to speak to or how serious the situation was. Josh took over straight away, spoke to HMRC on my behalf, and explained what was happening at each step. Everything was brought up to date quickly and I finally felt relieved knowing it was all under control!",
     image: "/testimonials/kabir.png",
   },
   {
     name: "Adam",
-    role: "Director",
+    role: "Camera business",
     quote:
       "When I started my business, I had no real understanding of accounting at all. I was guessing most of the time and hoping nothing would go wrong. Josh took the time to explain my numbers in simple terms and showed me what actually mattered. I now understand how my business is performing, make decisions with confidence, and do not feel lost anymore.",
     image: "/testimonials/adam.png",
   },
   {
     name: "Janvi",
-    role: "Locum Pharmacist",
+    role: "Locum pharmacy",
     quote:
       "As a locum pharmacist working in the NHS, I always found self-assessments stressful and confusing. Josh explained everything clearly, handled the return efficiently, and made sure I understood what mattered. I now feel confident that my tax is done properly and no longer worry about getting it wrong.",
     image: "/testimonials/janvi.png",
   },
   {
     name: "Christian",
-    role: "Entrepreneur",
+    role: "Jewellery ecommerce",
     quote:
       "I came to Josh after getting fed up with my old accountant. It was hard to get replies and I never really knew how the business was doing. Josh explained everything clearly and set things up so I could see my numbers properly. Now I always know where I stand and I feel much more confident making decisions.",
     image: "/testimonials/christian.png",
+  },
+  {
+    name: "Ben",
+    role: "Logistics",
+    quote:
+      "Running a logistics business means I don't have time to be chasing my accountant for updates. Since moving to Figures, that's never been an issue. Josh is proactive, responsive, and always explains things in plain English. My year-end accounts and corporation tax are handled efficiently and I always know exactly where I stand. Genuinely one of the best decisions I've made for the business.",
+    image: "/testimonials/ben.png",
+  },
+  {
+    name: "Jack",
+    role: "Marketing agency",
+    quote:
+      "As someone who runs their own marketing agency, I understand the value of clear communication and delivering on time. Josh does both. Every deadline is met, every question gets a fast and clear answer, and I never feel like I'm being kept in the dark about my own finances. It's refreshing to have an accountant who actually gets what running a small business looks like.",
+    image: "/testimonials/jack.png",
+  },
+  {
+    name: "Tony",
+    role: "Tutoring",
+    quote:
+      "I used to dread self-assessment season. Josh made the whole process painless. He was quick to get everything sorted, kept me updated throughout, and made sure I understood what I was paying and why. Really glad I found Figures.",
+    image: "/testimonials/tony.png",
+  },
+  {
+    name: "Rebecca",
+    role: "Dog walking",
+    quote:
+      "Josh handles all my accounts and tax for my dog walking business and honestly takes a huge weight off my shoulders. The turnaround is always quick, communication is brilliant, and nothing ever feels rushed or like I'm just another client. He takes the time to actually explain things properly, which I really appreciate as someone who isn't very numbers-savvy. Couldn't recommend enough.",
+    image: "/testimonials/rebecca.png",
+  },
+  {
+    name: "Jon",
+    role: "Carpenter",
+    quote:
+      "I'm a carpenter, I know wood, not spreadsheets. Before coming to Figures, tax returns and keeping on top of my numbers felt like a nightmare. Josh sorted everything out quickly, kept me in the loop the whole way through, and made sure I actually understood what was going on with my finances. Communication is brilliant and nothing ever feels like too much trouble. Proper good service from start to finish.",
+    image: "/testimonials/jon.png",
   },
 ] as const;
 

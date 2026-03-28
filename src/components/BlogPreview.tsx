@@ -60,7 +60,7 @@ export async function BlogPreview() {
   }
 
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="px-4 py-[2.68rem] sm:px-6 sm:py-[3.35rem] lg:px-8 lg:py-[4.02rem]">
       <div className="mx-auto max-w-6xl">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">

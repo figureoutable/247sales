@@ -24,13 +24,9 @@ export default function AboutPage() {
 
           <p>
             Before founding Figures Chartered Accountants, Josh worked at EY in Turnaround and Restructuring, working on some of the
-            most high-profile engagements of recent years including <strong className="text-slate-900 dark:text-white">Credit Suisse</strong>,{" "}
-            <strong className="text-slate-900 dark:text-white">Metro Bank</strong> and{" "}
-            <strong className="text-slate-900 dark:text-white">Lloyds Bank</strong>. Before that he trained in Assurance auditing companies such
-            as <strong className="text-slate-900 dark:text-white">UBS</strong> and{" "}
-            <strong className="text-slate-900 dark:text-white">Mizuho Investment Bank</strong> and spent time at{" "}
-            <strong className="text-slate-900 dark:text-white">Barclays</strong> and{" "}
-            <strong className="text-slate-900 dark:text-white">Crown Agents Bank</strong> in management accounting roles.
+            most high-profile engagements of recent years including Credit Suisse, Metro Bank and Lloyds Bank. Before that he trained
+            in Assurance auditing companies such as UBS and Mizuho Investment Bank and spent time at Barclays and Crown Agents Bank in
+            management accounting roles.
           </p>
 
           <p>
