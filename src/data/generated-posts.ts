@@ -11,6 +11,7 @@ import { body as bodyLocal31 } from "./blog-post-bodies/local-31";
 import { body as bodyLocal32 } from "./blog-post-bodies/local-32";
 import { body as bodyLocal33 } from "./blog-post-bodies/local-33";
 import { body as bodyLocal34 } from "./blog-post-bodies/local-34";
+import { body as bodyLocal35 } from "./blog-post-bodies/local-35";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -104,6 +105,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/paye-payroll.jpg",
     excerpt: "Learn how to set up payroll UK for the first time, including PAYE registration, and ensure compliance with HMRC for your business.",
     body: bodyLocal34,
+  },
+  {
+    _id: "local-35",
+    title: "Understanding Auto-Enrolment Pension for UK Small Businesses",
+    slug: { current: "auto-enrolment-pension-uk-small-business" },
+    category: "Payroll",
+    publishedAt: "2025-03-31T09:00:00.000Z",
+    mainImage: "/blog/paye-payroll.jpg",
+    excerpt: "Learn about auto-enrolment pension UK requirements, including workplace pension setup, employer contributions, and staging dates for small businesses.",
+    body: bodyLocal35,
   },
   // GENERATED_ENTRIES
 ];
