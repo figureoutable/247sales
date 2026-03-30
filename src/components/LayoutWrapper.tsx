@@ -7,7 +7,9 @@ import { Footer } from "@/components/Footer";
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isLanding =
-    pathname === "/fractionalcfo" || pathname === "/accountsandtax";
+    pathname === "/fractionalcfo" ||
+    pathname === "/accountsandtax" ||
+    pathname === "/accountstax";
 
   if (isLanding) {
     return <>{children}</>;

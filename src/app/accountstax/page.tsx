@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { Testimonials } from "@/components/Testimonials";
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/constants";
 
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
 
 export default function AccountsTaxPage() {
   return (
+    <>
+      <Header />
+      <main className="flex-1">
     <div className="min-h-screen bg-white">
       <section className="px-4 pt-8 pb-2 sm:px-6 sm:pt-10 sm:pb-4 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -94,5 +99,8 @@ export default function AccountsTaxPage() {
         </div>
       </section>
     </div>
+      </main>
+      <Footer />
+    </>
   );
 }
