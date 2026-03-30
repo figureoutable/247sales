@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { CONTACT_EMAIL } from "@/lib/constants";
 
-export function ContactForm() {
+type ContactFormProps = {
+  align?: "center" | "left";
+};
+
+export function ContactForm({ align = "center" }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -30,8 +34,10 @@ export function ContactForm() {
     }
   }
 
+  const isLeft = align === "left";
+
   return (
-    <div className="mt-12 text-center">
+    <div className={`mt-12 ${isLeft ? "text-left" : "text-center"}`}>
       <h2 className="text-lg font-semibold text-slate-900">Send a message</h2>
       <form
         onSubmit={handleSubmit}
