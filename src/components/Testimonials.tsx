@@ -6,7 +6,12 @@ import { TESTIMONIALS } from "@/lib/constants";
 
 const TOTAL = TESTIMONIALS.length;
 
-export function Testimonials() {
+type TestimonialsProps = {
+  /** Tighter vertical spacing (e.g. landing pages with dense sections). */
+  compact?: boolean;
+};
+
+export function Testimonials({ compact = false }: TestimonialsProps) {
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(1);
@@ -52,13 +57,19 @@ export function Testimonials() {
   };
 
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section
+      className={
+        compact
+          ? "px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
+          : "px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      }
+    >
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
           What our clients say
         </h2>
 
-        <div className="relative mt-10">
+        <div className={compact ? "relative mt-6" : "relative mt-10"}>
           <div className="overflow-hidden" ref={containerRef}>
             <div
               className="flex gap-4 transition-transform duration-300 ease-out sm:gap-6"

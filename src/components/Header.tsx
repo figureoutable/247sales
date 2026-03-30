@@ -13,7 +13,12 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact" },
 ];
 
-export function Header() {
+type HeaderProps = {
+  /** Hide Services + main nav links (e.g. focused landing pages). Logo and phone/CTA stay. */
+  hideMainNav?: boolean;
+};
+
+export function Header({ hideMainNav = false }: HeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -37,6 +42,7 @@ export function Header() {
           </span>
         </Link>
 
+        {!hideMainNav && (
         <nav className="hidden md:flex md:items-center md:gap-8" aria-label="Main">
           <div
             className="relative"
@@ -109,23 +115,36 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        )}
 
         <div className="flex items-center gap-3 sm:gap-4">
-          <a
-            href={`tel:${CONTACT_PHONE_TEL}`}
-            className="hidden whitespace-nowrap text-sm font-bold text-slate-600 transition-colors hover:text-black sm:inline-block"
-          >
-            {CONTACT_PHONE_DISPLAY}
-          </a>
-          <a
-            href="https://cal.com/figures/discoverycall"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-800 sm:inline-block"
-          >
-            Schedule a call
-          </a>
+          {hideMainNav ? (
+            <a
+              href={`tel:${CONTACT_PHONE_TEL}`}
+              className="inline-flex items-center rounded-full bg-black px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-slate-800"
+            >
+              {CONTACT_PHONE_DISPLAY}
+            </a>
+          ) : (
+            <>
+              <a
+                href={`tel:${CONTACT_PHONE_TEL}`}
+                className="hidden whitespace-nowrap text-sm font-bold text-slate-600 transition-colors hover:text-black sm:inline-block"
+              >
+                {CONTACT_PHONE_DISPLAY}
+              </a>
+              <a
+                href="https://cal.com/figures/discoverycall"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-800 sm:inline-block"
+              >
+                Schedule a call
+              </a>
+            </>
+          )}
 
+          {!hideMainNav && (
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 md:hidden"
@@ -144,9 +163,11 @@ export function Header() {
               </svg>
             )}
           </button>
+          )}
         </div>
       </div>
 
+      {!hideMainNav && (
       <div
         id="mobile-menu"
         className={`border-t border-slate-200 bg-white md:hidden ${open ? "block" : "hidden"}`}
@@ -207,6 +228,7 @@ export function Header() {
           </div>
         </div>
       </div>
+      )}
     </header>
   );
 }
