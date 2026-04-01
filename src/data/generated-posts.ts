@@ -12,6 +12,7 @@ import { body as bodyLocal32 } from "./blog-post-bodies/local-32";
 import { body as bodyLocal33 } from "./blog-post-bodies/local-33";
 import { body as bodyLocal34 } from "./blog-post-bodies/local-34";
 import { body as bodyLocal35 } from "./blog-post-bodies/local-35";
+import { body as bodyLocal36 } from "./blog-post-bodies/local-36";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -115,6 +116,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/paye-payroll.jpg",
     excerpt: "Learn about auto-enrolment pension UK requirements, including workplace pension setup, employer contributions, and staging dates for small businesses.",
     body: bodyLocal35,
+  },
+  {
+    _id: "local-36",
+    title: "Annual Investment Allowance UK: A Comprehensive Guide",
+    slug: { current: "annual-investment-allowance-uk-guide" },
+    category: "Tax",
+    publishedAt: "2025-04-02T09:00:00.000Z",
+    mainImage: "/blog/corporation-tax-year-end.jpg",
+    excerpt: "Understand the annual investment allowance UK, AIA limit, and capital expenditure relief for plant and machinery. Boost your business investments.",
+    body: bodyLocal36,
   },
   // GENERATED_ENTRIES
 ];
