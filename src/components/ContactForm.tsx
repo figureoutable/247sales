@@ -9,12 +9,14 @@ type ContactFormProps = {
 
 export function ContactForm({ align = "center" }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
     setStatus("sending");
+    setErrorDetail(null);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -28,8 +30,19 @@ export function ContactForm({ align = "center" }: ContactFormProps) {
       if (res.ok) {
         setStatus("sent");
         form.reset();
-      } else setStatus("error");
+        return;
+      }
+      let message = `Request failed (${res.status}).`;
+      try {
+        const data = (await res.json()) as { error?: unknown };
+        if (typeof data.error === "string" && data.error.trim()) message = data.error.trim();
+      } catch {
+        /* keep default */
+      }
+      setErrorDetail(message);
+      setStatus("error");
     } catch {
+      setErrorDetail("Network error — could not reach the server. Check your connection and try again.");
       setStatus("error");
     }
   }
@@ -94,9 +107,19 @@ export function ContactForm({ align = "center" }: ContactFormProps) {
             Thanks — we’ll be in touch soon.
           </p>
         )}
-        {status === "error" && (
-          <p className="text-sm text-red-600" role="alert">
-            Something went wrong. Please try again or email us directly.
+        {status === "error" && errorDetail && (
+          <p
+            className={`text-sm text-red-600 ${isLeft ? "text-left" : "text-center"} whitespace-pre-wrap break-words`}
+            role="alert"
+          >
+            {errorDetail}{" "}
+            <span className="text-slate-600">
+              You can also email us at{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium text-black underline">
+                {CONTACT_EMAIL}
+              </a>
+              .
+            </span>
           </p>
         )}
       </form>
