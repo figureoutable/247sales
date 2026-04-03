@@ -13,6 +13,7 @@ import { body as bodyLocal33 } from "./blog-post-bodies/local-33";
 import { body as bodyLocal34 } from "./blog-post-bodies/local-34";
 import { body as bodyLocal35 } from "./blog-post-bodies/local-35";
 import { body as bodyLocal36 } from "./blog-post-bodies/local-36";
+import { body as bodyLocal37 } from "./blog-post-bodies/local-37";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -126,6 +127,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/corporation-tax-year-end.jpg",
     excerpt: "Understand the annual investment allowance UK, AIA limit, and capital expenditure relief for plant and machinery. Boost your business investments.",
     body: bodyLocal36,
+  },
+  {
+    _id: "local-37",
+    title: "Master Bank Reconciliation in Xero: Complete Guide",
+    slug: { current: "bank-reconciliation-xero-guide" },
+    category: "Bookkeeping",
+    publishedAt: "2025-04-04T09:00:00.000Z",
+    mainImage: "/blog/xero-bookkeeping.jpg",
+    excerpt: "Learn how to do a bank reconciliation in Xero accurately and efficiently. Simplify your bookkeeping process with our step-by-step guide.",
+    body: bodyLocal37,
   },
   // GENERATED_ENTRIES
 ];
