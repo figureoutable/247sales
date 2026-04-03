@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { CONTACT_EMAIL } from "@/lib/constants";
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY } from "@/lib/constants";
 
 function resendErrorMessage(status: number, bodyText: string): string {
   try {
@@ -30,25 +30,56 @@ export async function POST(request: Request) {
     // If Resend is configured, use it. Otherwise log and return 200 so the form still "succeeds"
     const resendKey = process.env.RESEND_API_KEY;
     if (resendKey) {
-      const res = await fetch("https://api.resend.com/emails", {
+      const from = process.env.RESEND_FROM ?? "Figures Contact Form <onboarding@resend.dev>";
+      const headers = {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${resendKey}`,
+      } as const;
+
+      const staffRes = await fetch("https://api.resend.com/emails", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${resendKey}`,
-        },
+        headers,
         body: JSON.stringify({
-          from: process.env.RESEND_FROM ?? "Figures Contact Form <onboarding@resend.dev>",
+          from,
           to: [CONTACT_EMAIL],
           replyTo: email,
           subject: `Contact form: ${name}`,
           text: `From: ${name} <${email}>\n\n${message}`,
         }),
       });
-      if (!res.ok) {
-        const err = await res.text();
+      if (!staffRes.ok) {
+        const err = await staffRes.text();
         console.error("Resend error:", err);
-        const detail = resendErrorMessage(res.status, err);
+        const detail = resendErrorMessage(staffRes.status, err);
         return NextResponse.json({ error: `Could not send email: ${detail}` }, { status: 502 });
+      }
+
+      const thankYouText = `Hi ${name.trim()},
+
+Thank you for reaching out to Figures, we've received your enquiry and will be in touch shortly.
+
+In the meantime, feel free to reply to this email or give us a call on ${CONTACT_PHONE_DISPLAY}.
+
+Speak soon,
+
+Josh Lee
+Figures Chartered Accountants
+${CONTACT_EMAIL}`;
+
+      const thankRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          from,
+          to: [email.trim()],
+          replyTo: CONTACT_EMAIL,
+          subject: "Thank you for your enquiry",
+          text: thankYouText,
+        }),
+      });
+      if (!thankRes.ok) {
+        const err = await thankRes.text();
+        console.error("Resend thank-you email error:", err);
       }
     } else {
       console.log("Contact form (no RESEND_API_KEY):", { name, email, message });
