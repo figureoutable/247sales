@@ -14,6 +14,7 @@ import { body as bodyLocal34 } from "./blog-post-bodies/local-34";
 import { body as bodyLocal35 } from "./blog-post-bodies/local-35";
 import { body as bodyLocal36 } from "./blog-post-bodies/local-36";
 import { body as bodyLocal37 } from "./blog-post-bodies/local-37";
+import { body as bodyLocal38 } from "./blog-post-bodies/local-38";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -137,6 +138,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/xero-bookkeeping.jpg",
     excerpt: "Learn how to do a bank reconciliation in Xero accurately and efficiently. Simplify your bookkeeping process with our step-by-step guide.",
     body: bodyLocal37,
+  },
+  {
+    _id: "local-38",
+    title: "When to Register for VAT UK: Thresholds & Timing",
+    slug: { current: "when-to-register-for-vat-uk-thresholds-timing" },
+    category: "VAT",
+    publishedAt: "2025-04-07T09:00:00.000Z",
+    mainImage: "/blog/vat-digital-services.jpg",
+    excerpt: "Understand when to register for VAT UK, including thresholds, timing, and voluntary registration options for small businesses.",
+    body: bodyLocal38,
   },
   // GENERATED_ENTRIES
 ];
