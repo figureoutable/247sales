@@ -46,16 +46,17 @@ function pickImage(category, id) {
 
 /** Prepended to every saved hero-image prompt (AI tools, designers, future image pipelines). */
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
-- Use a rich, saturated colour palette: deep blues, teals, emerald or forest greens, coral, amber, or violet accents — not a single muddy hue.
-- Strong contrast between subject and background; clear focal point; crisp, modern lighting.
-- Avoid beige, taupe, cream-only backgrounds, grey-washed offices, brown-on-brown stock looks, and flat "corporate beige" aesthetics.
+- Use a vivid, high-saturation palette with at least 3 distinct colours (for example: cobalt or navy, teal or emerald, and coral or amber accents).
+- Keep colour temperature lively and modern; prefer bright directional lighting and clean contrast over muted or dusty tones.
+- Avoid beige, taupe, cream-heavy, tan, sepia, grey-washed, or brown-on-brown scenes. Do not default to bland neutral office stock-photo aesthetics.
+- Include colourful environmental elements where relevant (screens, charts, stationery, lighting, signage, plants, clothing accents) to keep the frame energetic.
 - Suitable for a wide 16:9 or 3:2 web hero; professional, UK-relevant small-business context.`;
 
 function buildHeroImagePrompt(post, topic) {
   const scene =
     typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()
       ? post.heroImagePrompt.trim()
-      : `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Use props or settings that suggest finance, growth, or clarity — with bold, colourful environments (not a beige office).`;
+      : `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Use props or settings that suggest finance, growth, or clarity, with a bright multi-colour palette (no beige or neutral-dominant office scenes).`;
   return `${HERO_IMAGE_VISUAL_RULES}\n\nScene and composition:\n${scene}`;
 }
 
