@@ -15,6 +15,7 @@ import { body as bodyLocal35 } from "./blog-post-bodies/local-35";
 import { body as bodyLocal36 } from "./blog-post-bodies/local-36";
 import { body as bodyLocal37 } from "./blog-post-bodies/local-37";
 import { body as bodyLocal38 } from "./blog-post-bodies/local-38";
+import { body as bodyLocal39 } from "./blog-post-bodies/local-39";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -148,6 +149,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/vat-digital-services.jpg",
     excerpt: "Understand when to register for VAT UK, including thresholds, timing, and voluntary registration options for small businesses.",
     body: bodyLocal38,
+  },
+  {
+    _id: "local-39",
+    title: "Understanding the Construction Industry Scheme UK",
+    slug: { current: "construction-industry-scheme-uk-guide" },
+    category: "Compliance",
+    publishedAt: "2025-04-09T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Explore the Construction Industry Scheme UK: essential for contractors and subcontractors. Learn about CIS deductions, registration, and compliance.",
+    body: bodyLocal39,
   },
   // GENERATED_ENTRIES
 ];
