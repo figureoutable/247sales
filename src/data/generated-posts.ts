@@ -16,6 +16,7 @@ import { body as bodyLocal36 } from "./blog-post-bodies/local-36";
 import { body as bodyLocal37 } from "./blog-post-bodies/local-37";
 import { body as bodyLocal38 } from "./blog-post-bodies/local-38";
 import { body as bodyLocal39 } from "./blog-post-bodies/local-39";
+import { body as bodyLocal40 } from "./blog-post-bodies/local-40";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -159,6 +160,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/statutory-accounts.jpg",
     excerpt: "Explore the Construction Industry Scheme UK: essential for contractors and subcontractors. Learn about CIS deductions, registration, and compliance.",
     body: bodyLocal39,
+  },
+  {
+    _id: "local-40",
+    title: "Understanding IR35 Rules UK for Contractors & Businesses",
+    slug: { current: "ir35-rules-uk-contractors-businesses" },
+    category: "Tax",
+    publishedAt: "2025-04-11T09:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt: "Discover how IR35 rules UK impact contractors and businesses, including insights on off-payroll working and IR35 determination.",
+    body: bodyLocal40,
   },
   // GENERATED_ENTRIES
 ];
