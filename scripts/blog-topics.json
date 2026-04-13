@@ -162,7 +162,7 @@
       "HMRC compliance check"
     ],
     "category": "Compliance",
-    "used": false
+    "used": true
   },
   {
     "topic": "Cash accounting vs accrual accounting for UK small businesses",

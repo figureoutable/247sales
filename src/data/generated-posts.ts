@@ -17,6 +17,7 @@ import { body as bodyLocal37 } from "./blog-post-bodies/local-37";
 import { body as bodyLocal38 } from "./blog-post-bodies/local-38";
 import { body as bodyLocal39 } from "./blog-post-bodies/local-39";
 import { body as bodyLocal40 } from "./blog-post-bodies/local-40";
+import { body as bodyLocal41 } from "./blog-post-bodies/local-41";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -170,6 +171,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/making-tax-digital.jpg",
     excerpt: "Discover how IR35 rules UK impact contractors and businesses, including insights on off-payroll working and IR35 determination.",
     body: bodyLocal40,
+  },
+  {
+    _id: "local-41",
+    title: "Prepare for an HMRC Investigation UK: Key Steps",
+    slug: { current: "prepare-for-hmrc-investigation-uk" },
+    category: "Compliance",
+    publishedAt: "2025-04-14T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Learn how to prepare for an HMRC investigation UK. Ensure compliance and understand what to expect during an HMRC enquiry or tax investigation.",
+    body: bodyLocal41,
   },
   // GENERATED_ENTRIES
 ];
