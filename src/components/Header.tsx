@@ -4,12 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, SERVICES } from "@/lib/constants";
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_TEL,
+  FINANCE_DASHBOARD_URL,
+  isExternalHref,
+  SERVICES,
+} from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
+  { href: FINANCE_DASHBOARD_URL, label: "Finance Dashboard" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -96,6 +103,14 @@ export function Header({ hideMainNav = false }: HeaderProps) {
                           {item.label}
                         </Link>
                       ))}
+                      <Link
+                        href={FINANCE_DASHBOARD_URL}
+                        role="menuitem"
+                        className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-black"
+                        onClick={() => setServicesOpen(false)}
+                      >
+                        Custom Finance Dashboard
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -103,17 +118,22 @@ export function Header({ hideMainNav = false }: HeaderProps) {
             )}
           </div>
 
-          {NAV_LINKS.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`text-sm font-medium transition-colors ${
-                pathname === href ? "text-black" : "text-slate-600 hover:text-black"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
+          {NAV_LINKS.map(({ href, label }) => {
+            const external = isExternalHref(href);
+            const active = !external && pathname === href;
+            const className = `text-sm font-medium transition-colors ${
+              active ? "text-black" : "text-slate-600 hover:text-black"
+            }`;
+            return external ? (
+              <a key={href} href={href} className={className} target="_blank" rel="noopener noreferrer">
+                {label}
+              </a>
+            ) : (
+              <Link key={href} href={href} className={className}>
+                {label}
+              </Link>
+            );
+          })}
         </nav>
         )}
 
@@ -194,20 +214,38 @@ export function Header({ hideMainNav = false }: HeaderProps) {
                 {item.label}
               </Link>
             ))}
-          </div>
-
-          {NAV_LINKS.map(({ href, label }) => (
             <Link
-              key={href}
-              href={href}
-              className={`rounded-lg px-4 py-3 text-sm font-medium ${
-                pathname === href ? "bg-slate-100 text-black" : "text-slate-600 hover:bg-slate-50"
-              }`}
+              href={FINANCE_DASHBOARD_URL}
+              className="rounded-lg px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"
               onClick={() => setOpen(false)}
             >
-              {label}
+              Custom Finance Dashboard
             </Link>
-          ))}
+          </div>
+
+          {NAV_LINKS.map(({ href, label }) => {
+            const external = isExternalHref(href);
+            const active = !external && pathname === href;
+            const className = `rounded-lg px-4 py-3 text-sm font-medium ${
+              active ? "bg-slate-100 text-black" : "text-slate-600 hover:bg-slate-50"
+            }`;
+            return external ? (
+              <a
+                key={href}
+                href={href}
+                className={className}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </a>
+            ) : (
+              <Link key={href} href={href} className={className} onClick={() => setOpen(false)}>
+                {label}
+              </Link>
+            );
+          })}
           <div className="mt-2 flex flex-col gap-2">
             <a
               href={`tel:${CONTACT_PHONE_TEL}`}

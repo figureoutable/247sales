@@ -51,6 +51,19 @@
   --foreground: #0a0a0a;
 }
 
+/* Finance dashboard demo (scoped tokens — reference in inline styles / charts as needed) */
+.finance-demo-root {
+  --fd-bg-primary: #ffffff;
+  --fd-bg-secondary: #f9fafb;
+  --fd-border: #e5e7eb;
+  --fd-text-primary: #0a0a0a;
+  --fd-text-secondary: #6b7280;
+  --fd-accent-green: #16a34a;
+  --fd-negative: #dc2626;
+  --fd-chart-1: #16a34a;
+  --fd-chart-2: #0a0a0a;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

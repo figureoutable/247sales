@@ -13,6 +13,13 @@ export const CONTACT_EMAIL = "joshua@tryfigures.com";
 export const CONTACT_PHONE_DISPLAY = "+44 7775 081123";
 export const CONTACT_PHONE_TEL = "+447775081123";
 
+/** Client finance dashboard. Use a full https URL to open an external portal in a new tab. */
+export const FINANCE_DASHBOARD_URL = "/finance-dashboard";
+
+export function isExternalHref(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
 export const SERVICES = [
   {
     id: "statutory-accounts-tax",

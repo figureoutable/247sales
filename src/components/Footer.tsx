@@ -4,6 +4,8 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_TEL,
+  FINANCE_DASHBOARD_URL,
+  isExternalHref,
   TAGLINE,
   SOCIAL_LINKS,
 } from "@/lib/constants";
@@ -15,6 +17,7 @@ const FOOTER_LINKS = [
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
+  { href: FINANCE_DASHBOARD_URL, label: "Finance Dashboard" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -83,15 +86,27 @@ export function Footer() {
           </div>
           <div className="flex flex-wrap gap-10">
             <nav className="flex flex-wrap gap-6" aria-label="Footer">
-              {FOOTER_LINKS.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="text-sm text-slate-600 transition-colors hover:text-black"
-                >
-                  {label}
-                </Link>
-              ))}
+              {FOOTER_LINKS.map(({ href, label }) =>
+                isExternalHref(href) ? (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-slate-600 transition-colors hover:text-black"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="text-sm text-slate-600 transition-colors hover:text-black"
+                  >
+                    {label}
+                  </Link>
+                ),
+              )}
               <a
                 href="https://cal.com/figures/discoverycall"
                 target="_blank"
