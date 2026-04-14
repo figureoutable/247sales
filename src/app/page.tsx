@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { ServicesOverview } from "@/components/ServicesOverview";
 import { WhyFigures } from "@/components/WhyFigures";
 import { Testimonials } from "@/components/Testimonials";
+import { CustomFinancialDashboardsTeaser } from "@/components/CustomFinancialDashboardsTeaser";
 import { AboutTeaser } from "@/components/AboutTeaser";
 import { BlogPreview } from "@/components/BlogPreview";
 import { FAQ } from "@/components/FAQ";
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesOverview />
       <WhyFigures />
       <Testimonials />
+      <CustomFinancialDashboardsTeaser />
       <AboutTeaser />
       <BlogPreview />
       <section
