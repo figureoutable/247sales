@@ -18,6 +18,7 @@ import { body as bodyLocal38 } from "./blog-post-bodies/local-38";
 import { body as bodyLocal39 } from "./blog-post-bodies/local-39";
 import { body as bodyLocal40 } from "./blog-post-bodies/local-40";
 import { body as bodyLocal41 } from "./blog-post-bodies/local-41";
+import { body as bodyLocal42 } from "./blog-post-bodies/local-42";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -181,6 +182,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/statutory-accounts.jpg",
     excerpt: "Learn how to prepare for an HMRC investigation UK. Ensure compliance and understand what to expect during an HMRC enquiry or tax investigation.",
     body: bodyLocal41,
+  },
+  {
+    _id: "local-42",
+    title: "Cash vs Accrual Accounting UK: Choose the Right Method",
+    slug: { current: "cash-vs-accrual-accounting-uk" },
+    category: "Bookkeeping",
+    publishedAt: "2025-04-16T09:00:00.000Z",
+    mainImage: "/blog/xero-bookkeeping.jpg",
+    excerpt: "Explore cash vs accrual accounting UK methods for small businesses. Understand each approach's benefits to make informed financial decisions.",
+    body: bodyLocal42,
   },
   // GENERATED_ENTRIES
 ];
