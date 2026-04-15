@@ -5,17 +5,17 @@ export function CustomFinancialDashboardsTeaser() {
   return (
     <section className="bg-white px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20" aria-labelledby="custom-dashboards-heading">
       <div className="mx-auto max-w-6xl">
-        <Link href="/finance-dashboard" className="flex justify-center">
+        <Link href="/finance-dashboard" className="group block rounded-xl px-2 py-1 text-center">
           <h2
             id="custom-dashboards-heading"
-            className="text-center text-3xl font-bold tracking-tight text-slate-900 transition-colors hover:text-slate-700 sm:text-4xl"
+            className="text-center text-3xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-slate-700 sm:text-4xl"
           >
             Custom Financial Dashboards
           </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-base text-slate-600 sm:text-lg">
+            Built around your numbers, your reporting cadence, and the decisions you need to make.
+          </p>
         </Link>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-base text-slate-600 sm:text-lg">
-          Built around your numbers, your reporting cadence, and the decisions you need to make.
-        </p>
 
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Link

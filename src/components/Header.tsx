@@ -16,7 +16,6 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
-  { href: FINANCE_DASHBOARD_URL, label: "Finance Dashboard" },
   { href: "/contact", label: "Contact" },
 ];
 
