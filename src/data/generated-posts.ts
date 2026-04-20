@@ -20,6 +20,7 @@ import { body as bodyLocal40 } from "./blog-post-bodies/local-40";
 import { body as bodyLocal41 } from "./blog-post-bodies/local-41";
 import { body as bodyLocal42 } from "./blog-post-bodies/local-42";
 import { body as bodyLocal43 } from "./blog-post-bodies/local-43";
+import { body as bodyLocal44 } from "./blog-post-bodies/local-44";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -203,6 +204,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/xero-bookkeeping.jpg",
     excerpt: "Learn how to invoice correctly as a UK limited company, including VAT invoice requirements and legal invoice needs. Ensure compliance and streamline your billing process.",
     body: bodyLocal43,
+  },
+  {
+    _id: "local-44",
+    title: "Understanding Your Balance Sheet as a UK Small Business",
+    slug: { current: "balance-sheet-uk-small-business" },
+    category: "Reporting",
+    publishedAt: "2025-04-21T09:00:00.000Z",
+    mainImage: "/blog/read-pl-five-mins.jpg",
+    excerpt: "Learn how to read a balance sheet for your UK small business. Understand assets, liabilities, and net assets for better financial clarity.",
+    body: bodyLocal44,
   },
   // GENERATED_ENTRIES
 ];
