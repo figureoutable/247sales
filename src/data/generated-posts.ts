@@ -21,6 +21,7 @@ import { body as bodyLocal41 } from "./blog-post-bodies/local-41";
 import { body as bodyLocal42 } from "./blog-post-bodies/local-42";
 import { body as bodyLocal43 } from "./blog-post-bodies/local-43";
 import { body as bodyLocal44 } from "./blog-post-bodies/local-44";
+import { body as bodyLocal45 } from "./blog-post-bodies/local-45";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -214,6 +215,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/read-pl-five-mins.jpg",
     excerpt: "Learn how to read a balance sheet for your UK small business. Understand assets, liabilities, and net assets for better financial clarity.",
     body: bodyLocal44,
+  },
+  {
+    _id: "local-45",
+    title: "Dividend Tax UK: Rates and Allowances Explained",
+    slug: { current: "dividend-tax-uk-rates-allowances-explained" },
+    category: "Tax",
+    publishedAt: "2025-04-23T09:00:00.000Z",
+    mainImage: "/blog/corporation-tax-year-end.jpg",
+    excerpt: "Understand the dividend tax UK system, including rates and allowances for 2025. Learn how tax on dividends impacts small business owners and directors.",
+    body: bodyLocal45,
   },
   // GENERATED_ENTRIES
 ];
