@@ -23,6 +23,7 @@ import { body as bodyLocal43 } from "./blog-post-bodies/local-43";
 import { body as bodyLocal44 } from "./blog-post-bodies/local-44";
 import { body as bodyLocal45 } from "./blog-post-bodies/local-45";
 import { body as bodyLocal46 } from "./blog-post-bodies/local-46";
+import { body as bodyLocal47 } from "./blog-post-bodies/local-47";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -236,6 +237,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/year-end-accounts.jpg",
     excerpt: "Learn how to efficiently close a limited company in the UK, including strike off and voluntary liquidation processes. Ensure compliance and avoid pitfalls.",
     body: bodyLocal46,
+  },
+  {
+    _id: "local-47",
+    title: "Employee Share Schemes UK: Options for Startups",
+    slug: { current: "employee-share-schemes-uk-startups-options" },
+    category: "Tax",
+    publishedAt: "2025-04-28T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Explore employee share schemes UK options like EMI, CSOP for startups to incentivise and retain talent effectively.",
+    body: bodyLocal47,
   },
   // GENERATED_ENTRIES
 ];
