@@ -24,6 +24,7 @@ import { body as bodyLocal44 } from "./blog-post-bodies/local-44";
 import { body as bodyLocal45 } from "./blog-post-bodies/local-45";
 import { body as bodyLocal46 } from "./blog-post-bodies/local-46";
 import { body as bodyLocal47 } from "./blog-post-bodies/local-47";
+import { body as bodyLocal48 } from "./blog-post-bodies/local-48";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -247,6 +248,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/self-assessment-deadline.jpg",
     excerpt: "Explore employee share schemes UK options like EMI, CSOP for startups to incentivise and retain talent effectively.",
     body: bodyLocal47,
+  },
+  {
+    _id: "local-48",
+    title: "Understanding National Insurance Rates UK: A Guide",
+    slug: { current: "national-insurance-rates-uk-explained" },
+    category: "Payroll",
+    publishedAt: "2025-04-30T09:00:00.000Z",
+    mainImage: "/blog/paye-payroll.jpg",
+    excerpt: "Discover the current National Insurance rates UK, including NI thresholds, employer and employee contributions for a clear understanding.",
+    body: bodyLocal48,
   },
   // GENERATED_ENTRIES
 ];
