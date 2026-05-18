@@ -25,6 +25,7 @@ import { body as bodyLocal45 } from "./blog-post-bodies/local-45";
 import { body as bodyLocal46 } from "./blog-post-bodies/local-46";
 import { body as bodyLocal47 } from "./blog-post-bodies/local-47";
 import { body as bodyLocal48 } from "./blog-post-bodies/local-48";
+import { body as bodyLocal49 } from "./blog-post-bodies/local-49";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -258,6 +259,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/paye-payroll.jpg",
     excerpt: "Discover the current National Insurance rates UK, including NI thresholds, employer and employee contributions for a clear understanding.",
     body: bodyLocal48,
+  },
+  {
+    _id: "local-49",
+    title: "How to File a Confirmation Statement at Companies House UK",
+    slug: { current: "file-confirmation-statement-companies-house-uk" },
+    category: "Compliance",
+    publishedAt: "2025-05-02T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Learn how to file a confirmation statement UK with Companies House, replacing the annual return. Understand CS01 forms and compliance requirements.",
+    body: bodyLocal49,
   },
   // GENERATED_ENTRIES
 ];
