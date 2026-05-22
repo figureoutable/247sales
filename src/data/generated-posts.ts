@@ -27,6 +27,7 @@ import { body as bodyLocal47 } from "./blog-post-bodies/local-47";
 import { body as bodyLocal48 } from "./blog-post-bodies/local-48";
 import { body as bodyLocal49 } from "./blog-post-bodies/local-49";
 import { body as bodyLocal50 } from "./blog-post-bodies/local-50";
+import { body as bodyLocal51 } from "./blog-post-bodies/local-51";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -280,6 +281,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/self-assessment-deadline.jpg",
     excerpt: "Learn how Gift Aid business UK works, offering tax relief on charitable donations. Maximise benefits for your company while supporting good causes.",
     body: bodyLocal50,
+  },
+  {
+    _id: "local-51",
+    title: "Xero vs QuickBooks UK: Best for Small Businesses?",
+    slug: { current: "xero-vs-quickbooks-uk-small-business" },
+    category: "Systems",
+    publishedAt: "2025-05-07T09:00:00.000Z",
+    mainImage: "/blog/finance-stack.jpg",
+    excerpt: "Explore Xero vs QuickBooks UK to find the best accounting software for your small business. Discover features, pricing, and benefits.",
+    body: bodyLocal51,
   },
   // GENERATED_ENTRIES
 ];
