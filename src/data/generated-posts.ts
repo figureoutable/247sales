@@ -28,6 +28,7 @@ import { body as bodyLocal48 } from "./blog-post-bodies/local-48";
 import { body as bodyLocal49 } from "./blog-post-bodies/local-49";
 import { body as bodyLocal50 } from "./blog-post-bodies/local-50";
 import { body as bodyLocal51 } from "./blog-post-bodies/local-51";
+import { body as bodyLocal52 } from "./blog-post-bodies/local-52";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -291,6 +292,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/finance-stack.jpg",
     excerpt: "Explore Xero vs QuickBooks UK to find the best accounting software for your small business. Discover features, pricing, and benefits.",
     body: bodyLocal51,
+  },
+  {
+    _id: "local-52",
+    title: "How to Calculate Corporation Tax for UK Companies",
+    slug: { current: "calculate-corporation-tax-uk-guide" },
+    category: "Tax",
+    publishedAt: "2025-05-09T09:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt: "Learn how to calculate corporation tax for UK companies, including taxable profit and marginal relief, in this comprehensive guide.",
+    body: bodyLocal52,
   },
   // GENERATED_ENTRIES
 ];
