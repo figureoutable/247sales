@@ -29,6 +29,7 @@ import { body as bodyLocal49 } from "./blog-post-bodies/local-49";
 import { body as bodyLocal50 } from "./blog-post-bodies/local-50";
 import { body as bodyLocal51 } from "./blog-post-bodies/local-51";
 import { body as bodyLocal52 } from "./blog-post-bodies/local-52";
+import { body as bodyLocal53 } from "./blog-post-bodies/local-53";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -302,6 +303,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/making-tax-digital.jpg",
     excerpt: "Learn how to calculate corporation tax for UK companies, including taxable profit and marginal relief, in this comprehensive guide.",
     body: bodyLocal52,
+  },
+  {
+    _id: "local-53",
+    title: "Self Assessment Tax Return Guide for Directors UK",
+    slug: { current: "self-assessment-tax-return-guide-directors-uk" },
+    category: "Tax",
+    publishedAt: "2025-05-12T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Learn how UK company directors can efficiently manage their self assessment tax return, including key deadlines and forms like the SA100.",
+    body: bodyLocal53,
   },
   // GENERATED_ENTRIES
 ];
