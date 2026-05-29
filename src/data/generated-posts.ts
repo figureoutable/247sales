@@ -30,6 +30,7 @@ import { body as bodyLocal50 } from "./blog-post-bodies/local-50";
 import { body as bodyLocal51 } from "./blog-post-bodies/local-51";
 import { body as bodyLocal52 } from "./blog-post-bodies/local-52";
 import { body as bodyLocal53 } from "./blog-post-bodies/local-53";
+import { body as bodyLocal54 } from "./blog-post-bodies/local-54";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -313,6 +314,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/self-assessment-deadline.jpg",
     excerpt: "Learn how UK company directors can efficiently manage their self assessment tax return, including key deadlines and forms like the SA100.",
     body: bodyLocal53,
+  },
+  {
+    _id: "local-54",
+    title: "Essential Business Insurance Types for UK Small Businesses",
+    slug: { current: "business-insurance-uk-small-business" },
+    category: "Leadership",
+    publishedAt: "2025-05-14T09:00:00.000Z",
+    mainImage: "/blog/fractional-cfo.jpg",
+    excerpt: "Discover the essential types of business insurance UK small businesses need, including professional indemnity and public liability insurance.",
+    body: bodyLocal54,
   },
   // GENERATED_ENTRIES
 ];
