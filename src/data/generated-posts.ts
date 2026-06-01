@@ -31,6 +31,7 @@ import { body as bodyLocal51 } from "./blog-post-bodies/local-51";
 import { body as bodyLocal52 } from "./blog-post-bodies/local-52";
 import { body as bodyLocal53 } from "./blog-post-bodies/local-53";
 import { body as bodyLocal54 } from "./blog-post-bodies/local-54";
+import { body as bodyLocal55 } from "./blog-post-bodies/local-55";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -324,6 +325,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/fractional-cfo.jpg",
     excerpt: "Discover the essential types of business insurance UK small businesses need, including professional indemnity and public liability insurance.",
     body: bodyLocal54,
+  },
+  {
+    _id: "local-55",
+    title: "How to Read a Balance Sheet for UK Small Business Owners",
+    slug: { current: "how-to-read-balance-sheet-uk" },
+    category: "Reporting",
+    publishedAt: "2025-05-16T09:00:00.000Z",
+    mainImage: "/blog/investor-reporting.jpg",
+    excerpt: "Learn how to read a balance sheet UK. Discover key components like current assets and shareholders funds to better understand your business's financial health.",
+    body: bodyLocal55,
   },
   // GENERATED_ENTRIES
 ];
