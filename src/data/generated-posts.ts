@@ -32,6 +32,7 @@ import { body as bodyLocal52 } from "./blog-post-bodies/local-52";
 import { body as bodyLocal53 } from "./blog-post-bodies/local-53";
 import { body as bodyLocal54 } from "./blog-post-bodies/local-54";
 import { body as bodyLocal55 } from "./blog-post-bodies/local-55";
+import { body as bodyLocal56 } from "./blog-post-bodies/local-56";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -335,6 +336,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/investor-reporting.jpg",
     excerpt: "Learn how to read a balance sheet UK. Discover key components like current assets and shareholders funds to better understand your business's financial health.",
     body: bodyLocal55,
+  },
+  {
+    _id: "local-56",
+    title: "Profit Extraction Strategies for UK Limited Company Directors",
+    slug: { current: "profit-extraction-strategies-uk-limited-company-directors" },
+    category: "Tax",
+    publishedAt: "2025-05-19T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Explore tax-efficient profit extraction UK strategies for limited company directors. Understand salary, dividends, and pension contributions.",
+    body: bodyLocal56,
   },
   // GENERATED_ENTRIES
 ];
