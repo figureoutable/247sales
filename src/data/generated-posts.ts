@@ -33,6 +33,7 @@ import { body as bodyLocal53 } from "./blog-post-bodies/local-53";
 import { body as bodyLocal54 } from "./blog-post-bodies/local-54";
 import { body as bodyLocal55 } from "./blog-post-bodies/local-55";
 import { body as bodyLocal56 } from "./blog-post-bodies/local-56";
+import { body as bodyLocal57 } from "./blog-post-bodies/local-57";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -346,6 +347,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/self-assessment-deadline.jpg",
     excerpt: "Explore tax-efficient profit extraction UK strategies for limited company directors. Understand salary, dividends, and pension contributions.",
     body: bodyLocal56,
+  },
+  {
+    _id: "local-57",
+    title: "Manage Accounts Receivable for UK Small Businesses",
+    slug: { current: "manage-accounts-receivable-uk-small-business" },
+    category: "Cash Flow",
+    publishedAt: "2025-05-21T09:00:00.000Z",
+    mainImage: "/blog/quarterly-forecast.jpg",
+    excerpt: "Learn how to effectively manage accounts receivable for UK small businesses, including tips on chasing invoices and debtor management.",
+    body: bodyLocal57,
   },
   // GENERATED_ENTRIES
 ];
