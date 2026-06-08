@@ -63,7 +63,7 @@ In the meantime, feel free to reply to this email or give us a call on ${CONTACT
 Speak soon,
 
 Josh Lee
-Figures Chartered Accountants
+Figures
 ${CONTACT_EMAIL}`;
 
       const thankRes = await fetch("https://api.resend.com/emails", {

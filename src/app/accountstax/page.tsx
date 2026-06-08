@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Testimonials } from "@/components/Testimonials";
 export const metadata: Metadata = {
-  title: "Accounts & Tax | Figures Chartered Accountants",
+  title: "Accounts & Tax | Figures",
   description:
     "End-to-end accounting and tax for UK businesses. Bookkeeping, VAT, year-end accounts and tax — done properly, on time. Book a free discovery call.",
 };
@@ -35,7 +35,7 @@ export default function AccountsTaxPage() {
           <div className="w-full px-2 py-4 pt-5 sm:px-4 sm:py-5 sm:pt-6">
             <iframe
               src="https://cal.com/figures/discoverycall"
-              title="Book a discovery call with Figures Chartered Accountants"
+              title="Book a discovery call with Figures"
               className="h-[700px] w-full"
               style={{ border: 0 }}
             />
@@ -73,7 +73,7 @@ export default function AccountsTaxPage() {
           <div className="aspect-video w-full overflow-hidden rounded-2xl bg-slate-100">
             <iframe
               src="https://www.youtube.com/embed/h86AWtWx15o"
-              title="How Figures Chartered Accountants accounting and tax works"
+              title="How Figures accounting and tax works"
               className="h-full w-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

@@ -12,8 +12,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tryfigures.com"),
   title: {
-    default: "Figures Chartered Accountants | Oddly Satisfying Accounting",
-    template: "%s | Figures Chartered Accountants",
+    default: "Figures | Oddly Satisfying Accounting",
+    template: "%s | Figures",
   },
   description:
     "UK accounting and advisory for founders and small businesses. Plain English, same-day response, transparent pricing. Surrey-based.",

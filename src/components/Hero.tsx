@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { CAL_LINK } from "@/lib/constants";
+import { ChecklistsSection } from "@/components/ChecklistsSection";
 
 const YOUTUBE_EMBED_ID = "opShRwVFX10";
 
@@ -20,12 +20,12 @@ export function Hero() {
 
         <div
           className="mx-auto mt-10 max-w-4xl"
-          aria-label="Intro video: Welcome to Figures Chartered Accountants"
+          aria-label="Intro video: Welcome to Figures"
         >
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-lg ring-1 ring-slate-200/50">
             <iframe
               src={`https://www.youtube.com/embed/${YOUTUBE_EMBED_ID}?rel=0`}
-              title="Welcome to Figures Chartered Accountants – intro from Joshua Lee"
+              title="Welcome to Figures – intro from Joshua Lee"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="absolute inset-0 h-full w-full"
@@ -51,74 +51,10 @@ export function Hero() {
             Schedule a call
           </a>
         </div>
+      </div>
 
-        <div className="mt-10">
-          <p className="mb-6 text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Free checklists for smarter accounting
-          </p>
-          <div className="grid gap-3 text-left sm:gap-4 sm:grid-cols-3">
-          <a
-            href="/checklists/year-end-accounts-checklist.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
-          >
-            <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
-              <Image
-                src="/checklists/previews/year-end-accounts-checklist.pdf.png"
-                alt="Preview of Year-End Accounts Checklist PDF"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 640px) 100vw, 33vw"
-              />
-            </div>
-            <div className="p-4 sm:p-5">
-              <p className="text-sm font-semibold text-slate-900">Year-End Accounts Checklist</p>
-              <p className="mt-2 text-sm text-slate-600">Know exactly what your accountant needs before they ask.</p>
-            </div>
-          </a>
-          <a
-            href="/checklists/self-assessment-checklist.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
-          >
-            <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
-              <Image
-                src="/checklists/previews/self-assessment-checklist.pdf.png"
-                alt="Preview of Self Assessment Checklist PDF"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 640px) 100vw, 33vw"
-              />
-            </div>
-            <div className="p-4 sm:p-5">
-              <p className="text-sm font-semibold text-slate-900">Self Assessment Checklist</p>
-              <p className="mt-2 text-sm text-slate-600">Don&apos;t overpay or miss the deadline. Get it right first time.</p>
-            </div>
-          </a>
-          <a
-            href="/checklists/new-company-checklist.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm transition-colors hover:border-emerald-300"
-          >
-            <div className="relative h-28 w-full bg-white sm:h-auto sm:aspect-[4/3]">
-              <Image
-                src="/checklists/previews/new-company-checklist.pdf.png"
-                alt="Preview of New Company Checklist PDF"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 640px) 100vw, 33vw"
-              />
-            </div>
-            <div className="p-4 sm:p-5">
-              <p className="text-sm font-semibold text-slate-900">New Company Checklist</p>
-              <p className="mt-2 text-sm text-slate-600">Everything you need to set up your limited company correctly.</p>
-            </div>
-          </a>
-          </div>
-        </div>
+      <div className="mx-auto mt-10 max-w-6xl">
+        <ChecklistsSection />
       </div>
     </section>
   );

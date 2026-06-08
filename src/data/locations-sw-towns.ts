@@ -9,7 +9,7 @@ export const SW_LONDON_TOWN_PAGES: TownEntry[] = [
     h1: "Chartered Accountants in Kingston upon Thames",
     metaTitle: "Accountants in Kingston upon Thames | Chartered Accountants Surrey | Figures",
     metaDescription:
-      "Accountants in Kingston upon Thames for SME founders and directors in the Royal Borough. Figures Chartered Accountants, Woking-based, covers accounts, corporation tax, VAT, payroll and Xero for Kingston limited companies.",
+      "Accountants in Kingston upon Thames for SME founders and directors in the Royal Borough. Figures, Woking-based, covers accounts, corporation tax, VAT, payroll and Xero for Kingston limited companies.",
     intro:
       "Kingston upon Thames blends historic market-town character with a major South West London retail and commercial centre, all within the Royal Borough that many still mentally associate with Surrey. The business base spans professional services, healthcare practices, creative agencies, hospitality, and a strong SME and director community that serves households and corporates across South West London. Figures is based in Woking and serves Kingston upon Thames and nearby Surbiton, New Malden and Tolworth, combining chartered accountant rigour with an appreciation for how London Borough trading patterns differ from purely suburban Surrey. We support limited companies with bookkeeping, VAT, payroll, statutory accounts, corporation tax and management reporting, whether you are a single-director consultancy or a growing team with multiple sites. Our focus is practical: deadlines met, tax treated correctly, and numbers you can use for hiring, pricing and investment decisions in a competitive London market.",
     whyFigures:
@@ -47,7 +47,7 @@ export const SW_LONDON_TOWN_PAGES: TownEntry[] = [
     h1: "Accountants in Richmond",
     metaTitle: "Accountants in Richmond | Chartered Accountants Surrey | Figures",
     metaDescription:
-      "Accountants in Richmond for SME founders, directors and professionals. Figures Chartered Accountants serves Richmond from Woking with corporation tax, payroll, VAT, statutory accounts and advisory-ready reporting.",
+      "Accountants in Richmond for SME founders, directors and professionals. Figures serves Richmond from Woking with corporation tax, payroll, VAT, statutory accounts and advisory-ready reporting.",
     intro:
       "Richmond is one of London’s leafiest and most affluent districts, with an unusually high concentration of directors, contractors, consultants and professionals running personal service companies alongside more traditional SMEs in retail, hospitality and services. That profile creates sophisticated needs around remuneration planning, property decisions, investment portfolios intersecting with company cash, and tight expectations on reporting quality. Figures is based in Woking and serves Richmond and nearby areas such as Kew and Twickenham, offering chartered accountant support that respects both the pace of London life and the need for discretion. We help limited companies stay compliant with HMRC and Companies House while giving owners clarity on dividends, salaries, VAT and corporation tax. Whether you are optimising a compact consultancy or scaling a small team, we align bookkeeping, payroll and year-end work with how Richmond businesses actually generate income.",
     whyFigures:
@@ -85,7 +85,7 @@ export const SW_LONDON_TOWN_PAGES: TownEntry[] = [
     h1: "Chartered Accountants in Wimbledon",
     metaTitle: "Accountants in Wimbledon | Chartered Accountants Surrey | Figures",
     metaDescription:
-      "Accountants in Wimbledon for SME founders and owner-managed businesses in Merton. Figures Chartered Accountants, Woking-based, provides year-end accounts, corporation tax, payroll, VAT and Xero bookkeeping support.",
+      "Accountants in Wimbledon for SME founders and owner-managed businesses in Merton. Figures, Woking-based, provides year-end accounts, corporation tax, payroll, VAT and Xero bookkeeping support.",
     intro:
       "Wimbledon, within the London Borough of Merton, combines internationally recognised sporting heritage with a substantial local business community spanning professional services, healthcare, retail, hospitality, property and creative agencies. Owner-managed businesses here often serve affluent households and corporate clients across South West London, which shapes everything from pricing and VAT profiles to payroll and subcontractor usage. Figures is based in Woking and serves Wimbledon and surrounding Merton neighbourhoods, providing chartered accountant services that respect both London operational pace and the expectations of established SMEs. We help you maintain clean Xero records, run payroll accurately, manage VAT where relevant, and deliver year-end accounts and corporation tax filings without last-minute drama. Whether you are a single-site operator or a growing team with more complex reporting needs, we align compliance and management information with how Wimbledon businesses win and retain clients.",
     whyFigures:
@@ -123,7 +123,7 @@ export const SW_LONDON_TOWN_PAGES: TownEntry[] = [
     h1: "Accountants in Sutton",
     metaTitle: "Accountants in Sutton | Chartered Accountants Surrey | Figures",
     metaDescription:
-      "Accountants in Sutton for SME founders and owner-managed businesses. Figures Chartered Accountants serves Sutton from Woking with corporation tax, payroll, VAT, statutory accounts and Xero bookkeeping for local SMEs.",
+      "Accountants in Sutton for SME founders and owner-managed businesses. Figures serves Sutton from Woking with corporation tax, payroll, VAT, statutory accounts and Xero bookkeeping for local SMEs.",
     intro:
       "Sutton functions as a suburban commercial centre for the London Borough of Sutton, with a solid SME base spanning professional services, construction and trades, healthcare practices, education-linked businesses, and a growing community of tech-enabled services that appreciate clear pricing and fast email turnaround. Search competition for accountants can be less intense than in central London hotspots, but quality still varies — many founders want a chartered firm that combines compliance discipline with genuine accessibility. Figures is based in Woking and serves Sutton and nearby Carshalton, Cheam and Worcester Park, helping limited companies run clean bookkeeping, accurate payroll, well-prepared VAT returns, and timely year-end accounts. We understand how suburban SMEs often mix local clients with London-facing work, which affects travel expenses, subcontractor use, and working capital. Our advice stays grounded in how Sutton businesses actually operate week to week.",
     whyFigures:
@@ -161,7 +161,7 @@ export const SW_LONDON_TOWN_PAGES: TownEntry[] = [
     h1: "Chartered Accountants in Twickenham",
     metaTitle: "Accountants in Twickenham | Chartered Accountants Surrey | Figures",
     metaDescription:
-      "Accountants in Twickenham for SME founders, contractors and directors near Richmond. Figures Chartered Accountants, Woking-based, delivers accounts, corporation tax, payroll, VAT and cash flow support for local businesses.",
+      "Accountants in Twickenham for SME founders, contractors and directors near Richmond. Figures, Woking-based, delivers accounts, corporation tax, payroll, VAT and cash flow support for local businesses.",
     intro:
       "Twickenham combines riverside affluence, strong sports and events-related commerce, and a dense small-business community of contractors, consultants, healthcare practices and retail services that often overlaps commercially with neighbouring Richmond and Kingston. Many companies here are director-led, expect fast answers on tax and payroll questions, and need year-end processes that do not derail client delivery. Figures is based in Woking and serves Twickenham, Teddington and Whitton, offering chartered accountant support tuned to South West London SMEs that want both technical quality and approachable communication. We align bookkeeping, VAT, payroll, statutory accounts and corporation tax with your real cash cycles, whether income is project-based, retainer-based, or seasonal around events and hospitality. Our focus is to keep you compliant while making the numbers legible for decisions on hiring, dividends and investment.",
     whyFigures:

@@ -3,7 +3,7 @@ type Props = { areaServed: string };
 const BUSINESS = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Figures Chartered Accountants",
+  name: "Figures",
   url: "https://tryfigures.com",
   telephone: "+447775081123",
   address: {

@@ -57,7 +57,7 @@ import { RevenueForecasterPanel } from "./RevenueForecasterPanel";
 import { ChartAccentProvider } from "./ChartAccentContext";
 import { isBrandedChartPalette, positiveSubClassName, resolveChartPalette } from "./chartPalettes";
 
-const PREPARED_BY = "Figures Chartered Accountants";
+const PREPARED_BY = "Figures";
 
 export type FinanceDemoUiLabels = {
   companyName: string;
