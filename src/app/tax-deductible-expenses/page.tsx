@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 type Expense = { name: string; description: string };
 type Category = { title: string; expenses: Expense[] };
 type EntityType = "soleTrader" | "limitedCompany";
+type ChatMessage = { id: string; role: "user" | "assistant"; content: string };
+
+const inputClassName =
+  "block w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-primary focus:ring-1 focus:ring-primary";
 
 const EXPENSE_DATA: Record<EntityType, Category[]> = {
   soleTrader: [
@@ -1116,15 +1120,44 @@ const EXPENSE_DATA: Record<EntityType, Category[]> = {
 
 export default function TaxDeductibleExpensesPage() {
   const [entityType, setEntityType] = useState<EntityType | null>(null);
-  const [openCategories, setOpenCategories] = useState<Set<number>>(new Set());
+  const [openCategories, setOpenCategories] = useState<Set<string>>(new Set());
+  const [searchQuery, setSearchQuery] = useState("");
+  const [chatInput, setChatInput] = useState("");
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+  const [isChatLoading, setIsChatLoading] = useState(false);
+  const chatEndRef = useRef<HTMLDivElement>(null);
 
-  function toggleCategory(index: number) {
+  const isSearching = searchQuery.trim().length > 0;
+
+  const filteredCategories = useMemo(() => {
+    if (!entityType) return [];
+    const categories = EXPENSE_DATA[entityType];
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return categories;
+
+    return categories
+      .map((category) => ({
+        ...category,
+        expenses: category.expenses.filter(
+          (expense) =>
+            expense.name.toLowerCase().includes(query) ||
+            expense.description.toLowerCase().includes(query),
+        ),
+      }))
+      .filter((category) => category.expenses.length > 0);
+  }, [entityType, searchQuery]);
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chatMessages, isChatLoading]);
+
+  function toggleCategory(title: string) {
     setOpenCategories((prev) => {
       const next = new Set(prev);
-      if (next.has(index)) {
-        next.delete(index);
+      if (next.has(title)) {
+        next.delete(title);
       } else {
-        next.add(index);
+        next.add(title);
       }
       return next;
     });
@@ -1133,9 +1166,59 @@ export default function TaxDeductibleExpensesPage() {
   function selectEntityType(type: EntityType) {
     setEntityType(type);
     setOpenCategories(new Set());
+    setSearchQuery("");
   }
 
-  const categories = entityType ? EXPENSE_DATA[entityType] : [];
+  async function handleSendMessage() {
+    const message = chatInput.trim();
+    if (message.length < 10 || message.length > 300 || isChatLoading) return;
+
+    const userMessage: ChatMessage = {
+      id: crypto.randomUUID(),
+      role: "user",
+      content: message,
+    };
+
+    setChatInput("");
+    setChatMessages((prev) => [...prev, userMessage]);
+    setIsChatLoading(true);
+
+    try {
+      const res = await fetch("/api/tax-assistant", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+      const data = (await res.json()) as { reply?: string; error?: string };
+      const assistantContent =
+        res.ok && data.reply
+          ? data.reply
+          : data.error ?? "Something went wrong. Please try again.";
+
+      setChatMessages((prev) => [
+        ...prev,
+        { id: crypto.randomUUID(), role: "assistant", content: assistantContent },
+      ]);
+    } catch {
+      setChatMessages((prev) => [
+        ...prev,
+        {
+          id: crypto.randomUUID(),
+          role: "assistant",
+          content: "Something went wrong. Please try again.",
+        },
+      ]);
+    } finally {
+      setIsChatLoading(false);
+    }
+  }
+
+  function handleChatKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      void handleSendMessage();
+    }
+  }
 
   return (
     <div className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
@@ -1175,46 +1258,133 @@ export default function TaxDeductibleExpensesPage() {
 
         {entityType && (
           <>
+            <div className="mt-8">
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Search expenses, e.g. mobile phone, mileage, insurance..."
+                className={inputClassName}
+                aria-label="Search expenses"
+              />
+            </div>
+
             <div className="mt-8 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
               This list is for general guidance only and applies to UK taxpayers. Eligibility
               depends on your specific circumstances. Always confirm with a qualified accountant
               before making a claim.
             </div>
 
-            <div className="mt-8 divide-y divide-slate-200 border-t border-slate-200">
-              {categories.map((category, index) => {
-                const isOpen = openCategories.has(index);
-                return (
-                  <div key={category.title}>
+            {filteredCategories.length === 0 ? (
+              <p className="mt-8 text-base text-slate-600">
+                No matching expenses found. Try our tax assistant below.
+              </p>
+            ) : (
+              <div className="mt-8 divide-y divide-slate-200 border-t border-slate-200">
+                {filteredCategories.map((category) => {
+                  const isOpen = isSearching || openCategories.has(category.title);
+                  return (
+                    <div key={category.title}>
+                      <button
+                        type="button"
+                        onClick={() => toggleCategory(category.title)}
+                        className="flex w-full items-center justify-between py-4 text-left"
+                        aria-expanded={isOpen}
+                      >
+                        <span className="text-base font-semibold text-slate-900">
+                          {category.title}
+                        </span>
+                        <ChevronDown
+                          className={`h-5 w-5 shrink-0 text-slate-500 transition-transform ${
+                            isOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      {isOpen && (
+                        <ul className="space-y-4 pb-4">
+                          {category.expenses.map((expense) => (
+                            <li key={expense.name}>
+                              <p className="font-semibold text-slate-900">{expense.name}</p>
+                              <p className="mt-1 text-sm text-slate-600">{expense.description}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            <section className="mt-16 border-t border-slate-200 pt-12">
+              <h2 className="text-2xl font-bold text-slate-900">Ask Our Tax Assistant</h2>
+              <p className="mt-2 text-base text-slate-600">
+                Have a question about whether something is tax deductible? Ask below.
+              </p>
+
+              <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+                <div className="h-72 overflow-y-auto px-4 py-4 sm:h-80 sm:px-5">
+                  {chatMessages.length === 0 && !isChatLoading && (
+                    <p className="text-sm text-slate-500">
+                      Ask a UK tax or expenses question to get started.
+                    </p>
+                  )}
+                  <div className="space-y-4">
+                    {chatMessages.map((message) => (
+                      <div
+                        key={message.id}
+                        className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                      >
+                        <div
+                          className={`max-w-[85%] rounded-lg px-3 py-2 text-sm sm:max-w-[75%] sm:px-4 ${
+                            message.role === "user"
+                              ? "bg-primary text-white"
+                              : "bg-slate-100 text-slate-800"
+                          }`}
+                        >
+                          <p className="whitespace-pre-wrap">{message.content}</p>
+                        </div>
+                      </div>
+                    ))}
+                    {isChatLoading && (
+                      <div className="flex justify-start">
+                        <div className="rounded-lg bg-slate-100 px-3 py-2 text-sm text-slate-600 sm:px-4">
+                          Thinking...
+                        </div>
+                      </div>
+                    )}
+                    <div ref={chatEndRef} />
+                  </div>
+                </div>
+
+                <div className="border-t border-slate-200 bg-slate-50 p-4">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
+                    <textarea
+                      value={chatInput}
+                      onChange={(event) => setChatInput(event.target.value)}
+                      onKeyDown={handleChatKeyDown}
+                      placeholder="e.g. Can I claim my broadband as a business expense?"
+                      rows={2}
+                      maxLength={300}
+                      className={`${inputClassName} min-h-[2.75rem] resize-none bg-white sm:flex-1`}
+                      aria-label="Tax assistant question"
+                    />
                     <button
                       type="button"
-                      onClick={() => toggleCategory(index)}
-                      className="flex w-full items-center justify-between py-4 text-left"
-                      aria-expanded={isOpen}
+                      onClick={() => void handleSendMessage()}
+                      disabled={
+                        isChatLoading ||
+                        chatInput.trim().length < 10 ||
+                        chatInput.trim().length > 300
+                      }
+                      className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-50 sm:shrink-0"
                     >
-                      <span className="text-base font-semibold text-slate-900">
-                        {category.title}
-                      </span>
-                      <ChevronDown
-                        className={`h-5 w-5 shrink-0 text-slate-500 transition-transform ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
+                      Send
                     </button>
-                    {isOpen && (
-                      <ul className="pb-4 space-y-4">
-                        {category.expenses.map((expense) => (
-                          <li key={expense.name}>
-                            <p className="font-semibold text-slate-900">{expense.name}</p>
-                            <p className="mt-1 text-sm text-slate-600">{expense.description}</p>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              </div>
+            </section>
           </>
         )}
       </div>
