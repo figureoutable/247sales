@@ -34,6 +34,7 @@ import { body as bodyLocal54 } from "./blog-post-bodies/local-54";
 import { body as bodyLocal55 } from "./blog-post-bodies/local-55";
 import { body as bodyLocal56 } from "./blog-post-bodies/local-56";
 import { body as bodyLocal57 } from "./blog-post-bodies/local-57";
+import { body as bodyLocal58 } from "./blog-post-bodies/local-58";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -357,6 +358,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/quarterly-forecast.jpg",
     excerpt: "Learn how to effectively manage accounts receivable for UK small businesses, including tips on chasing invoices and debtor management.",
     body: bodyLocal57,
+  },
+  {
+    _id: "local-58",
+    title: "Year-End Checklist for UK Limited Companies",
+    slug: { current: "year-end-checklist-limited-company-uk" },
+    category: "Compliance",
+    publishedAt: "2025-05-23T09:00:00.000Z",
+    mainImage: "/blog/year-end-accounts.jpg",
+    excerpt: "Comprehensive year-end checklist for UK limited companies to ensure compliance and seamless year-end accounts preparation.",
+    body: bodyLocal58,
   },
   // GENERATED_ENTRIES
 ];
