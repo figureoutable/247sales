@@ -184,7 +184,7 @@
       "legal invoice requirements"
     ],
     "category": "Bookkeeping",
-    "used": false
+    "used": true
   },
   {
     "topic": "Understanding your balance sheet as a UK small business",
@@ -195,7 +195,7 @@
       "net assets"
     ],
     "category": "Reporting",
-    "used": false
+    "used": true
   },
   {
     "topic": "Dividend tax rates and allowances UK explained",
@@ -206,7 +206,7 @@
       "tax on dividends"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to close a limited company in the UK",
@@ -217,7 +217,7 @@
       "members voluntary liquidation"
     ],
     "category": "Compliance",
-    "used": false
+    "used": true
   },
   {
     "topic": "Employee share schemes and options for UK startups",
@@ -228,7 +228,7 @@
       "CSOP"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "National Insurance rates and thresholds UK explained",
@@ -239,7 +239,7 @@
       "employee NI contributions"
     ],
     "category": "Payroll",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to file a confirmation statement at Companies House UK",
@@ -250,7 +250,7 @@
       "CS01"
     ],
     "category": "Compliance",
-    "used": false
+    "used": true
   },
   {
     "topic": "Gift Aid for businesses donating to charity UK",
@@ -261,7 +261,7 @@
       "donating to charity tax"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Xero vs QuickBooks which is better for UK small businesses",
@@ -272,7 +272,7 @@
       "cloud accounting comparison"
     ],
     "category": "Systems",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to calculate corporation tax for a UK limited company",
@@ -283,7 +283,7 @@
       "marginal relief"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Self assessment tax return guide for company directors UK",
@@ -294,7 +294,7 @@
       "self assessment deadline"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Business insurance types and what UK small businesses need",
@@ -305,7 +305,7 @@
       "employers liability"
     ],
     "category": "Leadership",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to read a balance sheet for UK small business owners",
@@ -316,7 +316,7 @@
       "shareholders funds"
     ],
     "category": "Reporting",
-    "used": false
+    "used": true
   },
   {
     "topic": "Profit extraction strategies for UK limited company directors",
@@ -327,7 +327,7 @@
       "pension contributions"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to manage accounts receivable for UK small businesses",
@@ -338,7 +338,7 @@
       "credit control"
     ],
     "category": "Cash Flow",
-    "used": false
+    "used": true
   },
   {
     "topic": "Year-end checklist for UK limited companies",
@@ -349,7 +349,7 @@
       "pre year-end planning"
     ],
     "category": "Compliance",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to reduce corporation tax legally in the UK",

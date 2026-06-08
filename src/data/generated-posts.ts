@@ -19,6 +19,22 @@ import { body as bodyLocal39 } from "./blog-post-bodies/local-39";
 import { body as bodyLocal40 } from "./blog-post-bodies/local-40";
 import { body as bodyLocal41 } from "./blog-post-bodies/local-41";
 import { body as bodyLocal42 } from "./blog-post-bodies/local-42";
+import { body as bodyLocal43 } from "./blog-post-bodies/local-43";
+import { body as bodyLocal44 } from "./blog-post-bodies/local-44";
+import { body as bodyLocal45 } from "./blog-post-bodies/local-45";
+import { body as bodyLocal46 } from "./blog-post-bodies/local-46";
+import { body as bodyLocal47 } from "./blog-post-bodies/local-47";
+import { body as bodyLocal48 } from "./blog-post-bodies/local-48";
+import { body as bodyLocal49 } from "./blog-post-bodies/local-49";
+import { body as bodyLocal50 } from "./blog-post-bodies/local-50";
+import { body as bodyLocal51 } from "./blog-post-bodies/local-51";
+import { body as bodyLocal52 } from "./blog-post-bodies/local-52";
+import { body as bodyLocal53 } from "./blog-post-bodies/local-53";
+import { body as bodyLocal54 } from "./blog-post-bodies/local-54";
+import { body as bodyLocal55 } from "./blog-post-bodies/local-55";
+import { body as bodyLocal56 } from "./blog-post-bodies/local-56";
+import { body as bodyLocal57 } from "./blog-post-bodies/local-57";
+import { body as bodyLocal58 } from "./blog-post-bodies/local-58";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -192,6 +208,166 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/xero-bookkeeping.jpg",
     excerpt: "Explore cash vs accrual accounting UK methods for small businesses. Understand each approach's benefits to make informed financial decisions.",
     body: bodyLocal42,
+  },
+  {
+    _id: "local-43",
+    title: "How to Invoice Correctly as a UK Limited Company",
+    slug: { current: "invoicing-uk-limited-company-guide" },
+    category: "Bookkeeping",
+    publishedAt: "2025-04-18T09:00:00.000Z",
+    mainImage: "/blog/xero-bookkeeping.jpg",
+    excerpt: "Learn how to invoice correctly as a UK limited company, including VAT invoice requirements and legal invoice needs. Ensure compliance and streamline your billing process.",
+    body: bodyLocal43,
+  },
+  {
+    _id: "local-44",
+    title: "Understanding Your Balance Sheet as a UK Small Business",
+    slug: { current: "balance-sheet-uk-small-business" },
+    category: "Reporting",
+    publishedAt: "2025-04-21T09:00:00.000Z",
+    mainImage: "/blog/read-pl-five-mins.jpg",
+    excerpt: "Learn how to read a balance sheet for your UK small business. Understand assets, liabilities, and net assets for better financial clarity.",
+    body: bodyLocal44,
+  },
+  {
+    _id: "local-45",
+    title: "Dividend Tax UK: Rates and Allowances Explained",
+    slug: { current: "dividend-tax-uk-rates-allowances-explained" },
+    category: "Tax",
+    publishedAt: "2025-04-23T09:00:00.000Z",
+    mainImage: "/blog/corporation-tax-year-end.jpg",
+    excerpt: "Understand the dividend tax UK system, including rates and allowances for 2025. Learn how tax on dividends impacts small business owners and directors.",
+    body: bodyLocal45,
+  },
+  {
+    _id: "local-46",
+    title: "How to Close a Limited Company in the UK: A Guide",
+    slug: { current: "close-limited-company-uk-guide" },
+    category: "Compliance",
+    publishedAt: "2025-04-25T09:00:00.000Z",
+    mainImage: "/blog/year-end-accounts.jpg",
+    excerpt: "Learn how to efficiently close a limited company in the UK, including strike off and voluntary liquidation processes. Ensure compliance and avoid pitfalls.",
+    body: bodyLocal46,
+  },
+  {
+    _id: "local-47",
+    title: "Employee Share Schemes UK: Options for Startups",
+    slug: { current: "employee-share-schemes-uk-startups-options" },
+    category: "Tax",
+    publishedAt: "2025-04-28T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Explore employee share schemes UK options like EMI, CSOP for startups to incentivise and retain talent effectively.",
+    body: bodyLocal47,
+  },
+  {
+    _id: "local-48",
+    title: "Understanding National Insurance Rates UK: A Guide",
+    slug: { current: "national-insurance-rates-uk-explained" },
+    category: "Payroll",
+    publishedAt: "2025-04-30T09:00:00.000Z",
+    mainImage: "/blog/paye-payroll.jpg",
+    excerpt: "Discover the current National Insurance rates UK, including NI thresholds, employer and employee contributions for a clear understanding.",
+    body: bodyLocal48,
+  },
+  {
+    _id: "local-49",
+    title: "How to File a Confirmation Statement at Companies House UK",
+    slug: { current: "file-confirmation-statement-companies-house-uk" },
+    category: "Compliance",
+    publishedAt: "2025-05-02T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Learn how to file a confirmation statement UK with Companies House, replacing the annual return. Understand CS01 forms and compliance requirements.",
+    body: bodyLocal49,
+  },
+  {
+    _id: "local-50",
+    title: "Gift Aid Business UK: Maximise Charitable Donations Tax Relief",
+    slug: { current: "gift-aid-business-uk-charitable-donations-tax-relief" },
+    category: "Tax",
+    publishedAt: "2025-05-05T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Learn how Gift Aid business UK works, offering tax relief on charitable donations. Maximise benefits for your company while supporting good causes.",
+    body: bodyLocal50,
+  },
+  {
+    _id: "local-51",
+    title: "Xero vs QuickBooks UK: Best for Small Businesses?",
+    slug: { current: "xero-vs-quickbooks-uk-small-business" },
+    category: "Systems",
+    publishedAt: "2025-05-07T09:00:00.000Z",
+    mainImage: "/blog/finance-stack.jpg",
+    excerpt: "Explore Xero vs QuickBooks UK to find the best accounting software for your small business. Discover features, pricing, and benefits.",
+    body: bodyLocal51,
+  },
+  {
+    _id: "local-52",
+    title: "How to Calculate Corporation Tax for UK Companies",
+    slug: { current: "calculate-corporation-tax-uk-guide" },
+    category: "Tax",
+    publishedAt: "2025-05-09T09:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt: "Learn how to calculate corporation tax for UK companies, including taxable profit and marginal relief, in this comprehensive guide.",
+    body: bodyLocal52,
+  },
+  {
+    _id: "local-53",
+    title: "Self Assessment Tax Return Guide for Directors UK",
+    slug: { current: "self-assessment-tax-return-guide-directors-uk" },
+    category: "Tax",
+    publishedAt: "2025-05-12T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Learn how UK company directors can efficiently manage their self assessment tax return, including key deadlines and forms like the SA100.",
+    body: bodyLocal53,
+  },
+  {
+    _id: "local-54",
+    title: "Essential Business Insurance Types for UK Small Businesses",
+    slug: { current: "business-insurance-uk-small-business" },
+    category: "Leadership",
+    publishedAt: "2025-05-14T09:00:00.000Z",
+    mainImage: "/blog/fractional-cfo.jpg",
+    excerpt: "Discover the essential types of business insurance UK small businesses need, including professional indemnity and public liability insurance.",
+    body: bodyLocal54,
+  },
+  {
+    _id: "local-55",
+    title: "How to Read a Balance Sheet for UK Small Business Owners",
+    slug: { current: "how-to-read-balance-sheet-uk" },
+    category: "Reporting",
+    publishedAt: "2025-05-16T09:00:00.000Z",
+    mainImage: "/blog/investor-reporting.jpg",
+    excerpt: "Learn how to read a balance sheet UK. Discover key components like current assets and shareholders funds to better understand your business's financial health.",
+    body: bodyLocal55,
+  },
+  {
+    _id: "local-56",
+    title: "Profit Extraction Strategies for UK Limited Company Directors",
+    slug: { current: "profit-extraction-strategies-uk-limited-company-directors" },
+    category: "Tax",
+    publishedAt: "2025-05-19T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Explore tax-efficient profit extraction UK strategies for limited company directors. Understand salary, dividends, and pension contributions.",
+    body: bodyLocal56,
+  },
+  {
+    _id: "local-57",
+    title: "Manage Accounts Receivable for UK Small Businesses",
+    slug: { current: "manage-accounts-receivable-uk-small-business" },
+    category: "Cash Flow",
+    publishedAt: "2025-05-21T09:00:00.000Z",
+    mainImage: "/blog/quarterly-forecast.jpg",
+    excerpt: "Learn how to effectively manage accounts receivable for UK small businesses, including tips on chasing invoices and debtor management.",
+    body: bodyLocal57,
+  },
+  {
+    _id: "local-58",
+    title: "Year-End Checklist for UK Limited Companies",
+    slug: { current: "year-end-checklist-limited-company-uk" },
+    category: "Compliance",
+    publishedAt: "2025-05-23T09:00:00.000Z",
+    mainImage: "/blog/year-end-accounts.jpg",
+    excerpt: "Comprehensive year-end checklist for UK limited companies to ensure compliance and seamless year-end accounts preparation.",
+    body: bodyLocal58,
   },
   // GENERATED_ENTRIES
 ];
