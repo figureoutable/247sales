@@ -3,25 +3,17 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { latestPostsQuery } from "@/sanity/lib/queries";
 import { getLocalLatestPosts } from "@/data/blog-posts";
-
-type PostListItem = {
-  _id: string;
-  title: string;
-  slug: { current: string };
-  category: string | null;
-  publishedAt: string;
-  mainImage: string | null;
-  excerpt: string | null;
-};
+import { mergePostLists, type PostListItem } from "@/lib/blog-posts-merge";
 
 async function getLatestPosts(): Promise<PostListItem[]> {
+  let sanityPosts: PostListItem[] = [];
   try {
-    const sanityPosts = await client.fetch<PostListItem[]>(latestPostsQuery);
-    if (sanityPosts.length > 0) return sanityPosts;
+    sanityPosts = await client.fetch<PostListItem[]>(latestPostsQuery);
   } catch {
-    // fall through to local
+    // use local posts only
   }
-  return getLocalLatestPosts(3).map((p) => ({
+
+  const localPosts = getLocalLatestPosts(12).map((p) => ({
     _id: p._id,
     title: p.title,
     slug: p.slug,
@@ -30,6 +22,8 @@ async function getLatestPosts(): Promise<PostListItem[]> {
     mainImage: p.mainImage,
     excerpt: p.excerpt,
   }));
+
+  return mergePostLists(sanityPosts, localPosts).slice(0, 3);
 }
 
 export async function BlogPreview() {

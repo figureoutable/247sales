@@ -80,10 +80,13 @@ function getNextId() {
 function getNextPublishDate() {
   const combined = readAllSources();
   const matches = [...combined.matchAll(/publishedAt:\s*"([^"]+)"/g)];
-  const latest = new Date(
+  const latestInFile = new Date(
     Math.max(...matches.map((m) => new Date(m[1]).getTime()))
   );
-  const d = new Date(latest);
+  const today = new Date();
+  today.setUTCHours(9, 0, 0, 0);
+  const start = latestInFile > today ? latestInFile : today;
+  const d = new Date(start);
   d.setDate(d.getDate() + 1);
   while (![1, 3, 5].includes(d.getDay())) {
     d.setDate(d.getDate() + 1);

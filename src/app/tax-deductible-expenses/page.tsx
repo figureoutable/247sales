@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 type Expense = { name: string; description: string };
 type Category = { title: string; expenses: Expense[] };
 type EntityType = "soleTrader" | "limitedCompany";
-type ChatMessage = { id: string; role: "user" | "assistant"; content: string };
 
 const inputClassName =
   "block w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-primary focus:ring-1 focus:ring-primary";
@@ -1122,10 +1121,6 @@ export default function TaxDeductibleExpensesPage() {
   const [entityType, setEntityType] = useState<EntityType | null>(null);
   const [openCategories, setOpenCategories] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState("");
-  const [chatInput, setChatInput] = useState("");
-  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
-  const [isChatLoading, setIsChatLoading] = useState(false);
-  const chatEndRef = useRef<HTMLDivElement>(null);
 
   const isSearching = searchQuery.trim().length > 0;
 
@@ -1147,10 +1142,6 @@ export default function TaxDeductibleExpensesPage() {
       .filter((category) => category.expenses.length > 0);
   }, [entityType, searchQuery]);
 
-  useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [chatMessages, isChatLoading]);
-
   function toggleCategory(title: string) {
     setOpenCategories((prev) => {
       const next = new Set(prev);
@@ -1167,57 +1158,6 @@ export default function TaxDeductibleExpensesPage() {
     setEntityType(type);
     setOpenCategories(new Set());
     setSearchQuery("");
-  }
-
-  async function handleSendMessage() {
-    const message = chatInput.trim();
-    if (message.length < 10 || message.length > 300 || isChatLoading) return;
-
-    const userMessage: ChatMessage = {
-      id: crypto.randomUUID(),
-      role: "user",
-      content: message,
-    };
-
-    setChatInput("");
-    setChatMessages((prev) => [...prev, userMessage]);
-    setIsChatLoading(true);
-
-    try {
-      const res = await fetch("/api/tax-assistant", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
-      });
-      const data = (await res.json()) as { reply?: string; error?: string };
-      const assistantContent =
-        res.ok && data.reply
-          ? data.reply
-          : data.error ?? "Something went wrong. Please try again.";
-
-      setChatMessages((prev) => [
-        ...prev,
-        { id: crypto.randomUUID(), role: "assistant", content: assistantContent },
-      ]);
-    } catch {
-      setChatMessages((prev) => [
-        ...prev,
-        {
-          id: crypto.randomUUID(),
-          role: "assistant",
-          content: "Something went wrong. Please try again.",
-        },
-      ]);
-    } finally {
-      setIsChatLoading(false);
-    }
-  }
-
-  function handleChatKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
-    if (event.key === "Enter" && !event.shiftKey) {
-      event.preventDefault();
-      void handleSendMessage();
-    }
   }
 
   return (
@@ -1277,7 +1217,7 @@ export default function TaxDeductibleExpensesPage() {
 
             {filteredCategories.length === 0 ? (
               <p className="mt-8 text-base text-slate-600">
-                No matching expenses found. Try our tax assistant below.
+                No matching expenses found. Try a different search term.
               </p>
             ) : (
               <div className="mt-8 divide-y divide-slate-200 border-t border-slate-200">
@@ -1315,76 +1255,6 @@ export default function TaxDeductibleExpensesPage() {
                 })}
               </div>
             )}
-
-            <section className="mt-16 border-t border-slate-200 pt-12">
-              <h2 className="text-2xl font-bold text-slate-900">Ask Our Tax Assistant</h2>
-              <p className="mt-2 text-base text-slate-600">
-                Have a question about whether something is tax deductible? Ask below.
-              </p>
-
-              <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-                <div className="h-72 overflow-y-auto px-4 py-4 sm:h-80 sm:px-5">
-                  {chatMessages.length === 0 && !isChatLoading && (
-                    <p className="text-sm text-slate-500">
-                      Ask a UK tax or expenses question to get started.
-                    </p>
-                  )}
-                  <div className="space-y-4">
-                    {chatMessages.map((message) => (
-                      <div
-                        key={message.id}
-                        className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
-                      >
-                        <div
-                          className={`max-w-[85%] rounded-lg px-3 py-2 text-sm sm:max-w-[75%] sm:px-4 ${
-                            message.role === "user"
-                              ? "bg-primary text-white"
-                              : "bg-slate-100 text-slate-800"
-                          }`}
-                        >
-                          <p className="whitespace-pre-wrap">{message.content}</p>
-                        </div>
-                      </div>
-                    ))}
-                    {isChatLoading && (
-                      <div className="flex justify-start">
-                        <div className="rounded-lg bg-slate-100 px-3 py-2 text-sm text-slate-600 sm:px-4">
-                          Thinking...
-                        </div>
-                      </div>
-                    )}
-                    <div ref={chatEndRef} />
-                  </div>
-                </div>
-
-                <div className="border-t border-slate-200 bg-slate-50 p-4">
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
-                    <textarea
-                      value={chatInput}
-                      onChange={(event) => setChatInput(event.target.value)}
-                      onKeyDown={handleChatKeyDown}
-                      placeholder="e.g. Can I claim my broadband as a business expense?"
-                      rows={2}
-                      maxLength={300}
-                      className={`${inputClassName} min-h-[2.75rem] resize-none bg-white sm:flex-1`}
-                      aria-label="Tax assistant question"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => void handleSendMessage()}
-                      disabled={
-                        isChatLoading ||
-                        chatInput.trim().length < 10 ||
-                        chatInput.trim().length > 300
-                      }
-                      className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-50 sm:shrink-0"
-                    >
-                      Send
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
           </>
         )}
       </div>

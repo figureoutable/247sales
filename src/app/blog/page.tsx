@@ -4,30 +4,22 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { postListQuery } from "@/sanity/lib/queries";
 import { getLocalPosts } from "@/data/blog-posts";
+import { mergePostLists, type PostListItem } from "@/lib/blog-posts-merge";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Insights and updates from Figures — accounting and advisory for UK founders and small businesses.",
 };
 
-type PostListItem = {
-  _id: string;
-  title: string;
-  slug: { current: string };
-  category: string | null;
-  publishedAt: string;
-  mainImage: string | null;
-  excerpt: string | null;
-};
-
 async function getPosts(): Promise<PostListItem[]> {
+  let sanityPosts: PostListItem[] = [];
   try {
-    const sanityPosts = await client.fetch<PostListItem[]>(postListQuery);
-    if (sanityPosts.length > 0) return sanityPosts;
+    sanityPosts = await client.fetch<PostListItem[]>(postListQuery);
   } catch {
-    // fall through to local
+    // use local posts only
   }
-  return getLocalPosts().map((p) => ({
+
+  const localPosts = getLocalPosts().map((p) => ({
     _id: p._id,
     title: p.title,
     slug: p.slug,
@@ -36,6 +28,8 @@ async function getPosts(): Promise<PostListItem[]> {
     mainImage: p.mainImage,
     excerpt: p.excerpt,
   }));
+
+  return mergePostLists(sanityPosts, localPosts);
 }
 
 export default async function BlogPage() {
