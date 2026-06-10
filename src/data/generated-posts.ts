@@ -35,6 +35,7 @@ import { body as bodyLocal55 } from "./blog-post-bodies/local-55";
 import { body as bodyLocal56 } from "./blog-post-bodies/local-56";
 import { body as bodyLocal57 } from "./blog-post-bodies/local-57";
 import { body as bodyLocal58 } from "./blog-post-bodies/local-58";
+import { body as bodyLocal59 } from "./blog-post-bodies/local-59";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -368,6 +369,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/year-end-accounts.jpg",
     excerpt: "Comprehensive year-end checklist for UK limited companies to ensure compliance and seamless year-end accounts preparation.",
     body: bodyLocal58,
+  },
+  {
+    _id: "local-59",
+    title: "How to Legally Reduce Corporation Tax in the UK",
+    slug: { current: "reduce-corporation-tax-uk-legally" },
+    category: "Tax",
+    publishedAt: "2026-06-12T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Discover strategies to reduce corporation tax in the UK legally. Explore tax planning and allowable deductions for limited companies.",
+    body: bodyLocal59,
   },
   // GENERATED_ENTRIES
 ];
