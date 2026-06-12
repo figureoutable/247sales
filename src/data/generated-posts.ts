@@ -36,6 +36,7 @@ import { body as bodyLocal56 } from "./blog-post-bodies/local-56";
 import { body as bodyLocal57 } from "./blog-post-bodies/local-57";
 import { body as bodyLocal58 } from "./blog-post-bodies/local-58";
 import { body as bodyLocal59 } from "./blog-post-bodies/local-59";
+import { body as bodyLocal60 } from "./blog-post-bodies/local-60";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -379,6 +380,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/self-assessment-deadline.jpg",
     excerpt: "Discover strategies to reduce corporation tax in the UK legally. Explore tax planning and allowable deductions for limited companies.",
     body: bodyLocal59,
+  },
+  {
+    _id: "local-60",
+    title: "Cloud Accounting UK: Benefits for Small Businesses",
+    slug: { current: "cloud-accounting-uk-benefits-small-businesses" },
+    category: "Systems",
+    publishedAt: "2026-06-15T09:00:00.000Z",
+    mainImage: "/blog/finance-stack.jpg",
+    excerpt: "Discover the benefits of cloud accounting UK for small businesses. Learn how online accounting software can streamline your financial processes.",
+    body: bodyLocal60,
   },
   // GENERATED_ENTRIES
 ];
