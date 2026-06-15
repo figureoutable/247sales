@@ -37,6 +37,7 @@ import { body as bodyLocal57 } from "./blog-post-bodies/local-57";
 import { body as bodyLocal58 } from "./blog-post-bodies/local-58";
 import { body as bodyLocal59 } from "./blog-post-bodies/local-59";
 import { body as bodyLocal60 } from "./blog-post-bodies/local-60";
+import { body as bodyLocal61 } from "./blog-post-bodies/local-61";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -390,6 +391,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/finance-stack.jpg",
     excerpt: "Discover the benefits of cloud accounting UK for small businesses. Learn how online accounting software can streamline your financial processes.",
     body: bodyLocal60,
+  },
+  {
+    _id: "local-61",
+    title: "How to Prepare Management Accounts UK: A Step-by-Step Guide",
+    slug: { current: "prepare-management-accounts-uk-guide" },
+    category: "Reporting",
+    publishedAt: "2026-06-17T09:00:00.000Z",
+    mainImage: "/blog/investor-reporting.jpg",
+    excerpt: "Learn how to prepare management accounts UK style with this comprehensive guide. Includes tips on templates, monthly accounts, and management reporting.",
+    body: bodyLocal61,
   },
   // GENERATED_ENTRIES
 ];
