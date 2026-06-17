@@ -38,6 +38,7 @@ import { body as bodyLocal58 } from "./blog-post-bodies/local-58";
 import { body as bodyLocal59 } from "./blog-post-bodies/local-59";
 import { body as bodyLocal60 } from "./blog-post-bodies/local-60";
 import { body as bodyLocal61 } from "./blog-post-bodies/local-61";
+import { body as bodyLocal62 } from "./blog-post-bodies/local-62";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -401,6 +402,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/investor-reporting.jpg",
     excerpt: "Learn how to prepare management accounts UK style with this comprehensive guide. Includes tips on templates, monthly accounts, and management reporting.",
     body: bodyLocal61,
+  },
+  {
+    _id: "local-62",
+    title: "P11D Benefits in Kind UK: A Guide for Employers",
+    slug: { current: "p11d-benefits-in-kind-uk-employers-guide" },
+    category: "Payroll",
+    publishedAt: "2026-06-19T09:00:00.000Z",
+    mainImage: "/blog/paye-payroll.jpg",
+    excerpt: "Understand P11D benefits in kind UK, filing requirements, and deadlines to ensure compliance with HMRC regulations and avoid penalties.",
+    body: bodyLocal62,
   },
   // GENERATED_ENTRIES
 ];
