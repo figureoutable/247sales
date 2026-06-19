@@ -39,6 +39,7 @@ import { body as bodyLocal59 } from "./blog-post-bodies/local-59";
 import { body as bodyLocal60 } from "./blog-post-bodies/local-60";
 import { body as bodyLocal61 } from "./blog-post-bodies/local-61";
 import { body as bodyLocal62 } from "./blog-post-bodies/local-62";
+import { body as bodyLocal63 } from "./blog-post-bodies/local-63";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -412,6 +413,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/paye-payroll.jpg",
     excerpt: "Understand P11D benefits in kind UK, filing requirements, and deadlines to ensure compliance with HMRC regulations and avoid penalties.",
     body: bodyLocal62,
+  },
+  {
+    _id: "local-63",
+    title: "Effective Working Capital Management UK: Key Strategies",
+    slug: { current: "working-capital-management-uk-strategies" },
+    category: "Cash Flow",
+    publishedAt: "2026-06-22T09:00:00.000Z",
+    mainImage: "/blog/quarterly-forecast.jpg",
+    excerpt: "Explore working capital management UK strategies to optimise cash flow, improve working capital ratio, and manage the cash conversion cycle effectively.",
+    body: bodyLocal63,
   },
   // GENERATED_ENTRIES
 ];
