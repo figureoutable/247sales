@@ -40,6 +40,7 @@ import { body as bodyLocal60 } from "./blog-post-bodies/local-60";
 import { body as bodyLocal61 } from "./blog-post-bodies/local-61";
 import { body as bodyLocal62 } from "./blog-post-bodies/local-62";
 import { body as bodyLocal63 } from "./blog-post-bodies/local-63";
+import { body as bodyLocal64 } from "./blog-post-bodies/local-64";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -423,6 +424,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/quarterly-forecast.jpg",
     excerpt: "Explore working capital management UK strategies to optimise cash flow, improve working capital ratio, and manage the cash conversion cycle effectively.",
     body: bodyLocal63,
+  },
+  {
+    _id: "local-64",
+    title: "Digital Record Keeping for MTD UK: A Comprehensive Guide",
+    slug: { current: "digital-record-keeping-mtd-uk-guide" },
+    category: "Compliance",
+    publishedAt: "2026-06-24T09:00:00.000Z",
+    mainImage: "/blog/year-end-accounts.jpg",
+    excerpt: "Explore digital record keeping for MTD UK, ensuring compliance with HMRC requirements using MTD compliant software and digital links.",
+    body: bodyLocal64,
   },
   // GENERATED_ENTRIES
 ];
