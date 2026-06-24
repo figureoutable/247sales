@@ -36,7 +36,7 @@ export function Hero() {
         <div className="mx-auto mt-8 max-w-4xl space-y-2 text-lg font-light text-slate-600 sm:text-xl">
           <p>
             Your time matters.{" "}
-            <strong className="font-bold text-slate-900">We respond within 5 business hours, guaranteed.</strong>
+            <strong className="font-bold text-slate-900">We respond within 7 business hours, guaranteed.</strong>
           </p>
           <p>If we don&apos;t, next month&apos;s fee is on us.</p>
         </div>
