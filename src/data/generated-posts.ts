@@ -41,6 +41,7 @@ import { body as bodyLocal61 } from "./blog-post-bodies/local-61";
 import { body as bodyLocal62 } from "./blog-post-bodies/local-62";
 import { body as bodyLocal63 } from "./blog-post-bodies/local-63";
 import { body as bodyLocal64 } from "./blog-post-bodies/local-64";
+import { body as bodyLocal65 } from "./blog-post-bodies/local-65";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -434,6 +435,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/year-end-accounts.jpg",
     excerpt: "Explore digital record keeping for MTD UK, ensuring compliance with HMRC requirements using MTD compliant software and digital links.",
     body: bodyLocal64,
+  },
+  {
+    _id: "local-65",
+    title: "Employer NI Changes UK: Impact on Small Businesses",
+    slug: { current: "employer-ni-changes-uk-impact-small-businesses" },
+    category: "Payroll",
+    publishedAt: "2026-06-26T09:00:00.000Z",
+    mainImage: "/blog/paye-payroll.jpg",
+    excerpt: "Explore the impact of employer NI changes in the UK on small businesses, including rate increases and NI costs. Learn how to manage these changes effectively.",
+    body: bodyLocal65,
   },
   // GENERATED_ENTRIES
 ];
