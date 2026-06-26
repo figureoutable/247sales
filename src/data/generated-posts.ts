@@ -42,6 +42,7 @@ import { body as bodyLocal62 } from "./blog-post-bodies/local-62";
 import { body as bodyLocal63 } from "./blog-post-bodies/local-63";
 import { body as bodyLocal64 } from "./blog-post-bodies/local-64";
 import { body as bodyLocal65 } from "./blog-post-bodies/local-65";
+import { body as bodyLocal66 } from "./blog-post-bodies/local-66";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -445,6 +446,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/paye-payroll.jpg",
     excerpt: "Explore the impact of employer NI changes in the UK on small businesses, including rate increases and NI costs. Learn how to manage these changes effectively.",
     body: bodyLocal65,
+  },
+  {
+    _id: "local-66",
+    title: "Automate Your Accounting Workflow: A Guide for UK Businesses",
+    slug: { current: "automate-accounting-workflow-uk" },
+    category: "Systems",
+    publishedAt: "2026-06-29T09:00:00.000Z",
+    mainImage: "/blog/finance-stack.jpg",
+    excerpt: "Discover how to automate accounting in the UK using tools like Xero and Dext, streamlining your business processes and saving valuable time.",
+    body: bodyLocal66,
   },
   // GENERATED_ENTRIES
 ];
