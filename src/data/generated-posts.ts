@@ -43,6 +43,7 @@ import { body as bodyLocal63 } from "./blog-post-bodies/local-63";
 import { body as bodyLocal64 } from "./blog-post-bodies/local-64";
 import { body as bodyLocal65 } from "./blog-post-bodies/local-65";
 import { body as bodyLocal66 } from "./blog-post-bodies/local-66";
+import { body as bodyLocal67 } from "./blog-post-bodies/local-67";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -456,6 +457,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/finance-stack.jpg",
     excerpt: "Discover how to automate accounting in the UK using tools like Xero and Dext, streamlining your business processes and saving valuable time.",
     body: bodyLocal66,
+  },
+  {
+    _id: "local-67",
+    title: "Preparing for Your First Audit as a UK Small Business",
+    slug: { current: "first-audit-uk-small-business-preparation" },
+    category: "Compliance",
+    publishedAt: "2026-07-01T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Learn how to prepare for your first audit as a UK small business, including understanding audit thresholds and statutory requirements.",
+    body: bodyLocal67,
   },
   // GENERATED_ENTRIES
 ];
