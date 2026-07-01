@@ -44,6 +44,7 @@ import { body as bodyLocal64 } from "./blog-post-bodies/local-64";
 import { body as bodyLocal65 } from "./blog-post-bodies/local-65";
 import { body as bodyLocal66 } from "./blog-post-bodies/local-66";
 import { body as bodyLocal67 } from "./blog-post-bodies/local-67";
+import { body as bodyLocal68 } from "./blog-post-bodies/local-68";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -467,6 +468,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/statutory-accounts.jpg",
     excerpt: "Learn how to prepare for your first audit as a UK small business, including understanding audit thresholds and statutory requirements.",
     body: bodyLocal67,
+  },
+  {
+    _id: "local-68",
+    title: "Revenue Recognition UK: Key Insights for Small Businesses",
+    slug: { current: "revenue-recognition-uk-small-business-insights" },
+    category: "Reporting",
+    publishedAt: "2026-07-03T09:00:00.000Z",
+    mainImage: "/blog/read-pl-five-mins.jpg",
+    excerpt: "Learn about revenue recognition UK for small businesses, including when to recognise revenue and FRS 102 standards. Understand accrued income practices.",
+    body: bodyLocal68,
   },
   // GENERATED_ENTRIES
 ];
