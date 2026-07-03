@@ -45,6 +45,7 @@ import { body as bodyLocal65 } from "./blog-post-bodies/local-65";
 import { body as bodyLocal66 } from "./blog-post-bodies/local-66";
 import { body as bodyLocal67 } from "./blog-post-bodies/local-67";
 import { body as bodyLocal68 } from "./blog-post-bodies/local-68";
+import { body as bodyLocal69 } from "./blog-post-bodies/local-69";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -478,6 +479,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/read-pl-five-mins.jpg",
     excerpt: "Learn about revenue recognition UK for small businesses, including when to recognise revenue and FRS 102 standards. Understand accrued income practices.",
     body: bodyLocal68,
+  },
+  {
+    _id: "local-69",
+    title: "How to Apply for a Business Loan in the UK: What Lenders Want",
+    slug: { current: "apply-business-loan-uk-lenders-requirements" },
+    category: "Cash Flow",
+    publishedAt: "2026-07-06T09:00:00.000Z",
+    mainImage: "/blog/quarterly-forecast.jpg",
+    excerpt: "Learn how to apply for a business loan in the UK and discover what lenders look for in a small business loan application for successful financing.",
+    body: bodyLocal69,
   },
   // GENERATED_ENTRIES
 ];
