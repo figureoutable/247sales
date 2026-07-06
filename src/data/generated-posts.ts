@@ -46,6 +46,7 @@ import { body as bodyLocal66 } from "./blog-post-bodies/local-66";
 import { body as bodyLocal67 } from "./blog-post-bodies/local-67";
 import { body as bodyLocal68 } from "./blog-post-bodies/local-68";
 import { body as bodyLocal69 } from "./blog-post-bodies/local-69";
+import { body as bodyLocal70 } from "./blog-post-bodies/local-70";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -489,6 +490,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/quarterly-forecast.jpg",
     excerpt: "Learn how to apply for a business loan in the UK and discover what lenders look for in a small business loan application for successful financing.",
     body: bodyLocal69,
+  },
+  {
+    _id: "local-70",
+    title: "Tax-Efficient Strategies to Sell a Business in the UK",
+    slug: { current: "tax-efficient-strategies-sell-business-uk" },
+    category: "Tax",
+    publishedAt: "2026-07-08T09:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt: "Explore tax-efficient ways to sell a business in the UK. Learn about business asset disposal relief, entrepreneurs relief, and more.",
+    body: bodyLocal70,
   },
   // GENERATED_ENTRIES
 ];
