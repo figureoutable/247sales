@@ -47,6 +47,7 @@ import { body as bodyLocal67 } from "./blog-post-bodies/local-67";
 import { body as bodyLocal68 } from "./blog-post-bodies/local-68";
 import { body as bodyLocal69 } from "./blog-post-bodies/local-69";
 import { body as bodyLocal70 } from "./blog-post-bodies/local-70";
+import { body as bodyLocal71 } from "./blog-post-bodies/local-71";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -500,6 +501,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/making-tax-digital.jpg",
     excerpt: "Explore tax-efficient ways to sell a business in the UK. Learn about business asset disposal relief, entrepreneurs relief, and more.",
     body: bodyLocal70,
+  },
+  {
+    _id: "local-71",
+    title: "Company Pension Contributions and Tax Relief UK",
+    slug: { current: "company-pension-contributions-uk-tax-relief" },
+    category: "Tax",
+    publishedAt: "2026-07-10T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Discover how company pension contributions UK can provide valuable corporation tax relief. Learn about employer pension tax relief strategies.",
+    body: bodyLocal71,
   },
   // GENERATED_ENTRIES
 ];
