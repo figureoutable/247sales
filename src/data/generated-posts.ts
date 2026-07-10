@@ -48,6 +48,7 @@ import { body as bodyLocal68 } from "./blog-post-bodies/local-68";
 import { body as bodyLocal69 } from "./blog-post-bodies/local-69";
 import { body as bodyLocal70 } from "./blog-post-bodies/local-70";
 import { body as bodyLocal71 } from "./blog-post-bodies/local-71";
+import { body as bodyLocal72 } from "./blog-post-bodies/local-72";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -511,6 +512,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/self-assessment-deadline.jpg",
     excerpt: "Discover how company pension contributions UK can provide valuable corporation tax relief. Learn about employer pension tax relief strategies.",
     body: bodyLocal71,
+  },
+  {
+    _id: "local-72",
+    title: "Switch Accountants in the UK: What to Expect",
+    slug: { current: "switch-accountants-uk-what-to-expect" },
+    category: "Leadership",
+    publishedAt: "2026-07-13T09:00:00.000Z",
+    mainImage: "/blog/fractional-cfo.jpg",
+    excerpt: "Learn how to switch accountants in the UK smoothly and what to expect during the transition. Ensure a seamless change with our guide.",
+    body: bodyLocal72,
   },
   // GENERATED_ENTRIES
 ];
