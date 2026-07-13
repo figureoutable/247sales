@@ -49,6 +49,7 @@ import { body as bodyLocal69 } from "./blog-post-bodies/local-69";
 import { body as bodyLocal70 } from "./blog-post-bodies/local-70";
 import { body as bodyLocal71 } from "./blog-post-bodies/local-71";
 import { body as bodyLocal72 } from "./blog-post-bodies/local-72";
+import { body as bodyLocal73 } from "./blog-post-bodies/local-73";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -522,6 +523,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/fractional-cfo.jpg",
     excerpt: "Learn how to switch accountants in the UK smoothly and what to expect during the transition. Ensure a seamless change with our guide.",
     body: bodyLocal72,
+  },
+  {
+    _id: "local-73",
+    title: "Understanding Mileage Allowance for UK Businesses",
+    slug: { current: "mileage-allowance-uk-business" },
+    category: "Tax",
+    publishedAt: "2026-07-15T09:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt: "Learn how mileage allowance in the UK affects business travel expenses. Discover HMRC mileage rates and advisory fuel rates for efficient tax planning.",
+    body: bodyLocal73,
   },
   // GENERATED_ENTRIES
 ];
