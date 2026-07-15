@@ -50,6 +50,7 @@ import { body as bodyLocal70 } from "./blog-post-bodies/local-70";
 import { body as bodyLocal71 } from "./blog-post-bodies/local-71";
 import { body as bodyLocal72 } from "./blog-post-bodies/local-72";
 import { body as bodyLocal73 } from "./blog-post-bodies/local-73";
+import { body as bodyLocal74 } from "./blog-post-bodies/local-74";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -533,6 +534,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/making-tax-digital.jpg",
     excerpt: "Learn how mileage allowance in the UK affects business travel expenses. Discover HMRC mileage rates and advisory fuel rates for efficient tax planning.",
     body: bodyLocal73,
+  },
+  {
+    _id: "local-74",
+    title: "How to Prepare a Cash Flow Statement UK Guide",
+    slug: { current: "prepare-cash-flow-statement-uk" },
+    category: "Cash Flow",
+    publishedAt: "2026-07-17T09:00:00.000Z",
+    mainImage: "/blog/cash-flow-13-weeks.jpg",
+    excerpt: "Learn how to prepare a cash flow statement UK for your business. Understand cash flow reporting and improve financial clarity with this comprehensive guide.",
+    body: bodyLocal74,
   },
   // GENERATED_ENTRIES
 ];
