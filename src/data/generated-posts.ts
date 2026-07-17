@@ -51,6 +51,7 @@ import { body as bodyLocal71 } from "./blog-post-bodies/local-71";
 import { body as bodyLocal72 } from "./blog-post-bodies/local-72";
 import { body as bodyLocal73 } from "./blog-post-bodies/local-73";
 import { body as bodyLocal74 } from "./blog-post-bodies/local-74";
+import { body as bodyLocal75 } from "./blog-post-bodies/local-75";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -544,6 +545,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/cash-flow-13-weeks.jpg",
     excerpt: "Learn how to prepare a cash flow statement UK for your business. Understand cash flow reporting and improve financial clarity with this comprehensive guide.",
     body: bodyLocal74,
+  },
+  {
+    _id: "local-75",
+    title: "Startup Costs You Can Claim Before Trading in the UK",
+    slug: { current: "startup-costs-claim-uk-before-trading" },
+    category: "Tax",
+    publishedAt: "2026-07-20T09:00:00.000Z",
+    mainImage: "/blog/corporation-tax-year-end.jpg",
+    excerpt: "Discover which startup costs you can claim in the UK before trading. Understand pre-trading expenses and maximise allowable pre-trading costs.",
+    body: bodyLocal75,
   },
   // GENERATED_ENTRIES
 ];

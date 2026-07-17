@@ -536,7 +536,7 @@
       "allowable pre-trading costs"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to change your company year-end date in the UK",
