@@ -52,6 +52,7 @@ import { body as bodyLocal72 } from "./blog-post-bodies/local-72";
 import { body as bodyLocal73 } from "./blog-post-bodies/local-73";
 import { body as bodyLocal74 } from "./blog-post-bodies/local-74";
 import { body as bodyLocal75 } from "./blog-post-bodies/local-75";
+import { body as bodyLocal76 } from "./blog-post-bodies/local-76";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -555,6 +556,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/corporation-tax-year-end.jpg",
     excerpt: "Discover which startup costs you can claim in the UK before trading. Understand pre-trading expenses and maximise allowable pre-trading costs.",
     body: bodyLocal75,
+  },
+  {
+    _id: "local-76",
+    title: "How to Change Your Company Year End Date UK",
+    slug: { current: "change-company-year-end-date-uk" },
+    category: "Compliance",
+    publishedAt: "2026-07-22T09:00:00.000Z",
+    mainImage: "/blog/year-end-accounts.jpg",
+    excerpt: "Learn how to change your company year end date in the UK. Understand the process for altering your accounting reference date and its implications.",
+    body: bodyLocal76,
   },
   // GENERATED_ENTRIES
 ];
