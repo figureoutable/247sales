@@ -1,0 +1,9 @@
+Blog hero image — global style (apply every time):
+- Use a vivid, high-saturation palette with at least 3 distinct colours (for example: cobalt or navy, teal or emerald, and coral or amber accents).
+- Keep colour temperature lively and modern; prefer bright directional lighting and clean contrast over muted or dusty tones.
+- Avoid beige, taupe, cream-heavy, tan, sepia, grey-washed, or brown-on-brown scenes. Do not default to bland neutral office stock-photo aesthetics.
+- Include colourful environmental elements where relevant (screens, charts, stationery, lighting, signage, plants, clothing accents) to keep the frame energetic.
+- Suitable for a wide 16:9 or 3:2 web hero; professional, UK-relevant small-business context.
+
+Scene and composition:
+A vibrant scene of a UK small business owner reviewing import-export documents in a modern office. The room is filled with natural light from large windows, casting a soft glow on a teal desk with colourful folders and a digital tablet displaying a dynamic graph. A cobalt blue wall with a world map highlights the global nature of trade, while lush green plants add a touch of nature. This visually engaging setting reflects the complexities and opportunities of VAT on imports and exports post-Brexit.

@@ -558,7 +558,7 @@
       "export VAT rules"
     ],
     "category": "VAT",
-    "used": false
+    "used": true
   },
   {
     "topic": "Understanding FRS 102 for UK small businesses",

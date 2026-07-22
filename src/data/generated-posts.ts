@@ -53,6 +53,7 @@ import { body as bodyLocal73 } from "./blog-post-bodies/local-73";
 import { body as bodyLocal74 } from "./blog-post-bodies/local-74";
 import { body as bodyLocal75 } from "./blog-post-bodies/local-75";
 import { body as bodyLocal76 } from "./blog-post-bodies/local-76";
+import { body as bodyLocal77 } from "./blog-post-bodies/local-77";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -566,6 +567,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/year-end-accounts.jpg",
     excerpt: "Learn how to change your company year end date in the UK. Understand the process for altering your accounting reference date and its implications.",
     body: bodyLocal76,
+  },
+  {
+    _id: "local-77",
+    title: "Post-Brexit VAT on Imports & Exports for UK Businesses",
+    slug: { current: "post-brexit-vat-imports-exports-uk" },
+    category: "VAT",
+    publishedAt: "2026-07-24T09:00:00.000Z",
+    mainImage: "/blog/vat-schemes.jpg",
+    excerpt: "Understand the impact of post-Brexit VAT on imports and exports for UK small businesses, including VAT rules and postponed VAT accounting.",
+    body: bodyLocal77,
   },
   // GENERATED_ENTRIES
 ];
