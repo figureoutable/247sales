@@ -1,0 +1,9 @@
+Blog hero image — global style (apply every time):
+- Use a vivid, high-saturation palette with at least 3 distinct colours (for example: cobalt or navy, teal or emerald, and coral or amber accents).
+- Keep colour temperature lively and modern; prefer bright directional lighting and clean contrast over muted or dusty tones.
+- Avoid beige, taupe, cream-heavy, tan, sepia, grey-washed, or brown-on-brown scenes. Do not default to bland neutral office stock-photo aesthetics.
+- Include colourful environmental elements where relevant (screens, charts, stationery, lighting, signage, plants, clothing accents) to keep the frame energetic.
+- Suitable for a wide 16:9 or 3:2 web hero; professional, UK-relevant small-business context.
+
+Scene and composition:
+Visualize a modern UK small business office filled with vibrant colours. A large teal dashboard displaying financial graphs and charts dominates the scene, set against a cobalt blue wall. Green plants add a touch of nature, and warm lighting highlights a group of diverse professionals, symbolising clarity and collaboration in financial reporting. This energetic environment reflects the dynamism and precision required in understanding FRS 102 for UK small businesses.
