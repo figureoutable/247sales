@@ -1,11 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ChevronDown, X } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { CalEmbed } from "@/components/CalEmbed";
-
-const BANNER_STORAGE_KEY = "mtd-banner-dismissed-2026-08-07";
 
 const PHASES = [
   {
@@ -140,68 +138,14 @@ function phaseForIncome(income: number): string {
 }
 
 export function MtdIncomeTaxPage() {
-  const [bannerDismissed, setBannerDismissed] = useState(false);
   const [incomeInput, setIncomeInput] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  useEffect(() => {
-    try {
-      if (sessionStorage.getItem(BANNER_STORAGE_KEY) === "1") {
-        setBannerDismissed(true);
-      }
-    } catch {
-      /* ignore */
-    }
-  }, []);
 
   const income = useMemo(() => parseIncome(incomeInput), [incomeInput]);
   const phaseMessage = income === null ? null : phaseForIncome(income);
 
-  function dismissBanner() {
-    setBannerDismissed(true);
-    try {
-      sessionStorage.setItem(BANNER_STORAGE_KEY, "1");
-    } catch {
-      /* ignore */
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      {/*
-        TIME-SENSITIVE: Deadline banner for first MTD quarterly deadline (7 August 2026).
-        Remove or update this section after 7 August 2026.
-      */}
-      {!bannerDismissed && (
-        <div className="border-b border-teal-200 bg-teal-50">
-          <div className="mx-auto flex max-w-6xl items-start gap-4 px-4 py-4 sm:px-6 lg:px-8">
-            <div className="min-w-0 flex-1 text-sm text-teal-950 sm:text-base">
-              <p>
-                The first MTD quarterly deadline is{" "}
-                <strong className="font-semibold">7 August 2026</strong>. This applies if your
-                gross income from self-employment and property was over £50,000 last year. There is
-                no penalty for missing this specific deadline in year one, so there is no need to
-                panic — but it is worth sorting quickly.
-              </p>
-              <a
-                href="#contact"
-                className="mt-2 inline-block font-semibold text-teal-900 underline-offset-2 hover:underline"
-              >
-                Talk to us about getting ready
-              </a>
-            </div>
-            <button
-              type="button"
-              onClick={dismissBanner}
-              className="shrink-0 rounded-lg p-1.5 text-teal-800 transition-colors hover:bg-teal-100"
-              aria-label="Dismiss deadline notice"
-            >
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Hero */}
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-3xl text-center">
