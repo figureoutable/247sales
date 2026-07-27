@@ -55,6 +55,7 @@ import { body as bodyLocal75 } from "./blog-post-bodies/local-75";
 import { body as bodyLocal76 } from "./blog-post-bodies/local-76";
 import { body as bodyLocal77 } from "./blog-post-bodies/local-77";
 import { body as bodyLocal78 } from "./blog-post-bodies/local-78";
+import { body as bodyLocal79 } from "./blog-post-bodies/local-79";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -588,6 +589,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/management-accounts-do.jpg",
     excerpt: "Learn about FRS 102 UK small business implications and how Section 1A affects your financial reporting. Stay compliant with UK accounting standards.",
     body: bodyLocal78,
+  },
+  {
+    _id: "local-79",
+    title: "How to Claim Expenses as a Remote Worker in the UK",
+    slug: { current: "claim-expenses-remote-worker-uk" },
+    category: "Tax",
+    publishedAt: "2026-07-29T09:00:00.000Z",
+    mainImage: "/blog/making-tax-digital.jpg",
+    excerpt: "Learn how to claim expenses as a remote worker in the UK, including working from home expenses and home office deductions, to maximise tax efficiency.",
+    body: bodyLocal79,
   },
   // GENERATED_ENTRIES
 ];

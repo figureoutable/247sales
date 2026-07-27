@@ -580,7 +580,7 @@
       "remote working tax"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to set up Dext for receipt capture in your UK business",
