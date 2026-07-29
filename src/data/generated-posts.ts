@@ -56,6 +56,7 @@ import { body as bodyLocal76 } from "./blog-post-bodies/local-76";
 import { body as bodyLocal77 } from "./blog-post-bodies/local-77";
 import { body as bodyLocal78 } from "./blog-post-bodies/local-78";
 import { body as bodyLocal79 } from "./blog-post-bodies/local-79";
+import { body as bodyLocal80 } from "./blog-post-bodies/local-80";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -599,6 +600,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/making-tax-digital.jpg",
     excerpt: "Learn how to claim expenses as a remote worker in the UK, including working from home expenses and home office deductions, to maximise tax efficiency.",
     body: bodyLocal79,
+  },
+  {
+    _id: "local-80",
+    title: "How to Set Up Dext for Receipt Capture in UK Businesses",
+    slug: { current: "set-up-dext-receipt-capture-uk" },
+    category: "Systems",
+    publishedAt: "2026-07-31T09:00:00.000Z",
+    mainImage: "/blog/finance-stack.jpg",
+    excerpt: "Learn how to set up Dext for efficient receipt capture in your UK business. Streamline your accounting with Dext setup and Xero integration.",
+    body: bodyLocal80,
   },
   // GENERATED_ENTRIES
 ];
