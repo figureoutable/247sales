@@ -57,6 +57,7 @@ import { body as bodyLocal77 } from "./blog-post-bodies/local-77";
 import { body as bodyLocal78 } from "./blog-post-bodies/local-78";
 import { body as bodyLocal79 } from "./blog-post-bodies/local-79";
 import { body as bodyLocal80 } from "./blog-post-bodies/local-80";
+import { body as bodyLocal81 } from "./blog-post-bodies/local-81";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -610,6 +611,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/finance-stack.jpg",
     excerpt: "Learn how to set up Dext for efficient receipt capture in your UK business. Streamline your accounting with Dext setup and Xero integration.",
     body: bodyLocal80,
+  },
+  {
+    _id: "local-81",
+    title: "Intercompany Transactions UK: Group Accounting Insights",
+    slug: { current: "intercompany-transactions-uk-group-accounting" },
+    category: "Reporting",
+    publishedAt: "2026-08-03T09:00:00.000Z",
+    mainImage: "/blog/management-accounts-do.jpg",
+    excerpt: "Discover how intercompany transactions impact group accounts in the UK. Learn about consolidation and reconciliation for UK businesses.",
+    body: bodyLocal81,
   },
   // GENERATED_ENTRIES
 ];

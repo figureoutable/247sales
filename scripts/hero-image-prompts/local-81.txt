@@ -1,0 +1,9 @@
+Blog hero image — global style (apply every time):
+- Use a vivid, high-saturation palette with at least 3 distinct colours (for example: cobalt or navy, teal or emerald, and coral or amber accents).
+- Keep colour temperature lively and modern; prefer bright directional lighting and clean contrast over muted or dusty tones.
+- Avoid beige, taupe, cream-heavy, tan, sepia, grey-washed, or brown-on-brown scenes. Do not default to bland neutral office stock-photo aesthetics.
+- Include colourful environmental elements where relevant (screens, charts, stationery, lighting, signage, plants, clothing accents) to keep the frame energetic.
+- Suitable for a wide 16:9 or 3:2 web hero; professional, UK-relevant small-business context.
+
+Scene and composition:
+A vibrant and energetic scene depicting a modern UK office setting where a team is engaged in group accounting tasks. The room is filled with natural light streaming through large windows, creating a warm glow. The office features a teal and cobalt colour palette, with green plants adding a touch of nature. On a large screen, dynamic financial graphs and charts are displayed, illustrating the flow of intercompany transactions. The atmosphere is one of collaboration and precision, reflecting the meticulous process of intercompany reconciliation and consolidation.
