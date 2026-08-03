@@ -58,6 +58,7 @@ import { body as bodyLocal78 } from "./blog-post-bodies/local-78";
 import { body as bodyLocal79 } from "./blog-post-bodies/local-79";
 import { body as bodyLocal80 } from "./blog-post-bodies/local-80";
 import { body as bodyLocal81 } from "./blog-post-bodies/local-81";
+import { body as bodyLocal82 } from "./blog-post-bodies/local-82";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -621,6 +622,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/management-accounts-do.jpg",
     excerpt: "Discover how intercompany transactions impact group accounts in the UK. Learn about consolidation and reconciliation for UK businesses.",
     body: bodyLocal81,
+  },
+  {
+    _id: "local-82",
+    title: "Understanding Financial Due Diligence for UK Acquisitions",
+    slug: { current: "financial-due-diligence-uk-acquisitions" },
+    category: "FP&A",
+    publishedAt: "2026-08-05T09:00:00.000Z",
+    mainImage: "/blog/budgeting-growth.jpg",
+    excerpt: "Learn the essentials of financial due diligence in the UK for acquisitions and mergers. Ensure informed decisions with our comprehensive guide.",
+    body: bodyLocal82,
   },
   // GENERATED_ENTRIES
 ];
