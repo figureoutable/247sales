@@ -59,6 +59,7 @@ import { body as bodyLocal79 } from "./blog-post-bodies/local-79";
 import { body as bodyLocal80 } from "./blog-post-bodies/local-80";
 import { body as bodyLocal81 } from "./blog-post-bodies/local-81";
 import { body as bodyLocal82 } from "./blog-post-bodies/local-82";
+import { body as bodyLocal83 } from "./blog-post-bodies/local-83";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -632,6 +633,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/budgeting-growth.jpg",
     excerpt: "Learn the essentials of financial due diligence in the UK for acquisitions and mergers. Ensure informed decisions with our comprehensive guide.",
     body: bodyLocal82,
+  },
+  {
+    _id: "local-83",
+    title: "Flat Rate Expenses UK: A Guide for Employees & Directors",
+    slug: { current: "flat-rate-expenses-uk-guide" },
+    category: "Tax",
+    publishedAt: "2026-08-07T09:00:00.000Z",
+    mainImage: "/blog/self-assessment-deadline.jpg",
+    excerpt: "Discover how flat rate expenses UK benefit employees and directors. Learn about HMRC flat rate deductions, professional subscriptions, and more.",
+    body: bodyLocal83,
   },
   // GENERATED_ENTRIES
 ];
