@@ -60,6 +60,7 @@ import { body as bodyLocal80 } from "./blog-post-bodies/local-80";
 import { body as bodyLocal81 } from "./blog-post-bodies/local-81";
 import { body as bodyLocal82 } from "./blog-post-bodies/local-82";
 import { body as bodyLocal83 } from "./blog-post-bodies/local-83";
+import { body as bodyLocal84 } from "./blog-post-bodies/local-84";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -643,6 +644,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/self-assessment-deadline.jpg",
     excerpt: "Discover how flat rate expenses UK benefit employees and directors. Learn about HMRC flat rate deductions, professional subscriptions, and more.",
     body: bodyLocal83,
+  },
+  {
+    _id: "local-84",
+    title: "Build a Three-Way Financial Model for UK Business",
+    slug: { current: "three-way-financial-model-uk-business" },
+    category: "FP&A",
+    publishedAt: "2026-08-10T09:00:00.000Z",
+    mainImage: "/blog/budgeting-growth.jpg",
+    excerpt: "Discover how to construct a three-way financial model UK businesses use to integrate P&L, balance sheet, and cash flow for strategic insights.",
+    body: bodyLocal84,
   },
   // GENERATED_ENTRIES
 ];
