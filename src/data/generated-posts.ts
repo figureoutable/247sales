@@ -61,6 +61,7 @@ import { body as bodyLocal81 } from "./blog-post-bodies/local-81";
 import { body as bodyLocal82 } from "./blog-post-bodies/local-82";
 import { body as bodyLocal83 } from "./blog-post-bodies/local-83";
 import { body as bodyLocal84 } from "./blog-post-bodies/local-84";
+import { body as bodyLocal85 } from "./blog-post-bodies/local-85";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -654,6 +655,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/budgeting-growth.jpg",
     excerpt: "Discover how to construct a three-way financial model UK businesses use to integrate P&L, balance sheet, and cash flow for strategic insights.",
     body: bodyLocal84,
+  },
+  {
+    _id: "local-85",
+    title: "Understanding Company Directors Responsibilities UK",
+    slug: { current: "company-directors-responsibilities-uk" },
+    category: "Compliance",
+    publishedAt: "2026-08-12T09:00:00.000Z",
+    mainImage: "/blog/statutory-accounts.jpg",
+    excerpt: "Explore company directors responsibilities in the UK, including fiduciary duties and legal obligations under the Companies Act 2006.",
+    body: bodyLocal85,
   },
   // GENERATED_ENTRIES
 ];
