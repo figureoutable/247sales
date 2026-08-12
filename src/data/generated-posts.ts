@@ -62,6 +62,7 @@ import { body as bodyLocal82 } from "./blog-post-bodies/local-82";
 import { body as bodyLocal83 } from "./blog-post-bodies/local-83";
 import { body as bodyLocal84 } from "./blog-post-bodies/local-84";
 import { body as bodyLocal85 } from "./blog-post-bodies/local-85";
+import { body as bodyLocal86 } from "./blog-post-bodies/local-86";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -665,6 +666,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/statutory-accounts.jpg",
     excerpt: "Explore company directors responsibilities in the UK, including fiduciary duties and legal obligations under the Companies Act 2006.",
     body: bodyLocal85,
+  },
+  {
+    _id: "local-86",
+    title: "Managing Late Paying Clients in the UK: Essential Tips",
+    slug: { current: "managing-late-paying-clients-uk" },
+    category: "Cash Flow",
+    publishedAt: "2026-08-14T09:00:00.000Z",
+    mainImage: "/blog/cash-flow-13-weeks.jpg",
+    excerpt: "Learn how UK small businesses can effectively manage late paying clients with strategies for chasing late invoices and understanding late payment interest.",
+    body: bodyLocal86,
   },
   // GENERATED_ENTRIES
 ];
