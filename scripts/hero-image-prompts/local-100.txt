@@ -1,10 +1,11 @@
 Blog hero image — global style (apply every time):
-- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings).
+- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings, shop fronts, yards).
 - Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
-- People in real-world work contexts that fit the topic (founders, directors, trades, advisors) having a conversation or reviewing papers outdoors.
+- People are optional. Scenes can be places, buildings, tools, vehicles, signage, or still-life props that fit the topic.
+- If people appear, dress them casually or in everyday workwear appropriate to the setting — not corporate suits unless the topic truly requires it.
 - Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
 - Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
 - Suitable for a wide 16:9 web hero; clear subject, simple composition.
 
 Scene and composition:
-Two UK company directors talking outdoors on a pavement outside a brick commercial office building on a British high street, reviewing a folder of papers together, soft natural daylight, realistic natural colours, clear sky, no computers or screens.
+Quiet UK high street outside a small brick office and independent shop fronts in soft natural daylight, empty pavement with planters and a bicycle propped near a doorway, papers and a folder resting on an outdoor ledge, realistic natural colours, no people required, no computers or screens.

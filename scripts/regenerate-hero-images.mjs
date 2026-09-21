@@ -40,26 +40,28 @@ if (!FAL_KEY) {
 }
 
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
-- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings).
+- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings, shop fronts, yards).
 - Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
-- People in real-world work contexts that fit the topic (founders, directors, trades, advisors) having a conversation or reviewing papers outdoors.
+- People are optional. Scenes can be places, buildings, tools, vehicles, signage, or still-life props that fit the topic.
+- If people appear, dress them casually or in everyday workwear appropriate to the setting — not corporate suits unless the topic truly requires it.
 - Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
 - Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
 - Suitable for a wide 16:9 web hero; clear subject, simple composition.`;
 
 const FAL_STYLE = [
   "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
-  "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, or similar real-world location.",
+  "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, shop front, yard, or similar real-world location.",
   "Soft natural daylight, natural realistic colours — not oversaturated or heavily colour-graded.",
-  "People in professional or industry-appropriate clothing having a conversation or reviewing paperwork outdoors.",
+  "People are optional. The image can focus on place, architecture, vehicles, tools, or props that fit the topic.",
+  "If people appear, use casual or everyday workwear — not business suits, not boardroom attire.",
   "No indoor offices, no desks, no laptop or monitor screens, no green glow, no studio lighting.",
   "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
   "No text, logos, or watermarks.",
 ].join(" ");
 
 const OUTDOOR_SCENES = {
-  100: "Two UK company directors talking outdoors on a pavement outside a brick commercial office building on a British high street, reviewing a folder of papers together, soft natural daylight, realistic natural colours, clear sky, no computers or screens.",
-  102: "Two small-business owners discussing documents outdoors outside UK brick commercial buildings on a city street, one holding papers, soft natural daylight, realistic natural colours, plants in planters nearby, no computers or screens.",
+  100: "Quiet UK high street outside a small brick office and independent shop fronts in soft natural daylight, empty pavement with planters and a bicycle propped near a doorway, papers and a folder resting on an outdoor ledge, realistic natural colours, no people required, no computers or screens.",
+  102: "Outdoor view of a modern UK business park courtyard and brick commercial buildings under soft natural daylight, glass entrance and planters, international shipping crates or courier van subtly in frame suggesting cross-border trade, realistic natural colours, no people in suits, people optional, no computers or screens.",
 };
 
 function softenScene(scene) {

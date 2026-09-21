@@ -72,9 +72,10 @@ function pickImage(category, id) {
 
 /** Prepended to every saved hero-image prompt (AI tools, designers, future image pipelines). */
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
-- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings).
+- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings, shop fronts, yards).
 - Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
-- People in real-world work contexts that fit the topic (founders, directors, trades, advisors) having a conversation or reviewing papers outdoors.
+- People are optional. Scenes can be places, buildings, tools, vehicles, signage, or still-life props that fit the topic.
+- If people appear, dress them casually or in everyday workwear appropriate to the setting — not corporate suits unless the topic truly requires it.
 - Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
 - Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
 - Suitable for a wide 16:9 web hero; clear subject, simple composition.`;
@@ -83,7 +84,7 @@ function getHeroScene(post, topic) {
   if (typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()) {
     return post.heroImagePrompt.trim();
   }
-  return `Outdoor UK editorial photo related to: ${topic.topic}. People in a real-world outdoor setting that fits the topic, soft natural daylight, natural colours, no computer screens.`;
+  return `Outdoor UK editorial photo related to: ${topic.topic}. Soft natural daylight, natural colours. People optional; if included, everyday clothing not suits. No computer screens.`;
 }
 
 function buildHeroImagePrompt(post, topic) {
@@ -94,9 +95,10 @@ function buildHeroImagePrompt(post, topic) {
 function buildFalImagePrompt(post, topic) {
   return [
     "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
-    "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, or similar real-world location.",
+    "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, shop front, yard, or similar real-world location.",
     "Soft natural daylight, natural realistic colours — not oversaturated or heavily colour-graded.",
-    "People in professional or industry-appropriate clothing having a conversation or reviewing paperwork outdoors.",
+    "People are optional. The image can focus on place, architecture, vehicles, tools, or props that fit the topic.",
+    "If people appear, use casual or everyday workwear — not business suits, not boardroom attire.",
     "No indoor offices, no desks, no laptop or monitor screens, no green glow, no studio lighting.",
     "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
     "No text, logos, or watermarks.",
@@ -499,9 +501,11 @@ Use the primary keyword 3-5 times naturally throughout. Use secondary keywords w
 
 Hero image prompt (for AI or human designers generating the blog thumbnail/hero):
 - Also return a field "heroImagePrompt": one focused paragraph describing ONLY the visual scene for a wide hero image.
-- Prefer an OUTDOOR UK scene in soft natural daylight that fits the article topic (high street, outside offices, worksite exterior, etc.).
+- Prefer an OUTDOOR UK scene in soft natural daylight that fits the article topic.
 - Natural realistic colours — not neon, not oversaturated, not cinematic colour grading.
-- People in real-world work clothing reviewing papers or talking outdoors. Do NOT describe indoor desks, laptops, monitors, or green screen glow.
+- People are optional. You may describe places, buildings, vehicles, tools, or props instead.
+- If people appear, use casual or everyday workwear — not suits.
+- Do NOT describe indoor desks, laptops, monitors, or green screen glow.
 - Tie the scene to the article topic and UK small business context.`;
 }
 
