@@ -72,4 +72,4 @@ Schema reference is in `src/sanity/schema.ts`.
 
 ### Blog post generator (`scripts/generate-blog-post.mjs`)
 
-Requires `OPENAI_API_KEY`. Each run writes a body file, updates `generated-posts.ts`, and saves a **hero image prompt** under `scripts/hero-image-prompts/local-{id}.txt`. The model is instructed to propose **colourful, high-contrast** scenes and to **avoid beige / cream-only / grey-washed stock** aesthetics; the same rules are prepended to every saved prompt so future images stay on-brand visually.
+Requires `OPENAI_API_KEY` (text: `gpt-5-mini`) and optional `FAL_KEY` for hero images via fal.ai (`fal-ai/flux/dev`). Each run writes a body file, updates `generated-posts.ts`, saves a hero prompt under `scripts/hero-image-prompts/local-{id}.txt`, and tries to generate a hero image into `public/blog/generated/local-{id}.jpg`. If fal is unset or fails, the post falls back to a category stock image. Prompting prefers **colourful, high-contrast** scenes and avoids beige / cream-only / grey-washed stock aesthetics.

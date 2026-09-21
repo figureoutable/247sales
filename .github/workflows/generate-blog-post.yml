@@ -5,6 +5,11 @@ on:
     # 7 AM UTC on Monday, Wednesday, Friday
     - cron: "0 7 * * 1,3,5"
   workflow_dispatch:
+    inputs:
+      catch_up:
+        description: "Fill missed Mon/Wed/Fri slots up to today"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -21,10 +26,29 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Generate blog post
+      - name: Generate blog post(s)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: node scripts/generate-blog-post.mjs
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+          CATCH_UP: ${{ github.event_name == 'workflow_dispatch' && inputs.catch_up && '1' || '' }}
+        run: |
+          set -e
+          if [ "$CATCH_UP" = "1" ]; then
+            echo "Catch-up mode: generating missed posts through today"
+            for i in $(seq 1 25); do
+              echo ""
+              echo "=== Catch-up iteration $i ==="
+              before="$(git status --porcelain)"
+              node scripts/generate-blog-post.mjs
+              after="$(git status --porcelain)"
+              if [ "$before" = "$after" ]; then
+                echo "Catch-up finished (no further posts to write)"
+                break
+              fi
+            done
+          else
+            node scripts/generate-blog-post.mjs
+          fi
 
       - name: Commit and push
         run: |
@@ -32,5 +56,9 @@ jobs:
           git config user.email "bot@tryfigures.com"
           git add -A
           git diff --staged --quiet && echo "No changes to commit" && exit 0
-          git commit -m "Auto-generate blog post $(date +%Y-%m-%d)"
+          if [ "${{ github.event_name == 'workflow_dispatch' && inputs.catch_up }}" = "true" ]; then
+            git commit -m "Catch up missed blog posts $(date +%Y-%m-%d)"
+          else
+            git commit -m "Auto-generate blog post $(date +%Y-%m-%d)"
+          fi
           git push

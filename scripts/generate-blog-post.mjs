@@ -10,8 +10,34 @@ const BLOG_POSTS_FILE = path.join(ROOT, "src/data/blog-posts.ts");
 const GENERATED_FILE = path.join(ROOT, "src/data/generated-posts.ts");
 const BODIES_DIR = path.join(ROOT, "src/data/blog-post-bodies");
 const TOPICS_FILE = path.join(__dirname, "blog-topics.json");
+const GENERATED_IMAGES_DIR = path.join(ROOT, "public/blog/generated");
+const FAL_MODEL = "fal-ai/flux/dev";
+
+/** Load .env.local for local runs (does not override existing env vars). */
+function loadEnvLocal() {
+  const envPath = path.join(ROOT, ".env.local");
+  if (!fs.existsSync(envPath)) return;
+  for (const line of fs.readFileSync(envPath, "utf8").split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const eq = trimmed.indexOf("=");
+    if (eq <= 0) continue;
+    const key = trimmed.slice(0, eq).trim();
+    let value = trimmed.slice(eq + 1).trim();
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+    if (!process.env[key]) process.env[key] = value;
+  }
+}
+
+loadEnvLocal();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const FAL_KEY = process.env.FAL_KEY;
 if (!OPENAI_API_KEY) {
   console.error("Missing OPENAI_API_KEY environment variable");
   process.exit(1);
@@ -52,12 +78,128 @@ const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every t
 - Include colourful environmental elements where relevant (screens, charts, stationery, lighting, signage, plants, clothing accents) to keep the frame energetic.
 - Suitable for a wide 16:9 or 3:2 web hero; professional, UK-relevant small-business context.`;
 
+function getHeroScene(post, topic) {
+  if (typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()) {
+    return post.heroImagePrompt.trim();
+  }
+  return `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Use props or settings that suggest finance, growth, or clarity, with a bright multi-colour palette (no beige or neutral-dominant office scenes).`;
+}
+
 function buildHeroImagePrompt(post, topic) {
-  const scene =
-    typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()
-      ? post.heroImagePrompt.trim()
-      : `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Use props or settings that suggest finance, growth, or clarity, with a bright multi-colour palette (no beige or neutral-dominant office scenes).`;
-  return `${HERO_IMAGE_VISUAL_RULES}\n\nScene and composition:\n${scene}`;
+  return `${HERO_IMAGE_VISUAL_RULES}\n\nScene and composition:\n${getHeroScene(post, topic)}`;
+}
+
+/** Shorter prose prompt works better for fal/Flux than the bullet-style rules doc. */
+function buildFalImagePrompt(post, topic) {
+  return [
+    "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
+    "Vivid high-saturation colours with cobalt or navy, teal or emerald, and coral or amber accents.",
+    "Bright directional lighting, clean contrast, professional UK small-business context.",
+    "Avoid beige, cream, taupe, sepia, grey-washed, and bland neutral stock-office aesthetics.",
+    "No text, logos, watermarks, or readable UI screens.",
+    getHeroScene(post, topic),
+  ].join(" ");
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * Generate a hero image with fal.ai and save under public/blog/generated/.
+ * Returns the public path on success, or null on failure (caller should fall back).
+ */
+async function generateHeroImageWithFal(id, prompt) {
+  if (!FAL_KEY) {
+    console.warn("FAL_KEY not set — skipping fal image generation");
+    return null;
+  }
+
+  const authHeaders = {
+    Authorization: `Key ${FAL_KEY}`,
+    "Content-Type": "application/json",
+  };
+
+  console.log(`Calling fal (${FAL_MODEL})...`);
+  const submitRes = await fetch(`https://queue.fal.run/${FAL_MODEL}`, {
+    method: "POST",
+    headers: authHeaders,
+    body: JSON.stringify({
+      prompt,
+      image_size: "landscape_16_9",
+      num_images: 1,
+      output_format: "jpeg",
+      enable_safety_checker: true,
+    }),
+  });
+
+  if (!submitRes.ok) {
+    const err = await submitRes.text();
+    throw new Error(`fal submit ${submitRes.status}: ${err}`);
+  }
+
+  const submitted = await submitRes.json();
+  const statusUrl = submitted.status_url;
+  const responseUrl = submitted.response_url;
+  if (!statusUrl || !responseUrl) {
+    throw new Error(`fal submit missing status/response URLs: ${JSON.stringify(submitted)}`);
+  }
+
+  let status = submitted.status || "IN_QUEUE";
+  for (let attempt = 0; attempt < 60; attempt++) {
+    if (status === "COMPLETED") break;
+    if (status === "FAILED") {
+      throw new Error(`fal generation failed: ${JSON.stringify(submitted)}`);
+    }
+    await sleep(2000);
+    const statusRes = await fetch(statusUrl, {
+      headers: { Authorization: `Key ${FAL_KEY}` },
+    });
+    if (!statusRes.ok) {
+      const err = await statusRes.text();
+      throw new Error(`fal status ${statusRes.status}: ${err}`);
+    }
+    const statusBody = await statusRes.json();
+    status = statusBody.status;
+    if (attempt % 5 === 0) {
+      console.log(`  fal status: ${status}`);
+    }
+    if (status === "COMPLETED") break;
+    if (status === "FAILED") {
+      throw new Error(`fal generation failed: ${JSON.stringify(statusBody)}`);
+    }
+  }
+
+  if (status !== "COMPLETED") {
+    throw new Error(`fal timed out waiting for image (last status: ${status})`);
+  }
+
+  const resultRes = await fetch(responseUrl, {
+    headers: { Authorization: `Key ${FAL_KEY}` },
+  });
+  if (!resultRes.ok) {
+    const err = await resultRes.text();
+    throw new Error(`fal result ${resultRes.status}: ${err}`);
+  }
+
+  const result = await resultRes.json();
+  const imageUrl = result?.images?.[0]?.url;
+  if (!imageUrl) {
+    throw new Error(`fal result missing image URL: ${JSON.stringify(result)}`);
+  }
+
+  const imageRes = await fetch(imageUrl);
+  if (!imageRes.ok) {
+    throw new Error(`Failed to download fal image: ${imageRes.status}`);
+  }
+
+  const buffer = Buffer.from(await imageRes.arrayBuffer());
+  fs.mkdirSync(GENERATED_IMAGES_DIR, { recursive: true });
+  const fileName = `local-${id}.jpg`;
+  const filePath = path.join(GENERATED_IMAGES_DIR, fileName);
+  fs.writeFileSync(filePath, buffer);
+  console.log(`Hero image saved: public/blog/generated/${fileName} (${buffer.length} bytes)`);
+  return `/blog/generated/${fileName}`;
 }
 
 /* ---------- state helpers ---------- */
@@ -77,22 +219,36 @@ function getNextId() {
   return Math.max(...matches.map((m) => parseInt(m[1], 10))) + 1;
 }
 
-function getNextPublishDate() {
+function getTodayUtc9() {
+  const today = new Date();
+  today.setUTCHours(9, 0, 0, 0);
+  return today;
+}
+
+/**
+ * Next Mon/Wed/Fri publish slot.
+ * Normal mode: never schedules in the past (skips gaps).
+ * Catch-up mode (CATCH_UP=1): fills from the latest published date, including past slots up to today.
+ */
+function getNextPublishDate({ catchUp = false } = {}) {
   const combined = readAllSources();
   const matches = [...combined.matchAll(/publishedAt:\s*"([^"]+)"/g)];
   const latestInFile = new Date(
     Math.max(...matches.map((m) => new Date(m[1]).getTime()))
   );
-  const today = new Date();
-  today.setUTCHours(9, 0, 0, 0);
-  const start = latestInFile > today ? latestInFile : today;
+  const today = getTodayUtc9();
+  const start = catchUp
+    ? latestInFile
+    : latestInFile > today
+      ? latestInFile
+      : today;
   const d = new Date(start);
   d.setDate(d.getDate() + 1);
   while (![1, 3, 5].includes(d.getDay())) {
     d.setDate(d.getDate() + 1);
   }
   d.setUTCHours(9, 0, 0, 0);
-  return d.toISOString();
+  return d;
 }
 
 function getExistingTitles() {
@@ -183,13 +339,13 @@ Return ONLY a valid JSON object (no markdown fences, no explanation) with these 
       Authorization: `Bearer ${OPENAI_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "gpt-4o",
+      model: "gpt-5-mini",
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: userPrompt },
       ],
       temperature: 0.7,
-      max_tokens: 16384,
+      max_completion_tokens: 16384,
     }),
   });
 
@@ -229,8 +385,8 @@ function writeHeroImagePromptFile(id, fullPrompt) {
   return filePath;
 }
 
-function updateManifest(id, post, publishDate, category) {
-  const image = pickImage(category, id);
+function updateManifest(id, post, publishDate, category, imagePath) {
+  const image = imagePath || pickImage(category, id);
 
   let src = fs.readFileSync(GENERATED_FILE, "utf8");
 
@@ -263,10 +419,21 @@ function updateManifest(id, post, publishDate, category) {
 async function main() {
   console.log("=== Blog post generator ===\n");
 
+  const catchUp = process.env.CATCH_UP === "1";
+  if (catchUp) console.log("Catch-up mode: filling missed Mon/Wed/Fri slots\n");
+
   const nextId = getNextId();
   console.log(`Next ID: local-${nextId}`);
 
-  const publishDate = getNextPublishDate();
+  const publishDateObj = getNextPublishDate({ catchUp });
+  const today = getTodayUtc9();
+  if (catchUp && publishDateObj.getTime() > today.getTime()) {
+    console.log(
+      `Catch-up complete — next slot ${publishDateObj.toISOString()} is after today.`
+    );
+    process.exit(0);
+  }
+  const publishDate = publishDateObj.toISOString();
   console.log(`Publish date: ${publishDate}`);
 
   const topic = getNextTopic();
@@ -291,11 +458,25 @@ async function main() {
   const heroPrompt = buildHeroImagePrompt(post, topic);
   const heroPath = writeHeroImagePromptFile(nextId, heroPrompt);
   console.log(`Hero image prompt: ${path.relative(ROOT, heroPath)}`);
-  console.log("\n--- Copy for your image generator (colourful, not beige) ---\n");
-  console.log(heroPrompt);
-  console.log("\n--- End hero image prompt ---\n");
 
-  updateManifest(nextId, post, publishDate, topic.category);
+  let imagePath = null;
+  try {
+    imagePath = await generateHeroImageWithFal(
+      nextId,
+      buildFalImagePrompt(post, topic)
+    );
+  } catch (err) {
+    console.warn(
+      `fal image generation failed — falling back to stock image: ${err.message}`
+    );
+  }
+
+  if (!imagePath) {
+    imagePath = pickImage(topic.category, nextId);
+    console.log(`Using stock hero image: ${imagePath}`);
+  }
+
+  updateManifest(nextId, post, publishDate, topic.category, imagePath);
   console.log("Manifest updated: src/data/generated-posts.ts");
 
   markTopicUsed(topic);

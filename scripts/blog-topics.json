@@ -658,5 +658,1721 @@
     ],
     "category": "Cash Flow",
     "used": true
+  },
+  {
+    "topic": "Personal allowance and tax bands explained for UK company directors",
+    "primaryKeyword": "personal allowance tax bands UK directors",
+    "secondaryKeywords": [
+      "basic rate band",
+      "higher rate taxpayer",
+      "income tax bands UK"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How corporation tax instalment payments work for large UK companies",
+    "primaryKeyword": "corporation tax instalment payments UK",
+    "secondaryKeywords": [
+      "CT61",
+      "quarterly CT payments",
+      "large company tax"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Seed Enterprise Investment Scheme SEIS tax relief explained",
+    "primaryKeyword": "SEIS tax relief UK",
+    "secondaryKeywords": [
+      "seed EIS",
+      "startup investment relief",
+      "SEIS vs EIS"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Enterprise Investment Scheme EIS for UK investors and founders",
+    "primaryKeyword": "EIS tax relief UK",
+    "secondaryKeywords": [
+      "enterprise investment scheme",
+      "EIS advance assurance",
+      "angel investor tax relief"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to claim patent box relief for UK companies",
+    "primaryKeyword": "patent box relief UK",
+    "secondaryKeywords": [
+      "patent box tax",
+      "IP corporation tax relief",
+      "qualifying IP profits"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Tax treatment of crypto assets for UK limited companies",
+    "primaryKeyword": "crypto tax limited company UK",
+    "secondaryKeywords": [
+      "cryptocurrency corporation tax",
+      "crypto accounting UK",
+      "digital asset tax"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How double tax treaties affect UK companies trading overseas",
+    "primaryKeyword": "double tax treaties UK companies",
+    "secondaryKeywords": [
+      "DTA relief",
+      "foreign tax credit UK",
+      "overseas trading tax"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Research and development intensive SME scheme changes explained",
+    "primaryKeyword": "R&D intensive SME scheme UK",
+    "secondaryKeywords": [
+      "merged R&D scheme",
+      "R&D tax relief changes",
+      "RDEC for SMEs"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to claim loss relief when your UK company makes a loss",
+    "primaryKeyword": "corporation tax loss relief UK",
+    "secondaryKeywords": [
+      "carry forward losses",
+      "trade loss relief",
+      "group relief UK"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Tax implications of converting a sole trader to a limited company UK",
+    "primaryKeyword": "sole trader to limited company tax",
+    "secondaryKeywords": [
+      "incorporation tax",
+      "closing sole trader accounts",
+      "transferring business assets"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How the annual tax on enveloped dwellings ATED works UK",
+    "primaryKeyword": "ATED annual tax enveloped dwellings",
+    "secondaryKeywords": [
+      "ATED reliefs",
+      "company owned residential property",
+      "ATED return"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Business asset disposal relief entrepreneurs relief explained UK",
+    "primaryKeyword": "business asset disposal relief UK",
+    "secondaryKeywords": [
+      "BADR capital gains",
+      "entrepreneurs relief",
+      "selling company shares tax"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to treat bad debts for corporation tax in the UK",
+    "primaryKeyword": "bad debt corporation tax UK",
+    "secondaryKeywords": [
+      "writing off bad debts",
+      "tax deductible bad debts",
+      "doubtful debt provision"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Tax on directors loans and section 455 charge explained",
+    "primaryKeyword": "section 455 directors loan UK",
+    "secondaryKeywords": [
+      "overdrawn directors loan account",
+      "DLA tax charge",
+      "repaying directors loan"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to claim structures and buildings allowance UK",
+    "primaryKeyword": "structures and buildings allowance UK",
+    "secondaryKeywords": [
+      "SBA capital allowances",
+      "commercial property tax relief",
+      "building allowance claim"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Transfer pricing rules for UK small and medium groups",
+    "primaryKeyword": "transfer pricing UK SMEs",
+    "secondaryKeywords": [
+      "arm's length principle",
+      "related party pricing",
+      "transfer pricing documentation"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How Creative Industry Tax Reliefs work for UK companies",
+    "primaryKeyword": "creative industry tax reliefs UK",
+    "secondaryKeywords": [
+      "film tax relief",
+      "video games tax relief",
+      "theatre tax relief"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Tax deadlines calendar for UK limited companies and directors",
+    "primaryKeyword": "UK company tax deadlines calendar",
+    "secondaryKeywords": [
+      "corporation tax due date",
+      "self assessment deadline",
+      "Companies House filing dates"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "How to claim first year allowances on electric cars UK",
+    "primaryKeyword": "first year allowances electric cars UK",
+    "secondaryKeywords": [
+      "electric company car tax",
+      "zero emission vehicle allowance",
+      "FYAs capital allowances"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "Diverted profits tax and when UK companies need to worry",
+    "primaryKeyword": "diverted profits tax UK",
+    "secondaryKeywords": [
+      "DPT charge",
+      "tax avoidance diverted profits",
+      "permanent establishment UK"
+    ],
+    "category": "Tax",
+    "used": false
+  },
+  {
+    "topic": "People with Significant Control PSC register requirements UK",
+    "primaryKeyword": "PSC register Companies House",
+    "secondaryKeywords": [
+      "people with significant control",
+      "PSC filing",
+      "beneficial ownership UK"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Economic Crime and Corporate Transparency Act changes for UK companies",
+    "primaryKeyword": "Economic Crime Corporate Transparency Act",
+    "secondaryKeywords": [
+      "ECCTA Companies House",
+      "identity verification directors",
+      "company transparency reforms"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to file dormant company accounts at Companies House UK",
+    "primaryKeyword": "dormant company accounts UK",
+    "secondaryKeywords": [
+      "dormant accounts filing",
+      "inactive limited company",
+      "Companies House dormant"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Anti money laundering AML obligations for UK accountancy firms",
+    "primaryKeyword": "AML obligations UK accountants",
+    "secondaryKeywords": [
+      "money laundering regulations",
+      "customer due diligence",
+      "AML supervised firms"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to restore a struck off company in the UK",
+    "primaryKeyword": "restore struck off company UK",
+    "secondaryKeywords": [
+      "company restoration Companies House",
+      "administrative restoration",
+      "court ordered restoration"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Companies House identity verification for directors explained",
+    "primaryKeyword": "Companies House director identity verification",
+    "secondaryKeywords": [
+      "ACSP identity checks",
+      "director ID verification",
+      "Companies House reforms"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to change your company registered office address UK",
+    "primaryKeyword": "change registered office address UK",
+    "secondaryKeywords": [
+      "Companies House address change",
+      "service address vs registered office",
+      "AD01 form"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Statutory books and registers every UK company must keep",
+    "primaryKeyword": "statutory books UK company",
+    "secondaryKeywords": [
+      "register of members",
+      "register of directors",
+      "company secretarial records"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to appoint and resign a company director in the UK",
+    "primaryKeyword": "appoint resign company director UK",
+    "secondaryKeywords": [
+      "AP01 form",
+      "TM01 resignation",
+      "director appointment Companies House"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "UK GDPR for small businesses practical compliance checklist",
+    "primaryKeyword": "UK GDPR small business checklist",
+    "secondaryKeywords": [
+      "data protection compliance",
+      "ICO registration",
+      "privacy notice small business"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to handle a Companies House late filing penalty UK",
+    "primaryKeyword": "Companies House late filing penalty",
+    "secondaryKeywords": [
+      "late accounts penalty appeal",
+      "Companies House fine",
+      "accounts filing deadline"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Audit exemption thresholds for UK small companies explained",
+    "primaryKeyword": "audit exemption thresholds UK",
+    "secondaryKeywords": [
+      "small company audit exemption",
+      "turnover balance sheet thresholds",
+      "when is an audit required"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to file abbreviated or filleted accounts under UK rules",
+    "primaryKeyword": "filleted accounts Companies House",
+    "secondaryKeywords": [
+      "abridged accounts UK",
+      "filing options small companies",
+      "public accounts vs full accounts"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Whistleblowing policies and legal duties for UK employers",
+    "primaryKeyword": "whistleblowing policy UK employers",
+    "secondaryKeywords": [
+      "PIDA whistleblowing",
+      "protected disclosures",
+      "employer whistleblowing duties"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How to prepare for a Companies House or HMRC compliance check",
+    "primaryKeyword": "HMRC compliance check preparation",
+    "secondaryKeywords": [
+      "tax compliance check",
+      "HMRC soft landing",
+      "records for enquiry"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Registering as an employer with HMRC step by step UK",
+    "primaryKeyword": "register as employer HMRC",
+    "secondaryKeywords": [
+      "PAYE scheme registration",
+      "employer PAYE reference",
+      "first employee setup"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "How beneficial ownership and trusts reporting works in the UK",
+    "primaryKeyword": "beneficial ownership trusts UK",
+    "secondaryKeywords": [
+      "Trust Registration Service",
+      "TRS HMRC",
+      "beneficial owners register"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "Modern slavery statement requirements for UK businesses",
+    "primaryKeyword": "modern slavery statement UK",
+    "secondaryKeywords": [
+      "Modern Slavery Act",
+      "supply chain transparency",
+      "who must publish statement"
+    ],
+    "category": "Compliance",
+    "used": false
+  },
+  {
+    "topic": "VAT flat rate scheme should your UK small business join",
+    "primaryKeyword": "VAT flat rate scheme UK",
+    "secondaryKeywords": [
+      "flat rate VAT percentages",
+      "limited cost trader",
+      "leaving flat rate scheme"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "How to account for VAT on deposits and advance payments UK",
+    "primaryKeyword": "VAT on deposits UK",
+    "secondaryKeywords": [
+      "advance payment VAT",
+      "retainer VAT treatment",
+      "tax point deposits"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "Reverse charge VAT rules for UK construction and services",
+    "primaryKeyword": "reverse charge VAT UK",
+    "secondaryKeywords": [
+      "domestic reverse charge",
+      "construction reverse charge",
+      "VAT reverse charge invoicing"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "How to reclaim VAT on bad debts in the UK",
+    "primaryKeyword": "VAT bad debt relief UK",
+    "secondaryKeywords": [
+      "bad debt VAT claim",
+      "unpaid invoice VAT",
+      "VAT relief conditions"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "VAT partial exemption explained for UK mixed supply businesses",
+    "primaryKeyword": "VAT partial exemption UK",
+    "secondaryKeywords": [
+      "partially exempt VAT",
+      "input tax recovery",
+      "standard method override"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "How the VAT cash accounting scheme works for UK businesses",
+    "primaryKeyword": "VAT cash accounting scheme",
+    "secondaryKeywords": [
+      "cash accounting VAT eligibility",
+      "VAT on cash basis",
+      "leaving cash accounting"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "VAT on digital services and e commerce for UK sellers",
+    "primaryKeyword": "VAT digital services UK",
+    "secondaryKeywords": [
+      "OSS VAT",
+      "e commerce VAT UK",
+      "digital products VAT"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "How to correct a VAT error on your return without a penalty",
+    "primaryKeyword": "correct VAT error UK",
+    "secondaryKeywords": [
+      "VAT error correction",
+      "voluntary disclosure VAT",
+      "error reporting threshold"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "Place of supply rules for VAT on services UK explained",
+    "primaryKeyword": "VAT place of supply services UK",
+    "secondaryKeywords": [
+      "B2B place of supply",
+      "cross border services VAT",
+      "where is VAT due"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "How to handle VAT when selling a business or assets UK",
+    "primaryKeyword": "VAT transfer of a going concern",
+    "secondaryKeywords": [
+      "TOGC VAT",
+      "selling business VAT free",
+      "asset sale VAT"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "VAT groups for UK companies benefits and eligibility",
+    "primaryKeyword": "VAT group registration UK",
+    "secondaryKeywords": [
+      "forming a VAT group",
+      "VAT group benefits",
+      "intra group VAT"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "How Margin Scheme VAT works for second hand goods UK",
+    "primaryKeyword": "VAT margin scheme UK",
+    "secondaryKeywords": [
+      "second hand goods VAT",
+      "margin scheme eligibility",
+      "antiques VAT"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "Annual accounting scheme for VAT is it right for you",
+    "primaryKeyword": "VAT annual accounting scheme",
+    "secondaryKeywords": [
+      "annual VAT return",
+      "VAT instalments",
+      "annual accounting eligibility"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "How to register for VAT voluntarily before the threshold UK",
+    "primaryKeyword": "voluntary VAT registration UK",
+    "secondaryKeywords": [
+      "register VAT early",
+      "benefits of voluntary VAT",
+      "VAT registration timing"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "VAT on staff entertainment and business hospitality UK",
+    "primaryKeyword": "VAT staff entertainment UK",
+    "secondaryKeywords": [
+      "business hospitality VAT",
+      "input VAT blocked",
+      "staff party VAT"
+    ],
+    "category": "VAT",
+    "used": false
+  },
+  {
+    "topic": "Statutory Sick Pay SSP rules and employer costs UK",
+    "primaryKeyword": "Statutory Sick Pay UK employers",
+    "secondaryKeywords": [
+      "SSP eligibility",
+      "sick pay rates",
+      "employer SSP recovery"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Statutory Maternity Pay SMP and leave guide for UK employers",
+    "primaryKeyword": "Statutory Maternity Pay UK",
+    "secondaryKeywords": [
+      "SMP rates",
+      "maternity leave payroll",
+      "employer SMP reclaim"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How to process your first FPS Full Payment Submission UK",
+    "primaryKeyword": "FPS Full Payment Submission",
+    "secondaryKeywords": [
+      "RTI FPS filing",
+      "payroll submission HMRC",
+      "first FPS checklist"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Student loan deductions from payroll explained for UK employers",
+    "primaryKeyword": "student loan payroll deductions UK",
+    "secondaryKeywords": [
+      "student loan plan rates",
+      "SL1 SL2 notices",
+      "payroll student loan"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How Employment Allowance reduces employer NI for UK businesses",
+    "primaryKeyword": "Employment Allowance employer NI",
+    "secondaryKeywords": [
+      "claim Employment Allowance",
+      "NI savings small employers",
+      "Employment Allowance eligibility"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "P45 P60 and P11D what each form means for UK payroll",
+    "primaryKeyword": "P45 P60 P11D explained",
+    "secondaryKeywords": [
+      "end of year payroll forms",
+      "leaving employee P45",
+      "benefits P11D"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How to run payroll for directors of a UK limited company",
+    "primaryKeyword": "directors payroll UK limited company",
+    "secondaryKeywords": [
+      "director salary NI",
+      "pro rata directors earnings",
+      "payroll for owner directors"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Off payroll working IR35 payroll responsibilities for UK clients",
+    "primaryKeyword": "IR35 payroll responsibilities clients",
+    "secondaryKeywords": [
+      "off payroll working rules",
+      "SDS status determination",
+      "fee payer PAYE"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How to correct a payroll error and file an Earlier Year Update",
+    "primaryKeyword": "Earlier Year Update payroll UK",
+    "secondaryKeywords": [
+      "EYU RTI",
+      "correcting PAYE errors",
+      "payroll amendment HMRC"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "National Minimum Wage compliance checklist for UK employers",
+    "primaryKeyword": "National Minimum Wage compliance UK",
+    "secondaryKeywords": [
+      "NMW rates",
+      "national living wage",
+      "HMRC NMW enforcement"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How holiday pay is calculated for UK workers with variable hours",
+    "primaryKeyword": "holiday pay variable hours UK",
+    "secondaryKeywords": [
+      "holiday pay calculation",
+      "52 week reference period",
+      "irregular hours leave"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Shared Parental Leave and Pay for UK employers explained",
+    "primaryKeyword": "Shared Parental Leave Pay UK",
+    "secondaryKeywords": [
+      "ShPP rates",
+      "shared parental leave payroll",
+      "SPL eligibility"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How to set up salary sacrifice for pensions and benefits UK",
+    "primaryKeyword": "salary sacrifice pensions UK",
+    "secondaryKeywords": [
+      "salary sacrifice NI savings",
+      "pension salary exchange",
+      "optional remuneration rules"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Apprenticeship levy who pays and how it works UK",
+    "primaryKeyword": "apprenticeship levy UK employers",
+    "secondaryKeywords": [
+      "levy threshold",
+      "apprenticeship funding",
+      "levy payroll deduction"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "How to handle final pay when an employee leaves UK",
+    "primaryKeyword": "final pay leaving employee UK",
+    "secondaryKeywords": [
+      "holiday pay on termination",
+      "P45 process",
+      "notice pay calculations"
+    ],
+    "category": "Payroll",
+    "used": false
+  },
+  {
+    "topic": "Chart of accounts best practices for UK small businesses",
+    "primaryKeyword": "chart of accounts UK small business",
+    "secondaryKeywords": [
+      "setting up nominal codes",
+      "Xero chart of accounts",
+      "account structure SMB"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to categorise transactions correctly in Xero UK",
+    "primaryKeyword": "categorise transactions Xero",
+    "secondaryKeywords": [
+      "Xero bank rules",
+      "coding expenses correctly",
+      "bookkeeping categories"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Month end close checklist for UK small business bookkeepers",
+    "primaryKeyword": "month end close checklist bookkeeping",
+    "secondaryKeywords": [
+      "month end accounting process",
+      "bookkeeping close tasks",
+      "reconciliation checklist"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to handle prepayments and accruals in small company accounts",
+    "primaryKeyword": "prepayments and accruals UK",
+    "secondaryKeywords": [
+      "accrual accounting entries",
+      "prepaid expenses",
+      "month end accruals"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Fixed asset register how to set one up for a UK business",
+    "primaryKeyword": "fixed asset register UK",
+    "secondaryKeywords": [
+      "asset tracking spreadsheet",
+      "capital vs expense",
+      "depreciation records"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to bookkeep for multiple currencies in a UK company",
+    "primaryKeyword": "multi currency bookkeeping UK",
+    "secondaryKeywords": [
+      "foreign currency transactions",
+      "exchange rate accounting",
+      "Xero multi currency"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Common bookkeeping mistakes UK small businesses make",
+    "primaryKeyword": "common bookkeeping mistakes UK",
+    "secondaryKeywords": [
+      "bookkeeping errors",
+      "incorrect expense coding",
+      "messy accounts fixes"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to reconcile Stripe Shopify and marketplace payouts in Xero",
+    "primaryKeyword": "reconcile Stripe Shopify Xero",
+    "secondaryKeywords": [
+      "marketplace payout bookkeeping",
+      "payment processor fees",
+      "e commerce reconciliation"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Petty cash and staff expenses bookkeeping process UK",
+    "primaryKeyword": "petty cash bookkeeping UK",
+    "secondaryKeywords": [
+      "expense claim process",
+      "staff reimbursements",
+      "cash float accounting"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to clean up years of neglected bookkeeping UK",
+    "primaryKeyword": "catch up bookkeeping UK",
+    "secondaryKeywords": [
+      "accounts backlog",
+      "reconstructing books",
+      "bookkeeping catch up service"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Inventory bookkeeping methods for UK product businesses",
+    "primaryKeyword": "inventory bookkeeping UK",
+    "secondaryKeywords": [
+      "stock accounting",
+      "FIFO weighted average",
+      "COGS bookkeeping"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to record owner drawings vs salary vs dividends correctly",
+    "primaryKeyword": "drawings salary dividends bookkeeping",
+    "secondaryKeywords": [
+      "owner drawings accounting",
+      "director remuneration entries",
+      "equity vs expense"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "How to build a 13 week cash flow forecast for a UK business",
+    "primaryKeyword": "13 week cash flow forecast UK",
+    "secondaryKeywords": [
+      "rolling cash forecast",
+      "short term cash planning",
+      "cash flow spreadsheet"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Invoice financing and invoice factoring explained for UK SMEs",
+    "primaryKeyword": "invoice financing factoring UK",
+    "secondaryKeywords": [
+      "invoice discounting",
+      "factoring vs financing",
+      "improving cash flow invoices"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "How to set credit terms and credit limits for UK customers",
+    "primaryKeyword": "customer credit terms UK",
+    "secondaryKeywords": [
+      "credit control policy",
+      "payment terms net 30",
+      "customer credit checks"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Cash flow tips for seasonal UK businesses",
+    "primaryKeyword": "seasonal business cash flow UK",
+    "secondaryKeywords": [
+      "managing seasonal peaks",
+      "off season cash planning",
+      "seasonal working capital"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "How to use a business overdraft responsibly in the UK",
+    "primaryKeyword": "business overdraft UK",
+    "secondaryKeywords": [
+      "overdraft vs loan",
+      "arranged overdraft costs",
+      "short term cash cover"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Scenario planning for cash flow when revenue drops UK",
+    "primaryKeyword": "cash flow scenario planning UK",
+    "secondaryKeywords": [
+      "downside cash forecast",
+      "stress testing cash",
+      "revenue drop planning"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "How payment timing of VAT PAYE and corporation tax affects cash",
+    "primaryKeyword": "tax payment timing cash flow UK",
+    "secondaryKeywords": [
+      "VAT cash impact",
+      "PAYE payment dates",
+      "CT payment planning"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Building a cash reserve how much should a UK SME hold",
+    "primaryKeyword": "cash reserve small business UK",
+    "secondaryKeywords": [
+      "emergency fund business",
+      "operating cash buffer",
+      "runway for SMEs"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "How to negotiate better supplier payment terms UK",
+    "primaryKeyword": "negotiate supplier payment terms",
+    "secondaryKeywords": [
+      "extending supplier credit",
+      "supplier terms negotiation",
+      "payables cash management"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Deferred revenue and customer prepayments cash flow impact",
+    "primaryKeyword": "deferred revenue cash flow UK",
+    "secondaryKeywords": [
+      "customer deposits cash",
+      "prepaid income",
+      "subscription cash timing"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "How to manage cash flow in a project based UK business",
+    "primaryKeyword": "project based cash flow UK",
+    "secondaryKeywords": [
+      "milestone billing",
+      "retainers and cash",
+      "project working capital"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Using Open Banking tools to improve UK business cash visibility",
+    "primaryKeyword": "Open Banking cash flow UK business",
+    "secondaryKeywords": [
+      "bank feed forecasting",
+      "cash visibility tools",
+      "real time cash position"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "KPI dashboard for UK small business finance leaders",
+    "primaryKeyword": "finance KPI dashboard SME UK",
+    "secondaryKeywords": [
+      "key performance indicators finance",
+      "management reporting KPIs",
+      "SME metrics dashboard"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to write a monthly finance pack for company directors UK",
+    "primaryKeyword": "monthly finance pack directors",
+    "secondaryKeywords": [
+      "board finance report",
+      "management pack template",
+      "director financial reporting"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Gross margin analysis how UK businesses should track it",
+    "primaryKeyword": "gross margin analysis UK business",
+    "secondaryKeywords": [
+      "improving gross margin",
+      "contribution margin",
+      "product profitability"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to present financials to investors as a UK startup",
+    "primaryKeyword": "startup financials for investors UK",
+    "secondaryKeywords": [
+      "investor reporting pack",
+      "fundraising financials",
+      "startup metrics board"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Cohort and recurring revenue reporting for UK SaaS companies",
+    "primaryKeyword": "SaaS recurring revenue reporting UK",
+    "secondaryKeywords": [
+      "MRR ARR reporting",
+      "cohort retention",
+      "SaaS finance metrics"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to analyse your profit and loss beyond the bottom line",
+    "primaryKeyword": "analyse profit and loss UK",
+    "secondaryKeywords": [
+      "P&L deep dive",
+      "operating expense review",
+      "profitability analysis"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Board reporting calendar what to report and when UK",
+    "primaryKeyword": "board reporting calendar UK",
+    "secondaryKeywords": [
+      "board pack schedule",
+      "governance reporting",
+      "monthly quarterly board reports"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to track unit economics for a UK small business",
+    "primaryKeyword": "unit economics small business UK",
+    "secondaryKeywords": [
+      "customer lifetime value",
+      "CAC payback",
+      "contribution per unit"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Segment reporting by product channel or customer UK",
+    "primaryKeyword": "segment reporting small business",
+    "secondaryKeywords": [
+      "profit by channel",
+      "customer profitability",
+      "product line reporting"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to build flash reports for weekly trading updates UK",
+    "primaryKeyword": "weekly flash report finance UK",
+    "secondaryKeywords": [
+      "trading update report",
+      "weekly KPI flash",
+      "fast management reporting"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Non financial KPIs finance teams should still track UK",
+    "primaryKeyword": "non financial KPIs finance team",
+    "secondaryKeywords": [
+      "operational metrics finance",
+      "leading indicators",
+      "balanced scorecard SME"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to explain variance analysis to non finance founders",
+    "primaryKeyword": "variance analysis for founders",
+    "secondaryKeywords": [
+      "budget vs actual explained",
+      "explaining variances simply",
+      "management accounts narrative"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to build an annual budget for a UK small business",
+    "primaryKeyword": "annual budget small business UK",
+    "secondaryKeywords": [
+      "business budgeting process",
+      "zero based budgeting SME",
+      "annual financial plan"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Rolling forecasts vs annual budgets which UK SMEs should use",
+    "primaryKeyword": "rolling forecast vs annual budget",
+    "secondaryKeywords": [
+      "rolling financial forecast",
+      "reforecasting process",
+      "agile budgeting SME"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Driver based forecasting for UK growing companies",
+    "primaryKeyword": "driver based forecasting UK",
+    "secondaryKeywords": [
+      "forecast drivers",
+      "operational forecasting",
+      "linked financial model"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to run a quarterly business review with finance data UK",
+    "primaryKeyword": "quarterly business review finance UK",
+    "secondaryKeywords": [
+      "QBR finance pack",
+      "quarterly performance review",
+      "business review agenda"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Headcount planning and people cost forecasting for UK SMEs",
+    "primaryKeyword": "headcount planning cost forecast UK",
+    "secondaryKeywords": [
+      "workforce planning finance",
+      "people cost model",
+      "hiring plan budget"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to model pricing changes and their profit impact UK",
+    "primaryKeyword": "pricing change financial model UK",
+    "secondaryKeywords": [
+      "price increase modelling",
+      "margin impact analysis",
+      "pricing scenario planning"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Capex vs opex planning for UK growing businesses",
+    "primaryKeyword": "capex vs opex planning UK",
+    "secondaryKeywords": [
+      "capital expenditure budget",
+      "opex planning",
+      "investment vs expense"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to set finance OKRs and targets for a UK leadership team",
+    "primaryKeyword": "finance OKRs leadership UK",
+    "secondaryKeywords": [
+      "financial targets OKRs",
+      "finance team goals",
+      "measurable finance outcomes"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Break even analysis for UK product and service businesses",
+    "primaryKeyword": "break even analysis UK business",
+    "secondaryKeywords": [
+      "break even point calculator",
+      "contribution margin break even",
+      "sales volume planning"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to build a fundraising financial model for UK startups",
+    "primaryKeyword": "fundraising financial model UK startup",
+    "secondaryKeywords": [
+      "seed Series A model",
+      "investor grade forecast",
+      "startup financial projections"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Integrated P&L balance sheet and cash forecast best practice",
+    "primaryKeyword": "integrated three statement forecast UK",
+    "secondaryKeywords": [
+      "linked financial statements",
+      "balance sheet forecasting",
+      "cash linked model"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to choose planning software for UK SME finance teams",
+    "primaryKeyword": "FP&A software UK SME",
+    "secondaryKeywords": [
+      "finance planning tools",
+      "budgeting software UK",
+      "FP&A platform comparison"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to choose between Xero QuickBooks and FreeAgent UK",
+    "primaryKeyword": "Xero vs QuickBooks vs FreeAgent",
+    "secondaryKeywords": [
+      "best accounting software UK",
+      "cloud accounting comparison",
+      "choosing bookkeeping software"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Building a modern finance tech stack for UK small businesses",
+    "primaryKeyword": "finance tech stack UK SME",
+    "secondaryKeywords": [
+      "accounting software stack",
+      "finance tools integration",
+      "SME finance systems"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to implement approval workflows for bills and expenses UK",
+    "primaryKeyword": "bill expense approval workflows",
+    "secondaryKeywords": [
+      "purchase approval process",
+      "spend controls software",
+      "accounts payable approvals"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Integrating CRM and accounting software for UK sales teams",
+    "primaryKeyword": "CRM accounting integration UK",
+    "secondaryKeywords": [
+      "HubSpot Xero integration",
+      "sales to cash systems",
+      "invoice from CRM"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to use AI tools safely in UK accounting and bookkeeping",
+    "primaryKeyword": "AI tools UK accounting",
+    "secondaryKeywords": [
+      "AI bookkeeping",
+      "automation in accounting",
+      "safe AI finance use"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Data security checklist for cloud accounting in the UK",
+    "primaryKeyword": "cloud accounting data security UK",
+    "secondaryKeywords": [
+      "Xero security best practice",
+      "finance data protection",
+      "access controls accounting"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to migrate from spreadsheets to cloud accounting UK",
+    "primaryKeyword": "migrate spreadsheets to cloud accounting",
+    "secondaryKeywords": [
+      "spreadsheet to Xero",
+      "accounting system migration",
+      "leaving Excel bookkeeping"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Choosing a payroll software for UK small employers",
+    "primaryKeyword": "payroll software UK small employers",
+    "secondaryKeywords": [
+      "best payroll systems UK",
+      "RTI compatible payroll",
+      "payroll app comparison"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to set up project accounting in Xero for agencies UK",
+    "primaryKeyword": "project accounting Xero agencies",
+    "secondaryKeywords": [
+      "Xero projects",
+      "job costing agencies",
+      "time tracking accounting"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Receipt capture apps compared Dext Hubdoc and native tools",
+    "primaryKeyword": "Dext vs Hubdoc receipt capture",
+    "secondaryKeywords": [
+      "receipt scanning apps UK",
+      "expense capture software",
+      "paperless bookkeeping tools"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to automate bank feeds and rules without losing control",
+    "primaryKeyword": "automate bank feeds accounting UK",
+    "secondaryKeywords": [
+      "bank rules best practice",
+      "auto coding risks",
+      "controlled automation bookkeeping"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "ERP vs accounting software when should a UK SME upgrade",
+    "primaryKeyword": "ERP vs accounting software SME",
+    "secondaryKeywords": [
+      "when to move to ERP",
+      "SME ERP UK",
+      "scaling finance systems"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "When to hire a fractional CFO for your UK business",
+    "primaryKeyword": "hire fractional CFO UK",
+    "secondaryKeywords": [
+      "part time CFO",
+      "outsourced finance director",
+      "fractional finance leadership"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How founders should partner with their accountant effectively",
+    "primaryKeyword": "work with your accountant effectively",
+    "secondaryKeywords": [
+      "accountant relationship tips",
+      "getting value from accountant",
+      "founder finance partnership"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "Building a finance function roadmap for scaling UK startups",
+    "primaryKeyword": "finance function roadmap startup UK",
+    "secondaryKeywords": [
+      "scaling finance team",
+      "when to hire controller",
+      "startup finance maturity"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How to prepare for due diligence as a UK business seller",
+    "primaryKeyword": "prepare due diligence selling business UK",
+    "secondaryKeywords": [
+      "exit readiness finance",
+      "dataroom checklist",
+      "seller due diligence pack"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "Financial governance basics for UK SME boards and directors",
+    "primaryKeyword": "financial governance SME board UK",
+    "secondaryKeywords": [
+      "director financial oversight",
+      "board finance duties",
+      "SME governance framework"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How to price your services profitably as a UK professional firm",
+    "primaryKeyword": "profitable pricing professional services UK",
+    "secondaryKeywords": [
+      "value based pricing",
+      "pricing for accountants consultants",
+      "margin led pricing"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "Managing founder salary vs reinvestment decisions UK",
+    "primaryKeyword": "founder salary vs reinvestment UK",
+    "secondaryKeywords": [
+      "how much should founders pay themselves",
+      "reinvesting profits",
+      "owner compensation strategy"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How to run an effective monthly finance meeting UK",
+    "primaryKeyword": "monthly finance meeting agenda UK",
+    "secondaryKeywords": [
+      "finance meeting cadence",
+      "leadership finance review",
+      "management accounts meeting"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "Outsource vs in house bookkeeping for UK growing companies",
+    "primaryKeyword": "outsource vs in house bookkeeping UK",
+    "secondaryKeywords": [
+      "outsourced bookkeeping",
+      "hiring a bookkeeper",
+      "finance resourcing decision"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How to communicate bad financial news to your team UK",
+    "primaryKeyword": "communicate financial bad news team",
+    "secondaryKeywords": [
+      "transparent finance communication",
+      "leading through cash pressure",
+      "employee financial updates"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "Succession planning and exit options for UK owner managed businesses",
+    "primaryKeyword": "succession planning owner managed UK",
+    "secondaryKeywords": [
+      "business exit options",
+      "management buyout UK",
+      "owner succession finance"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "What good looks like in a UK SME finance hire interview",
+    "primaryKeyword": "hiring finance talent SME UK",
+    "secondaryKeywords": [
+      "interview bookkeeper accountant",
+      "finance hire scorecard",
+      "controller interview questions"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How to use Xero tracking categories for better reporting",
+    "primaryKeyword": "Xero tracking categories reporting",
+    "secondaryKeywords": [
+      "tracking options Xero",
+      "department reporting Xero",
+      "class tracking bookkeeping"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Interbank transfers and clearing accounts bookkeeping tips UK",
+    "primaryKeyword": "interbank transfers bookkeeping UK",
+    "secondaryKeywords": [
+      "clearing account Xero",
+      "bank transfer reconciliation",
+      "suspense account cleanup"
+    ],
+    "category": "Bookkeeping",
+    "used": false
+  },
+  {
+    "topic": "Cash flow forecasting for funded UK startups runway focused",
+    "primaryKeyword": "startup runway cash forecast UK",
+    "secondaryKeywords": [
+      "burn rate forecast",
+      "runway calculation",
+      "venture backed cash planning"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "How early payment discounts affect cash flow and accounts UK",
+    "primaryKeyword": "early payment discounts accounting UK",
+    "secondaryKeywords": [
+      "settlement discount",
+      "prompt payment discount",
+      "discount cash flow trade off"
+    ],
+    "category": "Cash Flow",
+    "used": false
+  },
+  {
+    "topic": "Management accounts vs statutory accounts differences UK",
+    "primaryKeyword": "management vs statutory accounts UK",
+    "secondaryKeywords": [
+      "internal vs filed accounts",
+      "purpose of management accounts",
+      "reporting differences"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "How to create a one page financial summary for busy directors",
+    "primaryKeyword": "one page financial summary directors",
+    "secondaryKeywords": [
+      "executive finance summary",
+      "single page board report",
+      "director dashboard finance"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Benchmarking your UK business against industry margins",
+    "primaryKeyword": "industry margin benchmarking UK",
+    "secondaryKeywords": [
+      "compare business margins",
+      "sector KPI benchmarks",
+      "profitability benchmarking"
+    ],
+    "category": "Reporting",
+    "used": false
+  },
+  {
+    "topic": "Zero based budgeting for UK professional services firms",
+    "primaryKeyword": "zero based budgeting professional services",
+    "secondaryKeywords": [
+      "ZBB process",
+      "rebuild budget from zero",
+      "cost challenge budgeting"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to forecast churn and expansion revenue for UK SaaS",
+    "primaryKeyword": "forecast SaaS churn expansion UK",
+    "secondaryKeywords": [
+      "net revenue retention forecast",
+      "churn modelling",
+      "expansion ARR planning"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "Sensitivity analysis simple methods for UK SME forecasts",
+    "primaryKeyword": "sensitivity analysis SME forecast UK",
+    "secondaryKeywords": [
+      "what if analysis finance",
+      "tornado charts SME",
+      "forecast assumptions testing"
+    ],
+    "category": "FP&A",
+    "used": false
+  },
+  {
+    "topic": "How to implement Making Tax Digital compatible software UK",
+    "primaryKeyword": "MTD compatible software UK",
+    "secondaryKeywords": [
+      "MTD ITSA software",
+      "digital links requirement",
+      "HMRC recognised software"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Accounts payable automation tools for UK small businesses",
+    "primaryKeyword": "accounts payable automation UK",
+    "secondaryKeywords": [
+      "AP automation software",
+      "invoice capture AP",
+      "bill pay automation"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "How to connect e commerce platforms to your accounting system",
+    "primaryKeyword": "ecommerce accounting integration UK",
+    "secondaryKeywords": [
+      "Shopify Xero connection",
+      "marketplace accounting sync",
+      "online sales bookkeeping"
+    ],
+    "category": "Systems",
+    "used": false
+  },
+  {
+    "topic": "Board observer vs non executive director finance expectations UK",
+    "primaryKeyword": "NED finance expectations UK board",
+    "secondaryKeywords": [
+      "non executive director finance",
+      "board observer role",
+      "governance finance oversight"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "How to set finance policies for a growing UK company",
+    "primaryKeyword": "finance policies growing company UK",
+    "secondaryKeywords": [
+      "delegated authority policy",
+      "expense policy SME",
+      "financial controls framework"
+    ],
+    "category": "Leadership",
+    "used": false
+  },
+  {
+    "topic": "Buying an existing UK business financial checks before you offer",
+    "primaryKeyword": "buying a business financial checks UK",
+    "secondaryKeywords": [
+      "acquisition financial review",
+      "buy business due diligence",
+      "quality of earnings basics"
+    ],
+    "category": "Leadership",
+    "used": false
   }
 ]
