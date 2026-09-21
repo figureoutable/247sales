@@ -72,17 +72,17 @@ function pickImage(category, id) {
 
 /** Prepended to every saved hero-image prompt (AI tools, designers, future image pipelines). */
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
-- Use a vivid, high-saturation palette with at least 3 distinct colours (for example: cobalt or navy, teal or emerald, and coral or amber accents).
-- Keep colour temperature lively and modern; prefer bright directional lighting and clean contrast over muted or dusty tones.
-- Avoid beige, taupe, cream-heavy, tan, sepia, grey-washed, or brown-on-brown scenes. Do not default to bland neutral office stock-photo aesthetics.
-- Include colourful environmental elements where relevant (screens, charts, stationery, lighting, signage, plants, clothing accents) to keep the frame energetic.
-- Suitable for a wide 16:9 or 3:2 web hero; professional, UK-relevant small-business context.`;
+- Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
+- Keep the scene bright, friendly, and professional for a UK small-business audience.
+- Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
+- Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
+- Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.`;
 
 function getHeroScene(post, topic) {
   if (typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()) {
     return post.heroImagePrompt.trim();
   }
-  return `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Use props or settings that suggest finance, growth, or clarity, with a bright multi-colour palette (no beige or neutral-dominant office scenes).`;
+  return `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Show a clear, colourful real-world scene that fits the topic (people, workplace, or finance-related props) without heavy colour grading.`;
 }
 
 function buildHeroImagePrompt(post, topic) {
@@ -93,9 +93,10 @@ function buildHeroImagePrompt(post, topic) {
 function buildFalImagePrompt(post, topic) {
   return [
     "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
-    "Vivid high-saturation colours with cobalt or navy, teal or emerald, and coral or amber accents.",
-    "Bright directional lighting, clean contrast, professional UK small-business context.",
-    "Avoid beige, cream, taupe, sepia, grey-washed, and bland neutral stock-office aesthetics.",
+    "Naturally colourful and inviting with real-world colours — not oversaturated or heavily colour-graded.",
+    "Bright, friendly, professional UK small-business context.",
+    "Avoid dull beige-only, grey-washed, or monochrome stock-office looks.",
+    "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
     "No text, logos, watermarks, or readable UI screens.",
     getHeroScene(post, topic),
   ].join(" ");
@@ -309,9 +310,9 @@ Use the primary keyword 3-5 times naturally throughout. Use secondary keywords w
 
 Hero image prompt (for AI or human designers generating the blog thumbnail/hero):
 - Also return a field "heroImagePrompt": one focused paragraph describing ONLY the visual scene for a wide hero image.
-- The scene must feel colourful and energetic: name specific colours (e.g. teal dashboard, cobalt sky, green plants, warm accent lighting) — not vague "professional office".
-- Explicitly avoid beige-only, cream-washed, or all-grey stock-photo moods; do not describe bland neutral open-plan offices as the whole frame.
-- Tie the visual metaphor to the article topic and UK small business context (founders, limited companies, finance clarity).`;
+- Describe a naturally colourful, real-world scene that fits the article (people, workplace, or relevant props) — bright and inviting, not grey or beige-only.
+- Do NOT prescribe high saturation, neon looks, or a navy/cobalt/coral/teal-and-orange colour grade.
+- Tie the scene to the article topic and UK small business context.`;
 
 async function generatePost(topic, existingTitles) {
   const userPrompt = `Write a blog post about: ${topic.topic}
@@ -329,7 +330,7 @@ Return ONLY a valid JSON object (no markdown fences, no explanation) with these 
   "slug": "url-friendly-slug-with-keyword",
   "excerpt": "Meta description with primary keyword (150-160 characters)",
   "body": "Full markdown body (1500+ words, no H1, opening paragraph first)",
-  "heroImagePrompt": "One paragraph: vivid, non-beige hero image scene matching this article (colours and metaphor specified; no beige stock-office clichés)"
+  "heroImagePrompt": "One paragraph: naturally colourful real-world hero scene matching this article (no forced navy/coral grading, not beige-only)"
 }`;
 
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
