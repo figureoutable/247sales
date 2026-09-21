@@ -74,6 +74,8 @@ function pickImage(category, id) {
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
 - Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
 - Keep the scene bright, friendly, and professional for a UK small-business audience.
+- Computer/laptop screens should look like normal neutral UI (soft greys, whites, subtle blues) — never solid green, neon green, or green-tinted monitors.
+- No green backlights, green wall washes, or green ambient colour gels.
 - Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
 - Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
 - Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.`;
@@ -95,6 +97,8 @@ function buildFalImagePrompt(post, topic) {
     "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
     "Naturally colourful and inviting with real-world colours — not oversaturated or heavily colour-graded.",
     "Bright, friendly, professional UK small-business context.",
+    "Laptop and monitor screens show normal neutral software UI in soft grey, white, and subtle blue — not green screens, not green-tinted displays, not neon dashboards.",
+    "No green backlights, green rim lights, green wall washes, or green ambient gels.",
     "Avoid dull beige-only, grey-washed, or monochrome stock-office looks.",
     "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
     "No text, logos, watermarks, or readable UI screens.",
@@ -279,7 +283,9 @@ Strict rules:
 - Write in UK English (e.g. "organise" not "organize", "colour" not "color", "recognise" not "recognize")
 - Minimum 1,500 words
 - Use markdown: ## for H2, ### for H3, **bold** for emphasis
-- Use bullet lists where appropriate
+- Put a blank line before and after every heading
+- Use bullet lists (- item) for any list of 2+ points; never write list items as plain paragraphs
+- Use short paragraphs (2-4 sentences). Avoid long walls of text
 - NO em dashes. Use en dashes or restructure the sentence
 - NO curly/smart quotes. Use straight apostrophes and straight double quotes only
 - NO backtick characters anywhere in the output
@@ -311,7 +317,8 @@ Use the primary keyword 3-5 times naturally throughout. Use secondary keywords w
 Hero image prompt (for AI or human designers generating the blog thumbnail/hero):
 - Also return a field "heroImagePrompt": one focused paragraph describing ONLY the visual scene for a wide hero image.
 - Describe a naturally colourful, real-world scene that fits the article (people, workplace, or relevant props) — bright and inviting, not grey or beige-only.
-- Do NOT prescribe high saturation, neon looks, or a navy/cobalt/coral/teal-and-orange colour grade.
+- Do NOT prescribe high saturation, neon looks, navy/cobalt/coral grading, green backlights, or green-tinted computer screens.
+- If a screen is visible, describe a normal neutral UI, not a green dashboard.
 - Tie the scene to the article topic and UK small business context.`;
 
 async function generatePost(topic, existingTitles) {

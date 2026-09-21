@@ -86,7 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           )}
           {sanityPost.body && (
-            <div className="prose prose-slate mt-10 max-w-none prose-headings:font-bold prose-p:text-slate-600 prose-a:text-black prose-a:no-underline hover:prose-a:underline dark:prose-a:text-white">
+            <div className="blog-prose mt-10">
               <PortableText value={sanityPost.body} />
             </div>
           )}
@@ -138,7 +138,7 @@ export default async function BlogPostPage({ params }: Props) {
               />
             </div>
           )}
-          <div className="prose prose-slate mt-10 max-w-none prose-headings:font-bold prose-p:text-slate-600 prose-ul:my-4 prose-li:my-1 prose-a:text-black prose-a:no-underline hover:prose-a:underline dark:prose-p:text-zinc-400 dark:prose-a:text-white">
+          <div className="blog-prose mt-10">
             {localPost.body ? (
               localPost.body.includes("##") ? (
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{localPost.body}</ReactMarkdown>

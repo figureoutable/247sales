@@ -42,6 +42,8 @@ if (!FAL_KEY) {
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
 - Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
 - Keep the scene bright, friendly, and professional for a UK small-business audience.
+- Computer/laptop screens should look like normal neutral UI (soft greys, whites, subtle blues) — never solid green, neon green, or green-tinted monitors.
+- No green backlights, green wall washes, or green ambient colour gels.
 - Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
 - Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
 - Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.`;
@@ -50,6 +52,8 @@ const FAL_STYLE = [
   "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
   "Naturally colourful and inviting with real-world colours — not oversaturated or heavily colour-graded.",
   "Bright, friendly, professional UK small-business context.",
+  "Laptop and monitor screens show normal neutral software UI in soft grey, white, and subtle blue — not green screens, not green-tinted displays, not neon dashboards.",
+  "No green backlights, green rim lights, green wall washes, or green ambient gels.",
   "Avoid dull beige-only, grey-washed, or monochrome stock-office looks.",
   "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
   "No text, logos, watermarks, or readable UI screens.",
@@ -61,12 +65,16 @@ function softenScene(scene) {
     .replace(/\bvivid(?:ly)?\b/gi, "colourful")
     .replace(/\bvibrant(?:ly)?\b/gi, "colourful")
     .replace(/\bcobalt(?:-blue)?\b/gi, "blue")
-    .replace(/\bnavy\b/gi, "blue")
-    .replace(/\bteal\b/gi, "green")
-    .replace(/\bemerald\b/gi, "green")
+    .replace(/\bnavy\b/gi, "dark blue")
+    .replace(/\bteal\b/gi, "soft blue")
+    .replace(/\bemerald\b/gi, "leafy")
     .replace(/\bcoral\b/gi, "warm")
     .replace(/\bamber\b/gi, "warm")
     .replace(/\bneon\b/gi, "")
+    .replace(/\bgreen[- ]tinted\b/gi, "neutral")
+    .replace(/\bsolid green\b/gi, "neutral grey")
+    .replace(/\bgreen (?:backlight|rim light|wall wash|ambient|glow|gel)s?\b/gi, "soft daylight")
+    .replace(/\bgreen (?:dashboard|screen|monitor|display|UI)\b/gi, "neutral grey screen")
     .replace(/\s{2,}/g, " ")
     .trim();
 }
