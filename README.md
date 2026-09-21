@@ -72,4 +72,11 @@ Schema reference is in `src/sanity/schema.ts`.
 
 ### Blog post generator (`scripts/generate-blog-post.mjs`)
 
-Requires `OPENAI_API_KEY` (text: `gpt-5-mini`) and optional `FAL_KEY` for hero images via fal.ai (`fal-ai/flux/dev`). Each run writes a body file, updates `generated-posts.ts`, saves a hero prompt under `scripts/hero-image-prompts/local-{id}.txt`, and tries to generate a hero image into `public/blog/generated/local-{id}.jpg`. If fal is unset or fails, the post falls back to a category stock image. Prompting prefers **naturally colourful** scenes and avoids forced navy/coral grading or dull beige-only stock looks.
+Requires `OPENAI_API_KEY` (text: `gpt-5-mini`) and optional `FAL_KEY` for hero images via fal.ai (`fal-ai/flux/dev`). Runs automatically Mon/Wed/Fri via GitHub Actions.
+
+Each run:
+- Uses the topic queue (`scripts/blog-topics.json`), and **auto-researches new topics** when unused topics run low so publishing can continue indefinitely
+- Pulls live **GOV.UK search results** for the topic and asks the model to align with tax year-aware guidance
+- Writes a body file, updates `generated-posts.ts`, saves a hero prompt, and generates a fal hero image (stock fallback if fal fails)
+
+Prompting prefers naturally colourful scenes and avoids forced navy/coral grading, green screens, or dull beige-only stock looks.

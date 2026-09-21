@@ -262,9 +262,155 @@ function getExistingTitles() {
   return [...combined.matchAll(/title:\s*"([^"]+)"/g)].map((m) => m[1]);
 }
 
-/* ---------- topic queue ---------- */
+function getExistingTopicsList() {
+  const topics = JSON.parse(fs.readFileSync(TOPICS_FILE, "utf8"));
+  return topics.map((t) => t.topic);
+}
 
-function getNextTopic() {
+/** UK tax year label, e.g. 2026/27 (runs 6 April → 5 April). */
+function getCurrentUkTaxYear(date = new Date()) {
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth(); // 0-11
+  const day = date.getUTCDate();
+  const startedThisCalendarYear = month > 3 || (month === 3 && day >= 6);
+  const startYear = startedThisCalendarYear ? year : year - 1;
+  const endYearShort = String(startYear + 1).slice(-2);
+  return `${startYear}/${endYearShort}`;
+}
+
+function parseJsonContent(content) {
+  let text = content.trim();
+  if (text.startsWith("```")) {
+    text = text.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
+  }
+  return JSON.parse(text);
+}
+
+async function openaiJson(messages, { maxCompletionTokens = 4096 } = {}) {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: "gpt-5-mini",
+      messages,
+      max_completion_tokens: maxCompletionTokens,
+    }),
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`OpenAI API ${res.status}: ${err}`);
+  }
+  const data = await res.json();
+  return parseJsonContent(data.choices[0].message.content);
+}
+
+/* ---------- topic queue (auto-researches forever) ---------- */
+
+const CATEGORIES = [
+  "Tax",
+  "Compliance",
+  "VAT",
+  "Payroll",
+  "Bookkeeping",
+  "Cash Flow",
+  "Reporting",
+  "FP&A",
+  "Systems",
+  "Leadership",
+];
+
+const TOPIC_TOP_UP = 20;
+const TOPIC_MIN_UNUSED = 5;
+
+function countUnusedTopics() {
+  const topics = JSON.parse(fs.readFileSync(TOPICS_FILE, "utf8"));
+  return topics.filter((t) => !t.used).length;
+}
+
+async function researchNewTopics(count, existingTopics, existingTitles) {
+  console.log(`Researching ${count} new blog topics...`);
+  const taxYear = getCurrentUkTaxYear();
+  const todayIso = new Date().toISOString().slice(0, 10);
+
+  const result = await openaiJson(
+    [
+      {
+        role: "system",
+        content: `You research SEO blog topics for Figures, a UK accounting firm serving small businesses, founders and limited company directors.
+
+Return ONLY valid JSON (no markdown fences) as:
+{ "topics": [ { "topic": string, "primaryKeyword": string, "secondaryKeywords": [string, string, string], "category": string } ] }
+
+Rules:
+- Topics must be timely for today (${todayIso}) and UK tax year ${taxYear}
+- Prefer practical how-to / explainer angles on current HMRC, Companies House, payroll, VAT, corporation tax, MTD, and finance ops
+- Avoid near-duplicates of existing topics or titles
+- category must be one of: ${CATEGORIES.join(", ")}
+- primaryKeyword should be a natural UK search phrase
+- Keep topic titles clear and specific (include UK where helpful)`,
+      },
+      {
+        role: "user",
+        content: `Propose ${count} new unused blog topics.
+
+Existing topics (do not repeat):
+${existingTopics.map((t) => `- ${t}`).join("\n")}
+
+Existing published titles (do not overlap):
+${existingTitles.map((t) => `- ${t}`).join("\n")}`,
+      },
+    ],
+    { maxCompletionTokens: 8192 }
+  );
+
+  const raw = Array.isArray(result.topics) ? result.topics : [];
+  const existingLower = new Set(existingTopics.map((t) => t.toLowerCase()));
+  const cleaned = [];
+  for (const item of raw) {
+    if (!item?.topic || !item?.primaryKeyword || !item?.category) continue;
+    const topic = String(item.topic).trim();
+    if (existingLower.has(topic.toLowerCase())) continue;
+    if (!CATEGORIES.includes(item.category)) continue;
+    const secondary = Array.isArray(item.secondaryKeywords)
+      ? item.secondaryKeywords.map(String).slice(0, 3)
+      : [];
+    while (secondary.length < 3) secondary.push(item.primaryKeyword);
+    cleaned.push({
+      topic,
+      primaryKeyword: String(item.primaryKeyword).trim(),
+      secondaryKeywords: secondary,
+      category: item.category,
+      used: false,
+    });
+    existingLower.add(topic.toLowerCase());
+  }
+  if (cleaned.length === 0) {
+    throw new Error("Topic research returned no usable topics");
+  }
+  return cleaned;
+}
+
+async function ensureTopicSupply() {
+  let unused = countUnusedTopics();
+  if (unused >= TOPIC_MIN_UNUSED) return;
+
+  const existingTopics = getExistingTopicsList();
+  const existingTitles = getExistingTitles();
+  const needed = Math.max(TOPIC_TOP_UP, TOPIC_MIN_UNUSED - unused);
+  const fresh = await researchNewTopics(needed, existingTopics, existingTitles);
+  const topics = JSON.parse(fs.readFileSync(TOPICS_FILE, "utf8"));
+  topics.push(...fresh);
+  fs.writeFileSync(TOPICS_FILE, JSON.stringify(topics, null, 2) + "\n");
+  console.log(
+    `Added ${fresh.length} researched topics (${countUnusedTopics()} unused now)`
+  );
+}
+
+async function getNextTopic() {
+  await ensureTopicSupply();
   const topics = JSON.parse(fs.readFileSync(TOPICS_FILE, "utf8"));
   return topics.find((t) => !t.used) ?? null;
 }
@@ -276,9 +422,48 @@ function markTopicUsed(topic) {
   fs.writeFileSync(TOPICS_FILE, JSON.stringify(topics, null, 2) + "\n");
 }
 
+/* ---------- GOV.UK research ---------- */
+
+async function fetchGovUkSources(query) {
+  try {
+    const url = `https://www.gov.uk/api/search.json?count=5&q=${encodeURIComponent(query)}`;
+    const res = await fetch(url, {
+      headers: { Accept: "application/json" },
+    });
+    if (!res.ok) {
+      console.warn(`GOV.UK search ${res.status} — continuing without live sources`);
+      return [];
+    }
+    const data = await res.json();
+    const results = Array.isArray(data.results) ? data.results : [];
+    return results.slice(0, 5).map((r) => ({
+      title: r.title || "GOV.UK",
+      link: r.link?.startsWith("http")
+        ? r.link
+        : `https://www.gov.uk${r.link || ""}`,
+      description: (r.description || "").replace(/\s+/g, " ").trim(),
+    }));
+  } catch (err) {
+    console.warn(`GOV.UK search failed — continuing: ${err.message}`);
+    return [];
+  }
+}
+
 /* ---------- OpenAI ---------- */
 
-const SYSTEM_PROMPT = `You are an expert SEO content writer for Figures, a UK accounting and advisory firm based in Surrey. Write blog posts for UK small business owners, founders, and limited company directors.
+function buildSystemPrompt() {
+  const taxYear = getCurrentUkTaxYear();
+  const todayIso = new Date().toISOString().slice(0, 10);
+  return `You are an expert SEO content writer for Figures, a UK accounting and advisory firm based in Surrey. Write blog posts for UK small business owners, founders, and limited company directors.
+
+Today's date: ${todayIso}
+Current UK tax year: ${taxYear}
+
+Currency / accuracy rules:
+- Prefer the latest published UK rules, rates and thresholds for tax year ${taxYear}
+- When live GOV.UK sources are provided in the user message, align the article with them and link to them
+- Do not invent precise rates, thresholds or deadlines. If unsure, state the principle and tell readers to confirm on GOV.UK or with an accountant
+- Call out recent or upcoming changes (MTD, rates, allowances, filings) where relevant
 
 Strict rules:
 - Write in UK English (e.g. "organise" not "organize", "colour" not "color", "recognise" not "recognize")
@@ -296,7 +481,7 @@ Strict rules:
 Required sections in order:
 1. Opening paragraphs introducing the topic
 2. Several H2 sections covering the topic in depth (use H3 for subsections where helpful)
-3. "## UK tax and legal accuracy" - disclaimer noting "This article is for informational purposes only and does not constitute professional tax or financial advice. Please speak to a qualified accountant before taking action." Include the relevant tax year.
+3. "## UK tax and legal accuracy" - disclaimer noting "This article is for informational purposes only and does not constitute professional tax or financial advice. Please speak to a qualified accountant before taking action." Explicitly name tax year ${taxYear}.
 4. "## Frequently asked questions" - 4-5 Q&A pairs using **bold** for questions
 5. "## Summary and next steps" - brief recap with a CTA to Figures
 
@@ -321,13 +506,28 @@ Hero image prompt (for AI or human designers generating the blog thumbnail/hero)
 - Do NOT prescribe high saturation, neon looks, navy/cobalt/coral grading, green backlights, or green-tinted computer screens.
 - If a screen is visible, describe a normal neutral UI, not a green dashboard.
 - Tie the scene to the article topic and UK small business context.`;
+}
 
-async function generatePost(topic, existingTitles) {
+async function generatePost(topic, existingTitles, govSources) {
+  const taxYear = getCurrentUkTaxYear();
+  const sourcesBlock =
+    govSources.length > 0
+      ? `Live GOV.UK sources to prefer (link to at least one in the article):\n${govSources
+          .map(
+            (s, i) =>
+              `${i + 1}. ${s.title}\n   ${s.link}\n   ${s.description}`
+          )
+          .join("\n")}`
+      : "No live GOV.UK results were fetched — still include at least one accurate GOV.UK link if you know a stable URL for this topic.";
+
   const userPrompt = `Write a blog post about: ${topic.topic}
 
 Primary keyword: ${topic.primaryKeyword}
 Secondary keywords: ${topic.secondaryKeywords.join(", ")}
 Category: ${topic.category}
+UK tax year to use: ${taxYear}
+
+${sourcesBlock}
 
 Existing blog post titles (avoid overlap):
 ${existingTitles.map((t) => `- ${t}`).join("\n")}
@@ -341,35 +541,13 @@ Return ONLY a valid JSON object (no markdown fences, no explanation) with these 
   "heroImagePrompt": "One paragraph: naturally colourful real-world hero scene matching this article (no forced navy/coral grading, not beige-only)"
 }`;
 
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-5-mini",
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        { role: "user", content: userPrompt },
-      ],
-      max_completion_tokens: 16384,
-    }),
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`OpenAI API ${res.status}: ${err}`);
-  }
-
-  const data = await res.json();
-  let content = data.choices[0].message.content.trim();
-
-  if (content.startsWith("```")) {
-    content = content.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
-  }
-
-  return JSON.parse(content);
+  return openaiJson(
+    [
+      { role: "system", content: buildSystemPrompt() },
+      { role: "user", content: userPrompt },
+    ],
+    { maxCompletionTokens: 16384 }
+  );
 }
 
 /* ---------- file writers ---------- */
@@ -444,18 +622,25 @@ async function main() {
   const publishDate = publishDateObj.toISOString();
   console.log(`Publish date: ${publishDate}`);
 
-  const topic = getNextTopic();
+  const topic = await getNextTopic();
   if (!topic) {
-    console.log(
-      "No unused topics remaining. Add more to scripts/blog-topics.json"
-    );
-    process.exit(0);
+    console.error("Failed to obtain a topic after research");
+    process.exit(1);
   }
   console.log(`Topic: ${topic.topic}`);
-  console.log(`Primary keyword: ${topic.primaryKeyword}\n`);
+  console.log(`Primary keyword: ${topic.primaryKeyword}`);
+  console.log(`UK tax year: ${getCurrentUkTaxYear()}\n`);
+
+  console.log("Fetching GOV.UK sources...");
+  const govSources = await fetchGovUkSources(
+    `${topic.primaryKeyword} ${topic.topic}`
+  );
+  if (govSources.length) {
+    console.log(`Found ${govSources.length} GOV.UK results`);
+  }
 
   console.log("Calling OpenAI...");
-  const post = await generatePost(topic, getExistingTitles());
+  const post = await generatePost(topic, getExistingTitles(), govSources);
   console.log(`Generated: "${post.title}"`);
   console.log(`Slug: ${post.slug}`);
   console.log(`Excerpt: ${post.excerpt}\n`);
