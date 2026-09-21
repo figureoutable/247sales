@@ -1,11 +1,10 @@
 Blog hero image — global style (apply every time):
-- Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
-- Keep the scene bright, friendly, and professional for a UK small-business audience.
-- Computer/laptop screens should look like normal neutral UI (soft greys, whites, subtle blues) — never solid green, neon green, or green-tinted monitors.
-- No green backlights, green wall washes, or green ambient colour gels.
-- Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
-- Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
-- Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.
+- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings).
+- Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
+- People in real-world work contexts that fit the topic (founders, directors, trades, advisors) having a conversation or reviewing papers outdoors.
+- Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
+- Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
+- Suitable for a wide 16:9 web hero; clear subject, simple composition.
 
 Scene and composition:
-A bright, natural office scene showing two small business owners and an accountant around a large wooden table by a window, reviewing neat paper files and a laptop displaying a neutral accounting dashboard. Include colourful real-world items such as a potted plant, a mug, and a printed diagram of a simple company group structure. The setting should feel lively and professional, representing a UK small business discussion about intra-group pricing and documentation.
+Two small-business owners discussing documents outdoors outside UK brick commercial buildings on a city street, one holding papers, soft natural daylight, realistic natural colours, plants in planters nearby, no computers or screens.

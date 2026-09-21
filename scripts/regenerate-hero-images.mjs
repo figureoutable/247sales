@@ -40,42 +40,42 @@ if (!FAL_KEY) {
 }
 
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
-- Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
-- Keep the scene bright, friendly, and professional for a UK small-business audience.
-- Computer/laptop screens should look like normal neutral UI (soft greys, whites, subtle blues) — never solid green, neon green, or green-tinted monitors.
-- No green backlights, green wall washes, or green ambient colour gels.
-- Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
-- Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
-- Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.`;
+- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings).
+- Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
+- People in real-world work contexts that fit the topic (founders, directors, trades, advisors) having a conversation or reviewing papers outdoors.
+- Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
+- Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
+- Suitable for a wide 16:9 web hero; clear subject, simple composition.`;
 
 const FAL_STYLE = [
   "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
-  "Naturally colourful and inviting with real-world colours — not oversaturated or heavily colour-graded.",
-  "Bright, friendly, professional UK small-business context with soft natural daylight.",
-  "CRITICAL: any laptop or monitor must show a normal light grey or white UI only — never green, never chroma-key green, never neon green, never green-tinted glass.",
-  "CRITICAL: no green glow on faces, hands, desks, or walls; no green backlights, rim lights, or ambient gels.",
-  "Prefer warm daylight and ordinary office colours; plants may be green but screens and lighting must not be.",
-  "Avoid dull beige-only, grey-washed, or monochrome stock-office looks.",
+  "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, or similar real-world location.",
+  "Soft natural daylight, natural realistic colours — not oversaturated or heavily colour-graded.",
+  "People in professional or industry-appropriate clothing having a conversation or reviewing paperwork outdoors.",
+  "No indoor offices, no desks, no laptop or monitor screens, no green glow, no studio lighting.",
   "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
-  "No text, logos, watermarks, or readable UI screens.",
+  "No text, logos, or watermarks.",
 ].join(" ");
+
+const OUTDOOR_SCENES = {
+  100: "Two UK company directors talking outdoors on a pavement outside a brick commercial office building on a British high street, reviewing a folder of papers together, soft natural daylight, realistic natural colours, clear sky, no computers or screens.",
+  102: "Two small-business owners discussing documents outdoors outside UK brick commercial buildings on a city street, one holding papers, soft natural daylight, realistic natural colours, plants in planters nearby, no computers or screens.",
+};
 
 function softenScene(scene) {
   return scene
     .replace(/\bhigh[- ]saturation\b/gi, "natural colour")
-    .replace(/\bvivid(?:ly)?\b/gi, "colourful")
-    .replace(/\bvibrant(?:ly)?\b/gi, "colourful")
+    .replace(/\bvivid(?:ly)?\b/gi, "natural")
+    .replace(/\bvibrant(?:ly)?\b/gi, "natural")
+    .replace(/\bindoor\b/gi, "outdoor")
+    .replace(/\bdesk\b/gi, "clipboard")
+    .replace(/\blaptop\b/gi, "folder of papers")
+    .replace(/\bmonitor\b/gi, "clipboard")
+    .replace(/\bscreen\b/gi, "papers")
     .replace(/\bcobalt(?:-blue)?\b/gi, "blue")
     .replace(/\bnavy\b/gi, "dark blue")
     .replace(/\bteal\b/gi, "soft blue")
-    .replace(/\bemerald\b/gi, "leafy")
-    .replace(/\bcoral\b/gi, "warm")
-    .replace(/\bamber\b/gi, "warm")
     .replace(/\bneon\b/gi, "")
-    .replace(/\bgreen[- ]tinted\b/gi, "neutral")
-    .replace(/\bsolid green\b/gi, "neutral grey")
-    .replace(/\bgreen (?:backlight|rim light|wall wash|ambient|glow|gel)s?\b/gi, "soft daylight")
-    .replace(/\bgreen (?:dashboard|screen|monitor|display|UI)\b/gi, "neutral grey screen")
     .replace(/\s{2,}/g, " ")
     .trim();
 }
@@ -164,7 +164,9 @@ async function regenerate(id) {
   }
 
   const oldPrompt = fs.readFileSync(promptPath, "utf8");
-  const scene = softenScene(extractScene(oldPrompt));
+  const scene =
+    OUTDOOR_SCENES[id] ||
+    softenScene(extractScene(oldPrompt));
   const falPrompt = `${FAL_STYLE} ${scene}`;
   const savedPrompt = `${HERO_IMAGE_VISUAL_RULES}\n\nScene and composition:\n${scene}\n`;
 

@@ -1,11 +1,10 @@
 Blog hero image — global style (apply every time):
-- Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
-- Keep the scene bright, friendly, and professional for a UK small-business audience.
-- Computer/laptop screens should look like normal neutral UI (soft greys, whites, subtle blues) — never solid green, neon green, or green-tinted monitors.
-- No green backlights, green wall washes, or green ambient colour gels.
-- Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
-- Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
-- Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.
+- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings).
+- Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
+- People in real-world work contexts that fit the topic (founders, directors, trades, advisors) having a conversation or reviewing papers outdoors.
+- Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
+- Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
+- Suitable for a wide 16:9 web hero; clear subject, simple composition.
 
 Scene and composition:
-A bright, natural workspace scene showing a small team of three people around a wooden table in a modern UK small business office. One person, a director, is reviewing a paper file labelled "Directors' Loan Account" while another types figures into a neutral accounting app visible on a laptop screen. A cup of tea, a small potted plant and colourful post-it notes are on the table. Through a window you can see a leafy Surrey suburb street, giving a welcoming, professional British context.
+Two UK company directors talking outdoors on a pavement outside a brick commercial office building on a British high street, reviewing a folder of papers together, soft natural daylight, realistic natural colours, clear sky, no computers or screens.

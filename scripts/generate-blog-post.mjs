@@ -72,19 +72,18 @@ function pickImage(category, id) {
 
 /** Prepended to every saved hero-image prompt (AI tools, designers, future image pipelines). */
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
-- Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
-- Keep the scene bright, friendly, and professional for a UK small-business audience.
-- Computer/laptop screens should look like normal neutral UI (soft greys, whites, subtle blues) — never solid green, neon green, or green-tinted monitors.
-- No green backlights, green wall washes, or green ambient colour gels.
-- Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
-- Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
-- Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.`;
+- Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings).
+- Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
+- People in real-world work contexts that fit the topic (founders, directors, trades, advisors) having a conversation or reviewing papers outdoors.
+- Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
+- Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
+- Suitable for a wide 16:9 web hero; clear subject, simple composition.`;
 
 function getHeroScene(post, topic) {
   if (typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()) {
     return post.heroImagePrompt.trim();
   }
-  return `Editorial hero image for a UK accounting and small-business article about: ${topic.topic}. Show a clear, colourful real-world scene that fits the topic (people, workplace, or finance-related props) without heavy colour grading.`;
+  return `Outdoor UK editorial photo related to: ${topic.topic}. People in a real-world outdoor setting that fits the topic, soft natural daylight, natural colours, no computer screens.`;
 }
 
 function buildHeroImagePrompt(post, topic) {
@@ -95,14 +94,12 @@ function buildHeroImagePrompt(post, topic) {
 function buildFalImagePrompt(post, topic) {
   return [
     "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
-    "Naturally colourful and inviting with real-world colours — not oversaturated or heavily colour-graded.",
-    "Bright, friendly, professional UK small-business context with soft natural daylight.",
-    "CRITICAL: any laptop or monitor must show a normal light grey or white UI only — never green, never chroma-key green, never neon green, never green-tinted glass.",
-    "CRITICAL: no green glow on faces, hands, desks, or walls; no green backlights, rim lights, or ambient gels.",
-    "Prefer warm daylight and ordinary office colours; plants may be green but screens and lighting must not be.",
-    "Avoid dull beige-only, grey-washed, or monochrome stock-office looks.",
+    "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, or similar real-world location.",
+    "Soft natural daylight, natural realistic colours — not oversaturated or heavily colour-graded.",
+    "People in professional or industry-appropriate clothing having a conversation or reviewing paperwork outdoors.",
+    "No indoor offices, no desks, no laptop or monitor screens, no green glow, no studio lighting.",
     "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
-    "No text, logos, watermarks, or readable UI screens.",
+    "No text, logos, or watermarks.",
     getHeroScene(post, topic),
   ].join(" ");
 }
@@ -502,9 +499,9 @@ Use the primary keyword 3-5 times naturally throughout. Use secondary keywords w
 
 Hero image prompt (for AI or human designers generating the blog thumbnail/hero):
 - Also return a field "heroImagePrompt": one focused paragraph describing ONLY the visual scene for a wide hero image.
-- Describe a naturally colourful, real-world scene that fits the article (people, workplace, or relevant props) — bright and inviting, not grey or beige-only.
-- Do NOT prescribe high saturation, neon looks, navy/cobalt/coral grading, green backlights, or green-tinted computer screens.
-- If a screen is visible, describe a normal neutral UI, not a green dashboard.
+- Prefer an OUTDOOR UK scene in soft natural daylight that fits the article topic (high street, outside offices, worksite exterior, etc.).
+- Natural realistic colours — not neon, not oversaturated, not cinematic colour grading.
+- People in real-world work clothing reviewing papers or talking outdoors. Do NOT describe indoor desks, laptops, monitors, or green screen glow.
 - Tie the scene to the article topic and UK small business context.`;
 }
 
@@ -538,7 +535,7 @@ Return ONLY a valid JSON object (no markdown fences, no explanation) with these 
   "slug": "url-friendly-slug-with-keyword",
   "excerpt": "Meta description with primary keyword (150-160 characters)",
   "body": "Full markdown body (1500+ words, no H1, opening paragraph first)",
-  "heroImagePrompt": "One paragraph: naturally colourful real-world hero scene matching this article (no forced navy/coral grading, not beige-only)"
+  "heroImagePrompt": "One paragraph: outdoor UK natural-daylight scene matching this article (no indoor screens)"
 }`;
 
   return openaiJson(
