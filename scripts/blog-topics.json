@@ -668,7 +668,7 @@
       "income tax bands UK"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How corporation tax instalment payments work for large UK companies",
@@ -679,7 +679,7 @@
       "large company tax"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Seed Enterprise Investment Scheme SEIS tax relief explained",
@@ -690,7 +690,7 @@
       "SEIS vs EIS"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Enterprise Investment Scheme EIS for UK investors and founders",
@@ -701,7 +701,7 @@
       "angel investor tax relief"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to claim patent box relief for UK companies",
@@ -712,7 +712,7 @@
       "qualifying IP profits"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Tax treatment of crypto assets for UK limited companies",
@@ -723,7 +723,7 @@
       "digital asset tax"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How double tax treaties affect UK companies trading overseas",
@@ -734,7 +734,7 @@
       "overseas trading tax"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Research and development intensive SME scheme changes explained",
@@ -745,7 +745,7 @@
       "RDEC for SMEs"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to claim loss relief when your UK company makes a loss",
@@ -756,7 +756,7 @@
       "group relief UK"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Tax implications of converting a sole trader to a limited company UK",
@@ -767,7 +767,7 @@
       "transferring business assets"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How the annual tax on enveloped dwellings ATED works UK",
@@ -778,7 +778,7 @@
       "ATED return"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Business asset disposal relief entrepreneurs relief explained UK",
@@ -789,7 +789,7 @@
       "selling company shares tax"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to treat bad debts for corporation tax in the UK",
@@ -800,7 +800,7 @@
       "doubtful debt provision"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Tax on directors loans and section 455 charge explained",
@@ -811,7 +811,7 @@
       "repaying directors loan"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to claim structures and buildings allowance UK",
@@ -822,7 +822,7 @@
       "building allowance claim"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "Transfer pricing rules for UK small and medium groups",
@@ -833,7 +833,7 @@
       "transfer pricing documentation"
     ],
     "category": "Tax",
-    "used": false
+    "used": true
   },
   {
     "topic": "How Creative Industry Tax Reliefs work for UK companies",

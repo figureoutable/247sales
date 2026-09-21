@@ -63,6 +63,22 @@ import { body as bodyLocal83 } from "./blog-post-bodies/local-83";
 import { body as bodyLocal84 } from "./blog-post-bodies/local-84";
 import { body as bodyLocal85 } from "./blog-post-bodies/local-85";
 import { body as bodyLocal86 } from "./blog-post-bodies/local-86";
+import { body as bodyLocal87 } from "./blog-post-bodies/local-87";
+import { body as bodyLocal88 } from "./blog-post-bodies/local-88";
+import { body as bodyLocal89 } from "./blog-post-bodies/local-89";
+import { body as bodyLocal90 } from "./blog-post-bodies/local-90";
+import { body as bodyLocal91 } from "./blog-post-bodies/local-91";
+import { body as bodyLocal92 } from "./blog-post-bodies/local-92";
+import { body as bodyLocal93 } from "./blog-post-bodies/local-93";
+import { body as bodyLocal94 } from "./blog-post-bodies/local-94";
+import { body as bodyLocal95 } from "./blog-post-bodies/local-95";
+import { body as bodyLocal96 } from "./blog-post-bodies/local-96";
+import { body as bodyLocal97 } from "./blog-post-bodies/local-97";
+import { body as bodyLocal98 } from "./blog-post-bodies/local-98";
+import { body as bodyLocal99 } from "./blog-post-bodies/local-99";
+import { body as bodyLocal100 } from "./blog-post-bodies/local-100";
+import { body as bodyLocal101 } from "./blog-post-bodies/local-101";
+import { body as bodyLocal102 } from "./blog-post-bodies/local-102";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -676,6 +692,166 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/cash-flow-13-weeks.jpg",
     excerpt: "Learn how UK small businesses can effectively manage late paying clients with strategies for chasing late invoices and understanding late payment interest.",
     body: bodyLocal86,
+  },
+  {
+    _id: "local-87",
+    title: "Personal allowance tax bands UK directors explained",
+    slug: { current: "personal-allowance-tax-bands-uk-directors" },
+    category: "Tax",
+    publishedAt: "2026-08-17T09:00:00.000Z",
+    mainImage: "/blog/generated/local-87.jpg",
+    excerpt: "A clear guide to personal allowance tax bands UK directors need to know — how allowances interact with salary, dividends and planning to stay tax efficient in 2026/27.",
+    body: bodyLocal87,
+  },
+  {
+    _id: "local-88",
+    title: "Corporation tax instalment payments UK: guide for large firms",
+    slug: { current: "corporation-tax-instalment-payments-uk-large-companies" },
+    category: "Tax",
+    publishedAt: "2026-08-19T09:00:00.000Z",
+    mainImage: "/blog/generated/local-88.jpg",
+    excerpt: "Essential guide to corporation tax instalment payments UK for large companies - who must pay quarterly CT payments, CT61 rules, deadlines and cashflow impact.",
+    body: bodyLocal88,
+  },
+  {
+    _id: "local-89",
+    title: "SEIS tax relief UK explained for founders and investors",
+    slug: { current: "seis-tax-relief-uk-explained" },
+    category: "Tax",
+    publishedAt: "2026-08-21T09:00:00.000Z",
+    mainImage: "/blog/generated/local-89.jpg",
+    excerpt: "Clear guide to SEIS tax relief UK for founders and investors – eligibility, benefits, claiming process, SEIS vs EIS and practical steps to secure startup investment relief.",
+    body: bodyLocal89,
+  },
+  {
+    _id: "local-90",
+    title: "EIS tax relief UK: Guide for investors and founders",
+    slug: { current: "eis-tax-relief-uk-enterprise-investment-scheme" },
+    category: "Tax",
+    publishedAt: "2026-08-24T09:00:00.000Z",
+    mainImage: "/blog/generated/local-90.jpg",
+    excerpt: "A practical guide to EIS tax relief UK for founders and investors. Learn eligibility, advance assurance, tax benefits and steps to secure EIS relief for your company.",
+    body: bodyLocal90,
+  },
+  {
+    _id: "local-91",
+    title: "Patent Box Relief UK: How to Claim IP Corporation Tax Relief",
+    slug: { current: "patent-box-relief-uk-how-to-claim" },
+    category: "Tax",
+    publishedAt: "2026-08-26T09:00:00.000Z",
+    mainImage: "/blog/generated/local-91.jpg",
+    excerpt: "Learn how to claim patent box relief UK: eligibility, calculating qualifying IP profits, the claiming process and record-keeping tips to cut your tax bill.",
+    body: bodyLocal91,
+  },
+  {
+    _id: "local-92",
+    title: "Crypto tax limited company UK: Essential guide for directors",
+    slug: { current: "crypto-tax-limited-company-uk" },
+    category: "Tax",
+    publishedAt: "2026-08-28T09:00:00.000Z",
+    mainImage: "/blog/generated/local-92.jpg",
+    excerpt: "Practical guidance on crypto tax limited company UK: how corporations tax crypto, accounting treatment, payroll and VAT implications for limited companies.",
+    body: bodyLocal92,
+  },
+  {
+    _id: "local-93",
+    title: "How double tax treaties affect UK companies trading overseas",
+    slug: { current: "double-tax-treaties-uk-companies-trading-overseas" },
+    category: "Tax",
+    publishedAt: "2026-08-31T09:00:00.000Z",
+    mainImage: "/blog/generated/local-93.jpg",
+    excerpt: "Understand how double tax treaties UK companies use can reduce overseas trading tax, the difference between DTA relief and foreign tax credit UK, and practical steps to claim relief.",
+    body: bodyLocal93,
+  },
+  {
+    _id: "local-94",
+    title: "R&D intensive SME scheme UK – Changes Explained for 2026",
+    slug: { current: "rd-intensive-sme-scheme-uk-changes-explained" },
+    category: "Tax",
+    publishedAt: "2026-09-02T09:00:00.000Z",
+    mainImage: "/blog/generated/local-94.jpg",
+    excerpt: "Understand the R&D intensive SME scheme UK changes, the merged R&D scheme, and how RDEC for SMEs may affect your claim strategy in the 2026/27 tax year.",
+    body: bodyLocal94,
+  },
+  {
+    _id: "local-95",
+    title: "Corporation tax loss relief UK – How to claim and use losses",
+    slug: { current: "corporation-tax-loss-relief-uk-claim-losses" },
+    category: "Tax",
+    publishedAt: "2026-09-04T09:00:00.000Z",
+    mainImage: "/blog/generated/local-95.jpg",
+    excerpt: "A practical guide to corporation tax loss relief UK for limited companies – how to claim, when to carry losses forward or back, and how group relief works.",
+    body: bodyLocal95,
+  },
+  {
+    _id: "local-96",
+    title: "Sole trader to limited company tax: what you need to know",
+    slug: { current: "sole-trader-to-limited-company-tax-uk" },
+    category: "Tax",
+    publishedAt: "2026-09-07T09:00:00.000Z",
+    mainImage: "/blog/generated/local-96.jpg",
+    excerpt: "Understand the sole trader to limited company tax implications in the UK – incorporation tax, final self assessment, transferring business assets and payroll setup explained.",
+    body: bodyLocal96,
+  },
+  {
+    _id: "local-97",
+    title: "ATED annual tax enveloped dwellings explained for UK businesses",
+    slug: { current: "ated-annual-tax-enveloped-dwellings-explained" },
+    category: "Tax",
+    publishedAt: "2026-09-09T09:00:00.000Z",
+    mainImage: "/blog/generated/local-97.jpg",
+    excerpt: "Understand ATED annual tax enveloped dwellings: who pays, reliefs, how to file an ATED return and practical steps for company owned residential property in the UK.",
+    body: bodyLocal97,
+  },
+  {
+    _id: "local-98",
+    title: "Business Asset Disposal Relief UK: BADR explained simply",
+    slug: { current: "business-asset-disposal-relief-uk-badr-explained" },
+    category: "Tax",
+    publishedAt: "2026-09-11T09:00:00.000Z",
+    mainImage: "/blog/generated/local-98.jpg",
+    excerpt: "A clear guide to business asset disposal relief UK for founders and directors. Learn BADR capital gains rules, who qualifies, selling company shares tax and planning.",
+    body: bodyLocal98,
+  },
+  {
+    _id: "local-99",
+    title: "Bad debt corporation tax UK: How to treat and claim relief",
+    slug: { current: "bad-debt-corporation-tax-uk" },
+    category: "Tax",
+    publishedAt: "2026-09-14T09:00:00.000Z",
+    mainImage: "/blog/generated/local-99.jpg",
+    excerpt: "A practical guide to bad debt corporation tax UK, explaining when debts are tax deductible, how to write off bad debts and handling doubtful debt provisions for limited companies.",
+    body: bodyLocal99,
+  },
+  {
+    _id: "local-100",
+    title: "Section 455 directors loan UK – Guide for company directors",
+    slug: { current: "section-455-directors-loan-uk" },
+    category: "Tax",
+    publishedAt: "2026-09-16T09:00:00.000Z",
+    mainImage: "/blog/generated/local-100.jpg",
+    excerpt: "Understand section 455 directors loan UK rules, the DLA tax charge, and practical steps for repaying directors loan to avoid extra tax. Clear guidance for company directors.",
+    body: bodyLocal100,
+  },
+  {
+    _id: "local-101",
+    title: "Structures and Buildings Allowance UK: How to Claim SBA",
+    slug: { current: "structures-and-buildings-allowance-uk-how-to-claim" },
+    category: "Tax",
+    publishedAt: "2026-09-18T09:00:00.000Z",
+    mainImage: "/blog/generated/local-101.jpg",
+    excerpt: "A practical guide to structures and buildings allowance UK for small business owners, landlords and company directors — learn eligibility, how to make a building allowance claim and tax interactions.",
+    body: bodyLocal101,
+  },
+  {
+    _id: "local-102",
+    title: "Transfer pricing UK SMEs: Guide to rules and compliance",
+    slug: { current: "transfer-pricing-uk-smes" },
+    category: "Tax",
+    publishedAt: "2026-09-21T09:00:00.000Z",
+    mainImage: "/blog/generated/local-102.jpg",
+    excerpt: "Practical guide to transfer pricing UK SMEs – understand the arm's length principle, related party pricing and transfer pricing documentation for small and medium groups.",
+    body: bodyLocal102,
   },
   // GENERATED_ENTRIES
 ];
