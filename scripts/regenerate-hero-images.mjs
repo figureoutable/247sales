@@ -51,9 +51,10 @@ const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every t
 const FAL_STYLE = [
   "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
   "Naturally colourful and inviting with real-world colours — not oversaturated or heavily colour-graded.",
-  "Bright, friendly, professional UK small-business context.",
-  "Laptop and monitor screens show normal neutral software UI in soft grey, white, and subtle blue — not green screens, not green-tinted displays, not neon dashboards.",
-  "No green backlights, green rim lights, green wall washes, or green ambient gels.",
+  "Bright, friendly, professional UK small-business context with soft natural daylight.",
+  "CRITICAL: any laptop or monitor must show a normal light grey or white UI only — never green, never chroma-key green, never neon green, never green-tinted glass.",
+  "CRITICAL: no green glow on faces, hands, desks, or walls; no green backlights, rim lights, or ambient gels.",
+  "Prefer warm daylight and ordinary office colours; plants may be green but screens and lighting must not be.",
   "Avoid dull beige-only, grey-washed, or monochrome stock-office looks.",
   "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
   "No text, logos, watermarks, or readable UI screens.",
