@@ -61,4 +61,6 @@ jobs:
           else
             git commit -m "Auto-generate blog post $(date +%Y-%m-%d)"
           fi
+          # Rebase onto latest main in case another push landed during generation
+          git pull --rebase origin main
           git push
