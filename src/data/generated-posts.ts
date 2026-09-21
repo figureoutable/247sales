@@ -74,6 +74,11 @@ import { body as bodyLocal94 } from "./blog-post-bodies/local-94";
 import { body as bodyLocal95 } from "./blog-post-bodies/local-95";
 import { body as bodyLocal96 } from "./blog-post-bodies/local-96";
 import { body as bodyLocal97 } from "./blog-post-bodies/local-97";
+import { body as bodyLocal98 } from "./blog-post-bodies/local-98";
+import { body as bodyLocal99 } from "./blog-post-bodies/local-99";
+import { body as bodyLocal100 } from "./blog-post-bodies/local-100";
+import { body as bodyLocal101 } from "./blog-post-bodies/local-101";
+import { body as bodyLocal102 } from "./blog-post-bodies/local-102";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -797,6 +802,56 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-97.jpg",
     excerpt: "Understand ATED annual tax enveloped dwellings: who pays, reliefs, how to file an ATED return and practical steps for company owned residential property in the UK.",
     body: bodyLocal97,
+  },
+  {
+    _id: "local-98",
+    title: "Business Asset Disposal Relief UK: Entrepreneurs' Relief Guide",
+    slug: { current: "business-asset-disposal-relief-uk-explained" },
+    category: "Tax",
+    publishedAt: "2026-09-11T09:00:00.000Z",
+    mainImage: "/blog/generated/local-98.jpg",
+    excerpt: "Understand business asset disposal relief UK, who qualifies, how BADR capital gains work and key steps when selling company shares tax. Practical guidance for UK business owners.",
+    body: bodyLocal98,
+  },
+  {
+    _id: "local-99",
+    title: "Bad debt corporation tax UK – How to treat bad debts",
+    slug: { current: "bad-debt-corporation-tax-uk" },
+    category: "Tax",
+    publishedAt: "2026-09-14T09:00:00.000Z",
+    mainImage: "/blog/generated/local-99.jpg",
+    excerpt: "Understand how to treat bad debts for corporation tax in the UK, when writing off bad debts is tax deductible, and how doubtful debt provisions affect your company.",
+    body: bodyLocal99,
+  },
+  {
+    _id: "local-100",
+    title: "Section 455 directors loan UK: tax on directors’ loans explained",
+    slug: { current: "section-455-directors-loan-uk" },
+    category: "Tax",
+    publishedAt: "2026-09-16T09:00:00.000Z",
+    mainImage: "/blog/generated/local-100.jpg",
+    excerpt: "A plain guide to section 455 directors loan UK rules – when the DLA tax charge applies, how to calculate it and practical steps for repaying directors loan and avoiding penalties.",
+    body: bodyLocal100,
+  },
+  {
+    _id: "local-101",
+    title: "Structures and Buildings Allowance UK: How to Claim SBA",
+    slug: { current: "structures-buildings-allowance-uk-claim" },
+    category: "Tax",
+    publishedAt: "2026-09-18T09:00:00.000Z",
+    mainImage: "/blog/generated/local-101.jpg",
+    excerpt: "Learn how to claim structures and buildings allowance UK for commercial property — eligibility, calculation examples and filing tips to maximise SBA capital allowances.",
+    body: bodyLocal101,
+  },
+  {
+    _id: "local-102",
+    title: "Transfer pricing UK SMEs: Practical guide for small groups",
+    slug: { current: "transfer-pricing-uk-smes" },
+    category: "Tax",
+    publishedAt: "2026-09-21T09:00:00.000Z",
+    mainImage: "/blog/generated/local-102.jpg",
+    excerpt: "Practical guide on transfer pricing UK SMEs – understand the arm's length principle, related party pricing and transfer pricing documentation for small groups.",
+    body: bodyLocal102,
   },
   // GENERATED_ENTRIES
 ];

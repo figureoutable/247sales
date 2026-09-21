@@ -1,0 +1,11 @@
+Blog hero image — global style (apply every time):
+- Aim for naturally colourful, inviting photography with real-world colours — not oversaturated or heavily colour-graded.
+- Keep the scene bright, friendly, and professional for a UK small-business audience.
+- Computer/laptop screens should look like normal neutral UI (soft greys, whites, subtle blues) — never solid green, neon green, or green-tinted monitors.
+- No green backlights, green wall washes, or green ambient colour gels.
+- Avoid dull beige-only, grey-washed, or monochrome stock-office looks.
+- Avoid forced navy/cobalt/coral schemes, cinematic teal-and-orange grading, and neon saturation.
+- Suitable for a wide 16:9 or 3:2 web hero; clear subject, simple composition.
+
+Scene and composition:
+A bright, natural office scene showing a small team of diverse UK founders around a large wooden table reviewing documents and a laptop displaying a neutral financial spreadsheet. Include share certificates and a cup of tea on the table, morning daylight through a window with a view of suburban British rooftops, colourful plants on the sill and warm, inviting tones.
