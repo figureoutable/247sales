@@ -344,7 +344,6 @@ Return ONLY a valid JSON object (no markdown fences, no explanation) with these 
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: userPrompt },
       ],
-      temperature: 0.7,
       max_completion_tokens: 16384,
     }),
   });
