@@ -42,26 +42,38 @@ if (!FAL_KEY) {
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
 - Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings, shop fronts, yards).
 - Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
-- People are optional. Scenes can be places, buildings, tools, vehicles, signage, or still-life props that fit the topic.
-- If people appear, dress them casually or in everyday workwear appropriate to the setting — not corporate suits unless the topic truly requires it.
+- People: aim for people in about two out of every three images. When included, casual or everyday workwear only — never corporate suits.
+- Scenes without people can use places, buildings, tools, vehicles, or props that fit the topic.
 - Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
 - Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
 - Suitable for a wide 16:9 web hero; clear subject, simple composition.`;
 
-const FAL_STYLE = [
+const FAL_STYLE_BASE = [
   "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
   "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, shop front, yard, or similar real-world location.",
   "Soft natural daylight, natural realistic colours — not oversaturated or heavily colour-graded.",
-  "People are optional. The image can focus on place, architecture, vehicles, tools, or props that fit the topic.",
-  "If people appear, use casual or everyday workwear — not business suits, not boardroom attire.",
   "No indoor offices, no desks, no laptop or monitor screens, no green glow, no studio lighting.",
   "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
   "No text, logos, or watermarks.",
-].join(" ");
+];
+
+/** About 2 in 3 posts include people; every 3rd id is place/props only. */
+function shouldIncludePeople(id) {
+  return id % 3 !== 0;
+}
+
+function falStyleForId(id) {
+  const peopleLine = shouldIncludePeople(id)
+    ? "Include 1-2 people in casual or everyday workwear (jeans, jumpers, coats, hi-vis if relevant) — NEVER business suits, blazers, ties, or boardroom attire."
+    : "Do NOT include any people. Focus on place, architecture, vehicles, tools, or props only.";
+  return [...FAL_STYLE_BASE.slice(0, 3), peopleLine, ...FAL_STYLE_BASE.slice(3)].join(" ");
+}
 
 const OUTDOOR_SCENES = {
-  100: "Quiet UK high street outside a small brick office and independent shop fronts in soft natural daylight, empty pavement with planters and a bicycle propped near a doorway, papers and a folder resting on an outdoor ledge, realistic natural colours, no people required, no computers or screens.",
-  102: "Outdoor view of a modern UK business park courtyard and brick commercial buildings under soft natural daylight, glass entrance and planters, international shipping crates or courier van subtly in frame suggesting cross-border trade, realistic natural colours, no people in suits, people optional, no computers or screens.",
+  // 100 % 3 = 1 → people (casual)
+  100: "A man and a woman in casual UK high-street clothes (jeans, jumpers, coats — not suits) standing outside small brick shop fronts on a British pavement, looking at a folder of papers together, soft natural daylight, realistic natural colours, no computers or screens.",
+  // 102 % 3 = 0 → no people
+  102: "Outdoor UK business park courtyard between red brick commercial buildings in soft natural daylight, planters and a courier van in the distance suggesting cross-border trade, realistic natural colours, completely empty of people, no computers or screens.",
 };
 
 function softenScene(scene) {
@@ -160,7 +172,10 @@ async function generateFalImage(prompt) {
 
 async function regenerate(id) {
   const promptPath = path.join(ROOT, "scripts/hero-image-prompts", `local-${id}.txt`);
-  const imagePath = path.join(ROOT, "public/blog/generated", `local-${id}.jpg`);
+  // Prefer *b.jpg cache-bust names when present in the site manifest pattern
+  const bPath = path.join(ROOT, "public/blog/generated", `local-${id}b.jpg`);
+  const plainPath = path.join(ROOT, "public/blog/generated", `local-${id}.jpg`);
+  const imagePath = fs.existsSync(bPath) || process.env.FORCE_B_SUFFIX === "1" ? bPath : plainPath;
   if (!fs.existsSync(promptPath)) {
     throw new Error(`missing prompt file: ${promptPath}`);
   }
@@ -169,10 +184,10 @@ async function regenerate(id) {
   const scene =
     OUTDOOR_SCENES[id] ||
     softenScene(extractScene(oldPrompt));
-  const falPrompt = `${FAL_STYLE} ${scene}`;
+  const falPrompt = `${falStyleForId(id)} ${scene}`;
   const savedPrompt = `${HERO_IMAGE_VISUAL_RULES}\n\nScene and composition:\n${scene}\n`;
 
-  console.log(`\n=== local-${id} ===`);
+  console.log(`\n=== local-${id} (${shouldIncludePeople(id) ? "with people" : "no people"}) ===`);
   console.log(`Fal prompt: ${falPrompt.slice(0, 180)}...`);
   const buffer = await generateFalImage(falPrompt);
   fs.writeFileSync(imagePath, buffer);

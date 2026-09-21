@@ -74,8 +74,8 @@ function pickImage(category, id) {
 const HERO_IMAGE_VISUAL_RULES = `Blog hero image — global style (apply every time):
 - Prefer OUTDOOR UK scenes in soft natural daylight (high street, pavement outside offices, worksite exterior, cafe terrace, brick commercial buildings, shop fronts, yards).
 - Natural, realistic colours — not oversaturated, neon, or heavily colour-graded.
-- People are optional. Scenes can be places, buildings, tools, vehicles, signage, or still-life props that fit the topic.
-- If people appear, dress them casually or in everyday workwear appropriate to the setting — not corporate suits unless the topic truly requires it.
+- People: aim for people in about two out of every three images. When included, casual or everyday workwear only — never corporate suits.
+- Scenes without people can use places, buildings, tools, vehicles, or props that fit the topic.
 - Avoid indoor desk setups, glowing laptop/monitor screens, green backlights, and studio lighting.
 - Avoid forced navy/cobalt/coral schemes and cinematic teal-and-orange grading.
 - Suitable for a wide 16:9 web hero; clear subject, simple composition.`;
@@ -84,21 +84,30 @@ function getHeroScene(post, topic) {
   if (typeof post.heroImagePrompt === "string" && post.heroImagePrompt.trim()) {
     return post.heroImagePrompt.trim();
   }
-  return `Outdoor UK editorial photo related to: ${topic.topic}. Soft natural daylight, natural colours. People optional; if included, everyday clothing not suits. No computer screens.`;
+  return `Outdoor UK editorial photo related to: ${topic.topic}. Soft natural daylight, natural colours. No computer screens.`;
 }
 
 function buildHeroImagePrompt(post, topic) {
   return `${HERO_IMAGE_VISUAL_RULES}\n\nScene and composition:\n${getHeroScene(post, topic)}`;
 }
 
+/** About 2 in 3 posts include people (casual wear); every 3rd is place/props only. */
+function shouldIncludePeople(id) {
+  return id % 3 !== 0;
+}
+
 /** Shorter prose prompt works better for fal/Flux than the bullet-style rules doc. */
-function buildFalImagePrompt(post, topic) {
+function buildFalImagePrompt(post, topic, id) {
+  const withPeople = shouldIncludePeople(id);
+  const peopleLine = withPeople
+    ? "Include 1-2 people in casual or everyday workwear (jeans, jumpers, hi-vis if relevant) — NEVER business suits, blazers, ties, or boardroom attire."
+    : "Do NOT include any people. Focus on place, architecture, vehicles, tools, or props only.";
+
   return [
     "Editorial wide 16:9 blog hero photograph for a UK accounting firm website.",
     "OUTDOOR scene only: UK high street, pavement outside offices, worksite exterior, shop front, yard, or similar real-world location.",
     "Soft natural daylight, natural realistic colours — not oversaturated or heavily colour-graded.",
-    "People are optional. The image can focus on place, architecture, vehicles, tools, or props that fit the topic.",
-    "If people appear, use casual or everyday workwear — not business suits, not boardroom attire.",
+    peopleLine,
     "No indoor offices, no desks, no laptop or monitor screens, no green glow, no studio lighting.",
     "Avoid cinematic teal-and-orange grading, neon saturation, and forced navy, cobalt, or coral colour schemes.",
     "No text, logos, or watermarks.",
@@ -657,7 +666,7 @@ async function main() {
   try {
     imagePath = await generateHeroImageWithFal(
       nextId,
-      buildFalImagePrompt(post, topic)
+      buildFalImagePrompt(post, topic, nextId)
     );
   } catch (err) {
     console.warn(
