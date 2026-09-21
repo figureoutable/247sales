@@ -789,7 +789,7 @@
       "selling company shares tax"
     ],
     "category": "Tax",
-    "used": true
+    "used": false
   },
   {
     "topic": "How to treat bad debts for corporation tax in the UK",
@@ -800,7 +800,7 @@
       "doubtful debt provision"
     ],
     "category": "Tax",
-    "used": true
+    "used": false
   },
   {
     "topic": "Tax on directors loans and section 455 charge explained",
@@ -811,7 +811,7 @@
       "repaying directors loan"
     ],
     "category": "Tax",
-    "used": true
+    "used": false
   },
   {
     "topic": "How to claim structures and buildings allowance UK",
@@ -822,7 +822,7 @@
       "building allowance claim"
     ],
     "category": "Tax",
-    "used": true
+    "used": false
   },
   {
     "topic": "Transfer pricing rules for UK small and medium groups",
@@ -833,7 +833,7 @@
       "transfer pricing documentation"
     ],
     "category": "Tax",
-    "used": true
+    "used": false
   },
   {
     "topic": "How Creative Industry Tax Reliefs work for UK companies",
@@ -844,7 +844,7 @@
       "theatre tax relief"
     ],
     "category": "Tax",
-    "used": true
+    "used": false
   },
   {
     "topic": "Tax deadlines calendar for UK limited companies and directors",

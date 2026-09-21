@@ -74,12 +74,6 @@ import { body as bodyLocal94 } from "./blog-post-bodies/local-94";
 import { body as bodyLocal95 } from "./blog-post-bodies/local-95";
 import { body as bodyLocal96 } from "./blog-post-bodies/local-96";
 import { body as bodyLocal97 } from "./blog-post-bodies/local-97";
-import { body as bodyLocal98 } from "./blog-post-bodies/local-98";
-import { body as bodyLocal99 } from "./blog-post-bodies/local-99";
-import { body as bodyLocal100 } from "./blog-post-bodies/local-100";
-import { body as bodyLocal101 } from "./blog-post-bodies/local-101";
-import { body as bodyLocal102 } from "./blog-post-bodies/local-102";
-import { body as bodyLocal103 } from "./blog-post-bodies/local-103";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -803,66 +797,6 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-97.jpg",
     excerpt: "Understand ATED annual tax enveloped dwellings: who pays, reliefs, how to file an ATED return and practical steps for company owned residential property in the UK.",
     body: bodyLocal97,
-  },
-  {
-    _id: "local-98",
-    title: "Business Asset Disposal Relief UK: BADR explained simply",
-    slug: { current: "business-asset-disposal-relief-uk-badr-explained" },
-    category: "Tax",
-    publishedAt: "2026-09-11T09:00:00.000Z",
-    mainImage: "/blog/generated/local-98.jpg",
-    excerpt: "A clear guide to business asset disposal relief UK for founders and directors. Learn BADR capital gains rules, who qualifies, selling company shares tax and planning.",
-    body: bodyLocal98,
-  },
-  {
-    _id: "local-99",
-    title: "Bad debt corporation tax UK: How to treat and claim relief",
-    slug: { current: "bad-debt-corporation-tax-uk" },
-    category: "Tax",
-    publishedAt: "2026-09-14T09:00:00.000Z",
-    mainImage: "/blog/generated/local-99.jpg",
-    excerpt: "A practical guide to bad debt corporation tax UK, explaining when debts are tax deductible, how to write off bad debts and handling doubtful debt provisions for limited companies.",
-    body: bodyLocal99,
-  },
-  {
-    _id: "local-100",
-    title: "Section 455 directors loan UK – Guide for company directors",
-    slug: { current: "section-455-directors-loan-uk" },
-    category: "Tax",
-    publishedAt: "2026-09-16T09:00:00.000Z",
-    mainImage: "/blog/generated/local-100.jpg",
-    excerpt: "Understand section 455 directors loan UK rules, the DLA tax charge, and practical steps for repaying directors loan to avoid extra tax. Clear guidance for company directors.",
-    body: bodyLocal100,
-  },
-  {
-    _id: "local-101",
-    title: "Structures and Buildings Allowance UK: How to Claim SBA",
-    slug: { current: "structures-and-buildings-allowance-uk-how-to-claim" },
-    category: "Tax",
-    publishedAt: "2026-09-18T09:00:00.000Z",
-    mainImage: "/blog/generated/local-101.jpg",
-    excerpt: "A practical guide to structures and buildings allowance UK for small business owners, landlords and company directors — learn eligibility, how to make a building allowance claim and tax interactions.",
-    body: bodyLocal101,
-  },
-  {
-    _id: "local-102",
-    title: "Transfer pricing UK SMEs: Guide to rules and compliance",
-    slug: { current: "transfer-pricing-uk-smes" },
-    category: "Tax",
-    publishedAt: "2026-09-21T09:00:00.000Z",
-    mainImage: "/blog/generated/local-102.jpg",
-    excerpt: "Practical guide to transfer pricing UK SMEs – understand the arm's length principle, related party pricing and transfer pricing documentation for small and medium groups.",
-    body: bodyLocal102,
-  },
-  {
-    _id: "local-103",
-    title: "Creative Industry Tax Reliefs UK – Guide for Companies",
-    slug: { current: "creative-industry-tax-reliefs-uk" },
-    category: "Tax",
-    publishedAt: "2026-09-23T09:00:00.000Z",
-    mainImage: "/blog/generated/local-103.jpg",
-    excerpt: "Understand creative industry tax reliefs UK: who qualifies, how to claim film, video games and theatre tax relief, and practical steps to maximise your claim.",
-    body: bodyLocal103,
   },
   // GENERATED_ENTRIES
 ];
