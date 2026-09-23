@@ -79,6 +79,7 @@ import { body as bodyLocal99 } from "./blog-post-bodies/local-99";
 import { body as bodyLocal100 } from "./blog-post-bodies/local-100";
 import { body as bodyLocal101 } from "./blog-post-bodies/local-101";
 import { body as bodyLocal102 } from "./blog-post-bodies/local-102";
+import { body as bodyLocal103 } from "./blog-post-bodies/local-103";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -852,6 +853,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-102b.jpg",
     excerpt: "Practical guide on transfer pricing UK SMEs – understand the arm's length principle, related party pricing and transfer pricing documentation for small groups.",
     body: bodyLocal102,
+  },
+  {
+    _id: "local-103",
+    title: "Creative Industry Tax Reliefs UK – Guide for Companies",
+    slug: { current: "creative-industry-tax-reliefs-uk" },
+    category: "Tax",
+    publishedAt: "2026-09-25T09:00:00.000Z",
+    mainImage: "/blog/generated/local-103.jpg",
+    excerpt: "Learn how creative industry tax reliefs UK work, who qualifies and how to claim. Practical guidance for film, video games and theatre companies in 2026/27.",
+    body: bodyLocal103,
   },
   // GENERATED_ENTRIES
 ];
