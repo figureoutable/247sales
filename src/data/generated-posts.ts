@@ -81,6 +81,7 @@ import { body as bodyLocal101 } from "./blog-post-bodies/local-101";
 import { body as bodyLocal102 } from "./blog-post-bodies/local-102";
 import { body as bodyLocal103 } from "./blog-post-bodies/local-103";
 import { body as bodyLocal104 } from "./blog-post-bodies/local-104";
+import { body as bodyLocal105 } from "./blog-post-bodies/local-105";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -874,6 +875,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-104.jpg",
     excerpt: "Practical UK company tax deadlines calendar for limited companies and directors. Plan corporation tax, Companies House, VAT, PAYE and Self Assessment dates with confidence.",
     body: bodyLocal104,
+  },
+  {
+    _id: "local-105",
+    title: "First Year Allowances Electric Cars UK - How to Claim",
+    slug: { current: "first-year-allowances-electric-cars-uk-claim" },
+    category: "Tax",
+    publishedAt: "2026-09-30T09:00:00.000Z",
+    mainImage: "/blog/generated/local-105.jpg",
+    excerpt: "Learn how to claim first year allowances electric cars UK for limited companies, what qualifies, interaction with electric company car tax, and practical steps for 2026/27.",
+    body: bodyLocal105,
   },
   // GENERATED_ENTRIES
 ];
