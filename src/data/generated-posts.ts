@@ -82,6 +82,7 @@ import { body as bodyLocal102 } from "./blog-post-bodies/local-102";
 import { body as bodyLocal103 } from "./blog-post-bodies/local-103";
 import { body as bodyLocal104 } from "./blog-post-bodies/local-104";
 import { body as bodyLocal105 } from "./blog-post-bodies/local-105";
+import { body as bodyLocal106 } from "./blog-post-bodies/local-106";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -885,6 +886,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-105.jpg",
     excerpt: "Learn how to claim first year allowances electric cars UK for limited companies, what qualifies, interaction with electric company car tax, and practical steps for 2026/27.",
     body: bodyLocal105,
+  },
+  {
+    _id: "local-106",
+    title: "Diverted profits tax UK: When companies need to worry",
+    slug: { current: "diverted-profits-tax-uk-when-to-worry" },
+    category: "Tax",
+    publishedAt: "2026-10-02T09:00:00.000Z",
+    mainImage: "/blog/generated/local-106.jpg",
+    excerpt: "Understand diverted profits tax UK, what triggers a DPT charge, how tax avoidance diverted profits works and when UK companies should review permanent establishment risk.",
+    body: bodyLocal106,
   },
   // GENERATED_ENTRIES
 ];
