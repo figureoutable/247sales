@@ -83,6 +83,7 @@ import { body as bodyLocal103 } from "./blog-post-bodies/local-103";
 import { body as bodyLocal104 } from "./blog-post-bodies/local-104";
 import { body as bodyLocal105 } from "./blog-post-bodies/local-105";
 import { body as bodyLocal106 } from "./blog-post-bodies/local-106";
+import { body as bodyLocal107 } from "./blog-post-bodies/local-107";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -896,6 +897,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-106.jpg",
     excerpt: "Understand diverted profits tax UK, what triggers a DPT charge, how tax avoidance diverted profits works and when UK companies should review permanent establishment risk.",
     body: bodyLocal106,
+  },
+  {
+    _id: "local-107",
+    title: "PSC register Companies House: What directors must know",
+    slug: { current: "psc-register-companies-house-requirements" },
+    category: "Compliance",
+    publishedAt: "2026-10-05T09:00:00.000Z",
+    mainImage: "/blog/generated/local-107.jpg",
+    excerpt: "A practical guide to the PSC register Companies House duties for UK limited companies, including who counts as a PSC, PSC filing and steps to stay compliant in 2026/27.",
+    body: bodyLocal107,
   },
   // GENERATED_ENTRIES
 ];
