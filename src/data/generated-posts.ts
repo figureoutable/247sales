@@ -84,6 +84,7 @@ import { body as bodyLocal104 } from "./blog-post-bodies/local-104";
 import { body as bodyLocal105 } from "./blog-post-bodies/local-105";
 import { body as bodyLocal106 } from "./blog-post-bodies/local-106";
 import { body as bodyLocal107 } from "./blog-post-bodies/local-107";
+import { body as bodyLocal108 } from "./blog-post-bodies/local-108";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -907,6 +908,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-107.jpg",
     excerpt: "A practical guide to the PSC register Companies House duties for UK limited companies, including who counts as a PSC, PSC filing and steps to stay compliant in 2026/27.",
     body: bodyLocal107,
+  },
+  {
+    _id: "local-108",
+    title: "Economic Crime Corporate Transparency Act: What UK Companies Must Do",
+    slug: { current: "economic-crime-corporate-transparency-act-uk-companies" },
+    category: "Compliance",
+    publishedAt: "2026-10-07T09:00:00.000Z",
+    mainImage: "/blog/generated/local-108.jpg",
+    excerpt: "How the Economic Crime Corporate Transparency Act affects UK companies – identity verification, Companies House changes and steps directors must take to stay compliant.",
+    body: bodyLocal108,
   },
   // GENERATED_ENTRIES
 ];
