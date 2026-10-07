@@ -85,6 +85,7 @@ import { body as bodyLocal105 } from "./blog-post-bodies/local-105";
 import { body as bodyLocal106 } from "./blog-post-bodies/local-106";
 import { body as bodyLocal107 } from "./blog-post-bodies/local-107";
 import { body as bodyLocal108 } from "./blog-post-bodies/local-108";
+import { body as bodyLocal109 } from "./blog-post-bodies/local-109";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -918,6 +919,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-108.jpg",
     excerpt: "How the Economic Crime Corporate Transparency Act affects UK companies – identity verification, Companies House changes and steps directors must take to stay compliant.",
     body: bodyLocal108,
+  },
+  {
+    _id: "local-109",
+    title: "Filing Dormant Company Accounts UK – Step-by-Step Guide",
+    slug: { current: "dormant-company-accounts-uk" },
+    category: "Compliance",
+    publishedAt: "2026-10-09T09:00:00.000Z",
+    mainImage: "/blog/generated/local-109.jpg",
+    excerpt: "Practical guide to filing dormant company accounts UK. Learn when a company is dormant, how to file with Companies House and what to tell HMRC for 2026/27.",
+    body: bodyLocal109,
   },
   // GENERATED_ENTRIES
 ];
