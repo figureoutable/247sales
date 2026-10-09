@@ -86,6 +86,7 @@ import { body as bodyLocal106 } from "./blog-post-bodies/local-106";
 import { body as bodyLocal107 } from "./blog-post-bodies/local-107";
 import { body as bodyLocal108 } from "./blog-post-bodies/local-108";
 import { body as bodyLocal109 } from "./blog-post-bodies/local-109";
+import { body as bodyLocal110 } from "./blog-post-bodies/local-110";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -929,6 +930,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-109.jpg",
     excerpt: "Practical guide to filing dormant company accounts UK. Learn when a company is dormant, how to file with Companies House and what to tell HMRC for 2026/27.",
     body: bodyLocal109,
+  },
+  {
+    _id: "local-110",
+    title: "AML obligations UK accountants – Practical compliance guide",
+    slug: { current: "aml-obligations-uk-accountants" },
+    category: "Compliance",
+    publishedAt: "2026-10-12T09:00:00.000Z",
+    mainImage: "/blog/generated/local-110.jpg",
+    excerpt: "Practical guide to AML obligations UK accountants must meet – customer due diligence, reporting, record keeping and supervision for small accountancy firms.",
+    body: bodyLocal110,
   },
   // GENERATED_ENTRIES
 ];
