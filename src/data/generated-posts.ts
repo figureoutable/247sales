@@ -87,6 +87,7 @@ import { body as bodyLocal107 } from "./blog-post-bodies/local-107";
 import { body as bodyLocal108 } from "./blog-post-bodies/local-108";
 import { body as bodyLocal109 } from "./blog-post-bodies/local-109";
 import { body as bodyLocal110 } from "./blog-post-bodies/local-110";
+import { body as bodyLocal111 } from "./blog-post-bodies/local-111";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -940,6 +941,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-110.jpg",
     excerpt: "Practical guide to AML obligations UK accountants must meet – customer due diligence, reporting, record keeping and supervision for small accountancy firms.",
     body: bodyLocal110,
+  },
+  {
+    _id: "local-111",
+    title: "How to restore struck off company UK: step-by-step guide",
+    slug: { current: "restore-struck-off-company-uk" },
+    category: "Compliance",
+    publishedAt: "2026-10-14T09:00:00.000Z",
+    mainImage: "/blog/generated/local-111.jpg",
+    excerpt: "Practical guide to restore struck off company UK: routes, paperwork, costs and pitfalls for directors. Learn administrative and court-ordered restoration options.",
+    body: bodyLocal111,
   },
   // GENERATED_ENTRIES
 ];
