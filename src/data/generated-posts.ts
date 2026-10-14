@@ -88,6 +88,7 @@ import { body as bodyLocal108 } from "./blog-post-bodies/local-108";
 import { body as bodyLocal109 } from "./blog-post-bodies/local-109";
 import { body as bodyLocal110 } from "./blog-post-bodies/local-110";
 import { body as bodyLocal111 } from "./blog-post-bodies/local-111";
+import { body as bodyLocal112 } from "./blog-post-bodies/local-112";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -951,6 +952,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-111.jpg",
     excerpt: "Practical guide to restore struck off company UK: routes, paperwork, costs and pitfalls for directors. Learn administrative and court-ordered restoration options.",
     body: bodyLocal111,
+  },
+  {
+    _id: "local-112",
+    title: "Companies House director identity verification explained",
+    slug: { current: "companies-house-director-identity-verification" },
+    category: "Compliance",
+    publishedAt: "2026-10-16T09:00:00.000Z",
+    mainImage: "/blog/generated/local-112.jpg",
+    excerpt: "Clear guidance on Companies House director identity verification for UK company directors, ACSP identity checks and what to prepare to meet Companies House reforms in 2026/27.",
+    body: bodyLocal112,
   },
   // GENERATED_ENTRIES
 ];
