@@ -89,6 +89,7 @@ import { body as bodyLocal109 } from "./blog-post-bodies/local-109";
 import { body as bodyLocal110 } from "./blog-post-bodies/local-110";
 import { body as bodyLocal111 } from "./blog-post-bodies/local-111";
 import { body as bodyLocal112 } from "./blog-post-bodies/local-112";
+import { body as bodyLocal113 } from "./blog-post-bodies/local-113";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -962,6 +963,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-112.jpg",
     excerpt: "Clear guidance on Companies House director identity verification for UK company directors, ACSP identity checks and what to prepare to meet Companies House reforms in 2026/27.",
     body: bodyLocal112,
+  },
+  {
+    _id: "local-113",
+    title: "Change registered office address UK – step-by-step guide",
+    slug: { current: "change-registered-office-address-uk" },
+    category: "Compliance",
+    publishedAt: "2026-10-19T09:00:00.000Z",
+    mainImage: "/blog/generated/local-113.jpg",
+    excerpt: "Learn how to change registered office address UK for your limited company – steps, AD01 form, service address vs registered office and who to notify to stay compliant.",
+    body: bodyLocal113,
   },
   // GENERATED_ENTRIES
 ];
