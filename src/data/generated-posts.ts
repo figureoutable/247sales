@@ -90,6 +90,7 @@ import { body as bodyLocal110 } from "./blog-post-bodies/local-110";
 import { body as bodyLocal111 } from "./blog-post-bodies/local-111";
 import { body as bodyLocal112 } from "./blog-post-bodies/local-112";
 import { body as bodyLocal113 } from "./blog-post-bodies/local-113";
+import { body as bodyLocal114 } from "./blog-post-bodies/local-114";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -973,6 +974,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-113.jpg",
     excerpt: "Learn how to change registered office address UK for your limited company – steps, AD01 form, service address vs registered office and who to notify to stay compliant.",
     body: bodyLocal113,
+  },
+  {
+    _id: "local-114",
+    title: "Statutory books UK company: registers and records guide",
+    slug: { current: "statutory-books-uk-company-registers-records" },
+    category: "Compliance",
+    publishedAt: "2026-10-21T09:00:00.000Z",
+    mainImage: "/blog/generated/local-114.jpg",
+    excerpt: "Essential guide to statutory books UK company directors must hold – what registers to keep, who can inspect them, and practical steps to stay compliant in 2026/27.",
+    body: bodyLocal114,
   },
   // GENERATED_ENTRIES
 ];
