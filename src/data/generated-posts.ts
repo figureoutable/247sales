@@ -91,6 +91,7 @@ import { body as bodyLocal111 } from "./blog-post-bodies/local-111";
 import { body as bodyLocal112 } from "./blog-post-bodies/local-112";
 import { body as bodyLocal113 } from "./blog-post-bodies/local-113";
 import { body as bodyLocal114 } from "./blog-post-bodies/local-114";
+import { body as bodyLocal115 } from "./blog-post-bodies/local-115";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -984,6 +985,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-114.jpg",
     excerpt: "Essential guide to statutory books UK company directors must hold – what registers to keep, who can inspect them, and practical steps to stay compliant in 2026/27.",
     body: bodyLocal114,
+  },
+  {
+    _id: "local-115",
+    title: "Appoint resign company director UK - step-by-step guide",
+    slug: { current: "appoint-resign-company-director-uk" },
+    category: "Compliance",
+    publishedAt: "2026-10-23T09:00:00.000Z",
+    mainImage: "/blog/generated/local-115.jpg",
+    excerpt: "Practical guide to appoint resign company director UK: how to use AP01 and TM01, file with Companies House, update registers and meet duties for 2026/27.",
+    body: bodyLocal115,
   },
   // GENERATED_ENTRIES
 ];
