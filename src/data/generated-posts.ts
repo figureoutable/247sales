@@ -92,6 +92,7 @@ import { body as bodyLocal112 } from "./blog-post-bodies/local-112";
 import { body as bodyLocal113 } from "./blog-post-bodies/local-113";
 import { body as bodyLocal114 } from "./blog-post-bodies/local-114";
 import { body as bodyLocal115 } from "./blog-post-bodies/local-115";
+import { body as bodyLocal116 } from "./blog-post-bodies/local-116";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -995,6 +996,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-115.jpg",
     excerpt: "Practical guide to appoint resign company director UK: how to use AP01 and TM01, file with Companies House, update registers and meet duties for 2026/27.",
     body: bodyLocal115,
+  },
+  {
+    _id: "local-116",
+    title: "UK GDPR small business checklist: Practical compliance guide",
+    slug: { current: "uk-gdpr-small-business-checklist" },
+    category: "Compliance",
+    publishedAt: "2026-10-26T09:00:00.000Z",
+    mainImage: "/blog/generated/local-116.jpg",
+    excerpt: "A practical UK GDPR small business checklist to help owners and directors put data protection compliance in place. Simple steps on ICO registration, privacy notices and breaches.",
+    body: bodyLocal116,
   },
   // GENERATED_ENTRIES
 ];
