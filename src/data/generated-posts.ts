@@ -93,6 +93,7 @@ import { body as bodyLocal113 } from "./blog-post-bodies/local-113";
 import { body as bodyLocal114 } from "./blog-post-bodies/local-114";
 import { body as bodyLocal115 } from "./blog-post-bodies/local-115";
 import { body as bodyLocal116 } from "./blog-post-bodies/local-116";
+import { body as bodyLocal117 } from "./blog-post-bodies/local-117";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1006,6 +1007,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-116.jpg",
     excerpt: "A practical UK GDPR small business checklist to help owners and directors put data protection compliance in place. Simple steps on ICO registration, privacy notices and breaches.",
     body: bodyLocal116,
+  },
+  {
+    _id: "local-117",
+    title: "Companies House late filing penalty – what to do and how to appeal",
+    slug: { current: "companies-house-late-filing-penalty-appeal" },
+    category: "Compliance",
+    publishedAt: "2026-10-28T09:00:00.000Z",
+    mainImage: "/blog/generated/local-117.jpg",
+    excerpt: "Missed your accounts filing deadline? Learn what a Companies House late filing penalty means, how to appeal a late accounts penalty, and practical steps to fix it.",
+    body: bodyLocal117,
   },
   // GENERATED_ENTRIES
 ];
