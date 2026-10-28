@@ -94,6 +94,7 @@ import { body as bodyLocal114 } from "./blog-post-bodies/local-114";
 import { body as bodyLocal115 } from "./blog-post-bodies/local-115";
 import { body as bodyLocal116 } from "./blog-post-bodies/local-116";
 import { body as bodyLocal117 } from "./blog-post-bodies/local-117";
+import { body as bodyLocal118 } from "./blog-post-bodies/local-118";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1017,6 +1018,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-117.jpg",
     excerpt: "Missed your accounts filing deadline? Learn what a Companies House late filing penalty means, how to appeal a late accounts penalty, and practical steps to fix it.",
     body: bodyLocal117,
+  },
+  {
+    _id: "local-118",
+    title: "Audit exemption thresholds UK: What small companies need to know",
+    slug: { current: "audit-exemption-thresholds-uk-small-companies" },
+    category: "Compliance",
+    publishedAt: "2026-10-30T09:00:00.000Z",
+    mainImage: "/blog/generated/local-118.jpg",
+    excerpt: "Clear guidance on audit exemption thresholds UK for small companies – what counts, when an audit is required, and practical steps to claim exemption in 2026/27.",
+    body: bodyLocal118,
   },
   // GENERATED_ENTRIES
 ];
