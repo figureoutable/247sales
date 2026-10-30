@@ -95,6 +95,7 @@ import { body as bodyLocal115 } from "./blog-post-bodies/local-115";
 import { body as bodyLocal116 } from "./blog-post-bodies/local-116";
 import { body as bodyLocal117 } from "./blog-post-bodies/local-117";
 import { body as bodyLocal118 } from "./blog-post-bodies/local-118";
+import { body as bodyLocal119 } from "./blog-post-bodies/local-119";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1028,6 +1029,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-118.jpg",
     excerpt: "Clear guidance on audit exemption thresholds UK for small companies – what counts, when an audit is required, and practical steps to claim exemption in 2026/27.",
     body: bodyLocal118,
+  },
+  {
+    _id: "local-119",
+    title: "Filleted accounts Companies House: How to file for small firms",
+    slug: { current: "filleted-accounts-companies-house" },
+    category: "Compliance",
+    publishedAt: "2026-11-02T09:00:00.000Z",
+    mainImage: "/blog/generated/local-119.jpg",
+    excerpt: "Learn how to prepare and file filleted accounts Companies House, the difference from abridged accounts UK and full accounts, and filing options for small companies.",
+    body: bodyLocal119,
   },
   // GENERATED_ENTRIES
 ];
