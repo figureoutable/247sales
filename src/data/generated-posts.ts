@@ -96,6 +96,7 @@ import { body as bodyLocal116 } from "./blog-post-bodies/local-116";
 import { body as bodyLocal117 } from "./blog-post-bodies/local-117";
 import { body as bodyLocal118 } from "./blog-post-bodies/local-118";
 import { body as bodyLocal119 } from "./blog-post-bodies/local-119";
+import { body as bodyLocal120 } from "./blog-post-bodies/local-120";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1039,6 +1040,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-119.jpg",
     excerpt: "Learn how to prepare and file filleted accounts Companies House, the difference from abridged accounts UK and full accounts, and filing options for small companies.",
     body: bodyLocal119,
+  },
+  {
+    _id: "local-120",
+    title: "Whistleblowing policy UK employers – duties and practical steps",
+    slug: { current: "whistleblowing-policy-uk-employers" },
+    category: "Compliance",
+    publishedAt: "2026-11-04T09:00:00.000Z",
+    mainImage: "/blog/generated/local-120.jpg",
+    excerpt: "A whistleblowing policy UK employers must have to meet PIDA duties, protect staff and manage protected disclosures. Practical guidance, legal duties and next steps for businesses.",
+    body: bodyLocal120,
   },
   // GENERATED_ENTRIES
 ];
