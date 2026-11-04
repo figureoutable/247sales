@@ -97,6 +97,7 @@ import { body as bodyLocal117 } from "./blog-post-bodies/local-117";
 import { body as bodyLocal118 } from "./blog-post-bodies/local-118";
 import { body as bodyLocal119 } from "./blog-post-bodies/local-119";
 import { body as bodyLocal120 } from "./blog-post-bodies/local-120";
+import { body as bodyLocal121 } from "./blog-post-bodies/local-121";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1050,6 +1051,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-120.jpg",
     excerpt: "A whistleblowing policy UK employers must have to meet PIDA duties, protect staff and manage protected disclosures. Practical guidance, legal duties and next steps for businesses.",
     body: bodyLocal120,
+  },
+  {
+    _id: "local-121",
+    title: "HMRC compliance check preparation: A practical guide",
+    slug: { current: "hmrc-compliance-check-preparation" },
+    category: "Compliance",
+    publishedAt: "2026-11-06T09:00:00.000Z",
+    mainImage: "/blog/generated/local-121.jpg",
+    excerpt: "HMRC compliance check preparation: practical steps to get records in order, manage communications and get professional support if HMRC opens an enquiry.",
+    body: bodyLocal121,
   },
   // GENERATED_ENTRIES
 ];
