@@ -98,6 +98,7 @@ import { body as bodyLocal118 } from "./blog-post-bodies/local-118";
 import { body as bodyLocal119 } from "./blog-post-bodies/local-119";
 import { body as bodyLocal120 } from "./blog-post-bodies/local-120";
 import { body as bodyLocal121 } from "./blog-post-bodies/local-121";
+import { body as bodyLocal122 } from "./blog-post-bodies/local-122";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1061,6 +1062,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-121.jpg",
     excerpt: "HMRC compliance check preparation: practical steps to get records in order, manage communications and get professional support if HMRC opens an enquiry.",
     body: bodyLocal121,
+  },
+  {
+    _id: "local-122",
+    title: "How to register as employer HMRC – Step‑by‑step UK guide",
+    slug: { current: "register-as-employer-hmrc-step-by-step" },
+    category: "Compliance",
+    publishedAt: "2026-11-09T09:00:00.000Z",
+    mainImage: "/blog/generated/local-122.jpg",
+    excerpt: "Learn how to register as employer HMRC in 2026/27 with this step-by-step UK guide covering PAYE scheme registration, employer PAYE reference and first employee setup.",
+    body: bodyLocal122,
   },
   // GENERATED_ENTRIES
 ];
