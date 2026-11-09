@@ -99,6 +99,7 @@ import { body as bodyLocal119 } from "./blog-post-bodies/local-119";
 import { body as bodyLocal120 } from "./blog-post-bodies/local-120";
 import { body as bodyLocal121 } from "./blog-post-bodies/local-121";
 import { body as bodyLocal122 } from "./blog-post-bodies/local-122";
+import { body as bodyLocal123 } from "./blog-post-bodies/local-123";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1072,6 +1073,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-122.jpg",
     excerpt: "Learn how to register as employer HMRC in 2026/27 with this step-by-step UK guide covering PAYE scheme registration, employer PAYE reference and first employee setup.",
     body: bodyLocal122,
+  },
+  {
+    _id: "local-123",
+    title: "Beneficial ownership trusts UK: Reporting obligations explained",
+    slug: { current: "beneficial-ownership-trusts-uk-reporting" },
+    category: "Compliance",
+    publishedAt: "2026-11-11T09:00:00.000Z",
+    mainImage: "/blog/generated/local-123.jpg",
+    excerpt: "Understand beneficial ownership trusts UK reporting: who must register on the Trust Registration Service, what to report, updates and practical steps for trustees and directors.",
+    body: bodyLocal123,
   },
   // GENERATED_ENTRIES
 ];
