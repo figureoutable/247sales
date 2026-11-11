@@ -100,6 +100,7 @@ import { body as bodyLocal120 } from "./blog-post-bodies/local-120";
 import { body as bodyLocal121 } from "./blog-post-bodies/local-121";
 import { body as bodyLocal122 } from "./blog-post-bodies/local-122";
 import { body as bodyLocal123 } from "./blog-post-bodies/local-123";
+import { body as bodyLocal124 } from "./blog-post-bodies/local-124";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1083,6 +1084,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-123.jpg",
     excerpt: "Understand beneficial ownership trusts UK reporting: who must register on the Trust Registration Service, what to report, updates and practical steps for trustees and directors.",
     body: bodyLocal123,
+  },
+  {
+    _id: "local-124",
+    title: "Modern slavery statement UK: a practical guide for businesses",
+    slug: { current: "modern-slavery-statement-uk-practical-guide" },
+    category: "Compliance",
+    publishedAt: "2026-11-13T09:00:00.000Z",
+    mainImage: "/blog/generated/local-124.jpg",
+    excerpt: "Understand modern slavery statement UK requirements, who must publish, what to include and practical steps to improve supply chain transparency and compliance.",
+    body: bodyLocal124,
   },
   // GENERATED_ENTRIES
 ];
