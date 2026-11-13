@@ -1086,7 +1086,7 @@
       "leaving flat rate scheme"
     ],
     "category": "VAT",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to account for VAT on deposits and advance payments UK",

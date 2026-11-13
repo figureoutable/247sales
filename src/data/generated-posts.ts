@@ -101,6 +101,7 @@ import { body as bodyLocal121 } from "./blog-post-bodies/local-121";
 import { body as bodyLocal122 } from "./blog-post-bodies/local-122";
 import { body as bodyLocal123 } from "./blog-post-bodies/local-123";
 import { body as bodyLocal124 } from "./blog-post-bodies/local-124";
+import { body as bodyLocal125 } from "./blog-post-bodies/local-125";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1094,6 +1095,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-124.jpg",
     excerpt: "Understand modern slavery statement UK requirements, who must publish, what to include and practical steps to improve supply chain transparency and compliance.",
     body: bodyLocal124,
+  },
+  {
+    _id: "local-125",
+    title: "VAT flat rate scheme UK – Should your small business join?",
+    slug: { current: "vat-flat-rate-scheme-uk-should-your-small-business-join" },
+    category: "VAT",
+    publishedAt: "2026-11-16T09:00:00.000Z",
+    mainImage: "/blog/generated/local-125.jpg",
+    excerpt: "Is the VAT flat rate scheme UK right for your small business? Learn how it works, who is a limited cost trader, pros and cons, and practical next steps for 2026/27.",
+    body: bodyLocal125,
   },
   // GENERATED_ENTRIES
 ];
