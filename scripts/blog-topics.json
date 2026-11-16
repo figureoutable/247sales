@@ -1097,7 +1097,7 @@
       "tax point deposits"
     ],
     "category": "VAT",
-    "used": false
+    "used": true
   },
   {
     "topic": "Reverse charge VAT rules for UK construction and services",
