@@ -1108,7 +1108,7 @@
       "VAT reverse charge invoicing"
     ],
     "category": "VAT",
-    "used": false
+    "used": true
   },
   {
     "topic": "How to reclaim VAT on bad debts in the UK",

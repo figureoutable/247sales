@@ -103,6 +103,7 @@ import { body as bodyLocal123 } from "./blog-post-bodies/local-123";
 import { body as bodyLocal124 } from "./blog-post-bodies/local-124";
 import { body as bodyLocal125 } from "./blog-post-bodies/local-125";
 import { body as bodyLocal126 } from "./blog-post-bodies/local-126";
+import { body as bodyLocal127 } from "./blog-post-bodies/local-127";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1116,6 +1117,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-126.jpg",
     excerpt: "Practical guide to VAT on deposits UK: when VAT is due on advance payments, retainer VAT treatment and tax point deposits for small businesses and limited companies.",
     body: bodyLocal126,
+  },
+  {
+    _id: "local-127",
+    title: "Reverse charge VAT UK: Practical guide for construction & services",
+    slug: { current: "reverse-charge-vat-uk-construction-services" },
+    category: "VAT",
+    publishedAt: "2026-11-20T09:00:00.000Z",
+    mainImage: "/blog/generated/local-127.jpg",
+    excerpt: "Clear, practical guidance on reverse charge VAT UK for construction and related services — invoicing, accounting, common pitfalls and next steps for small businesses.",
+    body: bodyLocal127,
   },
   // GENERATED_ENTRIES
 ];
