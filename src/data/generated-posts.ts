@@ -104,6 +104,7 @@ import { body as bodyLocal124 } from "./blog-post-bodies/local-124";
 import { body as bodyLocal125 } from "./blog-post-bodies/local-125";
 import { body as bodyLocal126 } from "./blog-post-bodies/local-126";
 import { body as bodyLocal127 } from "./blog-post-bodies/local-127";
+import { body as bodyLocal128 } from "./blog-post-bodies/local-128";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1127,6 +1128,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-127.jpg",
     excerpt: "Clear, practical guidance on reverse charge VAT UK for construction and related services — invoicing, accounting, common pitfalls and next steps for small businesses.",
     body: bodyLocal127,
+  },
+  {
+    _id: "local-128",
+    title: "VAT bad debt relief UK: How to reclaim VAT on bad debts",
+    slug: { current: "vat-bad-debt-relief-uk" },
+    category: "VAT",
+    publishedAt: "2026-11-23T09:00:00.000Z",
+    mainImage: "/blog/generated/local-128.jpg",
+    excerpt: "Learn how VAT bad debt relief UK works, when you can reclaim VAT on unpaid invoices and the practical steps small businesses must take to make a bad debt VAT claim.",
+    body: bodyLocal128,
   },
   // GENERATED_ENTRIES
 ];
