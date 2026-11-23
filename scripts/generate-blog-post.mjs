@@ -501,16 +501,17 @@ Required sections in order:
 5. "## Summary and next steps" - brief recap with a CTA to Figures
 
 Internal links to include (pick 2-3 that are relevant):
-- [Statutory Accounts & Tax](/services#statutory-accounts-tax)
-- [Payroll & PAYE](/services#payroll-paye)
-- [Bookkeeping & Xero](/services#bookkeeping-xero)
-- [Fractional CFO](/services#fractional-cfo)
-- [Management Reporting](/services#management-reporting)
-- [VAT](/services#vat)
-- [Cash Flow Management](/services#cash-flow-management)
-- [Budgeting & Forecasting](/services#budgeting-forecasting)
-- [Board & Investor Reporting](/services#board-investor-reporting)
-- [book a discovery call](/)
+- [Statutory Accounts & Tax](/services/statutory-accounts-tax)
+- [Payroll & PAYE](/services/payroll-paye)
+- [Bookkeeping & Xero](/services/bookkeeping-xero)
+- [Fractional CFO](/services/fractional-cfo)
+- [Management Reporting](/services/management-reporting)
+- [VAT](/services/vat)
+- [Cash Flow Management](/services/cash-flow-management)
+- [Budgeting & Forecasting](/services/budgeting-forecasting)
+- [Board & Investor Reporting](/services/board-investor-reporting)
+- [book a discovery call](/contact)
+- [free checklists](/checklists)
 
 Include at least one external link to GOV.UK or another authoritative UK source.
 Use the primary keyword 3-5 times naturally throughout. Use secondary keywords where they fit.
