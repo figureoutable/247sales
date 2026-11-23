@@ -1,104 +1,77 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import { client } from "@/sanity/lib/client";
-import { postListQuery } from "@/sanity/lib/queries";
-import { getLocalPosts } from "@/data/blog-posts";
-import { mergePostLists, type PostListItem } from "@/lib/blog-posts-merge";
+import { Suspense } from "react";
+import { getAllPosts } from "@/components/redesign/posts";
+import { PostCard } from "@/components/redesign/PostCard";
+import { BlogBrowser } from "@/components/redesign/BlogBrowser";
+import { Btn, C, CtaBand, Eyebrow, H1, H2, Lead, Row, Section } from "@/components/redesign/ui";
 
 export const metadata: Metadata = {
   title: "UK Tax & Accounting Guides for Small Businesses",
   alternates: { canonical: "/blog" },
-  description: "Insights and updates from Figures — accounting and advisory for UK founders and small businesses.",
+  description: "Plain-English UK tax and accounting guides for small businesses, startups and founders, from the team at Figures.",
 };
 
-async function getPosts(): Promise<PostListItem[]> {
-  let sanityPosts: PostListItem[] = [];
-  try {
-    sanityPosts = await client.fetch<PostListItem[]>(postListQuery);
-  } catch {
-    // use local posts only
-  }
+const KEY_DATES = [
+  { month: 1, day: 31, label: "31 Jan", text: "Self Assessment return and balancing payment due" },
+  { month: 4, day: 5, label: "5 Apr", text: "End of the tax year" },
+  { month: 7, day: 31, label: "31 Jul", text: "Second payment on account due" },
+  { month: 10, day: 5, label: "5 Oct", text: "Deadline to register for Self Assessment" },
+];
 
-  const localPosts = getLocalPosts().map((p) => ({
-    _id: p._id,
-    title: p.title,
-    slug: p.slug,
-    category: p.category,
-    publishedAt: p.publishedAt,
-    mainImage: p.mainImage,
-    excerpt: p.excerpt,
-  }));
-
-  return mergePostLists(sanityPosts, localPosts);
+/** The four key dates, starting with the next one coming up. */
+function upcomingDates() {
+  const now = new Date();
+  const today = (now.getMonth() + 1) * 100 + now.getDate();
+  const next = KEY_DATES.findIndex((d) => d.month * 100 + d.day >= today);
+  const start = next === -1 ? 0 : next;
+  return [...KEY_DATES.slice(start), ...KEY_DATES.slice(0, start)];
 }
 
 export default async function BlogPage() {
-  const posts = await getPosts();
+  const posts = await getAllPosts();
+  const [featured, ...rest] = posts;
 
   return (
-    <div className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-          Blog
-        </h1>
-        <p className="mt-4 text-lg text-slate-600">
-          Updates, guides, and thoughts from the Figures team.
-        </p>
+    <>
+      <Section pad="64px 0 40px">
+        <Eyebrow>The Figures blog</Eyebrow>
+        <H1>UK tax and accounting guides, in plain English</H1>
+        <Lead>Practical guides for UK small businesses, startups and founders, written by the team at Figures.</Lead>
+      </Section>
 
-        {posts.length === 0 ? (
-          <p className="mt-12 text-slate-600">
-            No posts yet. Add content in Sanity to see your blog posts here.
-          </p>
-        ) : (
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-              <Link
-                key={post._id}
-                href={`/blog/${post.slug.current}`}
-                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
-              >
-                {post.mainImage ? (
-                  <div className="relative aspect-[16/10] bg-slate-100">
-                    <Image
-                      src={post.mainImage}
-                      alt=""
-                      fill
-                      className="object-cover transition-transform group-hover:scale-[1.02]"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-[16/10] bg-slate-100" aria-hidden />
-                )}
-                <div className="p-6">
-                  {post.category && (
-                    <span className="text-xs font-medium uppercase tracking-wide text-primary">
-                      {post.category}
-                    </span>
-                  )}
-                  <h2 className="mt-2 text-lg font-semibold text-slate-900 group-hover:text-primary transition-colors line-clamp-2">
-                    {post.title}
-                  </h2>
-                  <time
-                    dateTime={post.publishedAt}
-                    className="mt-2 block text-sm text-slate-500"
-                  >
-                    {new Date(post.publishedAt).toLocaleDateString("en-GB", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })}
-                  </time>
-                  {post.excerpt && (
-                    <p className="mt-3 text-sm text-slate-600 line-clamp-2">{post.excerpt}</p>
-                  )}
+      {featured && (
+        <Section pad="0 0 64px">
+          <Row mt={0}>
+            <PostCard post={featured} big />
+            <div style={{ flex: "1 1 320px", boxSizing: "border-box", background: C.ink, borderRadius: 20, padding: 28, display: "flex", flexDirection: "column", gap: 14 }}>
+              <p style={{ margin: 0, fontSize: 13, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: C.yellow }}>Key dates coming up</p>
+              {upcomingDates().map((d) => (
+                <div key={d.label} style={{ display: "flex", gap: 14, padding: "12px 0", borderTop: "1px solid #2E2E2E" }}>
+                  <strong style={{ flex: "none", width: 70, fontSize: 15, color: "#FFFFFF" }}>{d.label}</strong>
+                  <span style={{ fontSize: 15, lineHeight: 1.45, color: C.dim }}>{d.text}</span>
                 </div>
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
+              ))}
+              <div style={{ marginTop: "auto" }}>
+                <Btn kind="yellow" big={false}>
+                  Get your return done
+                </Btn>
+              </div>
+            </div>
+          </Row>
+        </Section>
+      )}
+
+      <Section bg={C.alt}>
+        <Eyebrow>All guides</Eyebrow>
+        <H2>Find the guide for your situation</H2>
+        <div style={{ marginTop: 36 }}>
+          <Suspense fallback={null}>
+            <BlogBrowser posts={rest} />
+          </Suspense>
+        </div>
+      </Section>
+
+      <CtaBand title="Rather hand it all over?" text="Book a free discovery call. We'll look at your situation and give you a fixed quote." />
+    </>
   );
 }

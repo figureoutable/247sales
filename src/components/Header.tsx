@@ -1,20 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import {
-  CONTACT_PHONE_DISPLAY,
-  CONTACT_PHONE_TEL,
-  FINANCE_DASHBOARD_URL,
-  isExternalHref,
-  SERVICES,
-} from "@/lib/constants";
+import { CAL_LINK, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/constants";
+import { DeadlineBanner } from "@/components/redesign/DeadlineBanner";
+
+const SMALL_BUSINESS = [
+  { label: "Statutory Accounts & Tax", text: "Year-end accounts and corporation tax", href: "/accountstax" },
+  { label: "Self Assessment", text: "Tax returns for sole traders and landlords", href: "/services" },
+  { label: "Bookkeeping & Xero", text: "Clean books, always up to date", href: "/services/bookkeeping-xero" },
+  { label: "VAT", text: "Registration, returns and advice", href: "/services/vat" },
+  { label: "Payroll & PAYE", text: "Monthly payroll and HMRC filings", href: "/services/payroll-paye" },
+  { label: "Making Tax Digital", text: "Get ready for quarterly reporting", href: "/mtdincometax" },
+];
+
+const STARTUPS = [
+  { label: "Fractional CFO", text: "Senior finance without the full-time cost", href: "/fractionalcfo" },
+  { label: "Management Reporting", text: "Monthly board packs and KPIs", href: "/services/management-reporting" },
+  { label: "Cash Flow Management", text: "13-week rolling forecasts", href: "/services/cash-flow-management" },
+  { label: "Board & Investor Reporting", text: "Investor-ready packs", href: "/services/board-investor-reporting" },
+  { label: "Budgeting & Forecasting", text: "Annual budgets and reforecasts", href: "/services/budgeting-forecasting" },
+  { label: "Custom Finance Dashboard", text: "Your numbers, live", href: "/finance-dashboard" },
+];
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/startups", label: "Startups & VC" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -24,248 +35,134 @@ type HeaderProps = {
   hideMainNav?: boolean;
 };
 
+function Chevron() {
+  return (
+    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  );
+}
+
+function ServiceColumn({ title, items, onPick }: { title: string; items: typeof SMALL_BUSINESS; onPick: () => void }) {
+  return (
+    <div style={{ flex: "1 1 250px", display: "flex", flexDirection: "column", gap: 2 }}>
+      <p style={{ margin: "0 0 6px", padding: "0 12px", fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#525252" }}>{title}</p>
+      {items.map((item) => (
+        <Link key={item.label} href={item.href} onClick={onPick} className="rounded-[10px] hover:bg-[#FAFAF7]" style={{ display: "flex", flexDirection: "column", gap: 2, padding: "10px 12px", textDecoration: "none", color: "#0A0A0A" }}>
+          <span style={{ fontSize: 15, fontWeight: 700 }}>{item.label}</span>
+          <span style={{ fontSize: 13, lineHeight: 1.4, color: "#525252" }}>{item.text}</span>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
 export function Header({ hideMainNav = false }: HeaderProps) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const serviceLinks = SERVICES.map((s) => ({ href: `/services/${s.id}`, label: s.title }));
+  const close = () => {
+    setServicesOpen(false);
+    setMobileOpen(false);
+  };
+  const navLink = (active: boolean) => ({ display: "inline-flex", alignItems: "center", minHeight: 44, fontSize: 15, fontWeight: active ? 800 : 600, color: "#0A0A0A", textDecoration: "none" }) as const;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center" aria-label="Figures home">
-          <span className="flex h-12 items-center overflow-hidden rounded-sm bg-white px-1 sm:h-14">
-            <Image
-              src="/figures-logo.jpg"
-              alt="Figures"
-              width={200}
-              height={56}
-              className="h-12 w-auto object-left object-contain sm:h-14"
-              priority
-              unoptimized
-            />
-          </span>
-        </Link>
-
-        {!hideMainNav && (
-        <nav className="hidden md:flex md:items-center md:gap-8" aria-label="Main">
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <button
-              type="button"
-              className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${
-                pathname?.startsWith("/services") ? "text-black" : "text-slate-600 hover:text-black"
-              }`}
-              aria-haspopup="menu"
-              aria-expanded={servicesOpen}
-              onClick={() => setServicesOpen((v) => !v)}
-            >
-              Services
-              <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
-                <path
-                  fillRule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-
-            {servicesOpen && (
-              <div
-                role="menu"
-                className="absolute left-0 top-full z-50 w-[320px] pt-2"
-              >
-                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
-                  <div className="p-2">
-                    <Link
-                      href="/services"
-                      role="menuitem"
-                      className="block rounded-xl px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50"
-                      onClick={() => setServicesOpen(false)}
-                    >
-                      View all services
-                    </Link>
-                    <div className="my-2 h-px bg-slate-200" />
-                    <div className="grid gap-1">
-                      {serviceLinks.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          role="menuitem"
-                          className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-black"
-                          onClick={() => setServicesOpen(false)}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                      <Link
-                        href={FINANCE_DASHBOARD_URL}
-                        role="menuitem"
-                        className="rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-black"
-                        onClick={() => setServicesOpen(false)}
-                      >
-                        Custom Finance Dashboard
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {NAV_LINKS.map(({ href, label }) => {
-            const external = isExternalHref(href);
-            const active = !external && pathname === href;
-            const className = `text-sm font-medium transition-colors ${
-              active ? "text-black" : "text-slate-600 hover:text-black"
-            }`;
-            return external ? (
-              <a key={href} href={href} className={className} target="_blank" rel="noopener noreferrer">
-                {label}
-              </a>
-            ) : (
-              <Link key={href} href={href} className={className}>
-                {label}
-              </Link>
-            );
-          })}
-        </nav>
-        )}
-
-        <div className="flex items-center gap-3 sm:gap-4">
-          {hideMainNav ? (
-            <a
-              href={`tel:${CONTACT_PHONE_TEL}`}
-              className="inline-flex items-center rounded-full bg-black px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-slate-800"
-            >
-              {CONTACT_PHONE_DISPLAY}
-            </a>
-          ) : (
-            <>
-              <a
-                href={`tel:${CONTACT_PHONE_TEL}`}
-                className="hidden whitespace-nowrap text-sm font-bold text-slate-600 transition-colors hover:text-black sm:inline-block"
-              >
-                {CONTACT_PHONE_DISPLAY}
-              </a>
-              <a
-                href="https://cal.com/figures/discoverycall"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-800 sm:inline-block"
-              >
-                Schedule a call
-              </a>
-            </>
-          )}
+    <>
+      <DeadlineBanner />
+      <header className="sticky top-0" style={{ zIndex: 40, background: "#FFFFFF", borderBottom: "1px solid #E5E5E5" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "14px 24px", boxSizing: "border-box", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px 28px" }}>
+          <Link href="/" aria-label="Figures home" style={{ display: "inline-flex", alignItems: "center", minHeight: 44 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/redesign/logo-black.png" alt="Figures" style={{ height: 30, width: "auto", display: "block" }} />
+          </Link>
 
           {!hideMainNav && (
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-600 hover:bg-slate-100 md:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            onClick={() => setOpen(!open)}
-          >
-            <span className="sr-only">Menu</span>
-            {open ? (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+            <nav aria-label="Main" className="hidden md:flex" style={{ alignItems: "center", gap: "4px 28px" }}>
+              <div style={{ position: "relative" }} onMouseLeave={() => setServicesOpen(false)}>
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded={servicesOpen}
+                  onClick={() => setServicesOpen((v) => !v)}
+                  onMouseEnter={() => setServicesOpen(true)}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, minHeight: 44, padding: 0, border: 0, background: "transparent", fontFamily: "inherit", fontSize: 15, fontWeight: pathname.startsWith("/services") ? 800 : 600, color: "#0A0A0A", cursor: "pointer" }}
+                >
+                  Services <Chevron />
+                </button>
+                {servicesOpen && (
+                  <div style={{ position: "absolute", top: 44, left: -24, zIndex: 50, paddingTop: 8 }}>
+                    <div style={{ width: 600, maxWidth: "calc(100vw - 32px)", boxSizing: "border-box", background: "#FFFFFF", border: "1px solid #E5E5E5", borderRadius: 20, boxShadow: "0 24px 48px -16px rgba(10,10,10,0.25)", padding: 16 }}>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 12px" }}>
+                        <ServiceColumn title="Small businesses" items={SMALL_BUSINESS} onPick={close} />
+                        <ServiceColumn title="Startups & investors" items={STARTUPS} onPick={close} />
+                      </div>
+                      <div style={{ marginTop: 12, padding: "14px 12px 4px", borderTop: "1px solid #E5E5E5", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+                        <Link href="/services" onClick={close} style={{ display: "inline-flex", alignItems: "center", minHeight: 44, fontSize: 15, fontWeight: 700, color: "#0A0A0A" }}>
+                          View all services
+                        </Link>
+                        <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", minHeight: 44, boxSizing: "border-box", padding: "0 18px", borderRadius: 999, background: "#FFDD4F", fontSize: 14, fontWeight: 700, textDecoration: "none", color: "#0A0A0A" }}>
+                          Book a free call
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+              {NAV_LINKS.map((l) => (
+                <Link key={l.href} href={l.href} style={navLink(pathname === l.href || pathname.startsWith(l.href + "/"))}>
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
           )}
-        </div>
-      </div>
 
-      {!hideMainNav && (
-      <div
-        id="mobile-menu"
-        className={`border-t border-slate-200 bg-white md:hidden ${open ? "block" : "hidden"}`}
-        aria-hidden={!open}
-      >
-        <div className="flex flex-col gap-1 px-4 py-4">
-          <Link
-            href="/services"
-            className={`rounded-lg px-4 py-3 text-sm font-medium ${
-              pathname?.startsWith("/services") ? "bg-slate-100 text-black" : "text-slate-600 hover:bg-slate-50"
-            }`}
-            onClick={() => setOpen(false)}
-          >
-            Services
-          </Link>
-          <div className="ml-2 flex flex-col gap-1">
-            {serviceLinks.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="rounded-lg px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              href={FINANCE_DASHBOARD_URL}
-              className="rounded-lg px-4 py-2 text-sm text-slate-600 hover:bg-slate-50"
-              onClick={() => setOpen(false)}
-            >
-              Custom Finance Dashboard
-            </Link>
-          </div>
-
-          {NAV_LINKS.map(({ href, label }) => {
-            const external = isExternalHref(href);
-            const active = !external && pathname === href;
-            const className = `rounded-lg px-4 py-3 text-sm font-medium ${
-              active ? "bg-slate-100 text-black" : "text-slate-600 hover:bg-slate-50"
-            }`;
-            return external ? (
-              <a
-                key={href}
-                href={href}
-                className={className}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
-              >
-                {label}
-              </a>
-            ) : (
-              <Link key={href} href={href} className={className} onClick={() => setOpen(false)}>
-                {label}
-              </Link>
-            );
-          })}
-          <div className="mt-2 flex flex-col gap-2">
-            <a
-              href={`tel:${CONTACT_PHONE_TEL}`}
-              className="rounded-lg px-4 py-3 text-center text-sm font-bold text-slate-600 hover:bg-slate-50"
-              onClick={() => setOpen(false)}
-            >
+          <div style={{ display: "flex", alignItems: "center", gap: "12px 20px" }}>
+            <a href={`tel:${CONTACT_PHONE_TEL}`} className="hidden lg:inline-flex" style={{ alignItems: "center", minHeight: 44, fontSize: 15, fontWeight: 700, color: "#0A0A0A", textDecoration: "none", whiteSpace: "nowrap" }}>
               {CONTACT_PHONE_DISPLAY}
             </a>
-            <a
-              href="https://cal.com/figures/discoverycall"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-black px-4 py-3 text-center text-sm font-medium text-white hover:bg-slate-800"
-              onClick={() => setOpen(false)}
-            >
-              Schedule a call
+            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex" style={{ alignItems: "center", justifyContent: "center", minHeight: 44, boxSizing: "border-box", padding: "13px 22px", borderRadius: 999, fontSize: 15, fontWeight: 700, textDecoration: "none", background: "#FFDD4F", color: "#0A0A0A", whiteSpace: "nowrap" }}>
+              Book a free call
             </a>
+            {!hideMainNav && (
+              <button type="button" className="inline-flex md:hidden" aria-expanded={mobileOpen} aria-controls="mobile-menu" onClick={() => setMobileOpen((v) => !v)} style={{ width: 44, height: 44, alignItems: "center", justifyContent: "center", border: 0, borderRadius: 12, background: "transparent", color: "#0A0A0A", cursor: "pointer" }}>
+                <span className="sr-only">Menu</span>
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  {mobileOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
+                </svg>
+              </button>
+            )}
           </div>
         </div>
-      </div>
-      )}
-    </header>
+
+        {!hideMainNav && mobileOpen && (
+          <div id="mobile-menu" className="md:hidden" style={{ borderTop: "1px solid #E5E5E5", background: "#FFFFFF", maxHeight: "calc(100vh - 120px)", overflowY: "auto" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 4, padding: "16px 24px 24px" }}>
+              {NAV_LINKS.map((l) => (
+                <Link key={l.href} href={l.href} onClick={close} style={{ display: "flex", alignItems: "center", minHeight: 48, fontSize: 17, fontWeight: 700, color: "#0A0A0A", textDecoration: "none" }}>
+                  {l.label}
+                </Link>
+              ))}
+              <p style={{ margin: "14px 0 4px", fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "#525252" }}>Services</p>
+              {[...SMALL_BUSINESS, ...STARTUPS].map((s) => (
+                <Link key={s.label} href={s.href} onClick={close} style={{ display: "flex", alignItems: "center", minHeight: 44, fontSize: 16, fontWeight: 600, color: "#0A0A0A", textDecoration: "none" }}>
+                  {s.label}
+                </Link>
+              ))}
+              <Link href="/services" onClick={close} style={{ display: "flex", alignItems: "center", minHeight: 44, fontSize: 16, fontWeight: 700, color: "#0A0A0A" }}>
+                View all services
+              </Link>
+              <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" style={{ marginTop: 12, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 52, borderRadius: 999, background: "#FFDD4F", fontSize: 16, fontWeight: 700, textDecoration: "none", color: "#0A0A0A" }}>
+                Book a free call
+              </a>
+              <a href={`tel:${CONTACT_PHONE_TEL}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 48, fontSize: 16, fontWeight: 700, color: "#0A0A0A", textDecoration: "none" }}>
+                {CONTACT_PHONE_DISPLAY}
+              </a>
+            </div>
+          </div>
+        )}
+      </header>
+    </>
   );
 }

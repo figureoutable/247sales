@@ -1,177 +1,111 @@
 import Link from "next/link";
-import Image from "next/image";
-import {
-  CONTACT_EMAIL,
-  CONTACT_PHONE_DISPLAY,
-  CONTACT_PHONE_TEL,
-  FINANCE_DASHBOARD_URL,
-  isExternalHref,
-  TAGLINE,
-  SOCIAL_LINKS,
-} from "@/lib/constants";
-import { LOCATIONS_PATH, SURREY_HUB_PATH, SW_LONDON_HUB_PATH, townPath } from "@/data/locations";
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, SOCIAL_LINKS } from "@/lib/constants";
 import { SURREY_TOWN_PAGES } from "@/data/locations-surrey-towns";
 import { SW_LONDON_TOWN_PAGES } from "@/data/locations-sw-towns";
+import { SURREY_HUB_PATH, SW_LONDON_HUB_PATH, townPath } from "@/data/locations";
 
-const FOOTER_LINKS = [
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: FINANCE_DASHBOARD_URL, label: "Finance Dashboard" },
-  { href: "/contact", label: "Contact" },
+const DIM = "#B5B5B5";
+
+const SERVICES = [
+  { label: "Accounts & corporation tax", href: "/accountstax" },
+  { label: "Self Assessment", href: "/services" },
+  { label: "Bookkeeping & Xero", href: "/services/bookkeeping-xero" },
+  { label: "VAT returns", href: "/services/vat" },
+  { label: "Payroll & PAYE", href: "/services/payroll-paye" },
+  { label: "MTD for Income Tax", href: "/mtdincometax" },
 ];
 
-const SOCIAL_ICONS: Record<keyof typeof SOCIAL_LINKS, { label: string; path: string }> = {
-  youtube: { label: "YouTube", path: "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" },
-  tiktok: { label: "TikTok", path: "M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88 2.1V9.4a6.84 6.84 0 0 0 5.91 6.8 6.83 6.83 0 0 0 6.9-2.48v-5.2a8.16 8.16 0 0 0 4.12 1.11v-3.4a4.85 4.85 0 0 1-1-.1z" },
-  instagram: { label: "Instagram", path: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.919-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.919.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" },
-  linkedin: { label: "LinkedIn", path: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" },
-};
+const STARTUPS = [
+  { label: "Startup accountants", href: "/startups" },
+  { label: "Fractional CFO", href: "/fractionalcfo" },
+  { label: "Investor reporting", href: "/services/board-investor-reporting" },
+  { label: "Cash flow forecasting", href: "/services/cash-flow-management" },
+  { label: "Finance dashboards", href: "/finance-dashboard" },
+];
+
+const MORE = [
+  { label: "Free checklists", href: "/checklists" },
+  { label: "Home expense calculator", href: "/home-expense-calculator" },
+  { label: "Tax-deductible expenses", href: "/tax-deductible-expenses" },
+  { label: "Finance dashboard demo", href: "/finance-dashboard" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+const SOCIALS = [
+  { label: "YouTube", href: SOCIAL_LINKS.youtube },
+  { label: "TikTok", href: SOCIAL_LINKS.tiktok },
+  { label: "Instagram", href: SOCIAL_LINKS.instagram },
+  { label: "LinkedIn", href: SOCIAL_LINKS.linkedin },
+];
+
+const linkStyle = { display: "inline-flex", alignItems: "center", minHeight: 32, fontSize: 15, color: DIM, textDecoration: "none" } as const;
+const headStyle = { margin: "0 0 8px", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" } as const;
+
+function Column({ title, titleHref, items }: { title: string; titleHref?: string; items: { label: string; href: string }[] }) {
+  return (
+    <div style={{ flex: "1 1 130px", display: "flex", flexDirection: "column", gap: 4 }}>
+      <p style={headStyle}>
+        {titleHref ? (
+          <Link href={titleHref} style={{ color: "#FFFFFF", textDecoration: "none" }}>
+            {title}
+          </Link>
+        ) : (
+          title
+        )}
+      </p>
+      {items.map((item) => (
+        <Link key={item.label} href={item.href} className="hover:!text-white" style={linkStyle}>
+          {item.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div>
-            <Link href="/" className="inline-block" aria-label="Figures home">
-              <span className="flex h-10 items-center overflow-hidden rounded-sm bg-white px-1">
-                <Image
-                  src="/figures-logo.jpg"
-                  alt="Figures"
-                  width={160}
-                  height={40}
-                  className="h-10 w-auto object-left object-contain"
-                  unoptimized
-                />
-              </span>
+    <footer style={{ background: "#0A0A0A", padding: "72px 0 36px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", boxSizing: "border-box" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "40px 32px" }}>
+          <div style={{ flex: "1.6 1 240px", display: "flex", flexDirection: "column", gap: 14 }}>
+            <Link href="/" aria-label="Figures home" style={{ alignSelf: "flex-start" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/redesign/logo-white.png" alt="Figures" style={{ height: 32, width: "auto", display: "block" }} />
             </Link>
-            <p className="mt-2 text-sm text-slate-600">{TAGLINE}</p>
-            <div className="mt-3 space-y-1 text-sm text-slate-600">
-              <p>
-                <span className="font-semibold">Email:</span>{" "}
-                <a
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-slate-600 underline-offset-2 hover:text-black hover:underline"
-                >
-                  {CONTACT_EMAIL}
-                </a>
-              </p>
-              <p>
-                <span className="font-semibold">Phone:</span>{" "}
-                <a
-                  href={`tel:${CONTACT_PHONE_TEL}`}
-                  className="text-slate-600 underline-offset-2 hover:text-black hover:underline"
-                >
-                  {CONTACT_PHONE_DISPLAY}
-                </a>
-              </p>
-            </div>
-            <div className="mt-4 flex gap-4">
-              {(Object.keys(SOCIAL_LINKS) as (keyof typeof SOCIAL_LINKS)[]).map((key) => (
-                <a
-                  key={key}
-                  href={SOCIAL_LINKS[key]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-500 transition-colors hover:text-black"
-                  aria-label={SOCIAL_ICONS[key].label}
-                >
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                    <path d={SOCIAL_ICONS[key].path} />
-                  </svg>
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-10">
-            <nav className="flex flex-wrap gap-6" aria-label="Footer">
-              {FOOTER_LINKS.map(({ href, label }) =>
-                isExternalHref(href) ? (
-                  <a
-                    key={href}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-slate-600 transition-colors hover:text-black"
-                  >
-                    {label}
-                  </a>
-                ) : (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="text-sm text-slate-600 transition-colors hover:text-black"
-                  >
-                    {label}
-                  </Link>
-                ),
-              )}
-              <a
-                href="https://cal.com/figures/discoverycall"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-slate-600 transition-colors hover:text-black"
-              >
-                Schedule a call
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: DIM, maxWidth: 320 }}>
+              Oddly satisfying accounting. Chartered accountants for small businesses, startups and founders across Surrey, London and the UK.
+            </p>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: DIM }}>
+              <a href={`tel:${CONTACT_PHONE_TEL}`} style={{ color: DIM, textDecoration: "none" }}>
+                {CONTACT_PHONE_DISPLAY}
               </a>
-            </nav>
-
-            <div className="w-full min-w-0 sm:max-w-md lg:max-w-lg">
-              <Link
-                href={LOCATIONS_PATH}
-                className="block text-sm font-semibold text-slate-900 transition-colors hover:text-black"
-              >
-                Locations
-              </Link>
-              <div className="mt-4 grid grid-cols-2 gap-x-5 gap-y-0 sm:gap-x-6">
-                <div className="min-w-0">
-                  <Link
-                    href={SURREY_HUB_PATH}
-                    className="block text-sm font-semibold text-slate-800 transition-colors hover:text-black"
-                  >
-                    Surrey
-                  </Link>
-                  <ul className="mt-1.5 flex flex-col gap-0.5">
-                    {SURREY_TOWN_PAGES.map((t) => (
-                      <li key={t.slug}>
-                        <Link
-                          href={townPath("surrey", t.slug)}
-                          className="block text-sm leading-snug text-slate-600 transition-colors hover:text-black"
-                        >
-                          {t.listLabel}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="min-w-0">
-                  <Link
-                    href={SW_LONDON_HUB_PATH}
-                    className="block text-sm font-semibold text-slate-800 transition-colors hover:text-black"
-                  >
-                    South West London
-                  </Link>
-                  <ul className="mt-1.5 flex flex-col gap-0.5">
-                    {SW_LONDON_TOWN_PAGES.map((t) => (
-                      <li key={t.slug}>
-                        <Link
-                          href={townPath("south-west-london", t.slug)}
-                          className="block text-sm leading-snug text-slate-600 transition-colors hover:text-black"
-                        >
-                          {t.listLabel}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+              <br />
+              <a href={`mailto:${CONTACT_EMAIL}`} style={{ color: DIM, textDecoration: "none" }}>
+                {CONTACT_EMAIL}
+              </a>
+            </p>
           </div>
+          <Column title="Services" titleHref="/services" items={SERVICES} />
+          <Column title="Startups & VC" titleHref="/startups" items={STARTUPS} />
+          <Column title="Free tools & more" items={MORE} />
+          <Column title="Surrey" titleHref={SURREY_HUB_PATH} items={SURREY_TOWN_PAGES.map((t) => ({ label: t.listLabel, href: townPath(t.region, t.slug) }))} />
+          <Column title="South West London" titleHref={SW_LONDON_HUB_PATH} items={SW_LONDON_TOWN_PAGES.map((t) => ({ label: t.listLabel, href: townPath(t.region, t.slug) }))} />
         </div>
-        <p className="mt-8 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} figures. All rights reserved.
-        </p>
+        <div style={{ marginTop: 56, paddingTop: 24, borderTop: "1px solid #2E2E2E", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 12, fontSize: 14, color: DIM }}>
+          <span>&copy; {new Date().getFullYear()} Figures &amp; Finance Limited, trading as Figures. ICAS Chartered Accountants.</span>
+          <span style={{ display: "inline-flex", flexWrap: "wrap", gap: "4px 14px" }}>
+            {SOCIALS.map((s) => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" style={{ color: DIM, textDecoration: "none" }}>
+                {s.label}
+              </a>
+            ))}
+            <Link href="/privacypolicy" style={{ color: DIM }}>
+              Privacy policy
+            </Link>
+          </span>
+        </div>
       </div>
     </footer>
   );

@@ -79,9 +79,16 @@ button:focus-visible {
 
 /* Blog article markdown — Preflight resets headings/lists, so style them explicitly */
 .blog-prose {
-  color: #475569;
-  font-size: 1.0625rem;
+  color: #262626;
+  font-size: 1.125rem;
   line-height: 1.75;
+}
+
+.blog-prose a {
+  color: #0a0a0a;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .blog-prose > * + * {
@@ -91,9 +98,9 @@ button:focus-visible {
 .blog-prose h2 {
   margin-top: 2.75rem;
   margin-bottom: 0.85rem;
-  color: #0f172a;
-  font-size: 1.5rem;
-  font-weight: 700;
+  color: #0a0a0a;
+  font-size: 1.75rem;
+  font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.3;
 }

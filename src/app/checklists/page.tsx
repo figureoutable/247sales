@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ChecklistsSection } from "@/components/ChecklistsSection";
+import { ToolsS0, ToolsS1, ToolsS2, ToolsS3 } from "@/components/redesign/generated/Tools";
 
 export const metadata: Metadata = {
   title: "Free Accounting Checklists for UK Small Businesses",
@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 
 export default function ChecklistsPage() {
   return (
-    <div className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-6xl">
-        <ChecklistsSection />
-      </div>
-    </div>
+    <>
+      <ToolsS0 />
+      <ToolsS1 />
+      <ToolsS2 />
+      <ToolsS3 />
+    </>
   );
 }

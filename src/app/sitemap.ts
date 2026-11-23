@@ -35,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/services`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/fractionalcfo`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/startups`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/accountstax`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/mtdincometax`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/checklists`, changeFrequency: "monthly", priority: 0.7 },
