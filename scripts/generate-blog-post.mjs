@@ -551,9 +551,9 @@ ${existingTitles.map((t) => `- ${t}`).join("\n")}
 
 Return ONLY a valid JSON object (no markdown fences, no explanation) with these fields:
 {
-  "title": "SEO title including the primary keyword (50-65 chars)",
+  "title": "SEO title including the primary keyword (40-50 characters, never more than 50)",
   "slug": "url-friendly-slug-with-keyword",
-  "excerpt": "Meta description with primary keyword (150-160 characters)",
+  "excerpt": "Meta description with primary keyword (130-155 characters, never more than 155)",
   "body": "Full markdown body (1500+ words, no H1, opening paragraph first)",
   "heroImagePrompt": "One paragraph: outdoor UK natural-daylight scene matching this article (no indoor screens)"
 }`;

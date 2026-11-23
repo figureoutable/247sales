@@ -4,7 +4,8 @@ import { FinanceDemoCarousel } from "@/components/finance-demo/FinanceDemoCarous
 import { CAL_LINK, CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Finance Dashboard Demo",
+  title: "Finance Dashboard for Small Businesses: Live Demo",
+  alternates: { canonical: "/finance-dashboard" },
   description:
     "Interactive demo financial dashboards for SaaS, retail, and recruitment — income, expenses, tax timing, and KPIs.",
 };

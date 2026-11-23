@@ -10,6 +10,7 @@ import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
 import { getLocalPostBySlug } from "@/data/blog-posts";
 import { ArticleJsonLd } from "@/components/ArticleJsonLd";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -38,16 +39,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `/blog/${slug}`;
   if (sanityPost)
     return {
-      title: sanityPost.title,
-      description: sanityPost.excerpt ?? undefined,
+      title: seoTitle(sanityPost.title),
+      description: seoDescription(sanityPost.excerpt),
       alternates: { canonical },
       openGraph: { type: "article", publishedTime: sanityPost.publishedAt },
     };
   const localPost = getLocalPostBySlug(slug);
   if (localPost)
     return {
-      title: localPost.title,
-      description: localPost.excerpt ?? undefined,
+      title: seoTitle(localPost.title),
+      description: seoDescription(localPost.excerpt),
       alternates: { canonical },
       openGraph: {
         type: "article",

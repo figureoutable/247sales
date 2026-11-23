@@ -7,10 +7,12 @@ import { AboutTeaser } from "@/components/AboutTeaser";
 import { BlogPreview } from "@/components/BlogPreview";
 import { FAQ } from "@/components/FAQ";
 import { CalEmbed } from "@/components/CalEmbed";
+import { OrganizationJsonLd } from "@/components/OrganizationJsonLd";
 
 export default function Home() {
   return (
     <>
+      <OrganizationJsonLd />
       <Hero />
       <ServicesOverview />
       <WhyFigures />
