@@ -7,7 +7,7 @@ export const SURREY_TOWN_PAGES: TownEntry[] = [
     displayName: "Woking",
     listLabel: "Woking",
     h1: "Accountants in Woking",
-    metaTitle: "Accountants in Woking | Chartered Accountants Surrey | Figures",
+    metaTitle: "Accountants in Woking, Surrey | Figures",
     metaDescription:
       "Accountants in Woking for founders and owner-managed businesses. Figures is based here: accounts, tax, VAT, payroll and Xero, with local meetings.",
     intro:
@@ -45,7 +45,7 @@ export const SURREY_TOWN_PAGES: TownEntry[] = [
     displayName: "Guildford",
     listLabel: "Guildford",
     h1: "Chartered Accountants in Guildford",
-    metaTitle: "Accountants in Guildford | Chartered Accountants Surrey | Figures",
+    metaTitle: "Accountants in Guildford, Surrey | Figures",
     metaDescription:
       "Accountants in Guildford for founders near Surrey Research Park and the town centre. Woking-based Figures handles accounts, tax, payroll and Xero.",
     intro:
@@ -83,7 +83,7 @@ export const SURREY_TOWN_PAGES: TownEntry[] = [
     displayName: "Walton-on-Thames",
     listLabel: "Walton-on-Thames",
     h1: "Accountants in Walton-on-Thames",
-    metaTitle: "Accountants in Walton-on-Thames | Chartered Accountants Surrey | Figures",
+    metaTitle: "Accountants in Walton-on-Thames, Surrey | Figures",
     metaDescription:
       "Accountants in Walton-on-Thames for founders, directors and contractors in Elmbridge. Figures covers corporation tax, payroll, VAT and year-end accounts.",
     intro:
@@ -121,7 +121,7 @@ export const SURREY_TOWN_PAGES: TownEntry[] = [
     displayName: "Epsom",
     listLabel: "Epsom",
     h1: "Chartered Accountants in Epsom",
-    metaTitle: "Accountants in Epsom | Chartered Accountants Surrey | Figures",
+    metaTitle: "Accountants in Epsom, Surrey | Figures",
     metaDescription:
       "Accountants in Epsom and Ewell for founders and owner-managers. Woking-based Figures covers statutory accounts, corporation tax, payroll and VAT.",
     intro:
@@ -159,7 +159,7 @@ export const SURREY_TOWN_PAGES: TownEntry[] = [
     displayName: "Staines-upon-Thames",
     listLabel: "Staines-upon-Thames",
     h1: "Accountants in Staines-upon-Thames",
-    metaTitle: "Accountants in Staines-upon-Thames | Chartered Accountants Surrey | Figures",
+    metaTitle: "Accountants in Staines-upon-Thames, Surrey | Figures",
     metaDescription:
       "Accountants in Staines-upon-Thames for Spelthorne founders in logistics and professional services. Figures handles accounts, tax, VAT and payroll.",
     intro:
@@ -197,7 +197,7 @@ export const SURREY_TOWN_PAGES: TownEntry[] = [
     displayName: "Redhill",
     listLabel: "Redhill",
     h1: "Chartered Accountants in Redhill",
-    metaTitle: "Accountants in Redhill | Chartered Accountants Surrey | Figures",
+    metaTitle: "Accountants in Redhill, Surrey | Figures",
     metaDescription:
       "Accountants in Redhill and Reigate for founders and growing limited companies. Figures provides year-end accounts, tax, VAT, payroll and reporting.",
     intro:
@@ -235,7 +235,7 @@ export const SURREY_TOWN_PAGES: TownEntry[] = [
     displayName: "Camberley",
     listLabel: "Camberley",
     h1: "Accountants in Camberley",
-    metaTitle: "Accountants in Camberley | Chartered Accountants Surrey | Figures",
+    metaTitle: "Accountants in Camberley, Surrey | Figures",
     metaDescription:
       "Accountants in Camberley for founders, contractors and owner-managers in Surrey Heath. Figures delivers Xero bookkeeping, payroll, VAT and tax support.",
     intro:

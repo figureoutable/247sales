@@ -8,7 +8,7 @@ import { DeadlineBanner } from "@/components/redesign/DeadlineBanner";
 
 const SMALL_BUSINESS = [
   { label: "Statutory Accounts & Tax", text: "Year-end accounts and corporation tax", href: "/accountstax" },
-  { label: "Self Assessment", text: "Tax returns for sole traders and landlords", href: "/services" },
+  { label: "Self Assessment", text: "Tax returns for sole traders and landlords", href: "/services/self-assessment" },
   { label: "Bookkeeping & Xero", text: "Clean books, always up to date", href: "/services/bookkeeping-xero" },
   { label: "VAT", text: "Registration, returns and advice", href: "/services/vat" },
   { label: "Payroll & PAYE", text: "Monthly payroll and HMRC filings", href: "/services/payroll-paye" },

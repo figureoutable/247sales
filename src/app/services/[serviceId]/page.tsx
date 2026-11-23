@@ -10,6 +10,7 @@ type Props = { params: Promise<{ serviceId: string }> };
 /** Search-friendly page titles. "| Figures" is added by the root layout. */
 const SEO_TITLES: Record<string, string> = {
   "statutory-accounts-tax": "Year-End Accounts & Corporation Tax Accountants",
+  "self-assessment": "Self Assessment Tax Return Accountants",
   "payroll-paye": "Payroll & PAYE Services for Small Businesses",
   "bookkeeping-xero": "Bookkeeping & Xero Accountants for Small Businesses",
   "fractional-cfo": "Fractional CFO Services for UK Startups",

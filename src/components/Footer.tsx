@@ -8,7 +8,7 @@ const DIM = "#B5B5B5";
 
 const SERVICES = [
   { label: "Accounts & corporation tax", href: "/accountstax" },
-  { label: "Self Assessment", href: "/services" },
+  { label: "Self Assessment", href: "/services/self-assessment" },
   { label: "Bookkeeping & Xero", href: "/services/bookkeeping-xero" },
   { label: "VAT returns", href: "/services/vat" },
   { label: "Payroll & PAYE", href: "/services/payroll-paye" },

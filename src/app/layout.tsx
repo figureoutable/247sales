@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Figures",
   },
   description:
-    "UK accounting and advisory for founders and small businesses. Plain English, same-day response, transparent pricing. Surrey-based.",
+    "Oddly satisfying accounting from ICAS Chartered Accountants. Fixed fees, plain English and a reply within 1 business day, for small businesses and startups.",
   keywords: ["accounting", "advisory", "UK", "small business", "founders", "VAT", "payroll", "tax"],
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
