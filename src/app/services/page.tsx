@@ -29,7 +29,8 @@ const ICON_MAP: Record<string, LucideIcon> = {
 };
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Accounting & Tax Services for Small Businesses",
+  alternates: { canonical: "/services" },
   description:
     "Fractional CFO, management reporting, FP&A, cash flow, board reporting, budgeting, statutory accounts, payroll, bookkeeping. Finance and accounting for UK businesses.",
 };

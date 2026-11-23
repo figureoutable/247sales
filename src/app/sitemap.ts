@@ -35,15 +35,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/services`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/fractionalcfo`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/accountsandtax`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/accountstax`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/mtdincometax`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/checklists`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/finance-dashboard`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/home-expense-calculator`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tax-deductible-expenses`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blog`, changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE_URL}/contact`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/privacypolicy`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  const blogPosts: MetadataRoute.Sitemap = getLocalPosts().map((post) => ({
+  const now = Date.now();
+  const blogPosts: MetadataRoute.Sitemap = getLocalPosts()
+    // Never list a post before its publish date
+    .filter((post) => new Date(post.publishedAt).getTime() <= now)
+    .map((post) => ({
     url: `${BASE_URL}/blog/${post.slug.current}`,
-    lastModified: new Date(post.publishedAt),
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
     changeFrequency: "monthly",
     priority: 0.7,
   }));

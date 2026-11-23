@@ -39,6 +39,8 @@ export type LocalPost = {
   slug: { current: string };
   category: string | null;
   publishedAt: string;
+  /** Set when a post is refreshed, so Google re-checks it */
+  updatedAt?: string;
   mainImage: string | null;
   excerpt: string | null;
   body: string | null; // plain text paragraphs for local posts

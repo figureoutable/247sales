@@ -5,10 +5,7 @@ export const metadata: Metadata = {
   title: "Accounting Checklists",
   description:
     "Free year-end accounts, self assessment, and new company checklists for UK founders and small businesses.",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  alternates: { canonical: "/checklists" },
 };
 
 export default function ChecklistsPage() {

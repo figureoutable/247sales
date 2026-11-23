@@ -4,7 +4,8 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Testimonials } from "@/components/Testimonials";
 export const metadata: Metadata = {
-  title: "Accounts & Tax | Figures",
+  title: "Accounts & Tax for Small Businesses",
+  alternates: { canonical: "/accountstax" },
   description:
     "End-to-end accounting and tax for UK businesses. Bookkeeping, VAT, year-end accounts and tax — done properly, on time. Book a free discovery call.",
 };

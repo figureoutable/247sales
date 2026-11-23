@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { CAL_LINK } from "@/lib/constants";
 import { ChecklistsSection } from "@/components/ChecklistsSection";
 
 const YOUTUBE_EMBED_ID = "opShRwVFX10";
 
 export function Hero() {
+  // Show a still image first; only load the YouTube player when someone presses play (much faster page load)
+  const [playVideo, setPlayVideo] = useState(false);
+
   return (
     <section className="relative w-full bg-white px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-12 lg:px-8 lg:pb-24 lg:pt-14">
       <div className="mx-auto max-w-4xl text-center">
@@ -23,13 +27,34 @@ export function Hero() {
           aria-label="Intro video: Welcome to Figures"
         >
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-lg ring-1 ring-slate-200/50">
-            <iframe
-              src={`https://www.youtube.com/embed/${YOUTUBE_EMBED_ID}?rel=0`}
-              title="Welcome to Figures – intro from Joshua Lee"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="absolute inset-0 h-full w-full"
-            />
+            {playVideo ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${YOUTUBE_EMBED_ID}?rel=0&autoplay=1`}
+                title="Welcome to Figures – intro from Joshua Lee"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setPlayVideo(true)}
+                aria-label="Play the intro video: Welcome to Figures"
+                className="group absolute inset-0 h-full w-full cursor-pointer"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`https://i.ytimg.com/vi/${YOUTUBE_EMBED_ID}/hqdefault.jpg`}
+                  alt="Welcome to Figures: why us in 49 seconds, with Joshua Lee"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <span className="absolute left-1/2 top-1/2 flex h-16 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-2xl bg-red-600 shadow-lg transition-transform group-hover:scale-105">
+                  <svg viewBox="0 0 24 24" className="ml-1 h-8 w-8 fill-white" aria-hidden>
+                    <path d="M7 4.5v15l13-7.5z" />
+                  </svg>
+                </span>
+              </button>
+            )}
           </div>
         </div>
 

@@ -7,6 +7,19 @@ import { AreasWeServeCrossLinks } from "@/components/locations/AreasWeServeCross
 
 type Props = { params: Promise<{ serviceId: string }> };
 
+/** Search-friendly page titles. "| Figures" is added by the root layout. */
+const SEO_TITLES: Record<string, string> = {
+  "statutory-accounts-tax": "Year-End Accounts & Corporation Tax Accountants",
+  "payroll-paye": "Payroll & PAYE Services for Small Businesses",
+  "bookkeeping-xero": "Bookkeeping & Xero Accountants for Small Businesses",
+  "fractional-cfo": "Fractional CFO Services for UK Startups",
+  "management-reporting": "Management Accounts & Board Reporting",
+  vat: "VAT Accountants for Small Businesses",
+  "cash-flow-management": "Cash Flow Forecasting for Startups & SMEs",
+  "board-investor-reporting": "Board & Investor Reporting for Startups",
+  "budgeting-forecasting": "Budgeting & Forecasting Services",
+};
+
 function getService(serviceId: string) {
   return SERVICES.find((s) => s.id === serviceId) ?? null;
 }
@@ -21,8 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return { title: "Service not found" };
 
   return {
-    title: service.title,
+    title: SEO_TITLES[service.id] ?? service.title,
     description: service.description,
+    alternates: { canonical: `/services/${service.id}` },
   };
 }
 

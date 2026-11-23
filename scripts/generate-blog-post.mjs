@@ -240,11 +240,18 @@ function getTodayUtc9() {
 }
 
 /**
- * Next Mon/Wed/Fri publish slot.
- * Normal mode: never schedules in the past (skips gaps).
+ * Publish date for the next post.
+ * Normal mode: the current time (the post goes live straight away).
  * Catch-up mode (CATCH_UP=1): fills from the latest published date, including past slots up to today.
  */
 function getNextPublishDate({ catchUp = false } = {}) {
+  // Normal scheduled run: date the post the moment it goes live, never in the future
+  // (future dates looked odd on the site and in the sitemap).
+  if (!catchUp) {
+    const now = new Date();
+    now.setUTCSeconds(0, 0);
+    return now;
+  }
   const combined = readAllSources();
   const matches = [...combined.matchAll(/publishedAt:\s*"([^"]+)"/g)];
   const latestInFile = new Date(

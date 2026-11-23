@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { CalEmbed } from "@/components/CalEmbed";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: { absolute: "Joshua Lee, ICAS Chartered Accountant | Figures" },
+  alternates: { canonical: "/about" },
   description:
     "Josh co-founded Figures in 2023. EY Turnaround & Restructuring, Barclays, Crown Agents Bank. Credit Suisse, Metro Bank, Lloyds, UBS. Fractional CFO and accounting for UK founders.",
 };
