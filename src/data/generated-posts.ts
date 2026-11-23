@@ -105,6 +105,7 @@ import { body as bodyLocal125 } from "./blog-post-bodies/local-125";
 import { body as bodyLocal126 } from "./blog-post-bodies/local-126";
 import { body as bodyLocal127 } from "./blog-post-bodies/local-127";
 import { body as bodyLocal128 } from "./blog-post-bodies/local-128";
+import { body as bodyLocal129 } from "./blog-post-bodies/local-129";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1138,6 +1139,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-128.jpg",
     excerpt: "Learn how VAT bad debt relief UK works, when you can reclaim VAT on unpaid invoices and the practical steps small businesses must take to make a bad debt VAT claim.",
     body: bodyLocal128,
+  },
+  {
+    _id: "local-129",
+    title: "VAT partial exemption UK: Guide for mixed supply businesses",
+    slug: { current: "vat-partial-exemption-uk" },
+    category: "VAT",
+    publishedAt: "2026-11-25T09:00:00.000Z",
+    mainImage: "/blog/generated/local-129.jpg",
+    excerpt: "Clear explanations of VAT partial exemption UK for mixed supply businesses. Learn how input tax recovery, standard method override and practical steps work.",
+    body: bodyLocal129,
   },
   // GENERATED_ENTRIES
 ];
