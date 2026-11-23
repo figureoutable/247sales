@@ -7,7 +7,8 @@ import { getLocalPosts } from "@/data/blog-posts";
 import { mergePostLists, type PostListItem } from "@/lib/blog-posts-merge";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "UK Tax & Accounting Guides for Small Businesses",
+  alternates: { canonical: "/blog" },
   description: "Insights and updates from Figures — accounting and advisory for UK founders and small businesses.",
 };
 

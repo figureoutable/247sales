@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Fractional CFO | Figures",
+  title: "Fractional CFO for UK Startups & Scale-ups",
+  alternates: { canonical: "/fractionalcfo" },
   description:
-    "Senior finance leadership from £1,500 a month. No recruitment, no overhead, no long-term commitment. Book a free discovery call.",
+    "Senior finance leadership from £999 a month. No recruitment, no overhead, no long-term commitment. Book a free discovery call.",
 };
 
 export default function FractionalCFOPage() {

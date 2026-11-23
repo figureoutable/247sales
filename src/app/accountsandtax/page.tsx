@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Testimonials } from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Accounts & Tax | Figures",
+  title: "Accounts & Tax for Small Businesses",
+  // Ad landing page variant: point Google at the main /accountstax page
+  alternates: { canonical: "/accountstax" },
   description:
     "End-to-end accounting and tax for UK businesses. Bookkeeping, VAT, year-end accounts and tax — done properly, on time. Book a free discovery call.",
 };

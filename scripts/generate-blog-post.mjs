@@ -240,11 +240,18 @@ function getTodayUtc9() {
 }
 
 /**
- * Next Mon/Wed/Fri publish slot.
- * Normal mode: never schedules in the past (skips gaps).
+ * Publish date for the next post.
+ * Normal mode: the current time (the post goes live straight away).
  * Catch-up mode (CATCH_UP=1): fills from the latest published date, including past slots up to today.
  */
 function getNextPublishDate({ catchUp = false } = {}) {
+  // Normal scheduled run: date the post the moment it goes live, never in the future
+  // (future dates looked odd on the site and in the sitemap).
+  if (!catchUp) {
+    const now = new Date();
+    now.setUTCSeconds(0, 0);
+    return now;
+  }
   const combined = readAllSources();
   const matches = [...combined.matchAll(/publishedAt:\s*"([^"]+)"/g)];
   const latestInFile = new Date(
@@ -544,9 +551,9 @@ ${existingTitles.map((t) => `- ${t}`).join("\n")}
 
 Return ONLY a valid JSON object (no markdown fences, no explanation) with these fields:
 {
-  "title": "SEO title including the primary keyword (50-65 chars)",
+  "title": "SEO title including the primary keyword (40-50 characters, never more than 50)",
   "slug": "url-friendly-slug-with-keyword",
-  "excerpt": "Meta description with primary keyword (150-160 characters)",
+  "excerpt": "Meta description with primary keyword (130-155 characters, never more than 155)",
   "body": "Full markdown body (1500+ words, no H1, opening paragraph first)",
   "heroImagePrompt": "One paragraph: outdoor UK natural-daylight scene matching this article (no indoor screens)"
 }`;

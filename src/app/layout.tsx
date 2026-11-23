@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { LayoutWrapper } from "@/components/LayoutWrapper";
 
@@ -12,7 +13,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tryfigures.com"),
   title: {
-    default: "Figures | Oddly Satisfying Accounting",
+    default: "Figures: Oddly Satisfying Accountants in Surrey & London",
     template: "%s | Figures",
   },
   description:
@@ -25,7 +26,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
+    siteName: "Figures",
   },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
@@ -36,15 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={plusJakarta.variable}>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KTHH2BS4');`,
-          }}
-        />
         <script
           type="text/javascript"
           charSet="UTF-8"
@@ -61,6 +55,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <LayoutWrapper>{children}</LayoutWrapper>
+        {/* Google Tag Manager: loads after the page is interactive so it does not slow the first paint */}
+        <Script id="gtm" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTHH2BS4');`}</Script>
       </body>
     </html>
   );

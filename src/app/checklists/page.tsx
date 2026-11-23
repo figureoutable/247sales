@@ -2,13 +2,10 @@ import type { Metadata } from "next";
 import { ChecklistsSection } from "@/components/ChecklistsSection";
 
 export const metadata: Metadata = {
-  title: "Accounting Checklists",
+  title: "Free Accounting Checklists for UK Small Businesses",
   description:
     "Free year-end accounts, self assessment, and new company checklists for UK founders and small businesses.",
-  robots: {
-    index: false,
-    follow: false,
-  },
+  alternates: { canonical: "/checklists" },
 };
 
 export default function ChecklistsPage() {

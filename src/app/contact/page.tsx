@@ -3,7 +3,8 @@ import { ContactForm } from "@/components/ContactForm";
 import { CalEmbed } from "@/components/CalEmbed";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact a Chartered Accountant in Surrey & London",
+  alternates: { canonical: "/contact" },
   description:
     "Get in touch with Figures. Send a message or schedule a discovery call. UK accounting and advisory for founders and small businesses.",
 };

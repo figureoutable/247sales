@@ -9,6 +9,8 @@ import { postBySlugQuery } from "@/sanity/lib/queries";
 import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
 import { getLocalPostBySlug } from "@/data/blog-posts";
+import { ArticleJsonLd } from "@/components/ArticleJsonLd";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -34,9 +36,26 @@ async function getPostFromSanity(slug: string): Promise<SanityPost | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const sanityPost = await getPostFromSanity(slug);
-  if (sanityPost) return { title: sanityPost.title, description: sanityPost.excerpt ?? undefined };
+  const canonical = `/blog/${slug}`;
+  if (sanityPost)
+    return {
+      title: seoTitle(sanityPost.title),
+      description: seoDescription(sanityPost.excerpt),
+      alternates: { canonical },
+      openGraph: { type: "article", publishedTime: sanityPost.publishedAt },
+    };
   const localPost = getLocalPostBySlug(slug);
-  if (localPost) return { title: localPost.title, description: localPost.excerpt ?? undefined };
+  if (localPost)
+    return {
+      title: seoTitle(localPost.title),
+      description: seoDescription(localPost.excerpt),
+      alternates: { canonical },
+      openGraph: {
+        type: "article",
+        publishedTime: localPost.publishedAt,
+        modifiedTime: localPost.updatedAt ?? localPost.publishedAt,
+      },
+    };
   return { title: "Post not found" };
 }
 
@@ -48,6 +67,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (sanityPost) {
     return (
       <article className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <ArticleJsonLd title={sanityPost.title} description={sanityPost.excerpt} slug={sanityPost.slug.current} publishedAt={sanityPost.publishedAt} image={sanityPost.mainImage} />
         <div className="mx-auto max-w-3xl">
           <Link
             href="/blog"
@@ -101,6 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (localPost) {
     return (
       <article className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <ArticleJsonLd title={localPost.title} description={localPost.excerpt} slug={localPost.slug.current} publishedAt={localPost.publishedAt} updatedAt={localPost.updatedAt} image={localPost.mainImage} />
         <div className="mx-auto max-w-3xl">
           <Link
             href="/blog"
