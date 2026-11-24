@@ -8,10 +8,8 @@ const BUSINESS = {
   telephone: "+447775081123",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "65 Southwood Avenue",
     addressLocality: "Woking",
     addressRegion: "Surrey",
-    postalCode: "GU21 2EZ",
     addressCountry: "GB",
   },
 } as const;

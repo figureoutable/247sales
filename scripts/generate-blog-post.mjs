@@ -36,10 +36,14 @@ function loadEnvLocal() {
 
 loadEnvLocal();
 
+// Writing runs through Vercel AI Gateway (billed to the Vercel team).
+// OPENAI_API_KEY is only a fallback while the gateway key is not set.
+const AI_GATEWAY_API_KEY = process.env.AI_GATEWAY_API_KEY;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const FAL_KEY = process.env.FAL_KEY;
-if (!OPENAI_API_KEY) {
-  console.error("Missing OPENAI_API_KEY environment variable");
+const WRITER_MODEL = "anthropic/claude-sonnet-5.5";
+if (!AI_GATEWAY_API_KEY && !OPENAI_API_KEY) {
+  console.error("Missing AI_GATEWAY_API_KEY (or OPENAI_API_KEY fallback) environment variable");
   process.exit(1);
 }
 
@@ -302,24 +306,39 @@ function parseJsonContent(content) {
 }
 
 async function openaiJson(messages, { maxCompletionTokens = 4096 } = {}) {
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-5-mini",
-      messages,
-      max_completion_tokens: maxCompletionTokens,
-    }),
-  });
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`OpenAI API ${res.status}: ${err}`);
+  const viaGateway = Boolean(AI_GATEWAY_API_KEY);
+  const url = viaGateway
+    ? "https://ai-gateway.vercel.sh/v1/chat/completions"
+    : "https://api.openai.com/v1/chat/completions";
+  const body = viaGateway
+    ? { model: WRITER_MODEL, messages, max_tokens: maxCompletionTokens }
+    : { model: "gpt-5-mini", messages, max_completion_tokens: maxCompletionTokens };
+
+  let lastErr;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${viaGateway ? AI_GATEWAY_API_KEY : OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify(body),
+    });
+    if (res.ok) {
+      const data = await res.json();
+      try {
+        return parseJsonContent(data.choices[0].message.content);
+      } catch (err) {
+        lastErr = new Error(`Model returned invalid JSON: ${err.message}`);
+      }
+    } else {
+      lastErr = new Error(`${viaGateway ? "AI Gateway" : "OpenAI"} API ${res.status}: ${await res.text()}`);
+      if (res.status < 500 && res.status !== 429) throw lastErr;
+    }
+    console.warn(`  attempt ${attempt} failed: ${lastErr.message.slice(0, 200)}`);
+    await sleep(5000 * attempt);
   }
-  const data = await res.json();
-  return parseJsonContent(data.choices[0].message.content);
+  throw lastErr;
 }
 
 /* ---------- topic queue (auto-researches forever) ---------- */
@@ -493,24 +512,32 @@ Strict rules:
 - Do NOT start with an H1 heading (the title is rendered separately by the app)
 - Start with a strong opening paragraph (2-3 sentences) that includes the primary keyword naturally
 
-Required sections in order:
-1. Opening paragraphs introducing the topic
-2. Several H2 sections covering the topic in depth (use H3 for subsections where helpful)
-3. "## UK tax and legal accuracy" - disclaimer noting "This article is for informational purposes only and does not constitute professional tax or financial advice. Please speak to a qualified accountant before taking action." Explicitly name tax year ${taxYear}.
-4. "## Frequently asked questions" - 4-5 Q&A pairs using **bold** for questions
-5. "## Summary and next steps" - brief recap with a CTA to Figures
+Voice: plain English, friendly and confident, like a Chartered Accountant explaining it to a busy founder over coffee. Short sentences. Explain any jargon the first time it appears. Never use the word "really".
+
+Required structure, in this order:
+1. A short answer box as the very first thing: one markdown blockquote line starting "> **Short answer:**" followed by 2-3 sentences that directly answer the main question
+2. Opening paragraphs (2-3 sentences) that include the primary keyword
+3. Several H2 sections covering the topic in depth (use H3 for subsections where helpful)
+4. "## A worked example" - a simple, realistic UK example with numbers, showing the working step by step
+5. "## What to do next" - a short bullet checklist of practical actions
+6. "## UK tax and legal accuracy" - disclaimer noting "This article is for informational purposes only and does not constitute professional tax or financial advice. Please speak to a qualified accountant before taking action." Explicitly name tax year ${taxYear}.
+7. "## Frequently asked questions" - 4-5 Q&A pairs using **bold** for questions
+8. "## Summary and next steps" - brief recap with a CTA to book a free discovery call with Figures
+9. "## Sources" - a bullet list of the GOV.UK or other official pages relied on, as markdown links
 
 Internal links to include (pick 2-3 that are relevant):
-- [Statutory Accounts & Tax](/services#statutory-accounts-tax)
-- [Payroll & PAYE](/services#payroll-paye)
-- [Bookkeeping & Xero](/services#bookkeeping-xero)
-- [Fractional CFO](/services#fractional-cfo)
-- [Management Reporting](/services#management-reporting)
-- [VAT](/services#vat)
-- [Cash Flow Management](/services#cash-flow-management)
-- [Budgeting & Forecasting](/services#budgeting-forecasting)
-- [Board & Investor Reporting](/services#board-investor-reporting)
-- [book a discovery call](/)
+- [Statutory Accounts & Tax](/services/statutory-accounts-tax)
+- [Self Assessment](/services/self-assessment)
+- [Payroll & PAYE](/services/payroll-paye)
+- [Bookkeeping & Xero](/services/bookkeeping-xero)
+- [Fractional CFO](/services/fractional-cfo)
+- [Management Reporting](/services/management-reporting)
+- [VAT](/services/vat)
+- [Cash Flow Management](/services/cash-flow-management)
+- [Budgeting & Forecasting](/services/budgeting-forecasting)
+- [Board & Investor Reporting](/services/board-investor-reporting)
+- [book a discovery call](/contact)
+- [free checklists](/checklists)
 
 Include at least one external link to GOV.UK or another authoritative UK source.
 Use the primary keyword 3-5 times naturally throughout. Use secondary keywords where they fit.
@@ -565,6 +592,69 @@ Return ONLY a valid JSON object (no markdown fences, no explanation) with these 
     ],
     { maxCompletionTokens: 16384 }
   );
+}
+
+/* ---------- fact-check ---------- */
+
+/**
+ * A second pass that checks the draft against GOV.UK and current UK rules.
+ * Returns { pass, issues }. Only clear factual errors fail the check.
+ */
+async function factCheck(post, govSources) {
+  const taxYear = getCurrentUkTaxYear();
+  const todayIso = new Date().toISOString().slice(0, 10);
+  const sources = govSources.length
+    ? govSources.map((s, i) => `${i + 1}. ${s.title} (${s.link}): ${s.description}`).join("\n")
+    : "No GOV.UK results were fetched.";
+  const result = await openaiJson(
+    [
+      {
+        role: "system",
+        content: `You are a careful UK Chartered Accountant reviewing a blog post before it is published. Today is ${todayIso}; the current UK tax year is ${taxYear}.
+
+Check every rate, threshold, allowance, deadline, penalty and rule in the article against current UK law and the GOV.UK sources provided.
+Fail the article only for clear factual errors or out-of-date figures that could mislead a reader. Do not fail it for style, tone or missing detail.
+
+Return ONLY valid JSON (no markdown fences): { "pass": boolean, "issues": [ { "claim": string, "problem": string, "fix": string } ] }`,
+      },
+      {
+        role: "user",
+        content: `GOV.UK sources:\n${sources}\n\nTitle: ${post.title}\n\nArticle:\n${post.body}`,
+      },
+    ],
+    { maxCompletionTokens: 4096 }
+  );
+  return { pass: Boolean(result.pass), issues: Array.isArray(result.issues) ? result.issues : [] };
+}
+
+async function fixPost(post, issues) {
+  const fixed = await openaiJson(
+    [
+      { role: "system", content: buildSystemPrompt() },
+      {
+        role: "user",
+        content: `A reviewer found these factual problems in the draft below. Correct them, keep everything else the same, and return the same JSON shape (title, slug, excerpt, body, heroImagePrompt).
+
+Problems:
+${issues.map((i, n) => `${n + 1}. "${i.claim}": ${i.problem}. Fix: ${i.fix}`).join("\n")}
+
+Draft JSON:
+${JSON.stringify(post)}`,
+      },
+    ],
+    { maxCompletionTokens: 16384 }
+  );
+  return { ...post, ...fixed };
+}
+
+/** Saves a post that failed the fact-check so it can be reviewed by hand. */
+function holdPost(post, issues) {
+  const dir = path.join(ROOT, "scripts", "held-posts");
+  fs.mkdirSync(dir, { recursive: true });
+  const filePath = path.join(dir, `${post.slug || "post"}.md`);
+  const notes = issues.map((i) => `- ${i.claim}: ${i.problem} (fix: ${i.fix})`).join("\n");
+  fs.writeFileSync(filePath, `# ${post.title}\n\nHeld: failed the fact-check.\n\n${notes}\n\n---\n\n${post.body}\n`);
+  return filePath;
 }
 
 /* ---------- file writers ---------- */
@@ -656,8 +746,23 @@ async function main() {
     console.log(`Found ${govSources.length} GOV.UK results`);
   }
 
-  console.log("Calling OpenAI...");
-  const post = await generatePost(topic, getExistingTitles(), govSources);
+  console.log(AI_GATEWAY_API_KEY ? `Writing with ${WRITER_MODEL} via Vercel AI Gateway...` : "Writing with OpenAI (fallback)...");
+  let post = await generatePost(topic, getExistingTitles(), govSources);
+
+  console.log("Fact-checking...");
+  let check = await factCheck(post, govSources);
+  if (!check.pass) {
+    console.log(`Fact-check found ${check.issues.length} issue(s); fixing and checking again...`);
+    post = await fixPost(post, check.issues);
+    check = await factCheck(post, govSources);
+  }
+  if (!check.pass) {
+    const held = holdPost(post, check.issues);
+    markTopicUsed(topic);
+    console.log(`Post held, not published (failed the fact-check twice): ${path.relative(ROOT, held)}`);
+    return;
+  }
+  console.log("Fact-check passed");
   console.log(`Generated: "${post.title}"`);
   console.log(`Slug: ${post.slug}`);
   console.log(`Excerpt: ${post.excerpt}\n`);

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SERVICES } from "@/lib/constants";
 import { SERVICE_PAGES } from "@/data/service-pages";
-import { AreasWeServeCrossLinks } from "@/components/locations/AreasWeServeCrossLinks";
+import { getAllPosts } from "@/components/redesign/posts";
+import { Arrow, Btn, C, Card, Check, CheckList, Crumbs, CtaBand, DarkCard, Eyebrow, FaqGrid, Guarantee, H1, H2, Lead, Para, Pill, Row, Section, TextLink, Tile } from "@/components/redesign/ui";
 
 type Props = { params: Promise<{ serviceId: string }> };
 
 /** Search-friendly page titles. "| Figures" is added by the root layout. */
 const SEO_TITLES: Record<string, string> = {
   "statutory-accounts-tax": "Year-End Accounts & Corporation Tax Accountants",
+  "self-assessment": "Self Assessment Tax Return Accountants",
   "payroll-paye": "Payroll & PAYE Services for Small Businesses",
   "bookkeeping-xero": "Bookkeeping & Xero Accountants for Small Businesses",
   "fractional-cfo": "Fractional CFO Services for UK Startups",
@@ -48,102 +49,141 @@ export default async function ServicePage({ params }: Props) {
   const content = SERVICE_PAGES[service.id as keyof typeof SERVICE_PAGES];
   if (!content) notFound();
 
+  const heading = SEO_TITLES[service.id] ?? service.title;
+  const related = SERVICES.filter((s) => s.id !== service.id).slice(0, 5);
+  const allPosts = await getAllPosts();
+  const keyword = service.title.split(" ")[0].toLowerCase();
+  const guides = allPosts.filter((p) => p.title.toLowerCase().includes(keyword)).slice(0, 3);
+
   return (
-    <div className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-4xl">
-        <Link href="/services" className="text-sm font-medium text-slate-600 hover:text-black hover:underline">
-          Back to services
-        </Link>
-
-        <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-          {service.title}
-        </h1>
-        <p className="mt-6 text-lg text-slate-600">{content.intro}</p>
-
-        <div className="mt-14 space-y-12">
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">What we do</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
-              {content.whatWeDo.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">How we do it</h2>
-            <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-600">
-              {content.howWeWork.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ol>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">Items to note</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
-              {content.itemsToNote.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">What we need from you</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
-              {content.whatWeNeedFromYou.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">Typical timeline</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
-              {content.typicalTimeline.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">More detail</h2>
-            <div className="mt-4 space-y-4 text-slate-600">
-              {content.extraCopy.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
+    <>
+      <Section pad="56px 0 80px">
+        <Crumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: service.title }]} />
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: 48 }}>
+          <div style={{ flex: "1.3 1 480px", minWidth: 0 }}>
+            <Eyebrow>{service.title}</Eyebrow>
+            <H1>{heading}</H1>
+            <Lead>{content.intro}</Lead>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 30 }}>
+              <Btn>
+                Book a free discovery call <Arrow />
+              </Btn>
+              <Btn kind="ghost" href="/contact">
+                Get a fixed quote
+              </Btn>
             </div>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
-            <div className="mt-6 space-y-6">
-              {content.faqs.map((faq) => (
-                <div key={faq.q}>
-                  <p className="font-semibold text-slate-900">{faq.q}</p>
-                  <p className="mt-2 text-slate-600">{faq.a}</p>
-                </div>
-              ))}
+            <Guarantee />
+          </div>
+          <DarkCard label="At a glance">
+            <p style={{ margin: 0, fontSize: 17, lineHeight: 1.6, color: "#FFFFFF" }}>
+              <strong>Who it&rsquo;s for:</strong> {service.whoFor}
+            </p>
+            <div style={{ marginTop: 8 }}>
+              <CheckList items={[...content.whatWeDo.slice(0, 3), "Fixed fee agreed upfront"]} color="#FFFFFF" tick={C.yellow} />
             </div>
-          </section>
+          </DarkCard>
         </div>
+      </Section>
 
-        <div className="mt-12 rounded-2xl bg-slate-50 p-8 text-center">
-          <p className="text-lg font-medium text-slate-900">Want to talk it through?</p>
-          <p className="mt-2 text-slate-600">Book a free discovery call and we will point you to the right service.</p>
-          <a
-            href="https://cal.com/figures/discoverycall"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-slate-800"
-          >
-            Schedule a call
-          </a>
+      <Section bg={C.alt}>
+        <Eyebrow>What we do</Eyebrow>
+        <H2>{service.title}, handled properly</H2>
+        <Para>{service.detail}</Para>
+        <Row>
+          {content.whatWeDo.map((item) => (
+            <Card key={item} flex="1 1 250px">
+              <div style={{ display: "flex", gap: 12, fontSize: 16, lineHeight: 1.55 }}>
+                <Check />
+                <span>{item}</span>
+              </div>
+            </Card>
+          ))}
+        </Row>
+      </Section>
+
+      <Section>
+        <Eyebrow>How we do it</Eyebrow>
+        <H2>A clear process from start to finish</H2>
+        <ol style={{ listStyle: "none", margin: "36px 0 0", padding: 0, display: "flex", flexDirection: "column", gap: 16, maxWidth: 820 }}>
+          {content.howWeWork.map((step, i) => (
+            <li key={step} style={{ display: "flex", gap: 16, alignItems: "flex-start", fontSize: 17, lineHeight: 1.6 }}>
+              <span style={{ flex: "none", width: 36, height: 36, borderRadius: 999, background: C.yellow, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 800 }}>{i + 1}</span>
+              <span style={{ paddingTop: 4 }}>{step}</span>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section bg={C.alt}>
+        <Row gap="24px" mt={0}>
+          <Card pad={32} flex="1 1 320px">
+            <h2 style={{ margin: "0 0 8px", fontSize: 22, fontWeight: 800 }}>What we need from you</h2>
+            <CheckList items={content.whatWeNeedFromYou} />
+          </Card>
+          <Card pad={32} flex="1 1 320px">
+            <h2 style={{ margin: "0 0 8px", fontSize: 22, fontWeight: 800 }}>Typical timeline</h2>
+            <CheckList items={content.typicalTimeline} />
+          </Card>
+          <Card pad={32} flex="1 1 320px">
+            <h2 style={{ margin: "0 0 8px", fontSize: 22, fontWeight: 800 }}>Items to note</h2>
+            <CheckList items={content.itemsToNote} />
+          </Card>
+        </Row>
+      </Section>
+
+      {content.extraCopy.length > 0 && (
+        <Section>
+          <Eyebrow>More detail</Eyebrow>
+          <H2>Good to know</H2>
+          {content.extraCopy.map((p) => (
+            <Para key={p}>{p}</Para>
+          ))}
+        </Section>
+      )}
+
+      {guides.length > 0 && (
+        <Section bg={C.alt}>
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 20 }}>
+            <div>
+              <Eyebrow>Guides</Eyebrow>
+              <H2>Learn more</H2>
+            </div>
+            <TextLink href="/blog">All guides</TextLink>
+          </div>
+          <Row>
+            {guides.map((g) => (
+              <Tile key={g._id} title={g.title} href={`/blog/${g.slug.current}`} label="Read the guide" />
+            ))}
+          </Row>
+        </Section>
+      )}
+
+      <Section>
+        <Eyebrow>FAQ</Eyebrow>
+        <H2>Frequently asked questions</H2>
+        <FaqGrid items={content.faqs} />
+      </Section>
+
+      <Section pad="0 0 72px">
+        <Eyebrow>Related services</Eyebrow>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+          {related.map((s) => (
+            <Pill key={s.id} href={`/services/${s.id}`}>
+              {s.title}
+            </Pill>
+          ))}
         </div>
+        <div style={{ marginTop: 32 }}>
+          <Eyebrow>Areas we serve</Eyebrow>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+            <Pill href="/locations/surrey">Accountants in Surrey</Pill>
+            <Pill href="/locations/south-west-london">Accountants in South West London</Pill>
+            <Pill href="/locations">All areas we serve</Pill>
+          </div>
+        </div>
+      </Section>
 
-        <AreasWeServeCrossLinks />
-      </div>
-    </div>
+      <CtaBand title="Want to talk it through?" text="Book a free discovery call and we will point you to the right service." />
+    </>
   );
 }
-

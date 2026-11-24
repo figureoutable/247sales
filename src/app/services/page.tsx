@@ -1,126 +1,60 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import {
-  Briefcase,
-  LayoutDashboard,
-  LineChart,
-  Droplets,
-  Presentation,
-  CalendarRange,
-  ShieldCheck,
-  Users,
-  BookOpen,
-  Receipt,
-  type LucideIcon,
-} from "lucide-react";
 import { SERVICES } from "@/lib/constants";
-
-const ICON_MAP: Record<string, LucideIcon> = {
-  briefcase: Briefcase,
-  "layout-dashboard": LayoutDashboard,
-  "line-chart": LineChart,
-  droplets: Droplets,
-  presentation: Presentation,
-  "calendar-range": CalendarRange,
-  "shield-check": ShieldCheck,
-  users: Users,
-  "book-open": BookOpen,
-  receipt: Receipt,
-};
+import { Arrow, Btn, C, Crumbs, CtaBand, Eyebrow, Guarantee, H1, H2, Lead, Row, Section, Tile } from "@/components/redesign/ui";
 
 export const metadata: Metadata = {
   title: "Accounting & Tax Services for Small Businesses",
   alternates: { canonical: "/services" },
   description:
-    "Fractional CFO, management reporting, FP&A, cash flow, board reporting, budgeting, statutory accounts, payroll, bookkeeping. Finance and accounting for UK businesses.",
+    "Year-end accounts, Self Assessment, bookkeeping, VAT, payroll, management reporting and fractional CFO. Fixed-fee accounting for UK small businesses and startups.",
 };
 
+const SMALL_BUSINESS = ["statutory-accounts-tax", "self-assessment", "bookkeeping-xero", "vat", "payroll-paye"];
+
 export default function ServicesPage() {
+  const everyday = SERVICES.filter((s) => SMALL_BUSINESS.includes(s.id));
+  const growth = SERVICES.filter((s) => !SMALL_BUSINESS.includes(s.id));
+
   return (
-    <div className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-          Our services
-        </h1>
-        <p className="mt-6 text-lg text-slate-600">
-          End-to-end finance and accounting for UK founders and small businesses. Here’s what we offer.
-        </p>
+    <>
+      <Section pad="56px 0 80px">
+        <Crumbs items={[{ label: "Home", href: "/" }, { label: "Services" }]} />
+        <Eyebrow>Our services</Eyebrow>
+        <H1>Accounting and tax services, done properly</H1>
+        <Lead>End-to-end finance and accounting for UK founders and small businesses. Fixed fees, plain English and one team that knows your numbers.</Lead>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 30 }}>
+          <Btn>
+            Book a free discovery call <Arrow />
+          </Btn>
+          <Btn kind="ghost" href="/contact">
+            Get a fixed quote
+          </Btn>
+        </div>
+        <Guarantee />
+      </Section>
 
-        <div className="mt-10 flex flex-wrap gap-3">
-          {SERVICES.map((service) => (
-            <Link
-              key={service.id}
-              href={`/services/${service.id}`}
-              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-slate-300 hover:text-black"
-            >
-              {service.title}
-            </Link>
+      <Section bg={C.alt}>
+        <Eyebrow>Small businesses</Eyebrow>
+        <H2>The essentials, off your desk</H2>
+        <Row>
+          {everyday.map((s) => (
+            <Tile key={s.id} title={s.title} text={s.description} href={`/services/${s.id}`} />
           ))}
-        </div>
+          <Tile title="Making Tax Digital" text="Get ready for quarterly reporting to HMRC. A plain-English guide for sole traders and landlords." href="/mtdincometax" />
+        </Row>
+      </Section>
 
-        <div className="mt-16 space-y-20">
-          {SERVICES.map((service) => {
-            const Icon = ICON_MAP[service.icon] ?? Briefcase;
-            const hasDetail = "detail" in service && service.detail;
-            const hasWhoFor = "whoFor" in service && service.whoFor;
-            return (
-              <section
-                key={service.id}
-                id={service.id}
-                className="scroll-mt-24"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700 dark:bg-zinc-800 dark:text-zinc-300">
-                    <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden />
-                  </span>
-                  <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">
-                    <Link
-                      href={`/services/${service.id}`}
-                      className="transition-colors hover:text-slate-700 hover:underline dark:hover:text-zinc-200"
-                    >
-                      {service.title}
-                    </Link>
-                  </h2>
-                </div>
-                <p className="mt-4 text-slate-600 dark:text-zinc-400">{service.description}</p>
-                {hasDetail && (
-                  <p className="mt-4 text-slate-600 dark:text-zinc-400">{service.detail}</p>
-                )}
-                {hasWhoFor && (
-                  <p className="mt-6 rounded-lg border-l-4 border-slate-300 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700 dark:border-zinc-600 dark:bg-zinc-800/50 dark:text-zinc-300">
-                    <span className="text-slate-500 dark:text-zinc-500">Who it’s for:</span> {service.whoFor}
-                  </p>
-                )}
-                <div className="mt-6">
-                  <Link
-                    href={`/services/${service.id}`}
-                    className="inline-flex items-center text-sm font-semibold text-black hover:underline"
-                  >
-                    View {service.title}
-                    <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </section>
-            );
-          })}
-        </div>
+      <Section>
+        <Eyebrow>Startups &amp; investors</Eyebrow>
+        <H2>A finance team that grows with you</H2>
+        <Row>
+          {growth.map((s) => (
+            <Tile key={s.id} title={s.title} text={s.description} href={`/services/${s.id}`} />
+          ))}
+        </Row>
+      </Section>
 
-        <div className="mt-20 rounded-2xl bg-slate-50 p-8 text-center dark:bg-zinc-900/50">
-          <p className="text-lg font-medium text-slate-900 dark:text-white">
-            Not sure what you need? We’ll help you figure it out.
-          </p>
-          <a
-            href="https://cal.com/figures/discoverycall"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-          >
-            Schedule a call
-          </a>
-        </div>
-      </div>
-    </div>
+      <CtaBand title="Not sure what you need?" text="Book a free 30-minute discovery call. We will help you figure it out and send you a fixed quote." />
+    </>
   );
 }

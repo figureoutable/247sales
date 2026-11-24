@@ -69,6 +69,66 @@ export const SERVICE_PAGES: Record<ServiceId, ServicePageContent> = {
       },
     ],
   },
+  "self-assessment": {
+    intro:
+      "Your Self Assessment tax return prepared, checked and filed by Chartered Accountants. Fixed fee from £250, no jargon, and no last-minute January panic.",
+    whatWeDo: [
+      "Prepare and file your Self Assessment tax return with HMRC",
+      "Cover self-employment, rental income, dividends, capital gains and other income",
+      "Check the expenses and reliefs you can claim so you do not overpay",
+      "Tell you what you owe and when, including payments on account",
+      "Deal with HMRC letters and queries for you as your tax agent",
+    ],
+    howWeWork: [
+      "Kick-off: a short call to understand your income and what HMRC already holds",
+      "Records: we send a simple checklist and you send us what you have",
+      "Draft: we prepare your return and explain the tax bill in plain English",
+      "Approval: you check and approve the return before anything is filed",
+      "Filing: we file with HMRC and send you the confirmation and payment dates",
+    ],
+    itemsToNote: [
+      "The online filing and payment deadline is 31 January after the end of the tax year.",
+      "If you are new to Self Assessment, you need to register with HMRC by 5 October after the tax year ends.",
+      "Payments on account are due on 31 January and 31 July if your tax bill is over the HMRC threshold.",
+      "Making Tax Digital for Income Tax now applies to sole traders and landlords with qualifying income over £50,000, with lower thresholds to follow.",
+    ],
+    whatWeNeedFromYou: [
+      "Your Unique Taxpayer Reference (UTR), or we can help you register for one",
+      "Income records: sales, rental income, P60 or P45, dividends and interest",
+      "Expense records and receipts for the tax year",
+      "Details of any pension contributions, Gift Aid donations or asset sales",
+    ],
+    typicalTimeline: [
+      "Most returns are completed within two weeks of receiving your records.",
+      "Send your records early and you will know your tax bill months before it is due.",
+    ],
+    extraCopy: [
+      "A tax return is easy to put off and stressful to rush. The earlier it is done, the longer you have to plan for the bill. Filing early does not mean paying early: the payment date stays the same, you simply know the number sooner.",
+      "We keep it simple. You get a checklist of what we need, a clear draft to approve and a plain-English summary of what you owe and when. If something looks wrong, or there is a relief you have missed, we tell you before the return is filed.",
+    ],
+    faqs: [
+      {
+        q: "How much does a Self Assessment tax return cost?",
+        a: "Our fixed fee starts from £250. The price depends on how many sources of income you have, and we agree it with you before any work starts.",
+      },
+      {
+        q: "When is the Self Assessment deadline?",
+        a: "Online returns must be filed, and any tax paid, by 31 January after the end of the tax year. For the tax year ending 5 April 2026, that is 31 January 2027.",
+      },
+      {
+        q: "What happens if I file late?",
+        a: "HMRC charges an automatic £100 penalty if your return is late, even if you have no tax to pay. Further penalties and interest build up the longer it is left.",
+      },
+      {
+        q: "Do I need to file a tax return?",
+        a: "You usually do if you are self-employed, a landlord, a company director with income not taxed through payroll, or you have capital gains or other untaxed income. Book a free call and we will confirm it for you.",
+      },
+      {
+        q: "Can you help if I am behind with previous years?",
+        a: "Yes. We regularly help people bring late returns up to date and can speak to HMRC on your behalf.",
+      },
+    ],
+  },
   "payroll-paye": {
     intro:
       "Payroll run accurately, RTI filed on time, and HMRC kept happy. Whether you are a director-only company or you have a team, we keep payroll smooth and predictable.",

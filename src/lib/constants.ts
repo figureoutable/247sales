@@ -32,6 +32,16 @@ export const SERVICES = [
     whoFor: "Limited companies that want compliance done properly and on time.",
   },
   {
+    id: "self-assessment",
+    title: "Self Assessment",
+    icon: "receipt",
+    description:
+      "Self Assessment tax returns for sole traders, landlords and company directors. Fixed fee from £250, filed well before 31 January.",
+    detail:
+      "We prepare and file your Self Assessment tax return, covering self-employment, rental income, dividends, capital gains and anything else HMRC needs to see. We check what you can claim, tell you what you owe and when, and deal with HMRC for you.",
+    whoFor: "Sole traders, landlords, directors and anyone else who needs to file a tax return.",
+  },
+  {
     id: "payroll-paye",
     title: "Payroll & PAYE",
     icon: "users",
@@ -196,6 +206,6 @@ export const FAQ_ITEMS = [
   { q: "Where are you based?", a: "We're based in Surrey and work with clients across the UK remotely. We're happy to meet in person when it helps." },
   { q: "How do I get started?", a: "Book a discovery call via the link on our site. We'll chat about your situation and how we can help, with no obligation." },
   { q: "Do you use Xero or QuickBooks?", a: "We work with both and other leading tools. We'll use what you already have or recommend the best fit for your size and sector." },
-  { q: "What's your turnaround time?", a: "We aim for same-day responses on routine queries and clear timelines on larger pieces of work. No disappearing for weeks." },
+  { q: "What's your turnaround time?", a: "We reply within 1 business day on routine queries and give clear timelines on larger pieces of work. No disappearing for weeks." },
   { q: "Can you help with one-off projects?", a: "Yes. Whether it's a one-time cleanup, a capital allowances claim, or advice on a specific decision, we can take on project work." },
 ] as const;

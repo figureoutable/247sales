@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { SERVICES } from "@/lib/constants";
 import type { TownEntry } from "@/data/locations";
 import { LOCATIONS_PATH, SURREY_HUB_PATH, SW_LONDON_HUB_PATH, otherTownLinks } from "@/data/locations";
+import { Arrow, Btn, C, CheckList, Crumbs, CtaBand, DarkCard, Eyebrow, FaqGrid, Guarantee, H1, H2, Lead, Para, Pill, Row, Section, TextLink, Tile } from "@/components/redesign/ui";
 import { LocalBusinessJsonLd } from "./LocalBusinessJsonLd";
 
 const HUB_LABEL: Record<TownEntry["region"], string> = {
@@ -16,161 +16,83 @@ const HUB_PATH: Record<TownEntry["region"], string> = {
 
 export function TownLocationPage({ town }: { town: TownEntry }) {
   const others = otherTownLinks(town);
-  const surreyOthers = others.filter((o) => o.region === "surrey");
-  const swOthers = others.filter((o) => o.region === "south-west-london");
+  const isHome = town.slug === "woking";
 
   return (
     <>
       <LocalBusinessJsonLd areaServed={town.displayName} />
-      <div className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-4xl">
-          <nav className="text-sm text-slate-600" aria-label="Breadcrumb">
-            <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <li>
-                <Link href={LOCATIONS_PATH} className="font-medium hover:text-black hover:underline">
-                  Areas we serve
-                </Link>
-              </li>
-              <li aria-hidden className="text-slate-400">
-                /
-              </li>
-              <li>
-                <Link href={HUB_PATH[town.region]} className="font-medium hover:text-black hover:underline">
-                  {HUB_LABEL[town.region]}
-                </Link>
-              </li>
-              <li aria-hidden className="text-slate-400">
-                /
-              </li>
-              <li className="font-semibold text-slate-900">{town.displayName}</li>
-            </ol>
-          </nav>
-
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">{town.h1}</h1>
-          <p className="mt-6 text-lg leading-relaxed text-slate-600">{town.intro}</p>
-
-          <section className="mt-14" aria-labelledby="location-services-heading">
-            <h2 id="location-services-heading" className="text-2xl font-bold text-slate-900">
-              Accounting services for businesses in {town.displayName}
-            </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              We support limited companies and growing teams with the full stack of SME finance work. That includes{" "}
-              <Link href="/services/statutory-accounts-tax" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                statutory accounts and corporation tax
-              </Link>
-              ,{" "}
-              <Link href="/services/payroll-paye" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                payroll and PAYE
-              </Link>
-              ,{" "}
-              <Link href="/services/bookkeeping-xero" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                bookkeeping and Xero
-              </Link>
-              , and{" "}
-              <Link href="/services/vat" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                VAT
-              </Link>{" "}
-              compliance. When you need forward-looking insight, we also deliver{" "}
-              <Link href="/services/management-reporting" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                management reporting
-              </Link>
-              ,{" "}
-              <Link href="/services/cash-flow-management" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                cash flow management
-              </Link>
-              ,{" "}
-              <Link href="/services/budgeting-forecasting" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                budgeting and forecasting
-              </Link>
-              ,{" "}
-              <Link href="/services/board-investor-reporting" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                board and investor reporting
-              </Link>
-              , and{" "}
-              <Link href="/services/fractional-cfo" className="font-medium text-slate-900 underline-offset-2 hover:underline">
-                fractional CFO
-              </Link>{" "}
-              support for leadership teams. Every service has its own detail page if you want to go deeper on scope, timelines and how we work with clients like yours.
+      <Section pad="56px 0 80px">
+        <Crumbs items={[{ label: "Home", href: "/" }, { label: "Areas we serve", href: LOCATIONS_PATH }, { label: HUB_LABEL[town.region], href: HUB_PATH[town.region] }, { label: town.displayName }]} />
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", gap: 48 }}>
+          <div style={{ flex: "1.3 1 480px", minWidth: 0 }}>
+            <Eyebrow>{HUB_LABEL[town.region]}</Eyebrow>
+            <H1>{town.h1}</H1>
+            <Lead>{town.hubBlurb}</Lead>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 30 }}>
+              <Btn>
+                Book a free discovery call <Arrow />
+              </Btn>
+              <Btn kind="ghost" href="/#pricing">
+                See pricing
+              </Btn>
+            </div>
+            <Guarantee />
+          </div>
+          <DarkCard label={isHome ? "Local to Woking" : `Serving ${town.displayName}`}>
+            <p style={{ margin: 0, fontSize: 17, lineHeight: 1.6, color: "#FFFFFF" }}>
+              {isHome ? "Our home town. Woking clients get the shortest path to partner-level advice." : `Woking-based, working with ${town.displayName} businesses in person and remotely.`}
             </p>
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-              {SERVICES.map((s) => (
-                <li key={s.id}>
-                  <Link
-                    href={`/services/${s.id}`}
-                    className="text-sm font-medium text-slate-700 underline-offset-2 hover:text-black hover:underline"
-                  >
-                    {s.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="mt-14" aria-labelledby="why-figures-location-heading">
-            <h2 id="why-figures-location-heading" className="text-2xl font-bold text-slate-900">
-              Why Figures for {town.displayName} businesses
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-slate-600">{town.whyFigures}</p>
-          </section>
-
-          <section className="mt-14" aria-labelledby="location-faq-heading">
-            <h2 id="location-faq-heading" className="text-2xl font-bold text-slate-900">
-              Frequently asked questions
-            </h2>
-            <div className="mt-6 space-y-8">
-              {town.faqs.map((faq) => (
-                <div key={faq.q}>
-                  <p className="font-semibold text-slate-900">{faq.q}</p>
-                  <p className="mt-2 leading-relaxed text-slate-600">{faq.a}</p>
-                </div>
-              ))}
+            <div style={{ marginTop: 8 }}>
+              <CheckList items={["Face-to-face meetings when it helps", "ICAS Chartered Accountants", "Former EY, advised Lloyds, UBS and Metro Bank", "Fixed fees agreed upfront"]} color="#FFFFFF" tick={C.yellow} />
             </div>
-          </section>
-
-          <section className="mt-16 border-t border-slate-200 pt-12" aria-labelledby="internal-services-heading">
-            <h2 id="internal-services-heading" className="text-xl font-bold text-slate-900">
-              Our services
-            </h2>
-            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-              {SERVICES.map((s) => (
-                <li key={s.id}>
-                  <Link href={`/services/${s.id}`} className="text-sm text-slate-600 underline-offset-2 hover:text-black hover:underline">
-                    {s.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h2 className="mt-10 text-xl font-bold text-slate-900">Other areas we serve</h2>
-            <div className="mt-4 grid gap-8 sm:grid-cols-2">
-              <div>
-                <p className="text-sm font-semibold text-slate-900">Surrey</p>
-                <ul className="mt-2 space-y-1">
-                  {surreyOthers.map((o) => (
-                    <li key={o.href}>
-                      <Link href={o.href} className="text-sm text-slate-600 underline-offset-2 hover:text-black hover:underline">
-                        {o.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-slate-900">South West London</p>
-                <ul className="mt-2 space-y-1">
-                  {swOthers.map((o) => (
-                    <li key={o.href}>
-                      <Link href={o.href} className="text-sm text-slate-600 underline-offset-2 hover:text-black hover:underline">
-                        {o.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
+          </DarkCard>
         </div>
-      </div>
+      </Section>
+
+      <Section pad="0 0 88px">
+        <Eyebrow>About {town.displayName}</Eyebrow>
+        <H2>Accounting for {town.displayName} businesses</H2>
+        <Para>{town.intro}</Para>
+      </Section>
+
+      <Section bg={C.alt}>
+        <Eyebrow>What we do in {town.displayName}</Eyebrow>
+        <H2>Accounting services for businesses in {town.displayName}</H2>
+        <Row>
+          {SERVICES.map((s) => (
+            <Tile key={s.id} title={s.title} text={s.description} href={`/services/${s.id}`} />
+          ))}
+        </Row>
+        <div style={{ marginTop: 28 }}>
+          <TextLink href="/services">View all services</TextLink>
+        </div>
+      </Section>
+
+      <Section>
+        <Eyebrow>Why Figures</Eyebrow>
+        <H2>Why Figures for {town.displayName} businesses</H2>
+        <Para>{town.whyFigures}</Para>
+      </Section>
+
+      <Section bg={C.alt}>
+        <Eyebrow>FAQ</Eyebrow>
+        <H2>Questions from {town.displayName} businesses</H2>
+        <FaqGrid items={town.faqs} />
+      </Section>
+
+      <Section pad="72px 0">
+        <Eyebrow>Nearby areas</Eyebrow>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+          {others.map((o) => (
+            <Pill key={o.href} href={o.href}>
+              Accountants in {o.label}
+            </Pill>
+          ))}
+          <Pill href={LOCATIONS_PATH}>All areas we serve</Pill>
+        </div>
+      </Section>
+
+      <CtaBand title={`Looking for an accountant in ${town.displayName}?`} text="Book a free discovery call. We'll chat about your business and how we can help, with no obligation." />
     </>
   );
 }

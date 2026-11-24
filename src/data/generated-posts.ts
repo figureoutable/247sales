@@ -1145,7 +1145,7 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     title: "VAT partial exemption UK: Guide for mixed supply businesses",
     slug: { current: "vat-partial-exemption-uk" },
     category: "VAT",
-    publishedAt: "2026-11-25T09:00:00.000Z",
+    publishedAt: "2026-11-23T19:00:00.000Z",
     mainImage: "/blog/generated/local-129.jpg",
     excerpt: "Clear explanations of VAT partial exemption UK for mixed supply businesses. Learn how input tax recovery, standard method override and practical steps work.",
     body: bodyLocal129,
