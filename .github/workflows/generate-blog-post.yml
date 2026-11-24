@@ -28,6 +28,7 @@ jobs:
 
       - name: Generate blog post(s)
         env:
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           FAL_KEY: ${{ secrets.FAL_KEY }}
           CATCH_UP: ${{ github.event_name == 'workflow_dispatch' && inputs.catch_up && '1' || '' }}
