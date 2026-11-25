@@ -106,6 +106,7 @@ import { body as bodyLocal126 } from "./blog-post-bodies/local-126";
 import { body as bodyLocal127 } from "./blog-post-bodies/local-127";
 import { body as bodyLocal128 } from "./blog-post-bodies/local-128";
 import { body as bodyLocal129 } from "./blog-post-bodies/local-129";
+import { body as bodyLocal130 } from "./blog-post-bodies/local-130";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1149,6 +1150,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-129.jpg",
     excerpt: "Clear explanations of VAT partial exemption UK for mixed supply businesses. Learn how input tax recovery, standard method override and practical steps work.",
     body: bodyLocal129,
+  },
+  {
+    _id: "local-130",
+    title: "VAT cash accounting scheme: How it works",
+    slug: { current: "vat-cash-accounting-scheme" },
+    category: "VAT",
+    publishedAt: "2026-11-25T17:49:00.000Z",
+    mainImage: "/blog/generated/local-130.jpg",
+    excerpt: "Understand the VAT cash accounting scheme for small UK businesses. Learn eligibility, how VAT on cash basis works, joining, leaving and practical record keeping.",
+    body: bodyLocal130,
   },
   // GENERATED_ENTRIES
 ];

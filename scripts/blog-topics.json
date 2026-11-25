@@ -1141,7 +1141,7 @@
       "leaving cash accounting"
     ],
     "category": "VAT",
-    "used": false
+    "used": true
   },
   {
     "topic": "VAT on digital services and e commerce for UK sellers",
