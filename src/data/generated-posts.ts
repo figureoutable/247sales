@@ -107,6 +107,7 @@ import { body as bodyLocal127 } from "./blog-post-bodies/local-127";
 import { body as bodyLocal128 } from "./blog-post-bodies/local-128";
 import { body as bodyLocal129 } from "./blog-post-bodies/local-129";
 import { body as bodyLocal130 } from "./blog-post-bodies/local-130";
+import { body as bodyLocal131 } from "./blog-post-bodies/local-131";
 // GENERATED_IMPORTS
 
 export type GeneratedPost = {
@@ -1160,6 +1161,16 @@ export const GENERATED_POSTS: GeneratedPost[] = [
     mainImage: "/blog/generated/local-130.jpg",
     excerpt: "Understand the VAT cash accounting scheme for small UK businesses. Learn eligibility, how VAT on cash basis works, joining, leaving and practical record keeping.",
     body: bodyLocal130,
+  },
+  {
+    _id: "local-131",
+    title: "VAT digital services UK: Guide for e‑commerce",
+    slug: { current: "vat-digital-services-uk-ecommerce" },
+    category: "VAT",
+    publishedAt: "2026-11-27T17:15:00.000Z",
+    mainImage: "/blog/generated/local-131.jpg",
+    excerpt: "Practical guide to VAT digital services UK for sellers and e commerce businesses. Learn VAT rules, OSS VAT options, digital products VAT and compliance.",
+    body: bodyLocal131,
   },
   // GENERATED_ENTRIES
 ];
